@@ -18,3 +18,8 @@ github_username:  pact-foundation
 
 # Build settings
 markdown: kramdown
+
+collections:
+  docs:
+    output: true
+    permalink: /documentation/:path/
