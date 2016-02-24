@@ -3,6 +3,9 @@ layout: page
 title: FAQ
 ---
 
+* TOC
+{:toc}
+
 ## Pact
 
 ### What does PACT stand for?
@@ -72,3 +75,11 @@ Consumer driven contracts to some extent allows you to do away with versioning. 
 Using a [Pact Broker](https://github.com/bethesque/pact_broker), you can tag the production version of a pact when you make a release of a consumer. Then, any changes that you make to the provider can be checked against the production version of the pact, as well as the latest version, to ensure backward compatibility.
 
 If you need to support multiple versions of the provider API concurrently, then you will probably be specifying which version your consumer uses by setting a header, or using a different URL component. As these are actually different requests, the interactions can be verified in the same pact without any problems.
+
+### How does it work?
+
+1. In the specs for the provider facing code in the consumer project, expectations are set up on a mock service provider.
+2. When the specs are run, the mock service returns the expected responses. The requests, and their expected responses, are then written to a "pact" file.
+3. The requests in the pact file are later replayed against the provider, and the actual responses are checked to make sure they match the expected responses.
+
+![Pact two parts](/media/pact_two_parts.png "Pact two parts")
