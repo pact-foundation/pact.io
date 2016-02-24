@@ -203,4 +203,8 @@ pre {
             fill: $grey-color;
         }
     }
+
+    &.icon-sponsor > img {
+      width: 90px;
+    }
 }

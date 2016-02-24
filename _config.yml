@@ -9,6 +9,7 @@
 title: Pact Foundation
 email: your-email@domain.com
 googlegroup: https://groups.google.com/forum/#!forum/pact-support
+googledevgroup: https://groups.google.com/forum/#!forum/pact-dev
 description: > # this means to ignore newlines until "baseurl:"
   Documentation for the Pact Consumer Driven Contract Testing Frameworks.
 baseurl: "" # the subpath of your site, e.g. /blog
