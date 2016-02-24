@@ -19,6 +19,8 @@ github_username:  pact-foundation
 
 # Build settings
 markdown: kramdown
+kramdown:
+  auto_ids: true
 
 collections:
   docs:
