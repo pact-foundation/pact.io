@@ -78,8 +78,8 @@ If you need to support multiple versions of the provider API concurrently, then 
 
 ### How does it work?
 
-1. In the specs for the provider facing code in the consumer project, expectations are set up on a mock service provider.
-2. When the specs are run, the mock service returns the expected responses. The requests, and their expected responses, are then written to a "pact" file.
+1. In the tests for the provider facing code in the consumer project, expectations are set up on a mock service provider.
+2. When the tests are run, the mock service returns the expected responses. The requests, and their expected responses, are then written to a "pact" file.
 3. The requests in the pact file are later replayed against the provider, and the actual responses are checked to make sure they match the expected responses.
 
 ![Pact two parts](/media/pact_two_parts.png "Pact two parts")
