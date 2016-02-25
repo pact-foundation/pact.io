@@ -13,7 +13,7 @@ googledevgroup: https://groups.google.com/forum/#!forum/pact-dev
 description: > # this means to ignore newlines until "baseurl:"
   Documentation for the Pact Consumer Driven Contract Testing Frameworks.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://pact-foundation.github.io" # the base hostname & protocol for your site
+url: "http://www.pact.io" # the base hostname & protocol for your site
 twitter_username: pact_up
 github_username:  pact-foundation
 
