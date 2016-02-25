@@ -3,6 +3,9 @@ layout: page
 title: Terminology
 ---
 
+* TOC
+{:toc}
+
 ## Service Consumer
 
 A component that initiates a HTTP request to another component (the service provider). Note that this does not depend on the way the data flows - whether it is a GET or a PUT/POST/PATCH, the consumer is the initiator of the HTTP request.

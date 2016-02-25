@@ -20,8 +20,24 @@ Pact is most valuable for designing and testing integrations where you (or your 
 
 - Performance and load testing.
 - Functional testing of the provider - that is what the provider's own tests should do. Pact is about checking the contents and format of requests and responses.
-- Situations where you cannot load data into the provider without using the API that you're actually testing (eg. public APIs). [Why?](https://github.com/realestate-com-au/pact/wiki/Why-Pact-may-not-be-the-best-tool-for-testing-public-APIs)
-- Testing "pass through" APIs, where the provider merely passes on the request contents to a downstream service without validating them. [Why?](https://github.com/realestate-com-au/pact/wiki/Why-Pact-may-not-be-the-best-tool-for-testing-pass-through-APIs)
+- Situations where you cannot load data into the provider without using the API that you're actually testing (eg. public APIs). [Why?](#why-pact-may-not-be-the-best-tool-for-testing-public-apis)
+- Testing "pass through" APIs, where the provider merely passes on the request contents to a downstream service without validating them. [Why?](#why-pact-may-not-be-the-best-tool-for-testing-pass-through-apis)
+
+### Why Pact may not be the best tool for testing public APIs
+
+Each interaction in a pact should be verified in isolation, with no context maintained from the previous interactions. Tests that depend on the outcome of previous tests are brittle and land you back in integration test hell, which is the nasty place you're trying to escape by using pacts.
+
+So how do you test a request that requires data to already exist on the provider? Provider states allow you to set up data on the provider by injecting it straight into the datasource before the interaction is run, so that it can make a response that matches what the consumer expects. They also allow the consumer to make the same request with different expected responses (eg. different response codes, or the same resource with a different subset of data).
+
+If you use Pact to test a public API, the only way to set up the right provider state is to use the very API that you're actually testing, which will make the tests slower and more brittle compared to the "normal" pact verification tests.
+
+If this is still a better situation for you than integration testing, or using another tool like VCR, then go for it!
+
+### Why Pact may not be the best tool for testing pass through APIs
+
+During pact verification, Pact does not test the side effects of a request being executed on a provider, it just checks that the response body matches the expected response body. If your API is merely passing on a message to a downstream system (eg. a queue) and does not validate the contents of the body before doing so, you could send anything you like in the request body, and the provider would respond the same way. The "contract" that you really want is between the consumer and the downstream system. Checking that the provider responded with a 200 OK does not give you any confidence that your consumer and the downstream system will work correctly in real life.
+
+What you really need is a "non-HTTP" pact between your consumer and the downstream system. Check out this [gist](https://gist.github.com/bethesque/0ee446a9f93db4dd0697) for an example of how to use the Pact contract generation and matching code to test non-HTTP communications.
 
 ### Why is developing and testing with Pact better than using traditional system integration tests?
 
@@ -38,7 +54,7 @@ Whether you define a schema or not, you will still need a concrete example of th
 
 ### Why is there no support for specifying optional attributes?
 
-Firstly, it is assumed that you have control over the provider's data (and consumer's data) when doing the verification tests. If you don't, then maybe Pact is (https://github.com/realestate-com-au/pact#what-is-it-good-for)[not the best tool for your situation].
+Firstly, it is assumed that you have control over the provider's data (and consumer's data) when doing the verification tests. If you don't, then maybe Pact is (#what-is-it-good-for)[not the best tool for your situation].
 
 Secondly, if you think about it, if Pact supports making an assertion that element $.body.name may be present in a response, then you write consumer code that can handle an optional $.body.name, but in fact, the provider gives $.body.firstname, no test will ever fail to tell you that you've made an incorrect assumption. Remember that a provider may return extra data without failing the contract, but it must provide at minimum the data you expect.
 
@@ -83,3 +99,18 @@ If you need to support multiple versions of the provider API concurrently, then 
 3. The requests in the pact file are later replayed against the provider, and the actual responses are checked to make sure they match the expected responses.
 
 ![Pact two parts](/media/pact_two_parts.png "Pact two parts")
+
+### Using pact where the consumer team is different from the provider team
+
+Pact is "consumer driven contracts", not "dictator driven contracts". Just because it's called "consumer driven" doesn't mean that the team writing the consumer gets to write a pact and throw it at the provider team without talking about it. The pact should be the starting point of a collaborative effort.
+
+The way Pact works, it's the pact verification task (in the provider codebase) that fails when a consumer expects things that are different from what a provider responds with, even if the consumer itself is "wrong". This is a little unfortunate, but it's the nature of the beast.
+
+Running the pact verification task in a separate CI build from the rest of the tests for the provider is a good idea - if you have it in the same build, someone is going to get cranky about another team being able to break their build.
+
+It's very important for the consumer team to know when pact verification fails, because it means they cannot deploy the consumer. If the consumer team is using a different CI instance from the provider team, consider how you might communicate to the consumer team when pact verification has failed. You should do one of the following:
+
+* Configure the pact verification build to send an email to the consumer team when the build fails.
+* Even better, if you can, have a copy of the provider build run on the consumer CI that just runs the unit tests and pact verification. That way the consumer team has the same red build that the provider team has, and it gives them a vested interest in keeping it green.
+
+Verify a pact by using a URL that you know the latest pact will be made available at. Do not rely on manual intervention (eg. someone copying a file across to the provider project) because this process will inevitably break down, and your verification task will give you a false positive. Do not try to "protect" your build from being broken by instigating a manual pact update process. The pact verify task is the canary of your integration - manual updates would be like giving your canary a gas mask.
