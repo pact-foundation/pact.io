@@ -3,7 +3,7 @@ layout: page
 title: Matching Gotchas
 ---
 
-## Pact follows Postel's law
+## Pact follows [Postel's law](https://en.wikipedia.org/wiki/Robustness_principle)
 
 _Be conservative in what you send_ - when the mock server in the consumer project compares the actual request with the expected request, the actual request body is not allowed to contain fields that are not defined in the expected request body. We don't want the situation where our real consumer is "leaking" data that we don't know about.
 
@@ -20,4 +20,3 @@ Following Postel's law, when verifying a pact in the provider project, the respo
 ## You cannot expect a field to not be present in a response
 
 Following Postel's law, the provider may return fields that the consumer will just ignore. The provider may have a pact with another consumer that requires those fields, so your consumer cannot tell the provider what it should not do. It can only specify what it should do.
-Status API Training Shop Blog About Pricing
