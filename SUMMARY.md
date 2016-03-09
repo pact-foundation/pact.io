@@ -1,6 +1,5 @@
 # Summary
 
-* [Introduction](readme.md)
 * [Getting Started](documentation/README.md)
    * [Terminology](documentation/how_does_pact_work.md)
 * [Best practices](best_practices/README.md)
@@ -11,4 +10,3 @@
 * [Getting Help](getting_help/README.md)
 * [Contributing](contributing/README.md)
 * [Contributors](about_pact/README.md)
-
