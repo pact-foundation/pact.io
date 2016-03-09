@@ -1,6 +1,5 @@
 # Summary
 
-* Introduction
 * [Introduction](readme.md)
 * [Getting Started](documentation/README.md)
    * [Terminology](documentation/how_does_pact_work.md)
