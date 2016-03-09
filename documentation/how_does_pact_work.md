@@ -19,3 +19,11 @@ To verify a `Pact`, the requests contained in a `Pact` file are replayed against
 A name describing a “state” (like a fixture) that the `Provider` should be in when a given request is replayed against it - e.g. “when user John Doe exists” or “when user John Doe has a bank account”.
 
 A `Provider` state name is specified when writing the `Consumer` specs, then, when the pact verification is set up in the `Provider` the same name will be used to identify the set up code block that should be run before the request is executed.
+
+### Pact Specification
+
+The [Pact Specification](https://github.com/pact-foundation/pact-specification) is a document that governs the structure of the actual generated Pact files to allow for interoperability between languages (consider, for example, a JavaScript `Consumer` connecting to a Scala JVM-based `Provider`) , using semantic versioning to indicate breaking changes.
+
+Each language implementation of Pact needs to implement the rules of this specification, and advertise which version(s) are supported, corresponding closely to which features are available.
+
+The current version of the specification is [2.0](https://github.com/pact-foundation/pact-specification/tree/version-2), although not all implementations currently support this.
