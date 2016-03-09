@@ -11,4 +11,3 @@
 * [Getting Help](getting_help/README.md)
 * [Contributing](contributing/README.md)
 * [Contributors](about_pact/README.md)
-
