@@ -1,4 +1,4 @@
-# Matching Gotcha's
+# Gotcha's
 
 ### Pact follows [Postel's law](https://en.wikipedia.org/wiki/Robustness_principle)
 
