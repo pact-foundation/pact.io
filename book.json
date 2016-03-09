@@ -2,5 +2,11 @@
     "plugins": [
         "editlink"
     ],
-    "pluginsConfig": {}
+    "pluginsConfig": {
+        "editlink": {
+            "base": "https://github.com/pact-foundation/pact-foundation.github.io/tree/test",
+            "label": "Edit This Page",
+            "multilingual": "false"
+        }
+    }
 }
