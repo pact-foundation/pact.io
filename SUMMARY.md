@@ -6,7 +6,7 @@
 * [Best practices](best_practices/README.md)
    * [Consumer](best_practices/consumer.md)
    * [Provider](best_practices/provider.md)
-   * [Matching gotchas](best_practices/matching_gotchas.md)
+* [Matching gotchas](best_practices/matching_gotchas.md)
 * [FAQ](faq/README.md)
 * [Getting Help](getting_help/README.md)
 * [Contributing](contributing/README.md)
