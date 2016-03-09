@@ -1,9 +1,9 @@
 {
     "plugins": [
-        "-editlink"
+        "editlink"
     ],
     "pluginsConfig": {
-        "-editlink": {
+        "editlink": {
             "base": "https://github.com/pact-foundation/pact-foundation.github.io/edit/test",
             "label": "Edit This Page",
             "multilingual": "false"
