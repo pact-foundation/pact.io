@@ -1,6 +1,6 @@
 # Sharing Pacts
 
-At some point in your Pact journey, you are going to be generating lots of `Pact` files for your `Provider` to verify, ensuring the provider has access to the latest version of the pact at all times. This is great, but very quickly this becomes cumbersome to manage.
+At some point in your Pact journey, you are going to be generating lots of `Pact` files for your `Provider` to verify, ensuring the `Provider` has access to the latest version of the `Pacts` at all times. This is great, but very quickly this becomes cumbersome to manage.
 
 ## Pact Broker
 
