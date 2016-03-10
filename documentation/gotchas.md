@@ -17,3 +17,9 @@ Following Postel's law, when verifying a pact in the provider project, the respo
 ### You cannot expect a field to not be present in a response
 
 Following Postel's law, the provider may return fields that the consumer will just ignore. The provider may have a pact with another consumer that requires those fields, so your consumer cannot tell the provider what it should not do. It can only specify what it should do.
+
+### Consumer language != Provider language
+
+If you are writing tests on the Consumer side with a different language on the Provider side, you must ensure you use a common Pact Specification between them or you will be unable to validate the Pacts.
+
+e.g. If you are using v2 matching with the JS Consumer Pact DSL with a .NET provider, this will not work as the .NET provider only supports v1.1. In this case, you would need to use only v1.1 compatible matching on the Consumer side.
