@@ -14,7 +14,7 @@ Tell Karma about `pact-consumer-js-dsl.js` in `karma.conf.js`. In the `files: []
 
 Allow tests to load resources from `Pact Mock Server`. One way to do this is in the `karma.conf.js`, change `browsers: ['Chrome']` to,
 
- ````javascript
+ ```javascript
 browsers: ['Chrome_without_security'],
 customLaunchers: {
   Chrome_without_security: {
@@ -22,9 +22,9 @@ customLaunchers: {
       flags: ['--disable-web-security']
   }
 }
-````
+```
 Or `browsers: ['PhantomJS']` to:
-````javascript
+```javascript
 browsers: ['PhantomJS_without_security'],
 customLaunchers: {
   PhantomJS_without_security: {
@@ -32,7 +32,7 @@ customLaunchers: {
     flags: ['--web-security=false']
   }
 }
-````
+```
 
 #### Test
 Write your Mocha test like below:
