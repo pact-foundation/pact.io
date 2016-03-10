@@ -1,6 +1,7 @@
 # Matching
 
-### Regular expressions
+### Regular expressions 
+
 Sometimes you will have keys in a request or response with values that are hard to know beforehand - timestamps and generated IDs are two examples.
 
 What you need is a way to say "I expect something matching this regular expression, but I don't care what the actual value is".
@@ -126,7 +127,9 @@ animal_service.given("some alligators exist").
 
 ```
 
-### Flexible matching (v2)
+### Flexible matching
+**NOTE:** *Only available in Pact Specification 2.0+*
+
 Flexible length arrays:
 
 ```ruby
@@ -163,4 +166,5 @@ Pact.service_consumer "Zoo App" do
 end
 ```
 
+#### Using v2 matching with the Pact Mock Service
 To start the standalone pact mock service in v2 matching mode, specify `--pact-specification-version 2.0.0` in the startup options.
