@@ -8,9 +8,10 @@ This is where the [Pact Broker](https://github.com/bethesque/pact_broker) comes 
 
 * Auto-generated documentation
 * Dynamically generated network diagrams
-* The ability to tag a `Pact` (i.e. "prod") so a provider can verify itself against a fixed version of a pact to ensure backwards compatibility.
-* Webhooks to trigger provider builds when a pact is published.
-* If you want to decouple the release cycle of your consumer and provider, and be able to cross test the head/prod versions of each, then the Pact Broker is the best solution for you.
+* The ability to tag a `Pact` (i.e. "prod") so a `Provider` can verify itself against a fixed version of a `Pact` to ensure backwards compatibility.
+* Webhooks to trigger provider builds when a `Pact` is published.
+* Ability to decouple the release cycle of your `Consumer` and `Provider`
+* Ability to cross test the head/prod versions of `Pacts`
 
 For more information, head over to the Pact Broker [website](https://github.com/bethesque/pact_broker).
 
