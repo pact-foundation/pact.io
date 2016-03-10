@@ -1,4 +1,6 @@
 # Summary
+
+* [Introduction](README.md)
 * [Getting Started](documentation/README.md)
    * [Terminology](documentation/how_does_pact_work.md)
    * [Usage example](documentation/usage_ruby.md)
@@ -12,6 +14,7 @@
    * [JVM](documentation/jvm.md)
    * [Go](documentation/go.md)
    * [Ruby](documentation/ruby.md)
+       * Verifying Pacts
    * [Javascript](documentation/javascript.md)
    * [.NET](documentation/net.md)
    * [Swift](documentation/swift.md)
