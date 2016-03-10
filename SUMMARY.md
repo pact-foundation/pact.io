@@ -19,6 +19,7 @@
    * [Javascript](documentation/javascript.md)
        * [Mocha / Node](documentation/javascript/mocha__node.md)
        * [Jasmine / Karma](documentation/javascript/jasmine__karma.md)
+       * Flexible Matching
    * [Go](documentation/go.md)
    * [Swift](documentation/swift.md)
 * [Best practices](best_practices/README.md)
