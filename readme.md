@@ -42,7 +42,7 @@ Check out [this talk about Pact](http://www.infoq.com/presentations/pact) and th
 - [.NET Pact](https://github.com/SEEK-Jobs/pact-net)
 - [JS Pact](https://github.com/DiUS/pact-consumer-js-dsl)
 - [Go Pact](https://github.com/SEEK-Jobs/pact-go)
-- [Swift Pact](https://github.com/DiUS/pact-consumer-swift)
+- [Swift / Objective-C Pact](https://github.com/DiUS/pact-consumer-swift)
 
 ### Getting Help
 You can get help on pact from the following channels:
