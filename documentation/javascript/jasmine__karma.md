@@ -87,7 +87,7 @@ The command will:
 * Create a new folder `logs` where you can check all the interactions received by the Mock Service
 * Create a new folder `tmp` where it will store all `Pacts` successfully verified by the test
 
-From there, type in `mocha` on your terminal to get your test executed. Once successful a new Pact file will be generated at `tmp/pacts/hello_consumer-hello_provider.json` that looks somewhat like this:
+From there, type in `karma start` on your terminal to get your test executed. Once successful a new Pact file will be generated at `tmp/pacts/hello_consumer-hello_provider.json` that looks somewhat like this:
 ```json
 {
   "consumer": {
