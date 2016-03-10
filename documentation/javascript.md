@@ -5,7 +5,7 @@ Pact support for JavaScript and Node JS is currently in active development.
 ## Pact Mock Service
 In order to write Pact tests, first you gotta install the Pact Mock Service. If you are on Windows, please refer to the [Installing pact-mock-service on Windows](https://github.com/bethesque/pact-mock_service/wiki/Installing-the-pact-mock_service-gem-on-Windows).
 
-To install Pact Mock Service you gotta have Ruby installed. Create a `Gemfile` on your project and add the below:
+To install Pact Mock Service you have to have Ruby installed. Create a `Gemfile` on your project and add the below:
 
 ```ruby
 source 'https://rubygems.org'
