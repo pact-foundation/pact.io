@@ -17,14 +17,14 @@ For more information, head over to the Pact Broker [website](https://github.com/
 
 ## Alternative approaches
 
-1. `Consumer` CI build commits pact to `Provider` codebase
+##### 1. `Consumer` CI build commits pact to `Provider` codebase
 
 Pretty self explanatory.
 
-2. Publish pacts as CI build artefacts
+##### 2. Publish pacts as CI build artefacts
 
 Work out the URL to the pact created by the most recent successful build, and configure the pact:verify task to point to this URL.
 
-3. Use Github/Bitbucket URL
+##### 3. Use Github/Bitbucket URL
 
 This only works for repositories that don't require authentication to read. Make sure that you always regenerate the pacts before committing if you make any changes to the pact specs, and that the specs are always passing before you commit, because you don't want to verify the pact from a broken build.
