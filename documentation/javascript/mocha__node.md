@@ -84,8 +84,8 @@ Before running your test you have to start the Pact Mock Service. To do so, run 
 bundle exec pact-mock-service -p 1234 --pact-specification-version 2.0.0 -l logs/pact.logs --pact-dir tmp/pacts
 ```
 The command will:
-* create a new folder `logs` where you can check all the interactions received by the Mock Service
-* create a new folder `tmp` where it will store all `Pacts` successfully verified by the test
+* Create a new folder `logs` where you can check all the interactions received by the Mock Service
+* Create a new folder `tmp` where it will store all `Pacts` successfully verified by the test
 
 From there, type in `mocha` on your terminal to get your test executed. Once successful a new Pact file will be generated at `tmp/pacts/hello_consumer-hello_provider.json` that looks somewhat like this:
 ```json
