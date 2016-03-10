@@ -8,7 +8,7 @@ This is where the Pact Broker comes in. It enables you to share your `Pacts` bet
 
 * Auto-generated documentation
 * Dynamically generated network diagrams
-* The ability to tag a pact (ie. "prod") so a provider can verify itself against a fixed version of a pact to ensure backwards compatibility.
+* The ability to tag a `Pact` (i.e. "prod") so a provider can verify itself against a fixed version of a pact to ensure backwards compatibility.
 * Webhooks to trigger provider builds when a pact is published.
 * If you want to decouple the release cycle of your consumer and provider, and be able to cross test the head/prod versions of each, then the Pact Broker is the best solution for you.
 
