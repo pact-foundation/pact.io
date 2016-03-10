@@ -7,7 +7,6 @@
    * [Matching](documentation/matching.md)
        * [Gotchas](documentation/gotchas.md)
    * [Verifying Pacts](documentation/verifying_pacts.md)
-   * [Sharing Pacts](documentation/sharing_pacts.md)
    * [Sharing Pacts with the Pact Broker](documentation/sharings_pacts.md)
    * [Provider states](documentation/provider_states.md)
 * [Implementation guides](documentation/implementation_guides.md)
