@@ -16,7 +16,7 @@
    * [Ruby](documentation/ruby.md)
        * [Verifying Pacts](documentation/ruby/verifying_pacts.md)
        * [Configuration](documentation/ruby/configuration.md)
-       * [Provider States](documentation/provider_states.md)
+       * Provider States
    * [Javascript](documentation/javascript.md)
    * [.NET](documentation/net.md)
    * [Swift](documentation/swift.md)
