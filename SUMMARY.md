@@ -1,5 +1,6 @@
 # Summary
 
+* [Introduction](README.md)
 * [Getting Started](documentation/README.md)
    * [Terminology](documentation/how_does_pact_work.md)
    * [Usage example](documentation/usage_ruby.md)
@@ -9,12 +10,12 @@
    * [Provider states](documentation/provider_states.md)
    * [Sharing Pacts with the Pact Broker](documentation/sharings_pacts.md)
 * [Implementation guides](documentation/implementation_guides.md)
-   * [JVM](documentation/jvm.md)
-   * [Go](documentation/go.md)
    * [Ruby](documentation/ruby.md)
        * [Verifying Pacts](documentation/ruby/verifying_pacts.md)
        * [Configuration](documentation/ruby/configuration.md)
        * [Provider States](documentation/ruby/provider_states.md)
+   * [JVM](documentation/jvm.md)
+   * [Go](documentation/go.md)
    * [Javascript](documentation/javascript.md)
    * [.NET](documentation/net.md)
    * [Swift](documentation/swift.md)
