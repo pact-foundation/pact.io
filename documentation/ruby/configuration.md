@@ -63,15 +63,15 @@ Options: [:unix](#unix), [:list](#list), [:embedded](#embedded), [Custom Diff Fo
 
 
 #### :unix
-<img src="diff_formatter_unix.png" width="700">
+<img src="https://github.com/realestate-com-au/pact/raw/master/documentation/diff_formatter_unix.png" width="700">
 
 #### :list
 
-<img src="diff_formatter_list.png" width="700">
+<img src="https://github.com/realestate-com-au/pact/raw/master/documentation/diff_formatter_list.png" width="700">
 
 #### :embedded
 
-<img src="diff_formatter_embedded.png" width="700">
+<img src="https://github.com/realestate-com-au/pact/raw/master/documentation/diff_formatter_embedded.png" width="700">
 
 
 #### Custom Diff Formatter
