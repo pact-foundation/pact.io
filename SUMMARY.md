@@ -1,5 +1,6 @@
 # Summary
 
+* [Introduction](README.md)
 * [Getting Started](documentation/README.md)
    * [Terminology](documentation/how_does_pact_work.md)
    * [Usage example](documentation/usage_ruby.md)
@@ -16,6 +17,7 @@
    * [JVM](documentation/jvm.md)
    * [.NET](documentation/net.md)
    * [Javascript](documentation/javascript.md)
+       * Mocha / Node
    * [Go](documentation/go.md)
    * [Swift](documentation/swift.md)
 * [Best practices](best_practices/README.md)
