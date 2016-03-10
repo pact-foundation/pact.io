@@ -35,7 +35,7 @@ customLaunchers: {
 ````
 
 #### Test
-Write your Mocha test like below - written with `ES2015` syntax.
+Write your Mocha test like below:
 
 ```javascript
 import { expect } from 'chai'
