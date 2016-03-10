@@ -34,6 +34,8 @@ customLaunchers: {
 }
 ```
 
+Make sure the source and test files are included by Karma in the `karma.conf.js` in the files array.
+
 #### Test
 Write your Jasmine test like below:
 ```javascript
