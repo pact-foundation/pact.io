@@ -15,6 +15,7 @@
    * [Go](documentation/go.md)
    * [Ruby](documentation/ruby.md)
        * [Verifying Pacts](documentation/ruby/verifying_pacts.md)
+       * Configuration
    * [Javascript](documentation/javascript.md)
    * [.NET](documentation/net.md)
    * [Swift](documentation/swift.md)
