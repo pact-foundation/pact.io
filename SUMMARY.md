@@ -1,5 +1,6 @@
 # Summary
 
+* [Introduction](README.md)
 * [Getting Started](documentation/README.md)
    * [Terminology](documentation/how_does_pact_work.md)
    * [Usage example](documentation/usage_ruby.md)
@@ -7,7 +8,7 @@
        * [Gotchas](documentation/gotchas.md)
    * [Verifying Pacts](documentation/verifying_pacts.md)
    * [Sharing Pacts](documentation/sharing_pacts.md)
-   * [Pact Broker](documentation/sharings_pacts.md)
+   * [Sharing Pacts with the Pact Broker](documentation/sharings_pacts.md)
    * [Provider states](documentation/provider_states.md)
 * [Implementation guides](documentation/implementation_guides.md)
    * [JVM](documentation/jvm.md)
