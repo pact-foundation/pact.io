@@ -9,7 +9,7 @@
    * [Verifying Pacts](documentation/verifying_pacts.md)
    * [Sharing Pacts](documentation/sharing_pacts.md)
    * [Pact Broker](documentation/sharings_pacts.md)
-   * [Provider states](documentation/ruby/provider_states.md)
+   * [Provider states](documentation/provider_states.md)
 * [Implementation guides](documentation/implementation_guides.md)
    * [JVM](documentation/jvm.md)
    * [Go](documentation/go.md)
