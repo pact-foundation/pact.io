@@ -4,7 +4,7 @@ At some point in your Pact journey, you are going to be generating lots of `Pact
 
 ## Pact Broker
 
-This is where the Pact Broker comes in. It enables you to share your `Pacts` between projects, and make them useful for people too. It is the recommended way forward for serious Pact development, featuring:
+This is where the [Pact Broker](https://github.com/bethesque/pact_broker) comes in. It enables you to share your `Pacts` between projects, and make them useful for people too. It is the recommended way forward for serious Pact development, featuring:
 
 * Auto-generated documentation
 * Dynamically generated network diagrams
