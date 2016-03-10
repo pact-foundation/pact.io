@@ -125,7 +125,7 @@ From there, type in `mocha` on your terminal to get your test executed. Once suc
 ```
 
 ### Flexible Matching
-Make sure you read about [matching][documentation/matching.md] first.
+Make sure you read about [here][flexible-matching] first.
 
 #### Match by regular expression
 Remember that the mock service is written in Ruby, so the regular expression must be in a Ruby format, not a JavaScript format. Make sure to start the mock service with the argument `--pact-specification-version 2.0.0`.
