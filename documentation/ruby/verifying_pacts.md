@@ -107,14 +107,6 @@ At some stage, you'll want to be able to run your specs one at a time while you 
 ### Ruby apps
 If your app is a non-Rack Ruby app, you may be able to find a Rack adapter for it. If you can do this, then configure the `app` in the `Pact.service_provider` block to point to an instance of your adapter. Otherwise, use the [pact-provider-proxy](https://github.com/bethesque/pact-provider-proxy) gem. 
 
-### JVM apps
-
-Use [pact-jvm](https://github.com/DiUS/pact-jvm).
-
-### Other apps
-Use the [pact-provider-proxy](https://github.com/bethesque/pact-provider-proxy) gem
-
-
 ## Configuring RSpec
 
 Pact uses dynamically created RSpec specs to verify pacts. If you want to modify the behaviour of the underlying RSpec execution, you can:
