@@ -2,7 +2,7 @@
 
 This section describes the various request/response matching techniques available in your `Consumer` tests. Note the examples below demonstrate use of the Ruby DSL, please refer to your particular language and framework as implementations differ.
 
-**NOTE:** If you are writing tests on the `Consumer` side to a different language on the `Provider` side, you must ensure you use a common Pact Specification between them or you will be unable to validate. e.g. If you are using v2 matching with the JS Consumer Pact DSL with a .NET provider, this will not work. 
+**NOTE:** If you are writing tests on the `Consumer` side to a different language on the `Provider` side, you must ensure you use a common Pact Specification between them or you will be unable to validate. e.g. If you are using v2 matching with the JS Consumer Pact DSL with a .NET provider, this will not work as the .NET provider only supports v1.1. In this case, you would need to use only v1.1 compatible matching on the `Consumer` side.
 
 
 ### Regular expressions 
