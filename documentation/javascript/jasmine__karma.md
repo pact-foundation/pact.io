@@ -35,19 +35,15 @@ customLaunchers: {
 ```
 
 #### Test
-Write your Mocha test like below:
-
+Write your Jasmine test like below:
 ```javascript
-import { expect } from 'chai'
-import Pact from 'pact-consumer-js-dsl'
+describe("Client", function() {
+  var client, helloProvider;
 
-describe("Client", () => {
-  // ProviderClient is the class you have written to make the HTTP calls to the provider
-  const client = new ProviderClient('http://localhost:1234');
-
-  var helloProvider;
-
-  beforeEach(() => {
+  beforeEach(function() {
+    //ProviderClient is the class you have written to make the HTTP calls to the provider
+    client = new ProviderClient('http://localhost:1234');
+    
     // setup your mock service
     // your client above should be routed through to this guy
     // during testing so expectactions can be recorded
@@ -55,27 +51,25 @@ describe("Client", () => {
       consumer: 'Hello Consumer',
       provider: 'Hello Provider',
       port: 1234,
-      done: (error) => {
-        expect(error).to.be.null;
+      done: function (error) {
+        expect(error).toBe(null);
       }
     });
   });
 
-  it("should say hello", (done) => {
-    const requestHeaders  = { "Accept": "application/json" };
-    const responseHeaders = { "Content-Type": "application/json" };
-    const responseBody    = { "name": "Mary" };
-    
-    // setting expectation
+  it("should say hello", function(done) {
+    var requestHeaders  = { "Accept": "application/json" };
+    var responseHeaders = { "Content-Type": "application/json" };
+    var responseBody    = { "name": "Mary" };
+
     helloProvider
       .given("an alligator with the name Mary exists")
       .uponReceiving("a request for an alligator")
       .withRequest("GET", "/alligators/Mary", requestHeaders)
       .willRespondWith(200, responseHeaders, responseBody);
 
-    // verifying expectation
-    helloProvider.run(done, (runComplete) => {
-      expect(client.getAlligatorByName("Mary")).to.eql(new Alligator("Mary"));
+    helloProvider.run(done, function(runComplete) {
+      expect(client.getAlligatorByName("Mary")).toEqual(new Alligator("Mary"));
       runComplete();
     });
   });
