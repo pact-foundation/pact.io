@@ -45,7 +45,7 @@ Check out [this talk about Pact](http://www.infoq.com/presentations/pact) and th
 - [Swift / Objective-C Pact](https://github.com/DiUS/pact-consumer-swift)
 
 ### Getting Help
-You can get help on pact from the following channels:
+You can get help on Pact from the following channels:
 
 * **Google users group:** https://groups.google.com/forum/#!forum/pact-support
 * **Gitter:** Join the chat at https://gitter.im/realestate-com-au/pact and https://gitter.im/DiUS/pact-jvm
