@@ -44,6 +44,14 @@ Check out [this talk about Pact](http://www.infoq.com/presentations/pact) and th
 - [Go Pact](https://github.com/SEEK-Jobs/pact-go)
 - [Swift / Objective-C Pact](https://github.com/DiUS/pact-consumer-swift)
 
+
+### Introductory articles
+
+* [Getting started with Pact](http://dius.com.au/2016/02/03/microservices-pact/)
+* [Simplifying micro-service testing with Pact](http://dius.com.au/2014/05/19/simplifying-micro-service-testing-with-pacts/)
+* [...and more!](https://github.com/realestate-com-au/pact/wiki/News,-blogs,-videos-and-articles)
+ 
+
 ### Getting Help
 You can get help on Pact from the following channels:
 
