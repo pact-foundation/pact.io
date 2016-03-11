@@ -1,8 +1,12 @@
 {
-"title": "Pact Documentation - Pact Foundation",
-"description": "Learn how to use Pact, a consumer driven contract testing framework.",
-"language": "en",
-"variables": {
+    "title": "Pact Documentation - Pact Foundation",
+    "description": "Learn how to use Pact, a consumer driven contract testing framework.",
+    "language": "en",
+    "variables": {
         "version": "0.0.0"
-    }
+    },
+    "plugins": [
+        "ga"
+    ],
+    "pluginsConfig": {}
 }
