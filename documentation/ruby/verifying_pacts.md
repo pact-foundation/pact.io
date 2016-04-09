@@ -79,7 +79,7 @@ With basic auth, set the environment variables `PACT_BROKER_USERNAME` and `PACT_
 
 ## Verifying a pact stored in Amazon S3
 
-(Pact::Retreaty)[https://github.com/fairfaxmedia/pact-retreaty] is a tool which provides a ultra light mechanism for
+[Pact::Retreaty](https://github.com/fairfaxmedia/pact-retreaty) is a tool which provides a ultra light mechanism for
 pushing and pulling pact contracts to/from S3.
 
 ## Using a custom pact:verify task
