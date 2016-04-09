@@ -28,3 +28,8 @@ Work out the URL to the pact created by the most recent successful build, and co
 ##### 3. Use Github/Bitbucket URL
 
 This only works for repositories that don't require authentication to read. Make sure that you always regenerate the pacts before committing if you make any changes to the pact specs, and that the specs are always passing before you commit, because you don't want to verify the pact from a broken build.
+
+##### 4. Publish pacts to Amazon S3
+
+(Pact::Retreaty)[https://github.com/fairfaxmedia/pact-retreaty] is a tool which provides a ultra light mechanism for
+pushing and pulling pact contracts to/from S3.

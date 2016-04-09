@@ -37,8 +37,8 @@ require 'service_consumers/provider_states_for_my_service_consumer'
 
 Pact.service_provider "My Service Provider" do
 
-  # Optional app configuration. Pact loads the app from config.ru by default 
-  # (it is recommended to let Pact use the config.ru if possible, so testing 
+  # Optional app configuration. Pact loads the app from config.ru by default
+  # (it is recommended to let Pact use the config.ru if possible, so testing
   # conditions are closest to runtime conditions)
   app { MyApp.new }
 
@@ -54,8 +54,8 @@ Pact.service_provider "My Service Provider" do
   # This block is repeated for every pact that this provider should be verified against.
   honours_pact_with 'Some other Service Consumer' do
     ...
-  end  
-  
+  end
+
 end
 ```
 
@@ -76,6 +76,11 @@ This is useful when you are developing the consumer and provider concurrently, a
     $ rake pact:verify:at[http://build-box/MyConsumerBuild/latestSuccessful/artifacts/my_consumer-my_provider.json]
 
 With basic auth, set the environment variables `PACT_BROKER_USERNAME` and `PACT_BROKER_PASSWORD`, or use the basic auth URL format, `http://username:password@pactbroker.yourdomain/...`.
+
+## Verifying a pact stored in Amazon S3
+
+(Pact::Retreaty)[https://github.com/fairfaxmedia/pact-retreaty] is a tool which provides a ultra light mechanism for
+pushing and pulling pact contracts to/from S3.
 
 ## Using a custom pact:verify task
 
@@ -105,7 +110,7 @@ At some stage, you'll want to be able to run your specs one at a time while you 
 ## Verifying pacts for non-Rack apps
 
 ### Ruby apps
-If your app is a non-Rack Ruby app, you may be able to find a Rack adapter for it. If you can do this, then configure the `app` in the `Pact.service_provider` block to point to an instance of your adapter. Otherwise, use the [pact-provider-proxy](https://github.com/bethesque/pact-provider-proxy) gem. 
+If your app is a non-Rack Ruby app, you may be able to find a Rack adapter for it. If you can do this, then configure the `app` in the `Pact.service_provider` block to point to an instance of your adapter. Otherwise, use the [pact-provider-proxy](https://github.com/bethesque/pact-provider-proxy) gem.
 
 ## Configuring RSpec
 
