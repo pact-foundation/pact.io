@@ -1,6 +1,24 @@
 # Convince me: Why should I use Pact?
 
-## ...but I already have a local Mock Server (e.g. VCR)
+* Faster execution.
+* Reliable responses from mock service reduce likelihood of flakey tests.
+* Causes of failure are easier to identify as only one component is being tested at a time.
+* Design of service provider is improved by considering first how the data is actually going to be used, rather than how it is most easily retrieved and serialised.
+* No separate integration environment(s) required to be managed for automated integration tests - pact tests run in standalone CI builds.
+* Integration flows that would traditionally require running multiple services at the same time can be broken down and each integration point tested separately.
+
+## What if I think E2E integration tests are good?
+Read the following:
+
+* [http://googletesting.blogspot.com.au/2015/04/just-say-no-to-more-end-to-end-tests.html](http://googletesting.blogspot.com.au/2015/04/just-say-no-to-more-end-to-end-tests.html)
+* [http://blog.thecodewhisperer.com/permalink/integrated-tests-are-a-scam](http://blog.thecodewhisperer.com/permalink/integrated-tests-are-a-scam)
+* and if you're really keen, [Defect Analysis and Prevention for Software Process Quality Improvement](http://www.ijcaonline.org/volume8/number7/pxc3871759.pdf)
+
+Research tells us that integration tests are more costly in terms of time, effort and maintenance without giving us any more guarantees.
+
+
+## Common Excuses
+### ...but I already have a local Mock Server (e.g. VCR)
 
 Pact is like VCR in reverse. VCR records actual provider behaviour, and verifies that the consumer behaves as expected. Pact records consumer behaviour, and verifies that the provider behaves as expected. The advantages Pact provides are:
 
@@ -13,7 +31,7 @@ Pact is like VCR in reverse. VCR records actual provider behaviour, and verifies
 
 See [https://github.com/realestate-com-au/pact/wiki/FAQ#how-does-pact-differ-from-vcr](https://github.com/realestate-com-au/pact/wiki/FAQ#how-does-pact-differ-from-vcr) for more examples of similar technologies.
 
-## ...but I use Swagger/OpenAPI?
+### ...but I use Swagger/OpenAPI?
 
 OpenAPIs and Pact are designed with different ends in mind. The differences can be summarised below:
 
@@ -28,7 +46,7 @@ Potentially, for example, we could use vendor extensions to document this extra 
 
 See [https://github.com/pact-foundation/pact-specification/issues/28](https://github.com/pact-foundation/pact-specification/issues/28) for more.
 
-## ...but I already have an end-to-end (E2E) integration suite that runs for an hour?
+### ...but I already have an end-to-end (E2E) integration suite that runs for an hour?
 
 There are a few key problems with end-to-end (E2E) testing:
 
@@ -43,9 +61,9 @@ If you really want to hang onto these, consider pushing a subset of your E2E sce
 
 *NOTE: Obviously, there is an element of not wanting to throw the baby out with the bathwater here. Please factor accordingly *
 
-## ...but I use Docker?
+### ...but I use Docker?
 See "but I already have an E2E integration suite that runs for an hour?". All of the problems still exist, but Docker numbs the pain (or defers it).
 
-## ...but our company develops APIs before consumers (e.g. API/Document Driven Design)
+### ...but our company develops APIs before consumers (e.g. API/Document Driven Design)
 
 Then you are probably developing for _many consumers_, am I right? If you don't know who these consumers are going to be, then Pact is not for you. If you have control over any of them, then Pact is likely to be a good fit - you just won't be driving the design from the consumer.
