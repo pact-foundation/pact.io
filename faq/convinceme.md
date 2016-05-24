@@ -7,7 +7,7 @@
 * No separate integration environment(s) required to be managed for automated integration tests - pact tests run in standalone CI builds.
 * Integration flows that would traditionally require running multiple services at the same time can be broken down and each integration point tested separately.
 
-## What if I think E2E integration tests are good?
+## What if I think end-to-end (E2E) integration tests are good?
 Read the following:
 
 * [http://googletesting.blogspot.com.au/2015/04/just-say-no-to-more-end-to-end-tests.html](http://googletesting.blogspot.com.au/2015/04/just-say-no-to-more-end-to-end-tests.html)
