@@ -28,6 +28,7 @@
    * [Consumer](best_practices/consumer.md)
    * [Provider](best_practices/provider.md)
 * [FAQ](faq/README.md)
+  * [Convince me](faq/convinceme.md)
 * [Getting Help](getting_help/README.md)
 * [Contributing](contributing/README.md)
 * [Contributors](about_pact/README.md)
