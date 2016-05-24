@@ -31,7 +31,7 @@ Consumer Driven Contracts is a pattern that drives the development of the `Provi
   </tr>
 </table>
 
-I still need [convincing](faq/convinceme.md).
+I still need [convincing](faq/convinceme.html).
 
 Check out [this talk about Pact](http://www.infoq.com/presentations/pact) and the slides below from one of the Pact authors for an introduction.
 <p style="text-align: center;">
