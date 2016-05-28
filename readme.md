@@ -44,7 +44,7 @@ For a JVM specific talk, [Deploy with Confidence!](https://www.youtube.com/watch
 
 ### Implementations
 - [Ruby Pact](https://github.com/realestate-com-au/pact)
-- [JVM Pact](https://github.com/DiUS/pact-jvm) and [scala-pact](https://github.com/ITV/scala-pact)
+- [JVM Pact](https://github.com/DiUS/pact-jvm) and [Scala-Pact](https://github.com/ITV/scala-pact)
 - [.NET Pact](https://github.com/SEEK-Jobs/pact-net)
 - [JS Pact](https://github.com/DiUS/pact-consumer-js-dsl)
 - [Go Pact](https://github.com/SEEK-Jobs/pact-go)
