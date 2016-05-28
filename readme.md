@@ -40,7 +40,7 @@ Check out [this talk about Pact](http://www.infoq.com/presentations/pact) and th
 
 ### Implementations
 - [Ruby Pact](https://github.com/realestate-com-au/pact)
-- [JVM Pact](https://github.com/DiUS/pact-jvm)
+- [JVM Pact](https://github.com/DiUS/pact-jvm) and [scala-pact](https://github.com/ITV/scala-pact)
 - [.NET Pact](https://github.com/SEEK-Jobs/pact-net)
 - [JS Pact](https://github.com/DiUS/pact-consumer-js-dsl)
 - [Go Pact](https://github.com/SEEK-Jobs/pact-go)
@@ -52,7 +52,7 @@ Check out [this talk about Pact](http://www.infoq.com/presentations/pact) and th
 * [Getting started with Pact](http://dius.com.au/2016/02/03/microservices-pact/)
 * [Simplifying micro-service testing with Pact](http://dius.com.au/2014/05/19/simplifying-micro-service-testing-with-pacts/)
 * [...and more!](https://github.com/realestate-com-au/pact/wiki/News,-blogs,-videos-and-articles)
- 
+
 
 ### Getting Help
 You can get help on Pact from the following channels:
