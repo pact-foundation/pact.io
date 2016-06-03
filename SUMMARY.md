@@ -1,5 +1,6 @@
 # Summary
 
+* [Introduction](README.md)
 * [Getting Started](documentation/README.md)
    * [Terminology](documentation/how_does_pact_work.md)
    * [Usage example](documentation/usage_ruby.md)
@@ -28,8 +29,9 @@
    * [Consumer](best_practices/consumer.md)
    * [Provider](best_practices/provider.md)
 * [FAQ](faq/README.md)
-  * [Convince me](faq/convinceme.md)
+   * [Convince me](faq/convinceme.md)
 * [Getting Help](getting_help/README.md)
 * [Contributing](contributing/README.md)
 * [Contributors](about_pact/README.md)
+* Roadmap
 
