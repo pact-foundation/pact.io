@@ -18,4 +18,6 @@ The Pact Community has come together to solve this problem. Our plan is to creat
 
 ## Node/JS [Status: Beta]
 
-<iframe src="https://docs.google.com/a/dius.com.au/presentation/d/133JGQamMsvhDT6xQQRY78gdNYPWkqcZG2xYXbWex1XI/embed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+<p style="text-align: center;">
+<iframe src="https://docs.google.com/a/dius.com.au/presentation/d/133JGQamMsvhDT6xQQRY78gdNYPWkqcZG2xYXbWex1XI/embed?start=false&loop=false&delayms=3000" frameborder="0" width="920" height="546" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+</p>
