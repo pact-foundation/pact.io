@@ -23,3 +23,6 @@ This project is well underway with proof-of-concepts along the way confirming th
 <p style="text-align: center;">
 <iframe src="https://docs.google.com/presentation/d/1cbf1mJ1cpvi_xAn83NdX9eXfrcTtXLoZD__Qr_hCyjc/embed?start=false&loop=false&delayms=3000" frameborder="0" width="700" height="422" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
 </p>
+
+## Golang [Status: Beta]
+Golang is in the same boat as the JavaScript community in that it uses Ruby 'binaries' under  the hood. We are working toward a release where we remove this dependency in favour of the reference library above. Whilst it is currently functional to v2 of the specification, the  API is subject to change.
