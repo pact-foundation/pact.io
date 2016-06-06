@@ -1,5 +1,5 @@
 # Go
 
-Pact Go is currently in *beta* and is targeting support for Pact specification 1.1.
+Pact Go is currently in *beta* and currently supports Pact Specification v2.
 
-Head to the [Go Pact website](https://github.com/SEEK-Jobs/pact-go) to get started using Pact in Golang.
+Head to the [Go Pact website](https://github.com/pact-foundation/pact-go) to get started using Pact in Golang.
