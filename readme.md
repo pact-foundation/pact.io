@@ -47,7 +47,7 @@ For a JVM specific talk, [Deploy with Confidence!](https://www.youtube.com/watch
 - [JVM Pact](https://github.com/DiUS/pact-jvm) and [Scala-Pact](https://github.com/ITV/scala-pact)
 - [.NET Pact](https://github.com/SEEK-Jobs/pact-net)
 - [JS Pact](https://github.com/DiUS/pact-consumer-js-dsl)
-- [Go Pact](https://github.com/SEEK-Jobs/pact-go)
+- [Go Pact](https://github.com/pact-foundation/pact-go)
 - [Swift / Objective-C Pact](https://github.com/DiUS/pact-consumer-swift)
 
 
