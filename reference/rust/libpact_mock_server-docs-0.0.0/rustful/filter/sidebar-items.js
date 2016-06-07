@@ -1,0 +1,1 @@
+initSidebarItems({"enum":[["ContextAction","The result from a context filter."],["ResponseAction","The result from a response filter."]],"struct":[["FilterContext","Contextual tools for filters."]],"trait":[["ContextFilter","A trait for context filters."],["ResponseFilter","A trait for response filters."]]});
