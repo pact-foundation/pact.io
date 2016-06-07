@@ -18,7 +18,7 @@ Research tells us that integration tests are more costly in terms of time, effor
 
 
 ## Common Excuses
-### ...but I already have a local Mock Server (e.g. VCR)
+### ...but I already have a local Mock Server (e.g. VCR, MockServer)
 
 Pact is like VCR in reverse. VCR records actual provider behaviour, and verifies that the consumer behaves as expected. Pact records consumer behaviour, and verifies that the provider behaves as expected. The advantages Pact provides are:
 
