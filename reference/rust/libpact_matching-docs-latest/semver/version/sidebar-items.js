@@ -1,0 +1,1 @@
+initSidebarItems({"enum":[["Identifier","An identifier in the pre-release or build metadata."],["SemVerError","An error type for this crate"]],"struct":[["Version","Represents a version number conforming to the semantic versioning scheme."]]});

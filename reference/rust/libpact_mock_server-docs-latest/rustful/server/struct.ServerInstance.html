@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `ServerInstance` struct in crate `rustful`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, ServerInstance">
+
+    <title>rustful::server::ServerInstance - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'><a href='../index.html'>rustful</a>::<wbr><a href='index.html'>server</a></p><script>window.sidebarCurrent = {name: 'ServerInstance', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content struct">
+<h1 class='fqn'><span class='in-band'>Struct <a href='../index.html'>rustful</a>::<wbr><a href='index.html'>server</a>::<wbr><a class='struct' href=''>ServerInstance</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a id='src-139' class='srclink' href='../../src/rustful/server/instance.rs.html#62-79' title='goto source code'>[src]</a></span></h1>
+<pre class='rust struct'>pub struct ServerInstance&lt;R: <a class='trait' href='../../rustful/router/trait.Router.html' title='rustful::router::Router'>Router</a>&gt; {
+    // some fields omitted
+}</pre><div class='docblock'><p>A runnable instance of a server.</p>
+
+<p>It&#39;s not meant to be used directly,
+unless additional control is required.</p>
+
+<pre class='rust rust-example-rendered'>
+<span class='kw'>let</span> (<span class='ident'>server_instance</span>, <span class='ident'>scheme</span>) <span class='op'>=</span> <span class='ident'>Server</span> {
+    <span class='ident'>host</span>: <span class='number'>8080</span>.<span class='ident'>into</span>(),
+    <span class='ident'>handlers</span>: <span class='ident'>router</span>,
+    ..<span class='ident'>Server</span>::<span class='ident'>default</span>()
+}.<span class='ident'>build</span>();</pre>
+</div><h2 id='methods'>Methods</h2><h3 class='impl'><code>impl&lt;R: <a class='trait' href='../../rustful/router/trait.Router.html' title='rustful::router::Router'>Router</a>&gt; <a class='struct' href='../../rustful/server/struct.ServerInstance.html' title='rustful::server::ServerInstance'>ServerInstance</a>&lt;R&gt;</code></h3><div class='impl-items'><h4 id='method.new' class='method'><code>fn <a href='#method.new' class='fnname'>new</a>(config: <a class='struct' href='../../rustful/server/struct.Server.html' title='rustful::server::Server'>Server</a>&lt;R&gt;) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.tuple.html'>(</a><a class='struct' href='../../rustful/server/struct.ServerInstance.html' title='rustful::server::ServerInstance'>ServerInstance</a>&lt;R&gt;, <a class='enum' href='../../rustful/server/enum.Scheme.html' title='rustful::server::Scheme'>Scheme</a><a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.tuple.html'>)</a></code></h4>
+<div class='docblock'><p>Create a new server instance, with the provided configuration. This is
+the same as <code>Server{...}.build()</code>.</p>
+</div><h4 id='method.run' class='method'><code>fn <a href='#method.run' class='fnname'>run</a>(self, _scheme: <a class='enum' href='../../rustful/server/enum.Scheme.html' title='rustful::server::Scheme'>Scheme</a>) -&gt; <a class='type' href='../../rustful/type.HttpResult.html' title='rustful::HttpResult'>HttpResult</a>&lt;<a class='struct' href='../../rustful/server/struct.Listening.html' title='rustful::server::Listening'>Listening</a>&gt;</code></h4>
+<div class='docblock'><p>Start the server.</p>
+</div></div><h2 id='implementations'>Trait Implementations</h2><h3 class='impl'><code>impl&lt;R: <a class='trait' href='../../rustful/router/trait.Router.html' title='rustful::router::Router'>Router</a>&gt; <a class='trait' href='../../hyper/server/trait.Handler.html' title='hyper::server::Handler'>HyperHandler</a> for <a class='struct' href='../../rustful/server/struct.ServerInstance.html' title='rustful::server::ServerInstance'>ServerInstance</a>&lt;R&gt;</code></h3><div class='impl-items'><h4 id='method.handle' class='method'><code>fn <a href='../../hyper/server/trait.Handler.html#tymethod.handle' class='fnname'>handle</a>(&amp;self, request: <a class='struct' href='../../hyper/server/request/struct.Request.html' title='hyper::server::request::Request'>Request</a>, writer: <a class='struct' href='../../hyper/server/response/struct.Response.html' title='hyper::server::response::Response'>Response</a>)</code></h4>
+<h4 id='method.on_connection_start' class='method'><code>fn <a href='../../hyper/server/trait.Handler.html#method.on_connection_start' class='fnname'>on_connection_start</a>(&amp;self)</code></h4>
+<h4 id='method.on_connection_end' class='method'><code>fn <a href='../../hyper/server/trait.Handler.html#method.on_connection_end' class='fnname'>on_connection_end</a>(&amp;self)</code></h4>
+<h4 id='method.check_continue' class='method'><code>fn <a href='../../hyper/server/trait.Handler.html#method.check_continue' class='fnname'>check_continue</a>(&amp;self, <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.tuple.html'>(</a>&amp;<a class='enum' href='../../rustful/enum.Method.html' title='rustful::Method'>Method</a>, &amp;<a class='enum' href='../../hyper/uri/enum.RequestUri.html' title='hyper::uri::RequestUri'>RequestUri</a>, &amp;<a class='struct' href='../../rustful/header/struct.Headers.html' title='rustful::header::Headers'>Headers</a><a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.tuple.html'>)</a>) -&gt; <a class='enum' href='../../rustful/enum.StatusCode.html' title='rustful::StatusCode'>StatusCode</a></code></h4>
+</div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>&larrb;</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>&rarrb;</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "rustful";
+        window.playgroundUrl = "";
+    </script>
+    <script src="../../jquery.js"></script>
+    <script src="../../main.js"></script>
+    
+    <script defer src="../../search-index.js"></script>
+</body>
+</html>

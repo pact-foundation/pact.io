@@ -1,0 +1,1 @@
+initSidebarItems({"struct":[["Variables","A router endpoint that assigns names to route variables."]]});
