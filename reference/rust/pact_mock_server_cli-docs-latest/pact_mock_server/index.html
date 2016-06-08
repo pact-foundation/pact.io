@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `pact_mock_server` crate.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, pact_mock_server">
+
+    <title>pact_mock_server - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'></p><script>window.sidebarCurrent = {name: 'pact_mock_server', ty: 'mod', relpath: '../'};</script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content mod">
+<h1 class='fqn'><span class='in-band'>Crate <a class='mod' href=''>pact_mock_server</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a id='src-0' class='srclink' href='../src/pact_mock_server/lib.rs.html#1-576' title='goto source code'>[src]</a></span></h1>
+<div class='docblock'><p>The <code>libpact_mock_server</code> crate provides the in-process mock server for mocking HTTP requests
+and generating responses based on a pact file. It implements the V1 Pact specification
+(<a href="https://github.com/pact-foundation/pact-specification/tree/version-1">https://github.com/pact-foundation/pact-specification/tree/version-1</a>).</p>
+</div><h2 id='structs' class='section-header'><a href="#structs">Structs</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.MockServer.html'
+                                  title='pact_mock_server::MockServer'>MockServer</a></td>
+                           <td class='docblock short'>
+                                <p>Struct to represent a mock server</p>
+                           </td>
+                       </tr></table><h2 id='enums' class='section-header'><a href="#enums">Enums</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class='enum' href='enum.MatchResult.html'
+                                  title='pact_mock_server::MatchResult'>MatchResult</a></td>
+                           <td class='docblock short'>
+                                <p>Enum to define a match result</p>
+                           </td>
+                       </tr></table><h2 id='functions' class='section-header'><a href="#functions">Functions</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.cleanup_mock_server.html'
+                                  title='pact_mock_server::cleanup_mock_server'>cleanup_mock_server</a></td>
+                           <td class='docblock short'>
+                                <p>External interface to cleanup a mock server. This function will try terminate the mock server
+with the given port number and cleanup any memory allocated for it. Returns true, unless a
+mock server with the given port number does not exist, or the function panics.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.create_mock_server.html'
+                                  title='pact_mock_server::create_mock_server'>create_mock_server</a></td>
+                           <td class='docblock short'>
+                                <p>External interface to create a mock server. A pointer to the pact JSON as a C string is passed in,
+and the port of the mock server is returned.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.iterate_mock_servers.html'
+                                  title='pact_mock_server::iterate_mock_servers'>iterate_mock_servers</a></td>
+                           <td class='docblock short'>
+                                <p>Iterates through all the mock servers, passing each one to the given closure.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.lookup_mock_server.html'
+                                  title='pact_mock_server::lookup_mock_server'>lookup_mock_server</a></td>
+                           <td class='docblock short'>
+                                <p>Looks up the mock server by ID, and passes it into the given closure. The result of the
+closure is returned wrapped in an <code>Option</code>. If no mock server is found with that ID, <code>None</code>
+is returned.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.lookup_mock_server_by_port.html'
+                                  title='pact_mock_server::lookup_mock_server_by_port'>lookup_mock_server_by_port</a></td>
+                           <td class='docblock short'>
+                                <p>Looks up the mock server by port number, and passes it into the given closure. The result of the
+closure is returned wrapped in an <code>Option</code>. If no mock server is found with that port number, <code>None</code>
+is returned.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.mock_server_matched.html'
+                                  title='pact_mock_server::mock_server_matched'>mock_server_matched</a></td>
+                           <td class='docblock short'>
+                                <p>External interface to check if a mock server has matched all its requests. The port number is
+passed in, and if all requests have been matched, true is returned. False is returned if there
+is no mock server on the given port, or if any request has not been successfully matched, or
+the method panics.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.mock_server_mismatches.html'
+                                  title='pact_mock_server::mock_server_mismatches'>mock_server_mismatches</a></td>
+                           <td class='docblock short'>
+                                <p>External interface to get all the mismatches from a mock server. The port number of the mock
+server is passed in, and a pointer to a C string with the mismatches in JSON format is
+returned.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.start_mock_server.html'
+                                  title='pact_mock_server::start_mock_server'>start_mock_server</a></td>
+                           <td class='docblock short'>
+                                <p>Starts a mock server with the given ID and pact. The ID needs to be unique. Returns the port
+that the mock server is running on wrapped in a <code>Result</code>.</p>
+                           </td>
+                       </tr></table></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>&larrb;</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>&rarrb;</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../";
+        window.currentCrate = "pact_mock_server";
+        window.playgroundUrl = "";
+    </script>
+    <script src="../jquery.js"></script>
+    <script src="../main.js"></script>
+    
+    <script defer src="../search-index.js"></script>
+</body>
+</html>

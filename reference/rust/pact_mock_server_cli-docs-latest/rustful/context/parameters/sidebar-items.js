@@ -1,0 +1,1 @@
+initSidebarItems({"struct":[["Parameters","An extended `HashMap` with extra functionality for value parsing."]]});

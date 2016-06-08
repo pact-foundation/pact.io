@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `rustful` crate.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, rustful">
+
+    <title>rustful - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'></p><script>window.sidebarCurrent = {name: 'rustful', ty: 'mod', relpath: '../'};</script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content mod">
+<h1 class='fqn'><span class='in-band'>Crate <a class='mod' href=''>rustful</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a id='src-0' class='srclink' href='../src/rustful/lib.rs.html#1-112' title='goto source code'>[src]</a></span></h1>
+<div class='docblock'><p>A light HTTP framework with REST-like features. The main purpose of Rustful
+is to create a simple, modular and non-intrusive foundation for HTTP
+applications. It has a mainly stateless structure, which naturally allows
+it to run both as one single server and as multiple instances in a cluster.</p>
+
+<p>A new server is created using the <a href="server/struct.Server.html"><code>Server</code></a> type, which contains
+all the necessary settings as fields:</p>
+
+<pre class='rust rust-example-rendered'>
+<span class='attribute'>#[<span class='ident'>macro_use</span>]</span>
+<span class='kw'>extern</span> <span class='kw'>crate</span> <span class='ident'>rustful</span>;
+<span class='kw'>use</span> <span class='ident'>rustful</span>::{<span class='ident'>Server</span>, <span class='ident'>Handler</span>, <span class='ident'>Context</span>, <span class='ident'>Response</span>, <span class='ident'>TreeRouter</span>};
+
+<span class='kw'>struct</span> <span class='ident'>Greeting</span>(<span class='kw-2'>&amp;</span><span class='lifetime'>&#39;static</span> <span class='ident'>str</span>);
+
+<span class='kw'>impl</span> <span class='ident'>Handler</span> <span class='kw'>for</span> <span class='ident'>Greeting</span> {
+    <span class='kw'>fn</span> <span class='ident'>handle_request</span>(<span class='kw-2'>&amp;</span><span class='self'>self</span>, <span class='ident'>context</span>: <span class='ident'>Context</span>, <span class='ident'>response</span>: <span class='ident'>Response</span>) {
+        <span class='comment'>//Check if the client accessed /hello/:name or /good_bye/:name</span>
+        <span class='kw'>if</span> <span class='kw'>let</span> <span class='prelude-val'>Some</span>(<span class='ident'>name</span>) <span class='op'>=</span> <span class='ident'>context</span>.<span class='ident'>variables</span>.<span class='ident'>get</span>(<span class='string'>&quot;name&quot;</span>) {
+            <span class='comment'>//Use the value of :name</span>
+            <span class='ident'>response</span>.<span class='ident'>send</span>(<span class='macro'>format</span><span class='macro'>!</span>(<span class='string'>&quot;{}, {}&quot;</span>, <span class='self'>self</span>.<span class='number'>0</span>, <span class='ident'>name</span>));
+        } <span class='kw'>else</span> {
+            <span class='ident'>response</span>.<span class='ident'>send</span>(<span class='self'>self</span>.<span class='number'>0</span>)
+        }
+    }
+}
+
+<span class='kw'>let</span> <span class='ident'>my_router</span> <span class='op'>=</span> <span class='macro'>insert_routes</span><span class='macro'>!</span>{
+    <span class='comment'>//Create a new TreeRouter</span>
+    <span class='ident'>TreeRouter</span>::<span class='ident'>new</span>() <span class='op'>=&gt;</span> {
+        <span class='comment'>//Receive GET requests to /hello and /hello/:name</span>
+        <span class='string'>&quot;hello&quot;</span> <span class='op'>=&gt;</span> {
+            <span class='ident'>Get</span>: <span class='ident'>Greeting</span>(<span class='string'>&quot;hello&quot;</span>),
+            <span class='string'>&quot;:name&quot;</span> <span class='op'>=&gt;</span> <span class='ident'>Get</span>: <span class='ident'>Greeting</span>(<span class='string'>&quot;hello&quot;</span>)
+        },
+        <span class='comment'>//Receive GET requests to /good_bye and /good_bye/:name</span>
+        <span class='string'>&quot;good_bye&quot;</span> <span class='op'>=&gt;</span> {
+            <span class='ident'>Get</span>: <span class='ident'>Greeting</span>(<span class='string'>&quot;good bye&quot;</span>),
+            <span class='string'>&quot;:name&quot;</span> <span class='op'>=&gt;</span> <span class='ident'>Get</span>: <span class='ident'>Greeting</span>(<span class='string'>&quot;good bye&quot;</span>)
+        }
+    }
+};
+
+<span class='ident'>Server</span> {
+    <span class='comment'>//Use a closure to handle requests.</span>
+    <span class='ident'>handlers</span>: <span class='ident'>my_router</span>,
+    <span class='comment'>//Set the listening port to `8080`.</span>
+    <span class='ident'>host</span>: <span class='number'>8080</span>.<span class='ident'>into</span>(),
+    <span class='comment'>//Fill out everything else with default values.</span>
+    ..<span class='ident'>Server</span>::<span class='ident'>default</span>()
+}.<span class='ident'>run</span>();</pre>
+</div><h2 id='reexports' class='section-header'><a href="#reexports">Reexports</a></h2>
+<table><tr><td><code>pub use self::<a class='mod'
+                                       href='./server/index.html'>server</a>::<a class='struct' href='../rustful/server/struct.Server.html' title='rustful::server::Server'>Server</a>;</code></td></tr><tr><td><code>pub use self::<a class='mod'
+                                       href='./context/index.html'>context</a>::<a class='struct' href='../rustful/context/struct.Context.html' title='rustful::context::Context'>Context</a>;</code></td></tr><tr><td><code>pub use self::<a class='mod'
+                                       href='./response/index.html'>response</a>::<a class='struct' href='../rustful/response/struct.Response.html' title='rustful::response::Response'>Response</a>;</code></td></tr><tr><td><code>pub use self::<a class='mod'
+                                       href='./response/index.html'>response</a>::<a class='enum' href='../rustful/response/enum.Error.html' title='rustful::response::Error'>Error</a>;</code></td></tr><tr><td><code>pub use self::<a class='mod'
+                                       href='./handler/index.html'>handler</a>::<a class='trait' href='../rustful/handler/trait.Handler.html' title='rustful::handler::Handler'>Handler</a>;</code></td></tr><tr><td><code>pub use self::<a class='mod'
+                                       href='./router/index.html'>router</a>::<a class='trait' href='../rustful/router/trait.Router.html' title='rustful::router::Router'>Router</a>;</code></td></tr></table><h2 id='modules' class='section-header'><a href="#modules">Modules</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class='mod' href='context/index.html'
+                                  title='rustful::context'>context</a></td>
+                           <td class='docblock short'>
+                                <p>Handler context and request body reading extensions.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='mod' href='file/index.html'
+                                  title='rustful::file'>file</a></td>
+                           <td class='docblock short'>
+                                <p>File related utilities.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='mod' href='filter/index.html'
+                                  title='rustful::filter'>filter</a></td>
+                           <td class='docblock short'>
+                                <p>Request and context filters.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='mod' href='handler/index.html'
+                                  title='rustful::handler'>handler</a></td>
+                           <td class='docblock short'>
+                                <p>Request handlers.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='mod' href='header/index.html'
+                                  title='rustful::header'>header</a></td>
+                           <td class='docblock short'>
+                                <p>Headers container, and common header fields.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='mod' href='mime/index.html'
+                                  title='rustful::mime'>mime</a></td>
+                           <td class='docblock short'>
+                                <p>Re-exporting the mime crate, for convenience.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='mod' href='response/index.html'
+                                  title='rustful::response'>response</a></td>
+                           <td class='docblock short'>
+                                <p>Response writers.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='mod' href='router/index.html'
+                                  title='rustful::router'>router</a></td>
+                           <td class='docblock short'>
+                                <p>Routers stores request handlers, using an HTTP method and a path as keys.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='mod' href='server/index.html'
+                                  title='rustful::server'>server</a></td>
+                           <td class='docblock short'>
+                                <p>Server configuration and instance.</p>
+                           </td>
+                       </tr></table><h2 id='macros' class='section-header'><a href="#macros">Macros</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class='macro' href='macro.content_type!.html'
+                                  title='rustful::content_type!'>content_type!</a></td>
+                           <td class='docblock short'>
+                                <p>A macro for making content types.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='macro' href='macro.insert_routes!.html'
+                                  title='rustful::insert_routes!'>insert_routes!</a></td>
+                           <td class='docblock short'>
+                                <p>The <code>insert_routes!</code> macro generates routes from the provided handlers and routing tree and
+adds them to the provided router. The router is then returned.</p>
+                           </td>
+                       </tr></table><h2 id='structs' class='section-header'><a href="#structs">Structs</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.TreeRouter.html'
+                                  title='rustful::TreeRouter'>TreeRouter</a></td>
+                           <td class='docblock short'>
+                                <p>A tree shaped router that selects handlers using paths.</p>
+                           </td>
+                       </tr></table><h2 id='enums' class='section-header'><a href="#enums">Enums</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class='enum' href='enum.HttpError.html'
+                                  title='rustful::HttpError'>HttpError</a></td>
+                           <td class='docblock short'>
+                                <p>A set of errors that can occur parsing HTTP streams.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='enum' href='enum.HttpVersion.html'
+                                  title='rustful::HttpVersion'>HttpVersion</a></td>
+                           <td class='docblock short'>
+                                <p>Represents a version of the HTTP spec.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='enum' href='enum.Method.html'
+                                  title='rustful::Method'>Method</a></td>
+                           <td class='docblock short'>
+                                <p>The Request Method (VERB)</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='enum' href='enum.StatusCode.html'
+                                  title='rustful::StatusCode'>StatusCode</a></td>
+                           <td class='docblock short'>
+                                <p>An HTTP status code (<code>status-code</code> in RFC 7230 et al.).</p>
+                           </td>
+                       </tr></table><h2 id='types' class='section-header'><a href="#types">Type Definitions</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.HttpResult.html'
+                                  title='rustful::HttpResult'>HttpResult</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr></table></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>&larrb;</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>&rarrb;</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../";
+        window.currentCrate = "rustful";
+        window.playgroundUrl = "";
+    </script>
+    <script src="../jquery.js"></script>
+    <script src="../main.js"></script>
+    
+    <script defer src="../search-index.js"></script>
+</body>
+</html>

@@ -1,0 +1,1 @@
+initSidebarItems({"enum":[["Scheme","HTTP or HTTPS."]],"struct":[["Global","A somewhat lazy container for globally accessible data."],["Host","A host address and a port."],["KeepAlive","Settings for `keep-alive` connections to the server."]]});

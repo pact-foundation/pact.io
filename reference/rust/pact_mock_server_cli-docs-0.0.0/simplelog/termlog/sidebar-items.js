@@ -1,0 +1,1 @@
+initSidebarItems({"struct":[["TermLogger","The TermLogger struct. Provides a stderr/out based Logger implementation"]]});

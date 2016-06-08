@@ -1,0 +1,1 @@
+initSidebarItems({"struct":[["FileLogger","The FileLogger struct. Provides a file based Logger implementation"]]});
