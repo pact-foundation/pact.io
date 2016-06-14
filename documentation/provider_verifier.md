@@ -1,10 +1,10 @@
 # Using Pact with other Languages
 
-For `Providers` written in languages that don't have native Pact support, you can still verify that they satisfy their Pacts, using the generic Pact Provider Verification tool.
+For `Providers` written in languages that don't have native Pact support, you can still verify that they satisfy their Pacts, using the generic [Pact Provider Verification tool](https://github.com/pact-foundation/pact-provider-verifier).
 
 ## Generic Pact Provider Verification
 
-This setup simplifies Pact Provider verification process in any language
+This setup simplifies Pact Provider verification process in any language.
 
 **Features**:
 
@@ -13,7 +13,7 @@ This setup simplifies Pact Provider verification process in any language
 * Pre-configured Docker image with Ruby installed and a sane, default `src/Rakefile` keeping things DRY
 * Works with Pact [provider states](https://github.com/realestate-com-au/pact/wiki/Provider-states) should you need them
 
-The two solutions below use the [Pact Provider Proxy](https://github.com/bethesque/pact-provider-proxy) Ruby Gem, via a the [Pact Provider Verifier](https://github.com/DiUS/pact-provider-verifier-docker) project. For advanced usage, you can use Gem directly, however in most cases the Pact Provider Verifier should cover your needs.
+The two solutions below use the [Pact Provider Proxy](https://github.com/bethesque/pact-provider-proxy) Ruby Gem, via a the [Pact Provider Verifier](https://github.com/pact-foundation/pact-provider-verifier) project (and it's [Docker](https://github.com/DiUS/pact-provider-verifier-docker) counterpart). For advanced usage, you can use Gem directly, however in most cases the Pact Provider Verifier should cover your needs.
 
 ### How it works
 
@@ -25,7 +25,7 @@ The two solutions below use the [Pact Provider Proxy](https://github.com/bethesq
 1. Run the Pact Provider Verifier
 1. Stop your API
 
-The verifier will then replay all of the Pact files against your running API, and will fail (`exit 1`) if they are not satisfied. 
+The verifier will then replay all of the Pact files against your running API, and will fail (`exit 1`) if they are not satisfied.
 
 There is no testing DSL available so you will need to be sensitive to process exit codes when running this in a CI/CD pipeline.
 
@@ -33,7 +33,7 @@ If you are using Docker and Docker compose, steps 3-5 above are automatically ta
 
 ### Docker Example
 
-The example below uses Docker image from the [Pact Provider Verifier](https://github.com/DiUS/pact-provider-verifier-docker) project. 
+The example below uses Docker image from the [Pact Provider Verifier](https://github.com/DiUS/pact-provider-verifier-docker) project.
 
 *Steps*:
 
@@ -114,7 +114,7 @@ The following environment variables required:
 If you're not using Docker, you will need to:
 
 * Install a Ruby runtime
-* Fork/clone the [repository](https://github.com/DiUS/pact-provider-verifier-docker) or copy the scripts into your project 
+* Fork/clone the [repository](https://github.com/DiUS/pact-provider-verifier-docker) or copy the scripts into your project
 * Run the following commands:
 
 ```
