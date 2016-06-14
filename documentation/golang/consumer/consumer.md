@@ -1,8 +1,4 @@
-Pact Go enables consumer driven contract testing, providing a mock service and
-DSL for the consumer project, and interaction playback and verification
-for the service provider project.
-
-Consumer tests
+# Consumer
 
 Consumer side Pact testing is an isolated test that ensures a given component
 is able to collaborate with another (remote) component. Pact will automatically

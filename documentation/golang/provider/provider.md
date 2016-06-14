@@ -1,7 +1,6 @@
-# Provider States
+# Provider
 
-Provider side Pact testing, involves verifying that the contract - the Pact file
-- can be satisfied by the Provider.
+Provider side Pact testing, involves verifying that the contract - the Pact file - can be satisfied by the Provider.
 
 1. Start your Provider API:
 
@@ -61,7 +60,7 @@ Provider side Pact testing, involves verifying that the contract - the Pact file
 		t.Fatalf("Got non-zero exit code '%d', expected 0", response.ExitCode)
 	}
 	```
-  
+
   Pact reads the specified pact files (from remote or local sources) and replays
   the interactions against a running Provider. If all of the interactions are met
   we can say that both sides of the contract are satisfied and the test passes.
@@ -69,7 +68,6 @@ Provider side Pact testing, involves verifying that the contract - the Pact file
 	Note that `PactURLs` is a list of local pact files or remote based
 	urls (e.g. from a
 	[Pact Broker](http://docs.pact.io/documentation/sharings_pacts.html)).
-
 
 	See the [integration tests](https://github.com/pact-foundation/pact-go/blob/master/dsl/pact_test.go)
 	for a more complete E2E example.
