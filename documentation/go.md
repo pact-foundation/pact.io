@@ -4,9 +4,11 @@ Pact Go is currently in *beta* and supports Pact Specification v2.
 
 ### Getting started
 
-[Download](https://github.com/pact-foundation/pact-go/releases) the latest release and then [install](https://github.com/pact-foundation/pact-go#installation) Pact Go.
+[Download](https://github.com/pact-foundation/pact-go/releases) the latest release
+and then [install](https://github.com/pact-foundation/pact-go#installation) Pact Go.
 
-Navigate through the side menu to learn more about using Pcat with go, or head to the [Go Pact website](https://github.com/pact-foundation/pact-go) for more detail.
+Navigate through the side menu to learn more about using Pact with Golang, or head
+to the [Go Pact website](https://github.com/pact-foundation/pact-go) for more detail.
 
 ### Go-Kit Example
 
@@ -16,4 +18,6 @@ demonstrating how Pact can be used to test Go Kit microservices.
 
 ### Native Go Implementation
 
-There is also a WIP version of Pact for Go that doesn't require running a daemon. If you don't need v2+ matching and would prefer to not run a daemon, consider using / contributing to [Pact Go](https://github.com/SEEK-Jobs/pact-go)
+There is also a WIP version of Pact for Go that doesn't require running a daemon.
+If you don't need v2+ matching and would prefer to not run a daemon, consider
+using / contributing to [Pact Go](https://github.com/SEEK-Jobs/pact-go)
