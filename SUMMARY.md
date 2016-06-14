@@ -22,6 +22,11 @@
            * [Flexible Matching](documentation/javascript/flexible_matching.md)
        * [Provider](documentation/javascript/provider/provider.md)
    * [Go](documentation/go.md)
+       * [Consumer](documentation/golang/consumer/consumer.md)
+           * [Flexible Matching](documentation/golang/consumer/matching.md)
+       * [Provider](documentation/golang/provider/provider.md)
+          * [Provider States](documentation/golang/provider/states.md)
+          * [Publishing to a Broker](documentation/golang/provider/publishing.md)
    * [Swift](documentation/swift.md)
    * [Other Languages](documentation/provider_verifier.md)
 * [Best practices](best_practices/README.md)
@@ -33,4 +38,3 @@
 * [Contributing](contributing/README.md)
 * [Contributors](about_pact/README.md)
 * [Roadmap](roadmap/README.md)
-
