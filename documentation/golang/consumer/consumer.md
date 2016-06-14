@@ -11,7 +11,7 @@ interactions were found:
 
 A typical consumer-side test would look something like this:
 
-```
+```go
 func TestLogin(t *testing.T) {
 
 	// Create Pact, connecting to local Daemon
