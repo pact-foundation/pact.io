@@ -1,6 +1,8 @@
 # Using Pact with other Languages
 
-For `Providers` written in languages that don't have native Pact support, you can still verify that they satisfy their Pacts, using the generic [Pact Provider Verification tool](https://github.com/pact-foundation/pact-provider-verifier).
+For `Providers` written in languages that don't have native Pact support, you
+can still verify that they satisfy their Pacts, using the generic
+[Pact Provider Verification tool](https://github.com/pact-foundation/pact-provider-verifier).
 
 ## Generic Pact Provider Verification
 
@@ -13,7 +15,11 @@ This setup simplifies Pact Provider verification process in any language.
 * Pre-configured Docker image with Ruby installed and a sane, default `src/Rakefile` keeping things DRY
 * Works with Pact [provider states](https://github.com/realestate-com-au/pact/wiki/Provider-states) should you need them
 
-The two solutions below use the [Pact Provider Proxy](https://github.com/bethesque/pact-provider-proxy) Ruby Gem, via a the [Pact Provider Verifier](https://github.com/pact-foundation/pact-provider-verifier) project (and it's [Docker](https://github.com/DiUS/pact-provider-verifier-docker) counterpart). For advanced usage, you can use Gem directly, however in most cases the Pact Provider Verifier should cover your needs.
+The two solutions below use the [Docker](https://github.com/DiUS/pact-provider-verifier-docker) image
+and the [Pact Provider Verifier](https://github.com/pact-foundation/pact-provider-verifier)
+Gem. For advanced usage, you can use
+[Pact Provider Proxy](https://github.com/bethesque/pact-provider-proxy) Gem
+directly, however in most cases the Pact Provider Verifier should cover your needs.
 
 ### How it works
 
