@@ -18,6 +18,6 @@ demonstrating how Pact can be used to test Go Kit microservices.
 
 ### Native Go Implementation
 
-There is also a WIP version of Pact for Go that doesn't require running a daemon.
-If you don't need v2+ matching and would prefer to not run a daemon, consider
-using / contributing to [Pact Go](https://github.com/SEEK-Jobs/pact-go)
+There is also a version of Pact for Go (v1.1 compatible) that doesn't require
+running a daemon. If you don't need v2+ matching and would prefer to not run a
+daemon, consider using / contributing to [Pact Go](https://github.com/SEEK-Jobs/pact-go).
