@@ -40,7 +40,8 @@ Check out [this talk about Pact](http://www.infoq.com/presentations/pact) and th
 <iframe src="//www.slideshare.net/slideshow/embed_code/key/f4e6DF51EttgzJ" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/bethesque/pact-44565612" title="Consumer-Driven Contracts with Pact (Sydney API Days 2015)" target="_blank">Consumer-Driven Contracts with Pact (Sydney API Days 2015)</a> </strong> from <strong><a target="_blank" href="//www.slideshare.net/bethesque">Beth Skurrie</a></strong> </div>
 </p>
 
-For a JVM specific talk, [Deploy with Confidence!](https://www.youtube.com/watch?v=h-79QmIV824) was presented at the April meet-up of [MelbJVM](http://www.meetup.com/en-AU/Melbourne-Java-JVM-Users-Group/).
+For a JVM specific talk, [Deploy with Confidence!](https://www.youtube.com/watch?v=h-79QmIV824) was presented at the April meet-up of [MelbJVM](http://www.meetup.com/en-AU/Melbourne-Java-JVM-Users-Group/) and at the June meet-up of
+[Melbourne Microservices Meetup](http://www.meetup.com/en-AU/Melbourne-Microservices/). [Slides for the talk](media/Pact - Deploy with Confidence!.odp).
 
 ### Implementations
 - [Ruby Pact](https://github.com/realestate-com-au/pact)
