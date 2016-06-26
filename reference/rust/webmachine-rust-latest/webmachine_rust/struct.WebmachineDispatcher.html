@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `WebmachineDispatcher` struct in crate `webmachine_rust`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, WebmachineDispatcher">
+
+    <title>webmachine_rust::WebmachineDispatcher - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'><a href='index.html'>webmachine_rust</a></p><script>window.sidebarCurrent = {name: 'WebmachineDispatcher', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content struct">
+<h1 class='fqn'><span class='in-band'>Struct <a href='index.html'>webmachine_rust</a>::<wbr><a class='struct' href=''>WebmachineDispatcher</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a id='src-1270' class='srclink' href='../src/webmachine_rust/src/lib.rs.html#922-925' title='goto source code'>[src]</a></span></h1>
+<pre class='rust struct'>pub struct WebmachineDispatcher {
+    pub routes: <a class='struct' href='https://doc.rust-lang.org/nightly/std/sync/mutex/struct.Mutex.html' title='std::sync::mutex::Mutex'>Mutex</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/btree/map/struct.BTreeMap.html' title='collections::btree::map::BTreeMap'>BTreeMap</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>, <a class='struct' href='https://doc.rust-lang.org/nightly/alloc/arc/struct.Arc.html' title='alloc::arc::Arc'>Arc</a>&lt;<a class='struct' href='../webmachine_rust/struct.WebmachineResource.html' title='webmachine_rust::WebmachineResource'>WebmachineResource</a>&gt;&gt;&gt;,
+}</pre><div class='docblock'><p>The main hyper dispatcher</p>
+</div><h2 class='fields'>Fields</h2>
+<table><tr class='stab '>
+                             <td id='structfield.routes'><code>routes</code></td><td><div class='docblock'><p>Map of routes to webmachine resources</p>
+</div></td></tr></table><h2 id='methods'>Methods</h2><h3 class='impl'><code>impl <a class='struct' href='../webmachine_rust/struct.WebmachineDispatcher.html' title='webmachine_rust::WebmachineDispatcher'>WebmachineDispatcher</a></code></h3><div class='impl-items'><h4 id='method.new' class='method'><code>fn <a href='#method.new' class='fnname'>new</a>(routes: <a class='struct' href='https://doc.rust-lang.org/nightly/collections/btree/map/struct.BTreeMap.html' title='collections::btree::map::BTreeMap'>BTreeMap</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>, <a class='struct' href='https://doc.rust-lang.org/nightly/alloc/arc/struct.Arc.html' title='alloc::arc::Arc'>Arc</a>&lt;<a class='struct' href='../webmachine_rust/struct.WebmachineResource.html' title='webmachine_rust::WebmachineResource'>WebmachineResource</a>&gt;&gt;) -&gt; <a class='struct' href='../webmachine_rust/struct.WebmachineDispatcher.html' title='webmachine_rust::WebmachineDispatcher'>WebmachineDispatcher</a></code></h4>
+<div class='docblock'><p>Create a new Webmachine dispatcher given a map of routes to webmachine resources</p>
+</div><h4 id='method.dispatch' class='method'><code>fn <a href='#method.dispatch' class='fnname'>dispatch</a>(&amp;self, req: <a class='struct' href='../hyper/server/request/struct.Request.html' title='hyper::server::request::Request'>Request</a>, res: <a class='struct' href='../hyper/server/response/struct.Response.html' title='hyper::server::response::Response'>Response</a>) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/result/enum.Result.html' title='core::result::Result'>Result</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.tuple.html'>()</a>, <a class='struct' href='https://doc.rust-lang.org/nightly/std/io/error/struct.Error.html' title='std::io::error::Error'>Error</a>&gt;</code></h4>
+<div class='docblock'><p>Main hyper dispatch function for the Webmachine. This will look for a matching resource
+based on the request path. If one is not found, a 404 Not Found response is returned</p>
+</div><h4 id='method.dispatch_to_resource' class='method'><code>fn <a href='#method.dispatch_to_resource' class='fnname'>dispatch_to_resource</a>(&amp;self, context: &amp;mut <a class='struct' href='../webmachine_rust/context/struct.WebmachineContext.html' title='webmachine_rust::context::WebmachineContext'>WebmachineContext</a>)</code></h4>
+<div class='docblock'><p>Dispatches to the matching webmachine resource. If there is no matching resource, returns
+404 Not Found response</p>
+</div></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>&larrb;</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>&rarrb;</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../";
+        window.currentCrate = "webmachine_rust";
+        window.playgroundUrl = "";
+    </script>
+    <script src="../jquery.js"></script>
+    <script src="../main.js"></script>
+    
+    <script defer src="../search-index.js"></script>
+</body>
+</html>

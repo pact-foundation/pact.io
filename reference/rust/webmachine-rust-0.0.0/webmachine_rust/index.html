@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `webmachine_rust` crate.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, webmachine_rust">
+
+    <title>webmachine_rust - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'></p><script>window.sidebarCurrent = {name: 'webmachine_rust', ty: 'mod', relpath: '../'};</script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content mod">
+<h1 class='fqn'><span class='in-band'>Crate <a class='mod' href=''>webmachine_rust</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a id='src-0' class='srclink' href='../src/webmachine_rust/src/lib.rs.html#1-995' title='goto source code'>[src]</a></span></h1>
+<div class='docblock'>
+<h1 id='webmachine-rust' class='section-header'><a href='#webmachine-rust'>webmachine-rust</a></h1>
+<p>Port of Webmachine-Ruby (<a href="https://github.com/webmachine/webmachine-ruby">https://github.com/webmachine/webmachine-ruby</a>) to Rust.</p>
+
+<p>webmachine-rust is a port of the Ruby version of webmachine. It implements a finite state machine for the HTTP protocol
+that provides semantic HTTP handling (based on the <a href="https://webmachine.github.io/images/http-headers-status-v3.png">diagram from the webmachine project</a>).
+It is basically a HTTP toolkit for building HTTP-friendly applications using the <a href="https://crates.io/crates/hyper">Hyper</a> rust crate.</p>
+
+<p>Webmachine-rust works with Hyper and sits between the Hyper Handler and your application code. It provides a resource struct
+with callbacks to handle the decisions required as the state machine is executed against the request with the following sequence.</p>
+
+<p>REQUEST -&gt; Hyper Handler -&gt; WebmachineDispatcher -&gt; WebmachineResource -&gt; Your application -&gt; WebmachineResponse -&gt; Hyper -&gt; RESPONSE</p>
+
+<h2 id='features' class='section-header'><a href='#features'>Features</a></h2>
+<ul>
+<li>Handles the hard parts of content negotiation, conditional requests, and response codes for you.</li>
+<li>Provides a resource struct with points of extension to let you describe what is relevant about your particular resource.</li>
+</ul>
+
+<h2 id='missing-features' class='section-header'><a href='#missing-features'>Missing Features</a></h2>
+<p>Currently, the following features from webmachine-ruby have not been implemented:</p>
+
+<ul>
+<li>Visual debugger</li>
+<li>Streaming response bodies</li>
+</ul>
+
+<h2 id='implementation-deficiencies' class='section-header'><a href='#implementation-deficiencies'>Implementation Deficiencies:</a></h2>
+<p>This implementation has the following deficiencies:</p>
+
+<ul>
+<li>Only supports Hyper</li>
+<li>WebmachineDispatcher and WebmachineResource are not shareable between threads.</li>
+<li>Automatically decoding request bodies and encoding response bodies.</li>
+<li>No easy mechanism to generate bodies with different content types (e.g. JSON vs. XML).</li>
+<li>No easy mechanism for handling sub-paths in a resource.</li>
+<li>Does not work with keep alive enabled (does not manage the Hyper thread pool).</li>
+<li>Dynamically determining the methods allowed on the resource.</li>
+<li>Compiled against Hyper with all features turned off (no HTTPS).</li>
+</ul>
+
+<h2 id='getting-started' class='section-header'><a href='#getting-started'>Getting started</a></h2>
+<p>Follow the getting started documentation from the Hyper crate to setup a Hyper Handler for your server. Then from the
+handle function, you need to define a WebmachineDispatcher that maps resource paths to your webmachine resources (WebmachineResource). Each WebmachineResource defines all the callbacks (via Closures) and values required to implement a
+resource.</p>
+
+<p>Note: This example uses the maplit crate to provide the <code>btreemap</code> macro and the log crate for the logging macros.</p>
+
+<pre class='rust rust-example-rendered'>
+ <span class='kw'>use</span> <span class='ident'>std</span>::<span class='ident'>sync</span>::<span class='ident'>Arc</span>;
+ <span class='kw'>use</span> <span class='ident'>hyper</span>::<span class='ident'>server</span>::{<span class='ident'>Handler</span>, <span class='ident'>Server</span>, <span class='ident'>Request</span>, <span class='ident'>Response</span>};
+ <span class='kw'>use</span> <span class='ident'>webmachine_rust</span>::<span class='op'>*</span>;
+ <span class='kw'>use</span> <span class='ident'>webmachine_rust</span>::<span class='ident'>context</span>::<span class='op'>*</span>;
+ <span class='kw'>use</span> <span class='ident'>webmachine_rust</span>::<span class='ident'>headers</span>::<span class='op'>*</span>;
+ <span class='kw'>use</span> <span class='ident'>rustc_serialize</span>::<span class='ident'>json</span>::<span class='ident'>Json</span>;
+
+
+ <span class='kw'>struct</span> <span class='ident'>ServerHandler</span> {
+ }
+
+ <span class='kw'>impl</span> <span class='ident'>Handler</span> <span class='kw'>for</span> <span class='ident'>ServerHandler</span> {
+
+     <span class='kw'>fn</span> <span class='ident'>handle</span>(<span class='kw-2'>&amp;</span><span class='self'>self</span>, <span class='ident'>req</span>: <span class='ident'>Request</span>, <span class='ident'>res</span>: <span class='ident'>Response</span>) {
+         <span class='comment'>// setup the dispatcher, which maps paths to resources</span>
+         <span class='kw'>let</span> <span class='ident'>dispatcher</span> <span class='op'>=</span> <span class='ident'>WebmachineDispatcher</span>::<span class='ident'>new</span>(
+             <span class='macro'>btreemap</span><span class='macro'>!</span>{
+                 <span class='string'>&quot;/myresource&quot;</span>.<span class='ident'>to_string</span>() <span class='op'>=&gt;</span> <span class='ident'>Arc</span>::<span class='ident'>new</span>(<span class='ident'>WebmachineResource</span> {
+                     <span class='comment'>// Methods allowed on this resource</span>
+                     <span class='ident'>allowed_methods</span>: <span class='macro'>vec</span><span class='macro'>!</span>[<span class='string'>&quot;OPTIONS&quot;</span>.<span class='ident'>to_string</span>(), <span class='string'>&quot;GET&quot;</span>.<span class='ident'>to_string</span>(),
+                        <span class='string'>&quot;HEAD&quot;</span>.<span class='ident'>to_string</span>(), <span class='string'>&quot;POST&quot;</span>.<span class='ident'>to_string</span>()],
+                     <span class='comment'>// if the resource exists callback</span>
+                     <span class='ident'>resource_exists</span>: <span class='ident'>Box</span>::<span class='ident'>new</span>(<span class='op'>|</span><span class='ident'>context</span><span class='op'>|</span> <span class='boolval'>true</span>),
+                     <span class='comment'>// callback to render the response for the resource</span>
+                     <span class='ident'>render_response</span>: <span class='ident'>Box</span>::<span class='ident'>new</span>(<span class='op'>|</span>_<span class='op'>|</span> {
+                         <span class='kw'>let</span> <span class='kw-2'>mut</span> <span class='ident'>data</span> <span class='op'>=</span> <span class='macro'>vec</span><span class='macro'>!</span>[<span class='ident'>Json</span>::<span class='ident'>I64</span>(<span class='number'>1</span>), <span class='ident'>Json</span>::<span class='ident'>I64</span>(<span class='number'>2</span>), <span class='ident'>Json</span>::<span class='ident'>I64</span>(<span class='number'>3</span>),
+                            <span class='ident'>Json</span>::<span class='ident'>I64</span>(<span class='number'>4</span>)];
+                         <span class='kw'>let</span> <span class='ident'>json_response</span> <span class='op'>=</span> <span class='ident'>Json</span>::<span class='ident'>Object</span>(<span class='macro'>btreemap</span><span class='macro'>!</span>{
+                            <span class='string'>&quot;data&quot;</span>.<span class='ident'>to_string</span>() <span class='op'>=&gt;</span> <span class='ident'>Json</span>::<span class='ident'>Array</span>(<span class='ident'>data</span>) });
+                         <span class='prelude-val'>Some</span>(<span class='ident'>json_response</span>.<span class='ident'>to_string</span>())
+                     }),
+                     <span class='comment'>// callback to process the post for the resource</span>
+                     <span class='ident'>process_post</span>: <span class='ident'>Box</span>::<span class='ident'>new</span>(<span class='op'>|</span><span class='ident'>context</span><span class='op'>|</span>  <span class='comment'>/* Handle the post here */</span> <span class='prelude-val'>Ok</span>(<span class='boolval'>true</span>) ),
+                     <span class='comment'>// default everything else</span>
+                     .. <span class='ident'>WebmachineResource</span>::<span class='ident'>default</span>()
+                 })
+             }
+         );
+         <span class='comment'>// then dispatch the request to the web machine.</span>
+         <span class='kw'>match</span> <span class='ident'>dispatcher</span>.<span class='ident'>dispatch</span>(<span class='ident'>req</span>, <span class='ident'>res</span>) {
+             <span class='prelude-val'>Ok</span>(_) <span class='op'>=&gt;</span> (),
+             <span class='prelude-val'>Err</span>(<span class='ident'>err</span>) <span class='op'>=&gt;</span> <span class='macro'>warn</span><span class='macro'>!</span>(<span class='string'>&quot;Error generating response - {}&quot;</span>, <span class='ident'>err</span>)
+         };
+     }
+ }
+
+ <span class='kw'>pub</span> <span class='kw'>fn</span> <span class='ident'>start_server</span>() {
+     <span class='kw'>match</span> <span class='ident'>Server</span>::<span class='ident'>http</span>(<span class='macro'>format</span><span class='macro'>!</span>(<span class='string'>&quot;0.0.0.0:0&quot;</span>).<span class='ident'>as_str</span>()) {
+         <span class='prelude-val'>Ok</span>(<span class='kw-2'>mut</span> <span class='ident'>server</span>) <span class='op'>=&gt;</span> {
+             <span class='comment'>// It is important to turn keep alive off</span>
+             <span class='ident'>server</span>.<span class='ident'>keep_alive</span>(<span class='prelude-val'>None</span>);
+             <span class='ident'>server</span>.<span class='ident'>handle</span>(<span class='ident'>ServerHandler</span> {});
+         },
+         <span class='prelude-val'>Err</span>(<span class='ident'>err</span>) <span class='op'>=&gt;</span> {
+             <span class='macro'>error</span><span class='macro'>!</span>(<span class='string'>&quot;could not start server: {}&quot;</span>, <span class='ident'>err</span>);
+         }
+     }
+ }</pre>
+
+<h2 id='example-implementations' class='section-header'><a href='#example-implementations'>Example implementations</a></h2>
+<p>For an example of a project using this crate, have a look at the <a href="https://github.com/pact-foundation/pact-reference/tree/master/rust/v1/pact_mock_server_cli">Pact Mock Server</a> from the Pact reference implementation.</p>
+</div><h2 id='modules' class='section-header'><a href="#modules">Modules</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class='mod' href='content_negotiation/index.html'
+                                  title='webmachine_rust::content_negotiation'>content_negotiation</a></td>
+                           <td class='docblock short'>
+                                <p>The <code>content_negotiation</code> module deals with handling media types, languages, charsets and
+encodings as per <a href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html">https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html</a>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='mod' href='context/index.html'
+                                  title='webmachine_rust::context'>context</a></td>
+                           <td class='docblock short'>
+                                <p>The <code>context</code> module encapsulates the context of the environment that the webmachine is
+executing in. Basically wraps the request and response.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='mod' href='headers/index.html'
+                                  title='webmachine_rust::headers'>headers</a></td>
+                           <td class='docblock short'>
+                                <p>The <code>headers</code> deals with parsing and formatting request and response headers</p>
+                           </td>
+                       </tr></table><h2 id='structs' class='section-header'><a href="#structs">Structs</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.WebmachineDispatcher.html'
+                                  title='webmachine_rust::WebmachineDispatcher'>WebmachineDispatcher</a></td>
+                           <td class='docblock short'>
+                                <p>The main hyper dispatcher</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.WebmachineResource.html'
+                                  title='webmachine_rust::WebmachineResource'>WebmachineResource</a></td>
+                           <td class='docblock short'>
+                                <p>Struct to represent a resource in webmachine</p>
+                           </td>
+                       </tr></table></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>&larrb;</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>&rarrb;</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../";
+        window.currentCrate = "webmachine_rust";
+        window.playgroundUrl = "";
+    </script>
+    <script src="../jquery.js"></script>
+    <script src="../main.js"></script>
+    
+    <script defer src="../search-index.js"></script>
+</body>
+</html>

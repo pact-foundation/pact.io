@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `WebmachineResource` struct in crate `webmachine_rust`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, WebmachineResource">
+
+    <title>webmachine_rust::WebmachineResource - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'><a href='index.html'>webmachine_rust</a></p><script>window.sidebarCurrent = {name: 'WebmachineResource', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content struct">
+<h1 class='fqn'><span class='in-band'>Struct <a href='index.html'>webmachine_rust</a>::<wbr><a class='struct' href=''>WebmachineResource</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a id='src-782' class='srclink' href='../src/webmachine_rust/src/lib.rs.html#159-281' title='goto source code'>[src]</a></span></h1>
+<pre class='rust struct'>pub struct WebmachineResource {
+    pub finalise_response: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/alloc/boxed/struct.Box.html' title='alloc::boxed::Box'>Box</a>&lt;<a class='trait' href='https://doc.rust-lang.org/nightly/core/ops/trait.Fn.html' title='core::ops::Fn'>Fn</a>(&amp;mut <a class='struct' href='../webmachine_rust/context/struct.WebmachineContext.html' title='webmachine_rust::context::WebmachineContext'>WebmachineContext</a>)&gt;&gt;,
+    pub render_response: <a class='struct' href='https://doc.rust-lang.org/nightly/alloc/boxed/struct.Box.html' title='alloc::boxed::Box'>Box</a>&lt;<a class='trait' href='https://doc.rust-lang.org/nightly/core/ops/trait.Fn.html' title='core::ops::Fn'>Fn</a>(&amp;mut <a class='struct' href='../webmachine_rust/context/struct.WebmachineContext.html' title='webmachine_rust::context::WebmachineContext'>WebmachineContext</a>) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>&gt;&gt;,
+    pub available: <a class='struct' href='https://doc.rust-lang.org/nightly/alloc/boxed/struct.Box.html' title='alloc::boxed::Box'>Box</a>&lt;<a class='trait' href='https://doc.rust-lang.org/nightly/core/ops/trait.Fn.html' title='core::ops::Fn'>Fn</a>(&amp;mut <a class='struct' href='../webmachine_rust/context/struct.WebmachineContext.html' title='webmachine_rust::context::WebmachineContext'>WebmachineContext</a>) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>&gt;,
+    pub known_methods: <a class='struct' href='https://doc.rust-lang.org/nightly/collections/vec/struct.Vec.html' title='collections::vec::Vec'>Vec</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>&gt;,
+    pub uri_too_long: <a class='struct' href='https://doc.rust-lang.org/nightly/alloc/boxed/struct.Box.html' title='alloc::boxed::Box'>Box</a>&lt;<a class='trait' href='https://doc.rust-lang.org/nightly/core/ops/trait.Fn.html' title='core::ops::Fn'>Fn</a>(&amp;mut <a class='struct' href='../webmachine_rust/context/struct.WebmachineContext.html' title='webmachine_rust::context::WebmachineContext'>WebmachineContext</a>) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>&gt;,
+    pub allowed_methods: <a class='struct' href='https://doc.rust-lang.org/nightly/collections/vec/struct.Vec.html' title='collections::vec::Vec'>Vec</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>&gt;,
+    pub malformed_request: <a class='struct' href='https://doc.rust-lang.org/nightly/alloc/boxed/struct.Box.html' title='alloc::boxed::Box'>Box</a>&lt;<a class='trait' href='https://doc.rust-lang.org/nightly/core/ops/trait.Fn.html' title='core::ops::Fn'>Fn</a>(&amp;mut <a class='struct' href='../webmachine_rust/context/struct.WebmachineContext.html' title='webmachine_rust::context::WebmachineContext'>WebmachineContext</a>) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>&gt;,
+    pub not_authorized: <a class='struct' href='https://doc.rust-lang.org/nightly/alloc/boxed/struct.Box.html' title='alloc::boxed::Box'>Box</a>&lt;<a class='trait' href='https://doc.rust-lang.org/nightly/core/ops/trait.Fn.html' title='core::ops::Fn'>Fn</a>(&amp;mut <a class='struct' href='../webmachine_rust/context/struct.WebmachineContext.html' title='webmachine_rust::context::WebmachineContext'>WebmachineContext</a>) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>&gt;&gt;,
+    pub forbidden: <a class='struct' href='https://doc.rust-lang.org/nightly/alloc/boxed/struct.Box.html' title='alloc::boxed::Box'>Box</a>&lt;<a class='trait' href='https://doc.rust-lang.org/nightly/core/ops/trait.Fn.html' title='core::ops::Fn'>Fn</a>(&amp;mut <a class='struct' href='../webmachine_rust/context/struct.WebmachineContext.html' title='webmachine_rust::context::WebmachineContext'>WebmachineContext</a>) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>&gt;,
+    pub unsupported_content_headers: <a class='struct' href='https://doc.rust-lang.org/nightly/alloc/boxed/struct.Box.html' title='alloc::boxed::Box'>Box</a>&lt;<a class='trait' href='https://doc.rust-lang.org/nightly/core/ops/trait.Fn.html' title='core::ops::Fn'>Fn</a>(&amp;mut <a class='struct' href='../webmachine_rust/context/struct.WebmachineContext.html' title='webmachine_rust::context::WebmachineContext'>WebmachineContext</a>) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>&gt;,
+    pub acceptable_content_types: <a class='struct' href='https://doc.rust-lang.org/nightly/collections/vec/struct.Vec.html' title='collections::vec::Vec'>Vec</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>&gt;,
+    pub valid_entity_length: <a class='struct' href='https://doc.rust-lang.org/nightly/alloc/boxed/struct.Box.html' title='alloc::boxed::Box'>Box</a>&lt;<a class='trait' href='https://doc.rust-lang.org/nightly/core/ops/trait.Fn.html' title='core::ops::Fn'>Fn</a>(&amp;mut <a class='struct' href='../webmachine_rust/context/struct.WebmachineContext.html' title='webmachine_rust::context::WebmachineContext'>WebmachineContext</a>) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>&gt;,
+    pub finish_request: <a class='struct' href='https://doc.rust-lang.org/nightly/alloc/boxed/struct.Box.html' title='alloc::boxed::Box'>Box</a>&lt;<a class='trait' href='https://doc.rust-lang.org/nightly/core/ops/trait.Fn.html' title='core::ops::Fn'>Fn</a>(&amp;mut <a class='struct' href='../webmachine_rust/context/struct.WebmachineContext.html' title='webmachine_rust::context::WebmachineContext'>WebmachineContext</a>, &amp;<a class='struct' href='../webmachine_rust/struct.WebmachineResource.html' title='webmachine_rust::WebmachineResource'>WebmachineResource</a>)&gt;,
+    pub options: <a class='struct' href='https://doc.rust-lang.org/nightly/alloc/boxed/struct.Box.html' title='alloc::boxed::Box'>Box</a>&lt;<a class='trait' href='https://doc.rust-lang.org/nightly/core/ops/trait.Fn.html' title='core::ops::Fn'>Fn</a>(&amp;mut <a class='struct' href='../webmachine_rust/context/struct.WebmachineContext.html' title='webmachine_rust::context::WebmachineContext'>WebmachineContext</a>, &amp;<a class='struct' href='../webmachine_rust/struct.WebmachineResource.html' title='webmachine_rust::WebmachineResource'>WebmachineResource</a>) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/std/collections/hash/map/struct.HashMap.html' title='std::collections::hash::map::HashMap'>HashMap</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>, <a class='struct' href='https://doc.rust-lang.org/nightly/collections/vec/struct.Vec.html' title='collections::vec::Vec'>Vec</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>&gt;&gt;&gt;&gt;,
+    pub produces: <a class='struct' href='https://doc.rust-lang.org/nightly/collections/vec/struct.Vec.html' title='collections::vec::Vec'>Vec</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>&gt;,
+    pub languages_provided: <a class='struct' href='https://doc.rust-lang.org/nightly/collections/vec/struct.Vec.html' title='collections::vec::Vec'>Vec</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>&gt;,
+    pub charsets_provided: <a class='struct' href='https://doc.rust-lang.org/nightly/collections/vec/struct.Vec.html' title='collections::vec::Vec'>Vec</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>&gt;,
+    pub encodings_provided: <a class='struct' href='https://doc.rust-lang.org/nightly/collections/vec/struct.Vec.html' title='collections::vec::Vec'>Vec</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>&gt;,
+    pub variances: <a class='struct' href='https://doc.rust-lang.org/nightly/collections/vec/struct.Vec.html' title='collections::vec::Vec'>Vec</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>&gt;,
+    pub resource_exists: <a class='struct' href='https://doc.rust-lang.org/nightly/alloc/boxed/struct.Box.html' title='alloc::boxed::Box'>Box</a>&lt;<a class='trait' href='https://doc.rust-lang.org/nightly/core/ops/trait.Fn.html' title='core::ops::Fn'>Fn</a>(&amp;mut <a class='struct' href='../webmachine_rust/context/struct.WebmachineContext.html' title='webmachine_rust::context::WebmachineContext'>WebmachineContext</a>) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>&gt;,
+    pub previously_existed: <a class='struct' href='https://doc.rust-lang.org/nightly/alloc/boxed/struct.Box.html' title='alloc::boxed::Box'>Box</a>&lt;<a class='trait' href='https://doc.rust-lang.org/nightly/core/ops/trait.Fn.html' title='core::ops::Fn'>Fn</a>(&amp;mut <a class='struct' href='../webmachine_rust/context/struct.WebmachineContext.html' title='webmachine_rust::context::WebmachineContext'>WebmachineContext</a>) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>&gt;,
+    pub moved_permanently: <a class='struct' href='https://doc.rust-lang.org/nightly/alloc/boxed/struct.Box.html' title='alloc::boxed::Box'>Box</a>&lt;<a class='trait' href='https://doc.rust-lang.org/nightly/core/ops/trait.Fn.html' title='core::ops::Fn'>Fn</a>(&amp;mut <a class='struct' href='../webmachine_rust/context/struct.WebmachineContext.html' title='webmachine_rust::context::WebmachineContext'>WebmachineContext</a>) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>&gt;&gt;,
+    pub moved_temporarily: <a class='struct' href='https://doc.rust-lang.org/nightly/alloc/boxed/struct.Box.html' title='alloc::boxed::Box'>Box</a>&lt;<a class='trait' href='https://doc.rust-lang.org/nightly/core/ops/trait.Fn.html' title='core::ops::Fn'>Fn</a>(&amp;mut <a class='struct' href='../webmachine_rust/context/struct.WebmachineContext.html' title='webmachine_rust::context::WebmachineContext'>WebmachineContext</a>) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>&gt;&gt;,
+    pub is_conflict: <a class='struct' href='https://doc.rust-lang.org/nightly/alloc/boxed/struct.Box.html' title='alloc::boxed::Box'>Box</a>&lt;<a class='trait' href='https://doc.rust-lang.org/nightly/core/ops/trait.Fn.html' title='core::ops::Fn'>Fn</a>(&amp;mut <a class='struct' href='../webmachine_rust/context/struct.WebmachineContext.html' title='webmachine_rust::context::WebmachineContext'>WebmachineContext</a>) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>&gt;,
+    pub allow_missing_post: <a class='struct' href='https://doc.rust-lang.org/nightly/alloc/boxed/struct.Box.html' title='alloc::boxed::Box'>Box</a>&lt;<a class='trait' href='https://doc.rust-lang.org/nightly/core/ops/trait.Fn.html' title='core::ops::Fn'>Fn</a>(&amp;mut <a class='struct' href='../webmachine_rust/context/struct.WebmachineContext.html' title='webmachine_rust::context::WebmachineContext'>WebmachineContext</a>) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>&gt;,
+    pub generate_etag: <a class='struct' href='https://doc.rust-lang.org/nightly/alloc/boxed/struct.Box.html' title='alloc::boxed::Box'>Box</a>&lt;<a class='trait' href='https://doc.rust-lang.org/nightly/core/ops/trait.Fn.html' title='core::ops::Fn'>Fn</a>(&amp;mut <a class='struct' href='../webmachine_rust/context/struct.WebmachineContext.html' title='webmachine_rust::context::WebmachineContext'>WebmachineContext</a>) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>&gt;&gt;,
+    pub last_modified: <a class='struct' href='https://doc.rust-lang.org/nightly/alloc/boxed/struct.Box.html' title='alloc::boxed::Box'>Box</a>&lt;<a class='trait' href='https://doc.rust-lang.org/nightly/core/ops/trait.Fn.html' title='core::ops::Fn'>Fn</a>(&amp;mut <a class='struct' href='../webmachine_rust/context/struct.WebmachineContext.html' title='webmachine_rust::context::WebmachineContext'>WebmachineContext</a>) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='../chrono/datetime/struct.DateTime.html' title='chrono::datetime::DateTime'>DateTime</a>&lt;<a class='struct' href='../chrono/offset/fixed/struct.FixedOffset.html' title='chrono::offset::fixed::FixedOffset'>FixedOffset</a>&gt;&gt;&gt;,
+    pub delete_resource: <a class='struct' href='https://doc.rust-lang.org/nightly/alloc/boxed/struct.Box.html' title='alloc::boxed::Box'>Box</a>&lt;<a class='trait' href='https://doc.rust-lang.org/nightly/core/ops/trait.Fn.html' title='core::ops::Fn'>Fn</a>(&amp;mut <a class='struct' href='../webmachine_rust/context/struct.WebmachineContext.html' title='webmachine_rust::context::WebmachineContext'>WebmachineContext</a>) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/result/enum.Result.html' title='core::result::Result'>Result</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>, <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u16.html'>u16</a>&gt;&gt;,
+    pub post_is_create: <a class='struct' href='https://doc.rust-lang.org/nightly/alloc/boxed/struct.Box.html' title='alloc::boxed::Box'>Box</a>&lt;<a class='trait' href='https://doc.rust-lang.org/nightly/core/ops/trait.Fn.html' title='core::ops::Fn'>Fn</a>(&amp;mut <a class='struct' href='../webmachine_rust/context/struct.WebmachineContext.html' title='webmachine_rust::context::WebmachineContext'>WebmachineContext</a>) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>&gt;,
+    pub process_post: <a class='struct' href='https://doc.rust-lang.org/nightly/alloc/boxed/struct.Box.html' title='alloc::boxed::Box'>Box</a>&lt;<a class='trait' href='https://doc.rust-lang.org/nightly/core/ops/trait.Fn.html' title='core::ops::Fn'>Fn</a>(&amp;mut <a class='struct' href='../webmachine_rust/context/struct.WebmachineContext.html' title='webmachine_rust::context::WebmachineContext'>WebmachineContext</a>) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/result/enum.Result.html' title='core::result::Result'>Result</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>, <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u16.html'>u16</a>&gt;&gt;,
+    pub create_path: <a class='struct' href='https://doc.rust-lang.org/nightly/alloc/boxed/struct.Box.html' title='alloc::boxed::Box'>Box</a>&lt;<a class='trait' href='https://doc.rust-lang.org/nightly/core/ops/trait.Fn.html' title='core::ops::Fn'>Fn</a>(&amp;mut <a class='struct' href='../webmachine_rust/context/struct.WebmachineContext.html' title='webmachine_rust::context::WebmachineContext'>WebmachineContext</a>) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/result/enum.Result.html' title='core::result::Result'>Result</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>, <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u16.html'>u16</a>&gt;&gt;,
+    pub process_put: <a class='struct' href='https://doc.rust-lang.org/nightly/alloc/boxed/struct.Box.html' title='alloc::boxed::Box'>Box</a>&lt;<a class='trait' href='https://doc.rust-lang.org/nightly/core/ops/trait.Fn.html' title='core::ops::Fn'>Fn</a>(&amp;mut <a class='struct' href='../webmachine_rust/context/struct.WebmachineContext.html' title='webmachine_rust::context::WebmachineContext'>WebmachineContext</a>) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/result/enum.Result.html' title='core::result::Result'>Result</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>, <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u16.html'>u16</a>&gt;&gt;,
+    pub multiple_choices: <a class='struct' href='https://doc.rust-lang.org/nightly/alloc/boxed/struct.Box.html' title='alloc::boxed::Box'>Box</a>&lt;<a class='trait' href='https://doc.rust-lang.org/nightly/core/ops/trait.Fn.html' title='core::ops::Fn'>Fn</a>(&amp;mut <a class='struct' href='../webmachine_rust/context/struct.WebmachineContext.html' title='webmachine_rust::context::WebmachineContext'>WebmachineContext</a>) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>&gt;,
+    pub expires: <a class='struct' href='https://doc.rust-lang.org/nightly/alloc/boxed/struct.Box.html' title='alloc::boxed::Box'>Box</a>&lt;<a class='trait' href='https://doc.rust-lang.org/nightly/core/ops/trait.Fn.html' title='core::ops::Fn'>Fn</a>(&amp;mut <a class='struct' href='../webmachine_rust/context/struct.WebmachineContext.html' title='webmachine_rust::context::WebmachineContext'>WebmachineContext</a>) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='../chrono/datetime/struct.DateTime.html' title='chrono::datetime::DateTime'>DateTime</a>&lt;<a class='struct' href='../chrono/offset/fixed/struct.FixedOffset.html' title='chrono::offset::fixed::FixedOffset'>FixedOffset</a>&gt;&gt;&gt;,
+}</pre><div class='docblock'><p>Struct to represent a resource in webmachine</p>
+</div><h2 class='fields'>Fields</h2>
+<table><tr class='stab '>
+                             <td id='structfield.finalise_response'><code>finalise_response</code></td><td><div class='docblock'><p>This is called just before the final response is constructed and sent. It allows the resource
+an opportunity to modify the response after the webmachine has executed.</p>
+</div></td></tr><tr class='stab '>
+                             <td id='structfield.render_response'><code>render_response</code></td><td><div class='docblock'><p>This is invoked to render the response for the resource</p>
+</div></td></tr><tr class='stab '>
+                             <td id='structfield.available'><code>available</code></td><td><div class='docblock'><p>Is the resource available? Returning false will result in a &#39;503 Service Not Available&#39;
+response. Defaults to true. If the resource is only temporarily not available,
+add a &#39;Retry-After&#39; response header.</p>
+</div></td></tr><tr class='stab '>
+                             <td id='structfield.known_methods'><code>known_methods</code></td><td><div class='docblock'><p>HTTP methods that are known to the resource. Default includes all standard HTTP methods.
+One could override this to allow additional methods</p>
+</div></td></tr><tr class='stab '>
+                             <td id='structfield.uri_too_long'><code>uri_too_long</code></td><td><div class='docblock'><p>If the URI is too long to be processed, this should return true, which will result in a</p>
+</div></td></tr><tr class='stab '>
+                             <td id='structfield.allowed_methods'><code>allowed_methods</code></td><td><div class='docblock'><p>HTTP methods that are allowed on this resource. Defaults to GET&#39;,&#39;HEAD and &#39;OPTIONS&#39;.</p>
+</div></td></tr><tr class='stab '>
+                             <td id='structfield.malformed_request'><code>malformed_request</code></td><td><div class='docblock'><p>If the request is malformed, this should return true, which will result in a
+&#39;400 Malformed Request&#39; response. Defaults to false.</p>
+</div></td></tr><tr class='stab '>
+                             <td id='structfield.not_authorized'><code>not_authorized</code></td><td><div class='docblock'><p>Is the client or request not authorized? Returning a Some<String>
+will result in a &#39;401 Unauthorized&#39; response.  Defaults to None. If a Some(String) is
+returned, the string will be used as the value in the WWW-Authenticate header.</p>
+</div></td></tr><tr class='stab '>
+                             <td id='structfield.forbidden'><code>forbidden</code></td><td><div class='docblock'><p>Is the request or client forbidden? Returning true will result in a &#39;403 Forbidden&#39; response.
+Defaults to false.</p>
+</div></td></tr><tr class='stab '>
+                             <td id='structfield.unsupported_content_headers'><code>unsupported_content_headers</code></td><td><div class='docblock'><p>If the request includes any invalid Content-* headers, this should return true, which will
+result in a &#39;501 Not Implemented&#39; response. Defaults to false.</p>
+</div></td></tr><tr class='stab '>
+                             <td id='structfield.acceptable_content_types'><code>acceptable_content_types</code></td><td><div class='docblock'><p>The list of acceptable content types. Defaults to &#39;application/json&#39;. If the content type
+of the request is not in this list, a &#39;415 Unsupported Media Type&#39; response is returned.</p>
+</div></td></tr><tr class='stab '>
+                             <td id='structfield.valid_entity_length'><code>valid_entity_length</code></td><td><div class='docblock'><p>If the entity length on PUT or POST is invalid, this should return false, which will result
+in a &#39;413 Request Entity Too Large&#39; response. Defaults to true.</p>
+</div></td></tr><tr class='stab '>
+                             <td id='structfield.finish_request'><code>finish_request</code></td><td><div class='docblock'><p>This is called just before the final response is constructed and sent. This allows the
+response to be modified. The default implementation adds CORS headers to the response</p>
+</div></td></tr><tr class='stab '>
+                             <td id='structfield.options'><code>options</code></td><td><div class='docblock'><p>If the OPTIONS method is supported and is used, this return a HashMap of headers that</p>
+</div></td></tr><tr class='stab '>
+                             <td id='structfield.produces'><code>produces</code></td><td><div class='docblock'><p>The list of content types that this resource produces. Defaults to &#39;application/json&#39;. If
+more than one is provided, and the client does not supply an Accept header, the first one
+will be selected.</p>
+</div></td></tr><tr class='stab '>
+                             <td id='structfield.languages_provided'><code>languages_provided</code></td><td><div class='docblock'><p>The list of content languages that this resource provides. Defaults to an empty list,
+which represents all languages. If more than one is provided, and the client does not
+supply an Accept-Language header, the first one will be selected.</p>
+</div></td></tr><tr class='stab '>
+                             <td id='structfield.charsets_provided'><code>charsets_provided</code></td><td><div class='docblock'><p>The list of charsets that this resource provides. Defaults to an empty list,
+which represents all charsets with ISO-8859-1 as the default. If more than one is provided,
+and the client does not supply an Accept-Charset header, the first one will be selected.</p>
+</div></td></tr><tr class='stab '>
+                             <td id='structfield.encodings_provided'><code>encodings_provided</code></td><td><div class='docblock'><p>The list of encodings your resource wants to provide. The encoding will be applied to the
+response body automatically by Webmachine. Default includes only the &#39;identity&#39; encoding.</p>
+</div></td></tr><tr class='stab '>
+                             <td id='structfield.variances'><code>variances</code></td><td><div class='docblock'><p>The list of header names that should be included in the response&#39;s Vary header. The standard
+content negotiation headers (Accept, Accept-Encoding, Accept-Charset, Accept-Language) do
+not need to be specified here as Webmachine will add the correct elements of those
+automatically depending on resource behavior. Default is an empty list.</p>
+</div></td></tr><tr class='stab '>
+                             <td id='structfield.resource_exists'><code>resource_exists</code></td><td><div class='docblock'><p>Does the resource exist? Returning a false value will result in a &#39;404 Not Found&#39; response
+unless it is a PUT or POST. Defaults to true.</p>
+</div></td></tr><tr class='stab '>
+                             <td id='structfield.previously_existed'><code>previously_existed</code></td><td><div class='docblock'><p>If this resource is known to have existed previously, this should return true. Default is false.</p>
+</div></td></tr><tr class='stab '>
+                             <td id='structfield.moved_permanently'><code>moved_permanently</code></td><td><div class='docblock'><p>If this resource has moved to a new location permanently, this should return the new
+location as a String. Default is to return None</p>
+</div></td></tr><tr class='stab '>
+                             <td id='structfield.moved_temporarily'><code>moved_temporarily</code></td><td><div class='docblock'><p>If this resource has moved to a new location temporarily, this should return the new
+location as a String. Default is to return None</p>
+</div></td></tr><tr class='stab '>
+                             <td id='structfield.is_conflict'><code>is_conflict</code></td><td><div class='docblock'><p>If this returns true, the client will receive a &#39;409 Conflict&#39; response. This is only
+called for PUT requests. Default is false.</p>
+</div></td></tr><tr class='stab '>
+                             <td id='structfield.allow_missing_post'><code>allow_missing_post</code></td><td><div class='docblock'><p>Return true if the resource accepts POST requests to nonexistent resources. Defaults to false.</p>
+</div></td></tr><tr class='stab '>
+                             <td id='structfield.generate_etag'><code>generate_etag</code></td><td><div class='docblock'><p>If this returns a value, it will be used as the value of the ETag header and for
+comparison in conditional requests. Default is None.</p>
+</div></td></tr><tr class='stab '>
+                             <td id='structfield.last_modified'><code>last_modified</code></td><td><div class='docblock'><p>Returns the last modified date and time of the resource which will be added as the
+Last-Modified header in the response and used in negotiating conditional requests.
+Default is None</p>
+</div></td></tr><tr class='stab '>
+                             <td id='structfield.delete_resource'><code>delete_resource</code></td><td><div class='docblock'><p>Called when a DELETE request should be enacted. Return <code>Ok(true)</code> if the deletion succeeded,
+and <code>Ok(false)</code> if the deletion was accepted but cannot yet be guaranteed to have finished.
+If the delete fails for any reason, return an Err with the status code you wish returned
+(a 500 status makes sense).
+Defaults to <code>Ok(true)</code>.</p>
+</div></td></tr><tr class='stab '>
+                             <td id='structfield.post_is_create'><code>post_is_create</code></td><td><div class='docblock'><p>If POST requests should be treated as a request to put content into a (potentially new)
+resource as opposed to a generic submission for processing, then this should return true.
+If it does return true, then <code>create_path</code> will be called and the rest of the request will
+be treated much like a PUT to the path returned by that call. Default is false.</p>
+</div></td></tr><tr class='stab '>
+                             <td id='structfield.process_post'><code>process_post</code></td><td><div class='docblock'><p>If <code>post_is_create</code> returns false, then this will be called to process any POST request.
+If it succeeds, return <code>Ok(true)</code>, <code>Ok(false)</code> otherwise. If it fails for any reason,
+return an Err with the status code you wish returned (e.g., a 500 status makes sense).
+Default is false. If you want the result of processing the POST to be a redirect, set
+<code>context.redirect</code> to true.</p>
+</div></td></tr><tr class='stab '>
+                             <td id='structfield.create_path'><code>create_path</code></td><td><div class='docblock'><p>This will be called on a POST request if <code>post_is_create</code> returns true. It should create
+the new resource and return the path as a valid URI part following the dispatcher prefix.
+That path will replace the previous one in the return value of <code>WebmachineRequest.request_path</code>
+for all subsequent resource function calls in the course of this request and will be set
+as the value of the Location header of the response. If it fails for any reason,
+return an Err with the status code you wish returned (e.g., a 500 status makes sense).
+Default will return an <code>Ok(WebmachineRequest.request_path)</code>. If you want the result of
+processing the POST to be a redirect, set <code>context.redirect</code> to true.</p>
+</div></td></tr><tr class='stab '>
+                             <td id='structfield.process_put'><code>process_put</code></td><td><div class='docblock'><p>This will be called to process any PUT request. If it succeeds, return <code>Ok(true)</code>,
+<code>Ok(false)</code> otherwise. If it fails for any reason, return an Err with the status code
+you wish returned (e.g., a 500 status makes sense). Default is <code>Ok(true)</code></p>
+</div></td></tr><tr class='stab '>
+                             <td id='structfield.multiple_choices'><code>multiple_choices</code></td><td><div class='docblock'><p>If this returns true, then it is assumed that multiple representations of the response are
+possible and a single one cannot be automatically chosen, so a 300 Multiple Choices will
+be sent instead of a 200. Default is false.</p>
+</div></td></tr><tr class='stab '>
+                             <td id='structfield.expires'><code>expires</code></td><td><div class='docblock'><p>If the resource expires, this should return the date/time it expires. Default is None.</p>
+</div></td></tr></table><h2 id='methods'>Methods</h2><h3 class='impl'><code>impl <a class='struct' href='../webmachine_rust/struct.WebmachineResource.html' title='webmachine_rust::WebmachineResource'>WebmachineResource</a></code></h3><div class='impl-items'><h4 id='method.default' class='method'><code>fn <a href='#method.default' class='fnname'>default</a>() -&gt; <a class='struct' href='../webmachine_rust/struct.WebmachineResource.html' title='webmachine_rust::WebmachineResource'>WebmachineResource</a></code></h4>
+<div class='docblock'><p>Creates a default webmachine resource</p>
+</div></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>&larrb;</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>&rarrb;</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../";
+        window.currentCrate = "webmachine_rust";
+        window.playgroundUrl = "";
+    </script>
+    <script src="../jquery.js"></script>
+    <script src="../main.js"></script>
+    
+    <script defer src="../search-index.js"></script>
+</body>
+</html>
