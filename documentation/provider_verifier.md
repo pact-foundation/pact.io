@@ -110,7 +110,7 @@ The following environment variables required:
 		- api
 		environment:
 		- pact_urls=http://pact-host:9292/pacts/provider/MyProvider/consumer/myConsumer/latest
-		- provider_base_url=http://api4000:
+		- provider_base_url=http://api:4000
 		- provider_states_url=http://api:4000/provider-states
 		- provider_states_active_url=http://api:4000/provider-states/active
 
