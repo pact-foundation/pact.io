@@ -1,1 +1,0 @@
-initSidebarItems({"enum":[["SegmentType","The type of a hyperlink segment."]],"struct":[["Link","A hyperlink."],["LinkSegment","A segment of a hyperlink path."]]});

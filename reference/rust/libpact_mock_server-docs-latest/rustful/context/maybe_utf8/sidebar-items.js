@@ -1,1 +1,0 @@
-initSidebarItems({"enum":[["MaybeUtf8","String data that may or may not be UTF-8 encoded."]],"struct":[["Buffer","A byte buffer for more efficient `MaybeUtf8` manipulation."]],"type":[["MaybeUtf8Owned","An owned string that may be UTF-8 encoded."],["MaybeUtf8Slice","A slice of a string that may be UTF-8 encoded."]]});

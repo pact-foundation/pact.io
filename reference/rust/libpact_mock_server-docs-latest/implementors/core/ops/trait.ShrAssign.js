@@ -1,5 +1,5 @@
 (function() {var implementors = {};
-implementors['libc'] = [];implementors['hyper'] = [];implementors['rustful'] = [];implementors['pact_mock_server'] = [];implementors['pact_mock_server'] = [];implementors['pact_mock_server'] = [];implementors['pact_mock_server'] = [];implementors['pact_mock_server'] = [];implementors['pact_mock_server'] = [];
+implementors["libc"] = [];implementors["hyper"] = [];implementors["pact_mock_server"] = [];
 
             if (window.register_implementors) {
                 window.register_implementors(implementors);
