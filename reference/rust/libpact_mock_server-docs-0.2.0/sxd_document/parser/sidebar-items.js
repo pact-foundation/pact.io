@@ -1,0 +1,1 @@
+initSidebarItems({"enum":[["Error",""]],"fn":[["parse","Parses a string into a DOM. On failure, the location of the parsing failure and all possible failures will be returned."]],"trait":[["XmlParseExt","Common reusable XML parsing methods"]]});
