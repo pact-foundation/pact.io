@@ -6,6 +6,6 @@
 * [FAQ](faq.md)
 * [Getting help](getting-help.md)
 * [Contributing](contributing.md)
-* Contributors
+* [Contributors](contributors.md)
 * Roadmap
 
