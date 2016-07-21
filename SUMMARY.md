@@ -1,5 +1,11 @@
 # Summary
 
 * [Getting started](README.md)
-* [First Chapter](chapter1.md)
+* [Implementation guides](chapter1.md)
+* [Best practices](best-practices.md)
+* FAQ
+* Getting help
+* Contributing
+* Contributors
+* Roadmap
 
