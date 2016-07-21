@@ -10,7 +10,11 @@ Pact is most valuable for designing and testing integrations where you (or your 
 * Testing “pass through” APIs, where the provider merely passes on the request contents to a downstream service without validating them. Why?
 
 ### Why doesn't Pact use JSON Schema?
-Whether you define a schema or not, you will still need a concrete example of the response to return from the mock server, and a concrete example of the request to replay against the provider. If you just used a schema, then the code would have to generate an example, and generated values are not very helpful when used in tests, nor do they give any readable, meaningful documentation. If you use a schema *and* an example, then you are duplicating effort. The schema can almost be implied from an example. The ability to specify more flexible matching like "an array of any length" that is currently missing from v1 matching will be available in v2 matching (beta is out now, see [v2 flexible matching](https://github.com/realestate-com-au/pact/wiki/v2-flexible-matching)).
+Whether you define a schema or not, you will still need a concrete example of the response to return from the mock server, and a concrete example of the request to replay against the provider.
+
+If you just used a schema, then the code would have to generate an example, and generated values are not very helpful when used in tests, nor do they give any readable, meaningful documentation.
+
+If you use a schema *and* an example, then you are duplicating effort. The schema can almost be implied from an example. The ability to specify more flexible matching like "an array of any length" that is currently missing from v1 matching will be available in v2 matching (beta is out now, see [v2 flexible matching](https://github.com/realestate-com-au/pact/wiki/v2-flexible-matching)).
 
 ### Why does Pact use concrete JSON documents rather than using more flexible JSONPaths?
 Pact was written by a team that was using microservices that had read/write RESTful interfaces. Flexible JSONPaths are useful when reading JSON documents, but no good for creating concrete examples of JSON documents to POST or PUT back to a service.
