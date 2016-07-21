@@ -6,6 +6,7 @@
     * [Consumer](consumer.md)
     * [Provider](provider.md)
 * [FAQ](faq.md)
+    * [Convince me!](convince-me.md)
 * [Getting help](getting-help.md)
 * [Contributing](contributing.md)
 * [Contributors](contributors.md)
