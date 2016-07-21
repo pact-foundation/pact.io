@@ -4,7 +4,7 @@
 * [Implementation guides](chapter1.md)
 * [Best practices](best-practices.md)
     * [Consumer](consumer.md)
-    * Provider
+    * [Provider](provider.md)
 * [FAQ](faq.md)
 * [Getting help](getting-help.md)
 * [Contributing](contributing.md)
