@@ -1,6 +1,12 @@
 # Summary
 
 * [Getting started](README.md)
+    * [Terminology](terminology.md)
+    * Usage example
+    * Matching
+    * Verifying Pacts
+    * Provider states
+    * Sharing Pacts with the Pact Broker
 * [Implementation guides](chapter1.md)
 * [Best practices](best-practices.md)
     * [Consumer](consumer.md)
