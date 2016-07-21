@@ -16,7 +16,7 @@ The Pact Community has come together to solve this problem. Our plan is to creat
 
 This project is well underway with proof-of-concepts along the way confirming the approach, and v1 matching almost complete.
 
-## Node/JS [Status: Beta]
+## Node/JS [Status: RC1]
 <p style="text-align: center;"><iframe src="https://docs.google.com/presentation/d/1cbf1mJ1cpvi_xAn83NdX9eXfrcTtXLoZD__Qr_hCyjc/embed?start=false&loop=false&delayms=3000" frameborder="0" width="700" height="422" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe></p>
 
 ## Golang [Status: Beta]
