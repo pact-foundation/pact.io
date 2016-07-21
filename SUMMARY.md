@@ -4,7 +4,7 @@
 * [Implementation guides](chapter1.md)
 * [Best practices](best-practices.md)
 * [FAQ](faq.md)
-* Getting help
+* [Getting help](getting-help.md)
 * Contributing
 * Contributors
 * Roadmap
