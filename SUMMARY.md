@@ -5,7 +5,7 @@
 * [Best practices](best-practices.md)
 * [FAQ](faq.md)
 * [Getting help](getting-help.md)
-* Contributing
+* [Contributing](contributing.md)
 * Contributors
 * Roadmap
 
