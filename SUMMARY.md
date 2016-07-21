@@ -2,7 +2,7 @@
 
 * [Getting started](README.md)
     * [Terminology](terminology.md)
-    * Usage example
+    * [Usage example](usage-example.md)
     * Matching
     * Verifying Pacts
     * Provider states
