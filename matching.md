@@ -74,7 +74,9 @@ animal_service.given("an alligator named Mary exists").
  )
  })
 ```
+
 The mock server will return `{"name": "Mary", "age": 73}` in the consumer tests, but when `pact:verify` is run in the provider, it will just check that the type of the `name` value is a String, and that the type of the `age` value is a Fixnum. If you wanted an exact match on "Mary", but to allow any age, you would only wrap the `73` in the `Pact::SomethingLike`.
+
 For request matching, the mock server will allow any values of the same type to be used in the consumer test, but will replay the given values in `pact:verify`.
 ```ruby
 animal_service.given("an alligator named Mary exists").
