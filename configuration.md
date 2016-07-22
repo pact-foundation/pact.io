@@ -24,6 +24,7 @@ Pact.configure do | config |
   config.log_dir = './log'
 end
 ```
+
 Default value: `./log`
 ### logger
 ```ruby
