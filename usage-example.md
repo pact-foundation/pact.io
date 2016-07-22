@@ -118,10 +118,14 @@ Pact.service_provider "Animal Service" do
 end
 ```
 #### 3. Run your failing specs
- $ rake pact:verify
+
+    $ rake pact:verify
+
 Congratulations! You now have a failing spec to develop against.
 At this stage, you'll want to be able to run your specs one at a time while you implement each feature. At the bottom of the failed pact:verify output you will see the commands to rerun each failed interaction individually. A command to run just one interaction will look like this:
- $ rake pact:verify PACT_DESCRIPTION="a request for an alligator" PACT_PROVIDER_STATE="an alligator exists"
+
+    $ rake pact:verify PACT_DESCRIPTION="a request for an alligator" PACT_PROVIDER_STATE="an alligator exists"
+
 #### 4. Implement enough to make your first interaction spec pass
 Rinse and repeat.
 #### 5. Keep going til you're green
