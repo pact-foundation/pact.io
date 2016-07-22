@@ -22,7 +22,7 @@ The recommended place is `spec/service_consumers/pact_helper.rb`.
 To ensure that the latest version of the consumer pact is used each time, it is recommended that you either use a [Pact Broker](https://github.com/bethesque/pact_broker)
 or that you publish the pacts of a successful consumer build as artefacts in your CI system.
 
-**_Note:_** Pact uses Rack::Test, and assumes that your service provider will be a Rack app. See below for options if your provider is not a Rack app.
+_**Note:**_ Pact uses Rack::Test, and assumes that your service provider will be a Rack app. See below for options if your provider is not a Rack app.
 
 ```ruby
 # In specs/service_consumers/pact_helper.rb
@@ -60,10 +60,9 @@ To verify a pact from a URL that requires basic auth, add username and password 
 You can verify a pact at any arbitrary local or remote URL using the `pact:verify:at` task.
 This is useful when you are developing the consumer and provider concurrently, and wish to verify the pact you have just generated in the consumer code base. It will use the same pact\_helper file as `pact:verify`.
 
+`$ rake pact:verify:at[../path-to-your-consumer-project/specs/pacts/my_consumer-my_provider.json]`
 
- $ rake pact:verify:at\[..\/path-to-your-consumer-project\/specs\/pacts\/my\_consumer-my\_provider.json\]
- $ rake pact:verify:at\[[http:\/\/build-box\/MyConsumerBuild\/latestSuccessful\/artifacts\/my\_consumer-my\_provider.json](http://build-box/MyConsumerBuild/latestSuccessful/artifacts/my_consumer-my_provider.json)\]
-
+`$ rake pact:verify:at[`[`http://build-box/MyConsumerBuild/latestSuccessful/artifacts/my_consumer-my_provider.json`](http://build-box/MyConsumerBuild/latestSuccessful/artifacts/my_consumer-my_provider.json)`]`
 
 With basic auth, set the environment variables `PACT_BROKER_USERNAME` and `PACT_BROKER_PASSWORD`, or use the basic auth URL format, `http://username:password@pactbroker.yourdomain/...`.
 
