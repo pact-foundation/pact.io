@@ -14,7 +14,7 @@
         * [Configuration](configuration.md)
         * [Provider states](ruby_provider_states.md)
     * [JVM](jvm.md)
-    * .NET
+    * [.NET](net.md)
     * Javascript
         * Consumer
             * Node
