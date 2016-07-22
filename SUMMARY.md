@@ -4,7 +4,7 @@
 * [Getting started](getting-started.md)
     * [Usage example](usage-example.md)
     * [Matching](matching.md)
-    * [Gotchas](gotchas.md)
+        * [Gotchas](gotchas.md)
     * [Verifying Pacts](verifying-pacts.md)
     * [Provider states](provider-states.md)
     * [Sharing Pacts with the Pact Broker](sharing-pacts-with-the-pact-broker.md)
