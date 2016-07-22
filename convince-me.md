@@ -39,7 +39,8 @@ Pact on the other hand, is essentially a unit testing framework using _specifica
   In fact, the authors of the OpenAPI specification predicted such use cases by announcing:
   > Additional utilities can also take advantage of the resulting files, such as testing tools.
   > Potentially, for example, we could use vendor extensions to document this extra metadata that is captured in our spec. This is one way the two projects could come together.
-  > See [https:\/\/github.com\/pact-foundation\/pact-specification\/issues\/28](https://github.com/pact-foundation/pact-specification/issues/28) for more.
+
+See [https:\/\/github.com\/pact-foundation\/pact-specification\/issues\/28](https://github.com/pact-foundation/pact-specification/issues/28) for more.
   > 
   > ### ...but I already have an end-to-end \(E2E\) integration suite that runs for an hour?
   > 
