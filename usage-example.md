@@ -1,6 +1,7 @@
 ## Usage - an example scenario
 We're going to write an integration, with Pact tests, between a consumer, the Zoo App, and its provider, the Animal Service. In the Consumer project, we're going to need to need a model (the Alligator class) to represent the data returned from the Animal Service, and a client (the AnimalServiceClient) which will be responsible for making the HTTP calls to the Animal Service.
-![Example](../media/zoo_app-animal_service.png)
+
+![Example](/assets/zoo_app-animal_service.png)
 
 ### In the Zoo App (consumer) project
 #### 1. Start with your model
