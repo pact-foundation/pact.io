@@ -13,4 +13,4 @@ An abstraction layer on top of Mocha to remove some of the boilerplate required.
 Still under development but an alpha version is available: https://github.com/pact-foundation/pact-js-mocha
 
 #### Pact Karma
-A Karma plugin that will spin up a Provider Mock Server before your tests run in the browser.
+A Karma plugin that will spin up a Provider Mock Server before your tests run in the browser. Eliminates the need for Ruby in your environment and works seamlessly with Mocha and Jasmine.
