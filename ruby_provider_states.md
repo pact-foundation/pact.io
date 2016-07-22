@@ -14,7 +14,7 @@ Some Provider will respond with { "status" : 200, ...}
 `\*` This is the provider state
 `\*\*` This is the request description
 
-### Consumer code bbase
+### Consumer code base
 
 For example, some code that creates a pact in a consumer project might look like this:
 
