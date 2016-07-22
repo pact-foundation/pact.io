@@ -45,7 +45,7 @@ Default value: `Logger::DEBUG`
 ### diff_formatter
 ```ruby
 Pact.configure do | config |
- config.diff_formatter = :list
+  config.diff_formatter = :list
 end
 ```
 Default value: [:list](#list)
