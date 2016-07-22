@@ -80,12 +80,12 @@ Of course, the above specs will fail because the Animal Service client method is
 #### 6. Implement the Animal Service client consumer methods
 ```ruby
 class AnimalServiceClient
- include HTTParty
- base_uri 'http://animal-service.com'
- def get_alligator
- name = JSON.parse(self.class.get("/alligator").body)['name']
- Alligator.new(name)
- end
+  include HTTParty
+  base_uri 'http://animal-service.com'
+  def get_alligator
+    name = JSON.parse(self.class.get("/alligator").body)['name']
+    Alligator.new(name)
+  end
 end
 ```
 #### 7. Run the specs again.
