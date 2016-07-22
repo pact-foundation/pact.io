@@ -83,7 +83,9 @@ The following environment variables required:
 * `provider_base_url` - the base URL of the pact `Provider`
 * `provider_states_url` - the full URL of the endpoint which returns `Provider States` by consumer
 * `provider_states_active_url` - the full URL of the endpoint which sets the active pact `Consumer` and `Provider` state`
+
 *Updated Sample docker-compose.yml file:*
+
  api:
  build: .
  command: npm start
