@@ -26,13 +26,16 @@ end
 ```
 
 Default value: `./log`
+
 ### logger
 ```ruby
 Pact.configure do | config |
- config.logger = Logger.new
+  config.logger = Logger.new
 end
 ```
+
 Default value: file logger to the configured log_dir.
+
 ### logger.level
 ```ruby
 Pact.configure do | config |
