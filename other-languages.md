@@ -64,14 +64,14 @@ pactverifier:
 Execute pact provider verification against a provider which implements the following:
 
 * an http get endpoint which returns pact provider_states by consumer
-
+```
     {
       "myConsumer": [
         "customer is logged in",
         "customer has a million dollars"
       ]
     }
-
+```
 * an http post endpoint which sets the active pact consumer and provider state
  consumer=web&state=customer%20is%20logged%20in
 The following environment variables required:
