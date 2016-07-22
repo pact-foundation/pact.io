@@ -9,10 +9,18 @@
     * [Provider states](provider-states.md)
     * [Sharing Pacts with the Pact Broker](sharing-pacts-with-the-pact-broker.md)
 * [Implementation guides](chapter1.md)
-    * Ruby
+    * [Ruby](ruby.md)
+        * Verifying Pacts
+        * Configuration
+        * Provider states
     * JVM
     * .NET
     * Javascript
+        * Consumer
+            * Node
+            * Browser \(using Karma\)
+            * Flexible matching
+        * Provider
     * Go
     * Swift
     * Other languages
