@@ -5,7 +5,7 @@
     * [Usage example](usage-example.md)
     * [Matching](matching.md)
         * [Gotchas](gotchas.md)
-    * Verifying Pacts
+    * [Verifying Pacts](verifying-pacts.md)
     * Provider states
     * Sharing Pacts with the Pact Broker
 * [Implementation guides](chapter1.md)
