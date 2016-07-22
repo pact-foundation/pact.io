@@ -15,7 +15,9 @@ If you use `Pact` with exact matching for integrated tests, you will drive yours
 * For the integration tests, use loose, type based matching for the requests to avoid brittleness, and pull out the setup into a method that can be shared between tests so that you do not end up with a million interactions to verify \(this will help because the interactions collection in the `Pact` acts like a set, and discards exact duplicates\).
 
 If you don’t care about verifying your interactions, you could use something like Webmock for your integrated tests, and use shared fixtures for requests\/responses between these tests and the `Pact` tests to ensure that you have some level of verification happening.
-  ### Make the latest pact available to the `Provider` via a URL
+
+
+### Make the latest pact available to the `Provider` via a URL
 
   See [Sharing pacts between ](https://github.com/realestate-com-au/pact/wiki/Sharing-pacts-between-consumer-and-provider)`Consumer`[ and ](https://github.com/realestate-com-au/pact/wiki/Sharing-pacts-between-consumer-and-provider)`Provider` for options to implement this.
   ### Ensure all calls to the `Provider` go through classes that have been tested with `Pact`
