@@ -117,19 +117,19 @@ It is important to test how your client will handle error responses.
 describe MyServiceProviderClient do
  subject { MyServiceProviderClient.new }
  describe "get_something" do
- context "when an error occurs retrieving a thing" do
- before do
- my_service.given("an error occurs while retrieving a thing").
- upon_receiving("a request for a thing").with(method: 'get', path: '/thing').
- will_respond_with(
- status: 500,
- headers: { 'Content-Type' => 'application/json' },
- body: { message: "An error occurred!" } )
- end
- it "raises an error" do
- expect{ subject.get_something }.to raise_error /An error occurred!/
- end
- end
+  context "when an error occurs retrieving a thing" do
+   before do
+    my_service.given("an error occurs while retrieving a thing").
+    upon_receiving("a request for a thing").with(method: 'get', path: '/thing').
+    will_respond_with(
+     status: 500,
+     headers: { 'Content-Type' => 'application/json' },
+     body: { message: "An error occurred!" } )
+   end
+   it "raises an error" do
+    expect{ subject.get_something }.to raise_error /An error occurred!/
+   end
+  end
  end
 end
 ```
