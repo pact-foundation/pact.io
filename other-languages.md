@@ -30,7 +30,9 @@ If you are using Docker and Docker compose, steps 3-5 above are automatically ta
 
 ### Docker Example
 The example below uses Docker image from the [Pact Provider Verifier](https://github.com/DiUS/pact-provider-verifier-docker) project.
+
 *Steps*:
+
 1. Create an API and a corresponding Docker image for it
 1. Publish Pacts to the Pact broker (or create local ones)
 1. Create a `docker-compose.yml` file connecting your API to the Pact Verifier
