@@ -16,11 +16,6 @@
     * [JVM](jvm.md)
     * [.NET](net.md)
     * [Javascript](javascript.md)
-        * Consumer
-            * Node
-            * Browser \(using Karma\)
-            * Flexible matching
-        * Provider
     * [Go](go.md)
     * [Swift](swift.md)
     * [Other languages](other-languages.md)
