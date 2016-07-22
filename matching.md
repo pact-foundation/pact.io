@@ -37,13 +37,13 @@ You can also use `Pact::Term` for request matching.
 animal_service.given("an alligator named Mary exists").
  upon_receiving("a request for an alligator").
  with(
- method: "get",
- path: "/alligators/Mary",
- query: Pact.term(
- generate: "transactionId=1234",
- matcher: /transactionId=\d{4}/),
+   method: "get",
+   path: "/alligators/Mary",
+   query: Pact.term(
+     generate: "transactionId=1234",
+     matcher: /transactionId=\d{4}/),
  will_respond_with(
- status: 200, ...)
+   status: 200, ...)
 ```
 
 The `matcher` will be used to ensure that the actual request query was in the right format, and the value specified in the `generate` field will be the one that is replayed against the provider as an example of what a real value would look like. This means that your provider states can still use known values to set up their data, but your Consumer tests can generate data on the fly.
