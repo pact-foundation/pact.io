@@ -118,6 +118,7 @@ By default, the pact file will be overwritten (started from scratch) every time 
 
 ## Provider
 Pact uses RSpec and Rack::Test to create dynamic specs based on the pact files. RSpec configuration can be used to modify test behaviour if there is not an appropriate Pact feature. If you wish to use the same spec_helper.rb file as your unit tests, require it in the pact_helper.rb, but remember that the RSpec configurations for your unit tests may or may not be what you want for your pact verification tests.
+
 ### include
 ```ruby
 Pact.configure do | config |
