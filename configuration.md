@@ -39,7 +39,7 @@ Default value: file logger to the configured log_dir.
 ### logger.level
 ```ruby
 Pact.configure do | config |
- config.logger.level = Logger::INFO
+  config.logger.level = Logger::INFO
 end
 ```
 Default value: `Logger::DEBUG`
