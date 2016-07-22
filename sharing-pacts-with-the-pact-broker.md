@@ -11,6 +11,7 @@ This is where the [Pact Broker](https://github.com/bethesque/pact_broker) comes 
 * Ability to decouple the release cycle of your `Consumer` and `Provider`
 * Ability to cross test the head/prod versions of `Pacts`
 For more information, head over to the Pact Broker [website](https://github.com/bethesque/pact_broker).
+
 ## Alternative approaches
 ##### 1. `Consumer` CI build commits pact to `Provider` codebase
 Pretty self explanatory.
