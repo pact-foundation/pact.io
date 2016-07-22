@@ -53,7 +53,10 @@ You can use `Pact::Term` for request and response header values, the request que
 For flexible ordering, specify it as a Hash, which in turn may include `Pact::Terms`.
 
 ### Type matching
-Often, you will not care what the exact value is at a particular path is, you just care that a value is present and that it is of the expected type. For this scenario, you can use `Pact::SomethingLike`.
+Often, you will not care what the exact value is at a particular path is, you just care that a value is present and that it is of the expected type.
+
+For this scenario, you can use `Pact::SomethingLike`.
+
 ```ruby
 animal_service.given("an alligator named Mary exists").
  upon_receiving("a request for an alligator").
