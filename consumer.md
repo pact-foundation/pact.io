@@ -32,6 +32,8 @@ Sure, you’ve checked that your client deserialises the HTTP response into the 
 ### Beware of Garbage In, Garbage Out with PUT\/POST\/PATCH
 
   Each interaction is tested in isolation, meaning you can’t do a PUT\/POST\/PATCH, and then follow it with a GET to ensure that the values you sent were actually read successfully by the `Provider`. For example, if you have an optional `surname` field, and you send `lastname` instead, a `Provider` will most likely ignore the misnamed field, and return a 200, failing to alert you to the fact that your `lastname` has gone to the big `/dev/null` in the sky.
-  To ensure you don’t have a Garbage In Garbage Out situation, expect the response body to contain the newly updated values of the resource, and all will be well.
-  If, for performance reasons, you don’t want to include the updated resource in the response, another way to avoid GIGO is to use a shared fixture between a GET response body, and a PUT\/POST request body. That way, you know that the fields you are PUTing or POSTing are the same fields that you will be GETing.
+
+To ensure you don’t have a Garbage In Garbage Out situation, expect the response body to contain the newly updated values of the resource, and all will be well.
+
+If, for performance reasons, you don’t want to include the updated resource in the response, another way to avoid GIGO is to use a shared fixture between a GET response body, and a PUT\/POST request body. That way, you know that the fields you are PUTing or POSTing are the same fields that you will be GETing.
 
