@@ -5,6 +5,8 @@ See [Verifying Pacts](/verifying-pacts.md) for an introduction into this topic.
 ## Using rake pact:verify
 
 Using the `pact:verify` task is the most common way to verify pacts. This is where you configure the default set of pacts that your service provider should honour.
+
+
 It is made available by requiring `'pact/tasks'` in your Rakefile.
 
 ```ruby
