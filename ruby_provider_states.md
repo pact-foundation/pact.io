@@ -1,15 +1,21 @@
 # Provider States
-See [Provider States](../provider_states.md) for an introduction into this advanced topic.
 
-The text in the provider state should make sense when you read it as follows (this is how the auto-generated documentation reads):
+See [Provider States](/provider-states.md) for an introduction into this advanced topic.
+
+The text in the provider state should make sense when you read it as follows \(this is how the auto-generated documentation reads\):
+
+
 Given **an alligator with the name Mary exists** \*
 Upon receiving **a request to retrieve an alligator by name** \*\* from Some Consumer
-With {"method" : "get", "path" : "/alligators/Mary" }
+With {"method" : "get", "path" : "\/alligators\/Mary" }
 Some Provider will respond with { "status" : 200, ...}
 \* This is the provider state
 \*\* This is the request description
+
 ### Consumer code bbase
+
 For example, some code that creates a pact in a consumer project might look like this:
+
 ```ruby
 describe MyServiceProviderClient do
  subject { MyServiceProviderClient.new }
@@ -39,8 +45,11 @@ describe MyServiceProviderClient do
  end
 end
 ```
+
 ### Provider codebase
-To define service provider states that create the right data for the provider states described above, write the following in the service provider project. (The consumer name here must match the name of the consumer configured in your consumer project for it to correctly find these provider states.)
+
+To define service provider states that create the right data for the provider states described above, write the following in the service provider project. \(The consumer name here must match the name of the consumer configured in your consumer project for it to correctly find these provider states.\)
+
 ```ruby
 # In /spec/service_consumers/provider_states_for_my_service_consumer.rb
 Pact.provider_states_for 'My Service Consumer' do
@@ -59,13 +68,18 @@ Pact.provider_states_for 'My Service Consumer' do
  end
 end
 ```
+
 Require your provider states file in the `pact_helper.rb`
+
 ```ruby
 # In /spec/service_consumers/pact_helper.rb
 require './spec/service_consumers/provider_states_for_my_service_consumer.rb'
 ```
+
 ### Base state
-To define code that should run before/after each interaction for a given consumer, regardless of whether a provider state is specified or not, define set_up/tear_down blocks with no wrapping provider_state.
+
+To define code that should run before\/after each interaction for a given consumer, regardless of whether a provider state is specified or not, define set\_up\/tear\_down blocks with no wrapping provider\_state.
+
 ```ruby
 Pact.provider_states_for 'My Service Consumer' do
  set_up do
@@ -78,8 +92,11 @@ Pact.provider_states_for 'My Service Consumer' do
  end
 end
 ```
+
 ### Global state
+
 Global state will be set up before consumer specific base state. Avoid using the global set up for creating data as it will make your tests brittle when more than one consumer exists.
+
 ```ruby
 Pact.set_up do
  # eg. start database cleaner transaction
@@ -88,8 +105,11 @@ Pact.tear_down do
  # eg. clean database
 end
 ```
+
 ### Testing error responses
+
 It is important to test how your client will handle error responses.
+
 ```ruby
 # Consumer codebase
 describe MyServiceProviderClient do
@@ -111,6 +131,7 @@ describe MyServiceProviderClient do
  end
 end
 ```
+
 ```ruby
 # Provider codebase
 Pact.provider_states_for 'My Service Consumer' do
@@ -122,10 +143,14 @@ Pact.provider_states_for 'My Service Consumer' do
  end
 end
 ```
-### Including modules for use in set_up and tear_down
-Any modules included this way will be available in the set_up and tear_down blocks. One common use of this to include factory methods for setting up data so that the provider states file doesn't get too bloated.
+
+### Including modules for use in set\_up and tear\_down
+
+Any modules included this way will be available in the set\_up and tear\_down blocks. One common use of this to include factory methods for setting up data so that the provider states file doesn't get too bloated.
+
 ```ruby
 Pact.configure do | config |
  config.include MyTestHelperMethods
 end
 ```
+
