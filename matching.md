@@ -113,7 +113,9 @@ animal_service.given("some alligators exist").
  ...
 ```
 
-Alternatively, if the order of the query parameters does not matter, you can specify the query as a hash. You can embed Pact::Terms or Pact::SomethingLike inside the hash. Remember that all query params will be parsed to strings, so don't use a SomethingLike with a number.
+Alternatively, if the order of the query parameters does not matter, you can specify the query as a hash. You can embed Pact::Terms or Pact::SomethingLike inside the hash.
+
+Remember that all query params will be parsed to strings, so don't use a SomethingLike with a number.
 
 ```ruby
 animal_service.given("some alligators exist").
