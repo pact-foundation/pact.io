@@ -6,4 +6,5 @@
 * [Javascript](/javascript.md)
 * [Go](/go.md)
 * [Swift \/ Objective-C](/swift.md)
+* [Other languages](/other-languages.md)
 
