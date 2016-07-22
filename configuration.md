@@ -1,4 +1,5 @@
 # Configuration
+
 ## Menu
 #### Consumer and Provider configuration options
 * [diffformatter](#diff_formatter)
