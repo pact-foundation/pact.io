@@ -1,14 +1,15 @@
 # Summary
 
 * [Introduction](introduction.md)
+* [Getting started](getting-started.md)
 * [Getting started](README.md)
-    * [Terminology](terminology.md)
     * [Usage example](usage-example.md)
     * [Matching](matching.md)
         * [Gotchas](gotchas.md)
     * [Verifying Pacts](verifying-pacts.md)
     * [Provider states](provider-states.md)
     * [Sharing Pacts with the Pact Broker](sharing-pacts-with-the-pact-broker.md)
+* [Terminology](terminology.md)
 * [Implementation guides](chapter1.md)
     * [Ruby](ruby.md)
         * [Verification](verification.md)
@@ -28,5 +29,5 @@
 * [Getting help](getting-help.md)
 * [Contributing](contributing.md)
 * [Contributors](contributors.md)
-* [Roadmap](roadmap.md)
+* Getting started
 
