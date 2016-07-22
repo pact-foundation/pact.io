@@ -1,32 +1,39 @@
 # Summary
 
+* Introduction
 * [Getting started](README.md)
-    * [Terminology](terminology.md)
-    * [Usage example](usage-example.md)
-    * [Matching](matching.md)
-        * [Gotchas](gotchas.md)
-    * [Verifying Pacts](verifying-pacts.md)
-    * [Provider states](provider-states.md)
-    * [Sharing Pacts with the Pact Broker](sharing-pacts-with-the-pact-broker.md)
+  * [Terminology](terminology.md)
+  * [Usage example](usage-example.md)
+  * [Matching](matching.md)
+    * [Gotchas](gotchas.md)
+
+  * [Verifying Pacts](verifying-pacts.md)
+  * [Provider states](provider-states.md)
+  * [Sharing Pacts with the Pact Broker](sharing-pacts-with-the-pact-broker.md)
+
 * [Implementation guides](chapter1.md)
-    * [Ruby](ruby.md)
-        * [Verification](verification.md)
-        * [Configuration](configuration.md)
-        * [Provider states](ruby_provider_states.md)
-    * [JVM](jvm.md)
-    * [.NET](net.md)
-    * [Javascript](javascript.md)
-    * [Go](go.md)
-    * [Swift](swift.md)
-    * [Other languages](other-languages.md)
+  * [Ruby](ruby.md)
+    * [Verification](verification.md)
+    * [Configuration](configuration.md)
+    * [Provider states](ruby_provider_states.md)
+
+  * [JVM](jvm.md)
+  * [.NET](net.md)
+  * [Javascript](javascript.md)
+  * [Go](go.md)
+  * [Swift](swift.md)
+  * [Other languages](other-languages.md)
+
 * [Best practices](best-practices.md)
-    * [Consumer](consumer.md)
-    * [Provider](provider.md)
+  * [Consumer](consumer.md)
+  * [Provider](provider.md)
+
 * [FAQ](faq.md)
-    * [Convince me!](convince-me.md)
+  * [Convince me!](convince-me.md)
+
 * [Getting help](getting-help.md)
 * [Contributing](contributing.md)
 * [Contributors](contributors.md)
 * [Roadmap](roadmap.md)
-* Introduction
+
 
