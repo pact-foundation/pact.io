@@ -14,3 +14,6 @@ Still under development but an alpha version is available: https://github.com/pa
 
 #### Pact Karma
 A Karma plugin that will spin up a Provider Mock Server before your tests run in the browser. Eliminates the need for Ruby in your environment and works seamlessly with Mocha and Jasmine.
+
+Check it out here: https://github.com/pact-foundation/karma-pact
+
