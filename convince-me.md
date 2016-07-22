@@ -41,10 +41,10 @@ Pact on the other hand, is essentially a unit testing framework using _specifica
   > Potentially, for example, we could use vendor extensions to document this extra metadata that is captured in our spec. This is one way the two projects could come together.
 
 See [https:\/\/github.com\/pact-foundation\/pact-specification\/issues\/28](https://github.com/pact-foundation/pact-specification/issues/28) for more.
-  > 
-  > ### ...but I already have an end-to-end \(E2E\) integration suite that runs for an hour?
-  > 
-  > There are a few key problems with end-to-end \(E2E\) testing:
+
+### ...but I already have an end-to-end \(E2E\) integration suite that runs for an hour?
+
+There are a few key problems with end-to-end \(E2E\) testing:
 
 * E2E tests are slow - slow build times result in batching of changes. Batching is bad for Continuous Delivery
 * E2E tests are hard to coordinate. How do you ensure the exact correct versions of _all_ software components are exactly as they should be?
