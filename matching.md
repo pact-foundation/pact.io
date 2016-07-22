@@ -158,6 +158,7 @@ animal_service.given("an alligator named Mary exists").
 When the provider verification is run, it will ensure that each of the elements in the `children` array has a String name, an Integer age, and that there is at least one element in the array.
 
 To turn the v2 Pact serialisation on, you will need version 1.9.0 of the pact gem, and to configure the `pact_specification_version` in the mock service configuration in the consumer. The provider will pick it up automatically.
+
 ```ruby
 require 'pact/consumer/rspec'
 Pact.service_consumer "Zoo App" do
