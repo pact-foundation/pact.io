@@ -106,7 +106,7 @@ end
 #### doc_dir
 ```ruby
 Pact.configure do | config |
- config.doc_dir = './doc'
+  config.doc_dir = './doc'
 end
 ```
 Default value: `./doc`
