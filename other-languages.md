@@ -62,6 +62,7 @@ pactverifier:
 ```
 #### API with Provider States
 Execute pact provider verification against a provider which implements the following:
+
 * an http get endpoint which returns pact provider_states by consumer
  {
  "myConsumer": [
