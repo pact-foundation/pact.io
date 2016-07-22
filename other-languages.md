@@ -87,19 +87,20 @@ The following environment variables required:
 *Updated Sample docker-compose.yml file:*
 ```
  api:
- build: .
- command: npm start
- expose:
- - "4000"
+   build: .
+   command: npm start
+   expose:
+   - "4000"
+
  pactverifier:
- image: dius/pact-provider-verifier-docker
- links:
- - api
- environment:
- - pact_urls=http://pact-host:9292/pacts/provider/MyProvider/consumer/myConsumer/latest
- - provider_base_url=http://api4000:
- - provider_states_url=http://api:4000/provider-states
- - provider_states_active_url=http://api:4000/provider-states/active
+   image: dius/pact-provider-verifier-docker
+   links:
+   - api
+   environment:
+   - pact_urls=http://pact-host:9292/pacts/provider/MyProvider/consumer/myConsumer/latest
+   - provider_base_url=http://api4000:
+   - provider_states_url=http://api:4000/provider-states
+   - provider_states_active_url=http://api:4000/provider-states/active
 ```
 
 ### Ruby Example
