@@ -17,3 +17,7 @@ A Karma plugin that will spin up a Provider Mock Server before your tests run in
 
 Check it out here: https://github.com/pact-foundation/karma-pact
 
+#### Pact Node
+A great little tool that wraps the Ruby Provider Mock Server in a Node executable and eliminates the need to manage Ruby versions within your environment. Also enables Provider verification and Pact publishing / tagging.
+
+Check it out here: https://github.com/pact-foundation/pact-node
