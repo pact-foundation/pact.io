@@ -50,6 +50,7 @@ end
 ```
 Default value: [:list](#list)
 Options: [:unix](#unix), [:list](#list), [:embedded](#embedded), [Custom Diff Formatter](#custom-diff-formatter)
+
 #### :unix
 <img src="https://github.com/realestate-com-au/pact/raw/master/documentation/diff_formatter_unix.png" width="700">
 #### :list
