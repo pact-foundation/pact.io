@@ -22,28 +22,28 @@ For example, some code that creates a pact in a consumer project might look like
 describe MyServiceProviderClient do
  subject { MyServiceProviderClient.new }
  describe "get_something" do
- context "when a thing exists" do
- before do
- my_service.given("a thing exists").
- upon_receiving("a request for a thing").with(method: 'get', path: '/thing').
- will_respond_with(status: 200,
- headers: { 'Content-Type' => 'application/json' },
- body: { name: 'A small something'} )
- end
- it "returns a thing" do
- expect(subject.get_something).to eq(SomethingModel.new('A small something'))
- end
- end
- context "when a thing does not exist" do
- before do
- my_service.given("a thing does not exist").
- upon_receiving("a request for a thing").with(method: 'get', path: '/thing').
- will_respond_with(status: 404)
- end
- it "returns nil" do
- expect(subject.get_something).to be_nil
- end
- end
+  context "when a thing exists" do
+   before do
+    my_service.given("a thing exists").
+    upon_receiving("a request for a thing").with(method: 'get', path: '/thing').
+    will_respond_with(status: 200,
+     headers: { 'Content-Type' => 'application/json' },
+     body: { name: 'A small something'} )
+   end
+   it "returns a thing" do
+    expect(subject.get_something).to eq(SomethingModel.new('A small something'))
+   end
+  end
+  context "when a thing does not exist" do
+   before do
+    my_service.given("a thing does not exist").
+    upon_receiving("a request for a thing").with(method: 'get', path: '/thing').
+    will_respond_with(status: 404)
+   end
+   it "returns nil" do
+    expect(subject.get_something).to be_nil
+   end
+  end
  end
 end
 ```
