@@ -23,6 +23,7 @@ For advanced usage, you can use Gem directly, however in most cases the Pact Pro
 1. Run the Pact Provider Verifier
 1. Stop your API
 The verifier will then replay all of the Pact files against your running API, and will fail (`exit 1`) if they are not satisfied.
+
 There is no testing DSL available so you will need to be sensitive to process exit codes when running this in a CI/CD pipeline.
 
 If you are using Docker and Docker compose, steps 3-5 above are automatically taken care of for you.
