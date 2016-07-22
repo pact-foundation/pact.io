@@ -8,13 +8,13 @@ We're going to write an integration, with Pact tests, between a consumer, the Zo
 Imagine a model class that looks something like this. The attributes for a Alligator live on a remote server, and will need to be retrieved by an HTTP call to the Animal Service.
 ```ruby
 class Alligator
- attr_reader :name
- def initialize name
- @name = name
- end
- def == other
- other.is_a?(Alligator) && other.name == name
- end
+  attr_reader :name
+  def initialize name
+    @name = name
+  end
+  def == other
+    other.is_a?(Alligator) && other.name == name
+  end
 end
 ```
 #### 2. Create a skeleton Animal Service client class
