@@ -1,6 +1,6 @@
 # Summary
 
-* [Introduct](README.md)
+* [Introduction](README.md)
 * [Getting started](getting-started.md)
     * [Usage example](usage-example.md)
     * [Matching](matching.md)
