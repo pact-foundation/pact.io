@@ -83,18 +83,18 @@ For request matching, the mock server will allow any values of the same type to 
 animal_service.given("an alligator named Mary exists").
  upon_receiving("a request to update an alligator").
  with(
- method: "put",
- path: "/alligators/Mary",
- headers: {"Accept" => "application/json"},
- body: {
- age: Pact.like(10)
- }).
+   method: "put",
+   path: "/alligators/Mary",
+   headers: {"Accept" => "application/json"},
+   body: {
+     age: Pact.like(10)
+   }).
  will_respond_with(
- status: 200,
- headers: {"Content-Type" => "application/json"},
- body: {
- age: 10
- })
+   status: 200,
+   headers: {"Content-Type" => "application/json"},
+   body: {
+     age: 10
+   })
 ```
 
 ### Query params
@@ -107,9 +107,9 @@ Note that the query params must already be URL encoded in the expectation. (This
 animal_service.given("some alligators exist").
  upon_receiving("a request to search for alligators").
  with(
- method: "get",
- path: "/alligators",
- query: "name=Mary+Jane&age=8")
+   method: "get",
+   path: "/alligators",
+   query: "name=Mary+Jane&age=8")
  ...
 ```
 
@@ -121,16 +121,16 @@ Remember that all query params will be parsed to strings, so don't use a Somethi
 animal_service.given("some alligators exist").
  upon_receiving("a request to search for alligators").
  with(
- method: "get",
- path: "/alligators",
- query: {
- # No need to encode params in the hash
- name: 'Mary Jane',
- age: '8',
- # Specify a param with multiple values using an
- # array - order will be enforced
- children: ['Betty', 'Sue']
- })
+   method: "get",
+   path: "/alligators",
+   query: {
+     # No need to encode params in the hash
+     name: 'Mary Jane',
+     age: '8',
+     # Specify a param with multiple values using an
+     # array - order will be enforced
+     children: ['Betty', 'Sue']
+   })
  ...
 ```
 ### Flexible matching
