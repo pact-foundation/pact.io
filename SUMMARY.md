@@ -4,6 +4,7 @@
     * [Terminology](terminology.md)
     * [Usage example](usage-example.md)
     * [Matching](matching.md)
+        * [Gotchas](gotchas.md)
     * Verifying Pacts
     * Provider states
     * Sharing Pacts with the Pact Broker
