@@ -3,11 +3,17 @@ This getting started guide should help you get off the ground using Pact with Ru
 
 ## Installation
 Add this line to your application's Gemfile:
- gem 'pact'
+
+    gem 'pact'
+
 And then execute:
- $ bundle
+
+    $ bundle
+
 Or install it yourself as:
- $ gem install pact
+
+    $ gem install pact
+
 
 ## Usage - an example scenario
 We're going to write an integration, with Pact tests, between a `Consumer`, the Zoo App, and its `Provider`, the Animal Service. In the `Consumer` project, we're going to need to need a model (the Alligator class) to represent the data returned from the Animal Service, and a client (the `AnimalServiceClient`) which will be responsible for making the HTTP calls to the Animal Service.
