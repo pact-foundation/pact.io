@@ -14,7 +14,9 @@ The two solutions below use the [Pact Provider Proxy](https://github.com/bethesq
 For advanced usage, you can use Gem directly, however in most cases the Pact Provider Verifier should cover your needs.
 
 ### How it works
+
 *Steps*:
+
 1. Create an API and a corresponding Docker image for it
 1. Publish Pacts to the Pact broker (or create local ones)
 1. Start your API
