@@ -12,7 +12,7 @@
     * [Ruby](ruby.md)
         * [Verification](verification.md)
         * [Configuration](configuration.md)
-        * [Provider states](provider-states.md)
+        * [Provider states](ruby_provider_states.md)
     * JVM
     * .NET
     * Javascript
