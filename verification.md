@@ -22,7 +22,7 @@ The recommended place is `spec/service_consumers/pact_helper.rb`.
 To ensure that the latest version of the consumer pact is used each time, it is recommended that you either use a [Pact Broker](https://github.com/bethesque/pact_broker)
 or that you publish the pacts of a successful consumer build as artefacts in your CI system.
 
-_**Note:**_ Pact uses Rack::Test, and assumes that your service provider will be a Rack app. See below for options if your provider is not a Rack app.
+**_Note:_** Pact uses Rack::Test, and assumes that your service provider will be a Rack app. See below for options if your provider is not a Rack app.
 
 ```ruby
 # In specs/service_consumers/pact_helper.rb
@@ -89,7 +89,9 @@ With basic auth, set the environment variables `PACT_BROKER_USERNAME` and `PACT_
 ## Verifying one interaction at a time
 
 At some stage, you'll want to be able to run your specs one at a time while you implement each feature. At the bottom of the failed pact:verify output you will see the commands to rerun each failed interaction individually. A command to run just one interaction will look like this:
- $ rake pact:verify PACT\_DESCRIPTION="a request for something" PACT\_PROVIDER\_STATE="something exists"
+
+
+$ rake pact:verify PACT\_DESCRIPTION="a request for something" PACT\_PROVIDER\_STATE="something exists"
 
 ## Verifying pacts for non-Rack apps
 
