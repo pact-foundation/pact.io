@@ -128,5 +128,6 @@ At this stage, you'll want to be able to run your specs one at a time while you 
 
 #### 4. Implement enough to make your first interaction spec pass
 Rinse and repeat.
+
 #### 5. Keep going til you're green
 Yay! Your Animal Service provider now honours the pact it has with your Zoo App consumer. You can now have confidence that your consumer and provider will play nicely together.
