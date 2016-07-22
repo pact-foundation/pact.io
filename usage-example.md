@@ -131,7 +131,7 @@ require 'pact/tasks'
 
 Create a `pact_helper.rb` in your service provider project. The recommended place is `spec/service_consumers/pact_helper.rb`.
 
-See [Verifying Pacts](https://github.com/realestate-com-au/pact/wiki/Verifying-pacts) and the [Provider](documentation/configuration.md#provider) section of the Configuration documentation for more information.
+See [Verifying Pacts](/verifying-pacts.md) and the [Provider](/configuration.md) section of the Configuration documentation for more information.
 
 ```ruby
 # In specs/service_consumers/pact_helper.rb
@@ -148,7 +148,9 @@ end
 
 #### 3. Run your failing specs
 
-    $ rake pact:verify
+```
+$ rake pact:verify
+```
 
 Congratulations! You now have a failing spec to develop against.
 At this stage, you'll want to be able to run your specs one at a time while you implement each feature. At the bottom of the failed pact:verify output you will see the commands to rerun each failed interaction individually. A command to run just one interaction will look like this:
