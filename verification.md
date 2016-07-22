@@ -22,7 +22,7 @@ The recommended place is `spec/service_consumers/pact_helper.rb`.
 To ensure that the latest version of the consumer pact is used each time, it is recommended that you either use a [Pact Broker](https://github.com/bethesque/pact_broker)
 or that you publish the pacts of a successful consumer build as artefacts in your CI system.
 
-**_Note:_** Pact uses Rack::Test, and assumes that your service provider will be a Rack app. See below for options if your provider is not a Rack app.
+_**Note:**_ Pact uses Rack::Test, and assumes that your service provider will be a Rack app. See below for options if your provider is not a Rack app.
 
 ```ruby
 # In specs/service_consumers/pact_helper.rb
@@ -73,9 +73,7 @@ With basic auth, set the environment variables `PACT_BROKER_USERNAME` and `PACT_
 
 ## Using a custom pact:verify task
 
-To make a shortcut task for verifying a pact an arbitrary URL that you do not want to verify as part of your normal pact:verify task,
-\(eg. when you are developing the consumer and provider side by side, and want a shorter feedback cycle than can be provided by
-by your CI box\) add the following to your Rakefile. The pact.uri may be a local file system path or a remote URL.
+To make a shortcut task for verifying a pact an arbitrary URL that you do not want to verify as part of your normal pact:verify task, \(eg. when you are developing the consumer and provider side by side, and want a shorter feedback cycle than can be provided by by your CI box\) add the following to your Rakefile. The pact.uri may be a local file system path or a remote URL.
 
 ```ruby
 # In Rakefile or /tasks/pact.rake
