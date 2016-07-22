@@ -85,7 +85,7 @@ The following environment variables required:
 * `provider_states_active_url` - the full URL of the endpoint which sets the active pact `Consumer` and `Provider` state`
 
 *Updated Sample docker-compose.yml file:*
-
+```
  api:
  build: .
  command: npm start
@@ -100,6 +100,7 @@ The following environment variables required:
  - provider_base_url=http://api4000:
  - provider_states_url=http://api:4000/provider-states
  - provider_states_active_url=http://api:4000/provider-states/active
+```
 
 ### Ruby Example
 If you're not using Docker, you will need to:
