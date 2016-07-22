@@ -53,10 +53,13 @@ Options: [:unix](#unix), [:list](#list), [:embedded](#embedded), [Custom Diff Fo
 
 #### :unix
 <img src="https://github.com/realestate-com-au/pact/raw/master/documentation/diff_formatter_unix.png" width="700">
+
 #### :list
 <img src="https://github.com/realestate-com-au/pact/raw/master/documentation/diff_formatter_list.png" width="700">
+
 #### :embedded
 <img src="https://github.com/realestate-com-au/pact/raw/master/documentation/diff_formatter_embedded.png" width="700">
+
 #### Custom Diff Formatter
 Any object can be used that responds to `call`, accepting the argument `diff`.
 ```ruby
