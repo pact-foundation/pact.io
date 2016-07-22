@@ -109,12 +109,12 @@ See [Verifying Pacts](https://github.com/realestate-com-au/pact/wiki/Verifying-p
 # In specs/service_consumers/pact_helper.rb
 require 'pact/provider/rspec'
 Pact.service_provider "Animal Service" do
- honours_pact_with 'Zoo App' do
- # This example points to a local file, however, on a real project with a continuous
- # integration box, you would use a [Pact Broker](https://github.com/bethesque/pact_broker) or publish your pacts as artifacts,
- # and point the pact_uri to the pact published by the last successful build.
- pact_uri '../zoo-app/specs/pacts/zoo_app-animal_service.json'
- end
+  honours_pact_with 'Zoo App' do
+    # This example points to a local file, however, on a real project with a continuous
+    # integration box, you would use a [Pact Broker](https://github.com/bethesque/pact_broker) or publish your pacts as artifacts,
+    # and point the pact_uri to the pact published by the last successful build.
+    pact_uri '../zoo-app/specs/pacts/zoo_app-animal_service.json'
+  end
 end
 ```
 #### 3. Run your failing specs
