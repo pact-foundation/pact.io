@@ -24,7 +24,6 @@ Pact.configure do | config |
   config.log_dir = './log'
 end
 ```
-
 Default value: `./log`
 
 ### logger
@@ -33,7 +32,6 @@ Pact.configure do | config |
   config.logger = Logger.new
 end
 ```
-
 Default value: file logger to the configured log_dir.
 
 ### logger.level
