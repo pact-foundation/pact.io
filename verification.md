@@ -62,7 +62,6 @@ This is useful when you are developing the consumer and provider concurrently, a
 
 ```
 $ rake pact:verify:at[../path-to-your-consumer-project/specs/pacts/my_consumer-my_provider.json]
-
 $ rake pact:verify:at[http://build-box/MyConsumerBuild/latestSuccessful/artifacts/my_consumer-my_provider.json]
 ```
 
