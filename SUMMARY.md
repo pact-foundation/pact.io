@@ -9,6 +9,13 @@
     * [Provider states](provider-states.md)
     * [Sharing Pacts with the Pact Broker](sharing-pacts-with-the-pact-broker.md)
 * [Implementation guides](chapter1.md)
+    * Ruby
+    * JVM
+    * .NET
+    * Javascript
+    * Go
+    * Swift
+    * Other languages
 * [Best practices](best-practices.md)
     * [Consumer](consumer.md)
     * [Provider](provider.md)
