@@ -1,5 +1,6 @@
 # Summary
 
+* [Introduct](README.md)
 * [Introduction](introduction.md)
 * [Getting started](getting-started.md)
  * [Usage example](usage-example.md)
@@ -8,7 +9,6 @@
  * [Verifying Pacts](verifying-pacts.md)
  * [Provider states](provider-states.md)
  * [Sharing Pacts with the Pact Broker](sharing-pacts-with-the-pact-broker.md)
-* [Getting started](README.md)
 * [Terminology](terminology.md)
 * [Implementation guides](chapter1.md)
     * [Ruby](ruby.md)
