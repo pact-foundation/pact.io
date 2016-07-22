@@ -27,8 +27,9 @@ Do not hand create any HTTP requests directly in your `Consumer` app. Testing th
 
 ### Ensure the models you use in other tests could actually be created from the responses you expect
 
-  Sure, you’ve checked that your client deserialises the HTTP response into the Alligator you expect, but then you need to make sure when you create an Alligator another test, that you create it with valid attributes \(eg. is the Alligator’s last\_login\_time a Time or a DateTime?\). One way to do this is to use factories or fixtures to create the models for all your tests. See this gist for a more detailed explanation.
-  ### Beware of Garbage In, Garbage Out with PUT\/POST\/PATCH
+Sure, you’ve checked that your client deserialises the HTTP response into the Alligator you expect, but then you need to make sure when you create an Alligator another test, that you create it with valid attributes \(eg. is the Alligator’s last\_login\_time a Time or a DateTime?\). One way to do this is to use factories or fixtures to create the models for all your tests. See this gist for a more detailed explanation.
+
+### Beware of Garbage In, Garbage Out with PUT\/POST\/PATCH
 
   Each interaction is tested in isolation, meaning you can’t do a PUT\/POST\/PATCH, and then follow it with a GET to ensure that the values you sent were actually read successfully by the `Provider`. For example, if you have an optional `surname` field, and you send `lastname` instead, a `Provider` will most likely ignore the misnamed field, and return a 200, failing to alert you to the fact that your `lastname` has gone to the big `/dev/null` in the sky.
   To ensure you don’t have a Garbage In Garbage Out situation, expect the response body to contain the newly updated values of the resource, and all will be well.
