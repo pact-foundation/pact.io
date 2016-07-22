@@ -23,7 +23,7 @@
         * Provider
     * [Go](go.md)
     * [Swift](swift.md)
-    * Other languages
+    * [Other languages](other-languages.md)
 * [Best practices](best-practices.md)
     * [Consumer](consumer.md)
     * [Provider](provider.md)
