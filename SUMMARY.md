@@ -22,7 +22,7 @@
             * Flexible matching
         * Provider
     * [Go](go.md)
-    * Swift
+    * [Swift](swift.md)
     * Other languages
 * [Best practices](best-practices.md)
     * [Consumer](consumer.md)
