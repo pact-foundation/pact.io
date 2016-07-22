@@ -40,6 +40,7 @@ The example below uses Docker image from the [Pact Provider Verifier](https://gi
  * `pact_urls` - a comma delimited list of pact file urls
  * `provider_base_url` - the base url of the pact provider (i.e. your API)
 1. Run `docker-compose build` and then `docker-compose up`
+
 ##### Sample docker-compose.yml file for a Node API exposed on port `4000`:
 ```
 api:
