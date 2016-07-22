@@ -21,7 +21,7 @@
             * Browser \(using Karma\)
             * Flexible matching
         * Provider
-    * Go
+    * [Go](go.md)
     * Swift
     * Other languages
 * [Best practices](best-practices.md)
