@@ -21,7 +21,7 @@
 ### log_dir
 ```ruby
 Pact.configure do | config |
- config.log_dir = './log'
+  config.log_dir = './log'
 end
 ```
 Default value: `./log`
