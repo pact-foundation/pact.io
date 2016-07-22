@@ -1,7 +1,7 @@
 # Implementation guides
 
 * [Ruby](/ruby.md)
-* [JVM](/.jvm.md)
+* JVM
 * .NET
 * Javascript
 * Go
