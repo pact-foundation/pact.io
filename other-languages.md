@@ -73,8 +73,9 @@ Execute pact provider verification against a provider which implements the follo
     }
 ```
 * an http post endpoint which sets the active pact consumer and provider state
-
- consumer=web&state=customer%20is%20logged%20in
+```
+consumer=web&state=customer%20is%20logged%20in
+```
 The following environment variables required:
 * `pact_urls` - a comma delimited list of pact file URL
 * `provider_base_url` - the base URL of the pact `Provider`
