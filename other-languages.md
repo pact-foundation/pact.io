@@ -2,7 +2,8 @@
 For `Providers` written in languages that don't have native Pact support, you can still verify that they satisfy their Pacts, using the generic Pact Provider Verification tool.
 
 ## Generic Pact Provider Verification
-This setup simplifies Pact Provider verification process in any language
+This setup simplifies Pact Provider verification process in any language.
+
 **Features**:
 * Verify Pacts published to a [Pact Broker](https://github.com/bethesque/pact_broker)
 * Verify local `*.json` Pacts for testing in a development environment
