@@ -138,10 +138,10 @@ end
 # Provider codebase
 Pact.provider_states_for 'My Service Consumer' do
  provider_state "an error occurs while retrieving a thing" do
- set_up do
- # Stubbing is ususally the easiest way to generate an error with predictable error text.
- allow(ThingRepository).to receive(:find).and_raise("An error occurred!")
- end
+  set_up do
+   # Stubbing is ususally the easiest way to generate an error with predictable error text.
+   allow(ThingRepository).to receive(:find).and_raise("An error occurred!")
+  end
  end
 end
 ```
