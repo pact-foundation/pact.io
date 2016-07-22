@@ -15,18 +15,18 @@ What you need is a way to say "I expect something matching this regular expressi
 animal_service.given("an alligator named Mary exists").
  upon_receiving("a request for an alligator").
  with(
- method: "get",
- path: "/alligators/Mary",
- headers: {"Accept" => "application/json"}).
+   method: "get",
+   path: "/alligators/Mary",
+   headers: {"Accept" => "application/json"}).
  will_respond_with(
- status: 200,
- headers: {"Content-Type" => "application/json"},
- body: {
- name: "Mary",
- dateOfBirth: Pact.term(
- generate: "02/11/2013",
- matcher: /\d{2}\/\d{2}\/\d{4}/)
- })
+   status: 200,
+   headers: {"Content-Type" => "application/json"},
+   body: {
+     name: "Mary",
+     dateOfBirth: Pact.term(
+       generate: "02/11/2013",
+       matcher: /\d{2}\/\d{2}\/\d{4}/)
+   })
 ```
 
 Note the use of the `Pact::Term`. When you run the Consumer tests, the mock server will return the value that you specified to "generate", and when you verify the pact in the Provider codebase, it will ensure that the value at that key matches the specified regular expression.
