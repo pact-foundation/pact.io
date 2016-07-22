@@ -11,3 +11,6 @@ Pact JS is currently under active development and are welcoming contributions an
 An abstraction layer on top of Mocha to remove some of the boilerplate required. The goal of this project is to provide Pact users with a great testing experience while keep using Mocha.
 
 Still under development but an alpha version is available: https://github.com/pact-foundation/pact-js-mocha
+
+#### Pact Karma
+A Karma plugin that will spin up a Provider Mock Server before your tests run in the browser.
