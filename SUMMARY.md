@@ -13,7 +13,7 @@
         * [Verification](verification.md)
         * [Configuration](configuration.md)
         * [Provider states](ruby_provider_states.md)
-    * JVM
+    * [JVM](jvm.md)
     * .NET
     * Javascript
         * Consumer
