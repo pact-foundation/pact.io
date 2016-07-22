@@ -41,6 +41,7 @@ Pact.configure do | config |
 end
 ```
 Default value: `Logger::DEBUG`
+
 ### diff_formatter
 ```ruby
 Pact.configure do | config |
