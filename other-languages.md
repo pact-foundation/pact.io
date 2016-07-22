@@ -44,19 +44,20 @@ The example below uses Docker image from the [Pact Provider Verifier](https://gi
 ##### Sample docker-compose.yml file for a Node API exposed on port `4000`:
 ```
 api:
- build: .
- command: npm start
- expose:
- - "4000:4000"
+  build: .
+  command: npm start
+  expose:
+  - "4000:4000"
+
 pactverifier:
- image: dius/pact-provider-verifier-docker
- links:
- - api:api
- volumes:
- - ./pact/pacts:/tmp/pacts # If you have local Pacts
- environment:
- - pact_urls=http://pact-host:9292/pacts/provider/MyAPI/consumer/MyConsumer/latest
- #- pact_urls=/tmp/pacts/foo-consumer.json # If you have local Pacts
+  image: dius/pact-provider-verifier-docker
+  links:
+  - api:api
+  volumes:
+  - ./pact/pacts:/tmp/pacts # If you have local Pacts
+  environment:
+  - pact_urls=http://pact-host:9292/pacts/provider/MyAPI/consumer/MyConsumer/latest
+  #- pact_urls=/tmp/pacts/foo-consumer.json # If you have local Pacts
  - provider_base_url=http://api:4000
 ```
 #### API with Provider States
