@@ -64,39 +64,45 @@ Options: [:unix](#unix), [:list](#list), [:embedded](#embedded), [Custom Diff Fo
 Any object can be used that responds to `call`, accepting the argument `diff`.
 ```ruby
 class MyCustomDiffFormatter
- def self.call diff
- ### Do stuff here
- end
+  def self.call diff
+    ### Do stuff here
+  end
 end
+
 Pact.configure do | config |
- config.diff_formatter = MyCustomDiffFormatter
+  config.diff_formatter = MyCustomDiffFormatter
 end
 ```
+
 ## Consumer
 ### pact_dir
 ```ruby
 Pact.configure do | config |
- config.pact_dir = `./spec/pacts`
+  config.pact_dir = `./spec/pacts`
 end
 ```
 Default value: `./spec/pacts`
+
 ### doc_generator
 ```ruby
 Pact.configure do | config |
- config.doc_generator = :markdown
+  config.doc_generator = :markdown
 end
 ```
 Default value: none
 Options: [:markdown](#markdown), [Custom Doc Generator](#custom-doc-generator)
+
 #### :markdown
 Generates Markdown documentation based on the contents of the pact files created in this consumer. Files are created in `${Pact.configuration.doc_dir}/markdown`.
+
 #### Custom Doc Generator
 Any object can be used that responds to `call`, accepting the arguments `pact_dir` and `doc_dir`.
 ```ruby
 Pact.configure do | config |
- config.doc_generator = lambda{ | pact_dir, doc_dir | generate_some_docs(pact_dir, doc_dir) }
+  config.doc_generator = lambda{ | pact_dir, doc_dir | generate_some_docs(pact_dir, doc_dir) }
 end
 ```
+
 #### doc_dir
 ```ruby
 Pact.configure do | config |
