@@ -10,7 +10,7 @@
     * [Sharing Pacts with the Pact Broker](sharing-pacts-with-the-pact-broker.md)
 * [Implementation guides](chapter1.md)
     * [Ruby](ruby.md)
-        * [Verification](verifying-pacts.md)
+        * [Verification](verification.md)
         * [Configuration](configuration.md)
         * Provider states
     * JVM
