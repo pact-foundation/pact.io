@@ -96,6 +96,7 @@ animal_service.given("an alligator named Mary exists").
  age: 10
  })
 ```
+
 ### Query params
 Query params can be specified as a string or a hash.
 When specified as a string, an exact match will be performed. You may use a Pact::Term, but only over the query string as a whole. Note that the query params must already be URL encoded in the expectation. (This will change for v2 matching.)
