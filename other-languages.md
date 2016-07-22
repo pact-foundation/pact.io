@@ -9,7 +9,10 @@ This setup simplifies Pact Provider verification process in any language.
 * Verify local `*.json` Pacts for testing in a development environment
 * Pre-configured Docker image with Ruby installed and a sane, default `src/Rakefile` keeping things DRY
 * Works with Pact [provider states](https://github.com/realestate-com-au/pact/wiki/Provider-states) should you need them
-The two solutions below use the [Pact Provider Proxy](https://github.com/bethesque/pact-provider-proxy) Ruby Gem, via a the [Pact Provider Verifier](https://github.com/DiUS/pact-provider-verifier-docker) project. For advanced usage, you can use Gem directly, however in most cases the Pact Provider Verifier should cover your needs.
+The two solutions below use the [Pact Provider Proxy](https://github.com/bethesque/pact-provider-proxy) Ruby Gem, via a the [Pact Provider Verifier](https://github.com/DiUS/pact-provider-verifier-docker) project.
+
+For advanced usage, you can use Gem directly, however in most cases the Pact Provider Verifier should cover your needs.
+
 ### How it works
 *Steps*:
 1. Create an API and a corresponding Docker image for it
