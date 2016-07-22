@@ -8,7 +8,8 @@
 
 **Why?**
 If you use `Pact` with exact matching for integrated tests, you will drive yourself nuts. You will have very brittle `Consumer` tests, as `Pact` checks every outgoing path, JSON node, query param and header. You will also end up with a cartesian explosion of interactions that need to be verified on the `Provider` side. This will increase the amount of time you spend getting your `Provider` tests to pass, without usefully increasing the amount of test coverage.
-  ### Think carefully about how you use it for non-isolated tests \(functional, integration tests\)
+
+### Think carefully about how you use it for non-isolated tests \(functional, integration tests\)
 
 * Keep your isolated, exact match tests. These will make sure that you’re mapping the right data from your domain objects into your requests.
 * For the integration tests, use loose, type based matching for the requests to avoid brittleness, and pull out the setup into a method that can be shared between tests so that you do not end up with a million interactions to verify \(this will help because the interactions collection in the `Pact` acts like a set, and discards exact duplicates\).
