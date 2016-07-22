@@ -22,11 +22,11 @@ Imagine an Animal Service client class that looks something like this.
 ```ruby
 require 'httparty'
 class AnimalServiceClient
- include HTTParty
- base_uri 'http://animal-service.com'
- def get_alligator
- # Yet to be implemented because we're doing Test First Development...
- end
+  include HTTParty
+  base_uri 'http://animal-service.com'
+  def get_alligator
+    # Yet to be implemented because we're doing Test First Development...
+  end
 end
 ```
 #### 3. Configure the mock Animal Service
