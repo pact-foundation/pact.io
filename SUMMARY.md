@@ -3,7 +3,7 @@
 * [Getting started](README.md)
     * [Terminology](terminology.md)
     * [Usage example](usage-example.md)
-    * Matching
+    * [Matching](matching.md)
     * Verifying Pacts
     * Provider states
     * Sharing Pacts with the Pact Broker
