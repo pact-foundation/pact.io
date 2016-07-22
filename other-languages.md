@@ -58,7 +58,7 @@ pactverifier:
   environment:
   - pact_urls=http://pact-host:9292/pacts/provider/MyAPI/consumer/MyConsumer/latest
   #- pact_urls=/tmp/pacts/foo-consumer.json # If you have local Pacts
- - provider_base_url=http://api:4000
+  - provider_base_url=http://api:4000
 ```
 #### API with Provider States
 Execute pact provider verification against a provider which implements the following:
