@@ -1,5 +1,6 @@
 # Ruby
 This getting started guide should help you get off the ground using Pact with Ruby. For more detail or advanced topics, head on over to the [Ruby Pact GitHub repository](https://github.com/realestate-com-au/pact).
+
 ## Installation
 Add this line to your application's Gemfile:
  gem 'pact'
