@@ -133,23 +133,22 @@ Create a `pact_helper.rb` in your service provider project. The recommended plac
 
 See [Verifying Pacts](https://github.com/realestate-com-au/pact/wiki/Verifying-pacts) and the [Provider](documentation/configuration.md#provider) section of the Configuration documentation for more information.
 
-  ```ruby
-  # In specs/service_consumers/pact_helper.rb
-  require 'pact/provider/rspec'
-  Pact.service_provider "Animal Service" do
+```ruby
+# In specs/service_consumers/pact_helper.rb
+require 'pact/provider/rspec'
+Pact.service_provider "Animal Service" do
   honours_pact_with 'Zoo App' do
     # This example points to a local file, however, on a real project with a continuous
     # integration box, you would use a [Pact Broker](https://github.com/bethesque/pact_broker) or publish your pacts as artifacts,
     # and point the pact_uri to the pact published by the last successful build.
     pact_uri '../zoo-app/specs/pacts/zoo_app-animal_service.json'
   end
-  end
-  ```
+end
+```
 
-  #### 3. Run your failing specs
+#### 3. Run your failing specs
 
-  $ rake pact:verify
-
+    $ rake pact:verify
 
 Congratulations! You now have a failing spec to develop against.
 At this stage, you'll want to be able to run your specs one at a time while you implement each feature. At the bottom of the failed pact:verify output you will see the commands to rerun each failed interaction individually. A command to run just one interaction will look like this:
