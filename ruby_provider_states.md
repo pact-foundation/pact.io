@@ -4,11 +4,11 @@ See [Provider States](/provider-states.md) for an introduction into this advance
 
 The text in the provider state should make sense when you read it as follows \(this is how the auto-generated documentation reads\):
 
-
 Given **an alligator with the name Mary exists** \*
 Upon receiving **a request to retrieve an alligator by name** \*\* from Some Consumer
 With {"method" : "get", "path" : "\/alligators\/Mary" }
 Some Provider will respond with { "status" : 200, ...}
+
 \* This is the provider state
 \*\* This is the request description
 
