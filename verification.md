@@ -22,7 +22,7 @@ The recommended place is `spec/service_consumers/pact_helper.rb`.
 To ensure that the latest version of the consumer pact is used each time, it is recommended that you either use a [Pact Broker](https://github.com/bethesque/pact_broker)
 or that you publish the pacts of a successful consumer build as artefacts in your CI system.
 
-_**Note:**_ Pact uses Rack::Test, and assumes that your service provider will be a Rack app. See below for options if your provider is not a Rack app.
+**_Note:_** Pact uses Rack::Test, and assumes that your service provider will be a Rack app. See below for options if your provider is not a Rack app.
 
 ```ruby
 # In specs/service_consumers/pact_helper.rb
@@ -111,9 +111,10 @@ The search paths for the pact\_helper are:
 
 ```ruby
 [
- "spec/**/*service*consumer*/pact_helper.rb",
- "spec/**/*consumer*/pact_helper.rb",
- "spec/**/pact_helper.rb",
- "**/pact_helper.rb"]
+  "spec/**/*service*consumer*/pact_helper.rb",
+  "spec/**/*consumer*/pact_helper.rb",
+  "spec/**/pact_helper.rb",
+  "**/pact_helper.rb"
+]
 ```
 
