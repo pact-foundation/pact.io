@@ -16,6 +16,7 @@
 
 #### Provider only configuration options
 * [include](#include)
+
 ## Consumer and Provider
 ### log_dir
 ```ruby
