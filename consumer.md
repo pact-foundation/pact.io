@@ -20,9 +20,10 @@ If you don’t care about verifying your interactions, you could use something l
 ### Make the latest pact available to the `Provider` via a URL
 
   See [Sharing pacts between ](https://github.com/realestate-com-au/pact/wiki/Sharing-pacts-between-consumer-and-provider)`Consumer`[ and ](https://github.com/realestate-com-au/pact/wiki/Sharing-pacts-between-consumer-and-provider)`Provider` for options to implement this.
-  ### Ensure all calls to the `Provider` go through classes that have been tested with `Pact`
 
-  Do not hand create any HTTP requests directly in your `Consumer` app. Testing through a client class \(a class with the sole responsibility of handling the HTTP interactions with the `Provider`\) gives you much more assurance that your `Consumer` app will be creating the HTTP requests that you think it should.
+### Ensure all calls to the `Provider` go through classes that have been tested with `Pact`
+
+Do not hand create any HTTP requests directly in your `Consumer` app. Testing through a client class \(a class with the sole responsibility of handling the HTTP interactions with the `Provider`\) gives you much more assurance that your `Consumer` app will be creating the HTTP requests that you think it should.
   ### Ensure the models you use in other tests could actually be created from the responses you expect
 
   Sure, you’ve checked that your client deserialises the HTTP response into the Alligator you expect, but then you need to make sure when you create an Alligator another test, that you create it with valid attributes \(eg. is the Alligator’s last\_login\_time a Time or a DateTime?\). One way to do this is to use factories or fixtures to create the models for all your tests. See this gist for a more detailed explanation.
