@@ -59,8 +59,9 @@ _NOTE: Obviously, there is an element of not wanting to throw the baby out with 
 
 ### ...but I use Docker?
 
-  See "but I already have an E2E integration suite that runs for an hour?". All of the problems still exist, but Docker numbs the pain \(or defers it\).
-  ### ...but our company develops APIs before consumers \(e.g. API\/Document Driven Design\)
+See "but I already have an E2E integration suite that runs for an hour?". All of the problems still exist, but Docker numbs the pain \(or defers it\).
 
-  Then you are probably developing for _many consumers_, am I right? If you don't know who these consumers are going to be, then Pact is not for you. If you have control over any of them, then Pact is likely to be a good fit - you just won't be driving the design from the consumer.
+### ...but our company develops APIs before consumers \(e.g. API\/Document Driven Design\)
+
+Then you are probably developing for _many consumers_, am I right? If you don't know who these consumers are going to be, then Pact is not for you. If you have control over any of them, then Pact is likely to be a good fit - you just won't be driving the design from the consumer.
 
