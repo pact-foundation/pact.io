@@ -27,7 +27,8 @@
 * The ability to immediately see which consumers will be broken if a change is made to the provider API.
 * When using the [Pact Broker](https://github.com/bethesque/pact_broker), the ability to map the relationships between your services.
   See [https:\/\/github.com\/realestate-com-au\/pact\/wiki\/FAQ\#how-does-pact-differ-from-vcr](https://github.com/realestate-com-au/pact/wiki/FAQ#how-does-pact-differ-from-vcr) for more examples of similar technologies.
-  ### ...but I use Swagger\/OpenAPI?
+
+### ...but I use Swagger\/OpenAPI?
 
   OpenAPIs and Pact are designed with different ends in mind. The differences can be summarised below:
   The Swagger \/ OpenAPI specification aims to standardise the description and structure of an API. It can tell you what APIs are available and what fields\/structure it expects and can generate documentation\/UI to interact with one. What it is not, is a testing framework.
