@@ -1,9 +1,9 @@
 # Implementation guides
 
 * [Ruby](/ruby.md)
-* JVM
-* .NET
-* Javascript
-* Go
-* Swift \/ Objective-C
+* [JVM](/jvm.md)
+* [.NET](/net.md)
+* [Javascript](/javascript.md)
+* [Go](/go.md)
+* [Swift \/ Objective-C](/swift.md)
 
