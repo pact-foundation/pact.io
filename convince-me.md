@@ -34,6 +34,7 @@ OpenAPIs and Pact are designed with different ends in mind. The differences can 
 > The Swagger \/ OpenAPI specification aims to standardise the description and structure of an API. It can tell you what APIs are available and what fields\/structure it expects and can generate documentation\/UI to interact with one. What it is not, is a testing framework.
 
   Pact on the other hand, is essentially a unit testing framework using _specification by example_. It just so happens that to be able to run those tests on the API consumer and provider side, it needs to generate an intermediate format to be able to communicate that structure - this is the specification.
+
   In fact, the authors of the OpenAPI specification predicted such use cases by announcing:
   > Additional utilities can also take advantage of the resulting files, such as testing tools.
   > Potentially, for example, we could use vendor extensions to document this extra metadata that is captured in our spec. This is one way the two projects could come together.
