@@ -4,8 +4,8 @@ Pact is an open source initiative and relies on the personal contributions of ma
 
 That being said, although each language will move at a different pace, as a community we are moving in the same direction.
 
-## Specification [Status: v2]
-The [Pact Specification](https://github.com/pact-foundation/pact-specification/) outlines the features each major version of a release should contain for interoperability between languages. The most current approved version is v2.
+## Specification [Status: v3]
+The [Pact Specification](https://github.com/pact-foundation/pact-specification/) outlines the features each major version of a release should contain for interoperability between languages. The most current approved version is v3.
 
 ## Reference Library [Status: Alpha]
 One of the key advantages of Pact is that its DSL is native to each language, resulting in seamless toolchain integration. This is also its biggest challenge - with any change to the specification, each language has to implement the complex matching and verification logic for the Consumer and Provider DSLs.
