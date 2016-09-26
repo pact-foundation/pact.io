@@ -18,11 +18,12 @@ verification process. The two options you must provide to the dsl.VerifyRequest
 are:
 
 ```
-ProviderStatesURL: 			 GET URL to fetch all available states (see types.ProviderStates)
+ProviderStatesURL: 		    GET URL to fetch all available states (see types.ProviderStates)
 ProviderStatesSetupURL: 	POST URL to set the provider state (see types.ProviderState)
 ```
 
-Example routes using the standard Go http package might look like this:
+Example routes using the standard Go http package might look like this, note
+the `/states` endpoint returns a list of available states for each known consumer:
 
 ```go
 // Return known provider states to the verifier (ProviderStatesURL):
