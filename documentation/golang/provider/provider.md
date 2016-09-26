@@ -49,15 +49,15 @@ Provider side Pact testing, involves verifying that the contract - the Pact file
 	satisfy the requirements of each of your known consumers:
 
 	```go
-	response := pact.VerifyProvider(&types.VerifyRequest{
+	err := pact.VerifyProvider(&types.VerifyRequest{
 		ProviderBaseURL:        "http://localhost:8000",
 		PactURLs:               []string{"./pacts/my_consumer-my_provider.json"},
 		ProviderStatesURL:      "http://localhost:8000/states",
 		ProviderStatesSetupURL: "http://localhost:8000/setup",
 	})
 
-	if response.ExitCode != 0 {
-		t.Fatalf("Got non-zero exit code '%d', expected 0", response.ExitCode)
+	if err != nil {
+		t.Fatal("error:", err)
 	}
 	```
 
