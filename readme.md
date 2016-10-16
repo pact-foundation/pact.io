@@ -43,6 +43,8 @@ Check out [this talk about Pact](http://www.infoq.com/presentations/pact) and th
 For a JVM specific talk, [Deploy with Confidence!](https://www.youtube.com/watch?v=h-79QmIV824) was presented at the April meet-up of [MelbJVM](http://www.meetup.com/en-AU/Melbourne-Java-JVM-Users-Group/) and at the June meet-up of
 [Melbourne Microservices](http://www.meetup.com/en-AU/Melbourne-Microservices/). Slides for the talk [can be found here](media/Pact%20-%20Deploy%20with%20Confidence!.pdf).
 
+For a great explanation of consumer-driven contracts (and Pact!), check out this talk from Atlassian at their 2016 summit: [Verifying Microservice Integrations with Contract Testing](https://www.youtube.com/watch?v=-6x6XBDf9sQ&feature=youtu.be).
+
 ### Implementations
 - [Ruby Pact](https://github.com/realestate-com-au/pact)
 - [JVM Pact](https://github.com/DiUS/pact-jvm) and [Scala-Pact](https://github.com/ITV/scala-pact)
