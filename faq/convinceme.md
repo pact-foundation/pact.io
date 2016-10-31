@@ -80,7 +80,7 @@ In fact, you don't even have to use Pact to implement contract testing and gain 
 
 Are you just saying that so we don't feel bad?
 
-Here are some suggestions:
+Here are some suggestions to win them over:
 
 * Watch some of the great talks over lunch with your team and some popcorn
 * [Ask](https://gitter.im/realestate-com-au/pact) one of the pact contributors to do a brown-bag talk at your office or over hangouts
