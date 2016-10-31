@@ -44,6 +44,8 @@ In fact, the authors of the OpenAPI specification predicted such use cases by an
 > Additional utilities can also take advantage of the resulting files, such as testing tools.
 Potentially, for example, we could use vendor extensions to document this extra metadata that is captured in our spec. This is one way the two projects could come together.
 
+If you are using Swagger, maybe take a look at [Swagger Request Validator](https://bitbucket.org/atlassian/swagger-request-validator), a plugin developed at Atlassian that aims to unify these worlds.
+
 See [https://github.com/pact-foundation/pact-specification/issues/28](https://github.com/pact-foundation/pact-specification/issues/28) for more.
 
 ### ...but I already have an end-to-end (E2E) integration suite that runs for an hour?
@@ -66,4 +68,20 @@ See "but I already have an E2E integration suite that runs for an hour?". All of
 
 ### ...but our company develops APIs before consumers (e.g. API/Document Driven Design)
 
-Then you are probably developing for _many consumers_, am I right? If you don't know who these consumers are going to be, then Pact is not for you. If you have control over any of them, then Pact is likely to be a good fit - you just won't be driving the design from the consumer.
+Then you are probably developing for _many consumers_, am I right? If you don't know who these consumers are going to be, then Pact may not be for you. If you have control over any of them, then Pact could be a good fit - you just won't be driving the design from the consumer (that's OK too).
+
+### ...but I don't trust you and your dodgy code
+
+Good, you shouldn't. You should evaluate Pact on a smaller project to prove its worthiness before downing the Kool-aid.
+
+In fact, you don't even have to use Pact to implement contract testing and gain the glorious benefits - Pact just makes it easier. 
+
+## OK, I'm convinced but I can't convince my friends
+
+Are you just saying that so we don't feel bad?
+
+Here are some suggestions:
+
+* Watch some of the great talks over lunch with your team and some popcorn
+* [Ask](https://gitter.im/realestate-com-au/pact) one of the pact contributors to do a brown-bag talk at your office or over hangouts
+* [Chat](https://gitter.im/realestate-com-au/pact) to us in real-time and we'll see if we can debate as your proxy
