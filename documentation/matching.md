@@ -55,27 +55,42 @@ You can use `Pact::Term` for request and response header values, the request que
 
 ### Type matching
 
-Often, you will not care what the exact value is at a particular path is, you just care that a value is present and that it is of the expected type. For this scenario, you can use `Pact::SomethingLike`.
+Often, you will not care what the exact value is at a particular path is, you just care that a value is present and that it is of the expected type. For this scenario, you can use `Pact::SomethingLike`(this library is already included in `require 'pact/consumer/rspec'`).
 
 ```ruby
 animal_service.given("an alligator named Mary exists").
   upon_receiving("a request for an alligator").
   with(
     method: "get",
-    path: "/alligators/Mary",
+    path: "/alligators/Mary", 
+    headers: {"Accept" => "application/json"}).
+  will_respond_with(
+    status: 200,
+    headers: {"Content-Type" => "application/json"},
+    body: Pact.like(
+      name: "Mary",
+      age: 73)
+  )
+```
+
+The mock server will return `{"name": "Mary", "age": 73}` in the consumer tests, but when `pact:verify` is run in the provider, it will just check that the type of the `name` value is a String, and that the type of the `age` value is a Fixnum. If you wanted an exact match on "Mary", but to allow any age, you would only wrap the `73` in the `Pact::SomethingLike`. For example:
+
+```ruby
+animal_service.given("an alligator named Mary exists").
+  upon_receiving("a request for an alligator").
+  with(
+    method: "get",
+    path: "/alligators/Mary", 
     headers: {"Accept" => "application/json"}).
   will_respond_with(
     status: 200,
     headers: {"Content-Type" => "application/json"},
     body: {
-      Pact.like(
-        name: "Mary",
-        age: 73
-      )
-    })
+      name: "Mary",
+      age: Pact.like(73)
+    }
+  )
 ```
-
-The mock server will return `{"name": "Mary", "age": 73}` in the consumer tests, but when `pact:verify` is run in the provider, it will just check that the type of the `name` value is a String, and that the type of the `age` value is a Fixnum. If you wanted an exact match on "Mary", but to allow any age, you would only wrap the `73` in the `Pact::SomethingLike`.
 
 For request matching, the mock server will allow any values of the same type to be used in the consumer test, but will replay the given values in `pact:verify`.
 
