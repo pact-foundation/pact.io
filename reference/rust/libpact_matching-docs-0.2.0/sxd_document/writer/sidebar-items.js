@@ -1,1 +1,0 @@
-initSidebarItems({"fn":[["format_document","Formats a document into a Write"]]});

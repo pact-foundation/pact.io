@@ -1,1 +1,0 @@
-initSidebarItems({"struct":[["WebmachineContext","Main context struct that holds the request and response."],["WebmachineRequest","Request that the state machine is executing against"],["WebmachineResponse","Response that is generated as a result of the webmachine execution"]]});

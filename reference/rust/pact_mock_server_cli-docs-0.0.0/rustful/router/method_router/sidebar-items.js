@@ -1,1 +1,0 @@
-initSidebarItems({"struct":[["MethodRouter","A router that selects an item from an HTTP method."]]});

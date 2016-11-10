@@ -1,1 +1,0 @@
-initSidebarItems({"struct":[["TreeRouter","A tree shaped router that selects handlers using paths."]]});

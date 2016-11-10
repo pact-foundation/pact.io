@@ -1,1 +1,0 @@
-initSidebarItems({"enum":[["ChildOfElement",""],["ChildOfRoot",""],["ParentOfChild",""]],"struct":[["Attribute",""],["Attributes",""],["Comment",""],["Connections",""],["Element",""],["ElementChildren",""],["ProcessingInstruction",""],["Root",""],["RootChildren",""],["Siblings",""],["Storage",""],["Text",""]]});
