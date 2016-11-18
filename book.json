@@ -4,7 +4,7 @@
         "prism",
         "-highlight",
         "github",
-        "ga"
+        "-ga"
     ],
     "pluginsConfig": {
         "edit-link": {
@@ -14,7 +14,7 @@
         "github": {
             "url": "https://github.com/pact-foundation/pact-foundation.github.io/"
         },
-        "ga": {
+        "-ga": {
             "token": "UA-8926693-8",
             "configuration": "auto"
         }
