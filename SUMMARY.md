@@ -1,5 +1,6 @@
 # Summary
 
+* [Introduction](blogs_vidios_and_articles.md)
 * [Getting Started](documentation/README.md)
    * [Terminology](documentation/how_does_pact_work.md)
    * [Usage example](documentation/usage_ruby.md)
@@ -25,8 +26,8 @@
        * [Consumer](documentation/golang/consumer/consumer.md)
            * [Flexible Matching](documentation/golang/consumer/matching.md)
        * [Provider](documentation/golang/provider/provider.md)
-          * [Provider States](documentation/golang/provider/states.md)
-          * [Publishing to a Broker](documentation/golang/provider/publishing.md)
+           * [Provider States](documentation/golang/provider/states.md)
+           * [Publishing to a Broker](documentation/golang/provider/publishing.md)
    * [Swift](documentation/swift.md)
    * [Other Languages](documentation/provider_verifier.md)
 * [Best practices](best_practices/README.md)
@@ -38,3 +39,4 @@
 * [Contributing](contributing/README.md)
 * [Contributors](about_pact/README.md)
 * [Roadmap](roadmap/README.md)
+
