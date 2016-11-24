@@ -15,3 +15,5 @@
 * [Karma Refactors to Microservices](http://www.infoq.com/news/2014/07/karma-microservices) - Jul 2014
 * [Simplifying microservices testing with pacts](http://dius.com.au/2014/05/19/simplifying-micro-service-testing-with-pacts/) - May 2014
 * [Consumer driven contract testing - Pact (.NET)](https://medium.com/@ericjwhuang/consumer-driven-contract-testing-pact-d791a3eac72a/) - Nov 2016
+
+
