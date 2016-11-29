@@ -9,7 +9,7 @@
 * Pact tests should **not** focus on
  * exposing bugs in the provider (though this might come up as a by product)
 
-You can read more about the difference between contract and functional tests [here](/documentation/contract_tests_not_functional_tests.html).
+You can read more about the difference between contract and functional tests [here](./documentation/contract_tests_not_functional_tests.md).
 
 **The rule of thumb for working out what to test or not test is - if I don't include this scenario, what bug in the consumer or what misunderstanding about how the provider behaves might be missed. If the answer is none, don't include it.**
 
