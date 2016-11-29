@@ -4,14 +4,14 @@
 * Functional testing is about ensuring the provider does the right thing with a request. These tests belong in the provider codebase, and it's not the job of the consumer team to be writing them. 
 * Contract testing is about making sure your consumer team and provider team have a shared understanding of what the requests and responses will be.
 * Pact tests should focus on 
- * exposing bugs in how the consumer creates the requests or handles responses
- * exposing misunderstandings about how the provider behaves
+ * exposing _bugs_ in how the consumer creates the requests or handles responses
+ * exposing _misunderstandings_ about how the provider behaves
 * Pact tests should **not** focus on
  * exposing bugs in the provider (though this might come up as a by product)
 
 You can read more about the difference between contract and functional tests [here](/documentation/contract_tests_not_functional_tests.html).
 
-**The rule of thumb for working out what to test is - if I don't include this scenario, what _bug in the consumer_ or what _misunderstanding about how the provider behaves_ might be missed.**
+**The rule of thumb for working out what to test or not test is - if I don't include this scenario, what bug in the consumer or what misunderstanding about how the provider behaves might be missed. If the answer is none, don't include it.**
 
 ### Use `Pact` for isolated (unit) tests
 
