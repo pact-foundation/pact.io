@@ -12,7 +12,7 @@
 
 **The rule of thumb for working out what to test is - if I don't include this scenario, what _bug in the consumer_ or what _misunderstanding about how the provider behaves_ might be missed.**
 
-You can read more about the difference between contract and functional tests [here](documentation/contract_tests_not_functional_tests.md).
+You can read more about the difference between contract and functional tests [here](/documentation/contract_tests_not_functional_tests.md).
 
 ### Use `Pact` for isolated (unit) tests
 
