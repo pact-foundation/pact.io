@@ -29,4 +29,10 @@ Edit: Functional testing would be about making sure the provider was doing the r
 
 > **I guess a rule of thumb for working out whether to include a scenario or not is - if I don't include this scenario, what _bug in the consumer_ or what _misunderstanding about how the provider behaves_ might be missed. Don't think so much about exposing _bugs in the provider_.**
 
-TODO: write an example of how NOT to do it here!
+## How not to do it
+
+* Write responses that expect exact values where the exact values don't really matter. This will make your tests very brittle.
+* Write separate interactions for every single business rule when the responses formats are exactly the same. This will make the maintenance a burden.
+* Only test success scenarios. You need to know that your consumer can handle error scenarios.
+ 
+
