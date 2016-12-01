@@ -1,6 +1,6 @@
 # The difference between contract tests and functional tests (or How To Do Pacts In a Way That Won't Make You Want To Stab Your Eyes Out)
 
-The difference between contract tests and functional tests is a debate that seems to surface quite often for Teams who start investing seriously into contracts testing. The challenge is that it's not a black and white kind of situation, but more something that starts creeping up on the depth of contract testing.
+The difference between contract tests and functional tests is a debate that seems to surface quite often for teams who start investing seriously into contracts testing. The challenge is that it's not a black and white kind of situation, but more something that starts creeping up on the depth of contract testing.
 
 One place where it can be common is around validation rules and rejected requests. For example, we might have a simple *User Service* that allows Consumers to register new users, typically with a POST request containing the details of the created user in the body.
 

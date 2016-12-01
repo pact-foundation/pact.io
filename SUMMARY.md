@@ -32,6 +32,7 @@
    * [Other Languages](documentation/provider_verifier.md)
 * [Best practices](best_practices/README.md)
    * [Consumer](best_practices/consumer.md)
+       * [Contract Tests vs Functional Tests](best_practices/contract_tests_not_functional_tests.md)
    * [Provider](best_practices/provider.md)
 * [FAQ](faq/README.md)
    * [Convince me](faq/convinceme.md)
@@ -39,4 +40,3 @@
 * [Contributing](contributing/README.md)
 * [Contributors](about_pact/README.md)
 * [Roadmap](roadmap/README.md)
-
