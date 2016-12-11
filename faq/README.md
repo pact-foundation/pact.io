@@ -82,4 +82,26 @@ It's very important for the consumer team to know when pact verification fails, 
 * Even better, if you can, have a copy of the provider build run on the consumer CI that just runs the unit tests and pact verification. That way the consumer team has the same red build that the provider team has, and it gives them a vested interest in keeping it green.
 
 Verify a pact by using a URL that you know the latest pact will be made available at. Do not rely on manual intervention (eg. someone copying a file across to the provider project) because this process will inevitably break down, and your verification task will give you a false positive. Do not try to "protect" your build from being broken by instigating a manual pact update process. The pact verify task is the canary of your integration - manual updates would be like giving your canary a gas mask.
-s
+
+### How do I test OAuth or other security headers?
+
+For interactions such as OAuth2 defined by a standard and implemented with a library implementing that standard, we would recommend _against_ using Pact for these scenarios. Standards are well defined and don't change often, and likely you have simpler testing options available (probably something your framework provides).
+
+For APIs that _use_ these headers, things are a little more complicated, particularly on the provider side - the side that actually needs the token to be valid. Why?
+
+When Pact reads the pact files for verification on the Provider side, it needs to have a valid token, and if that token has been persisted in a Pact file it has probably expired.
+
+#### Here are some options
+
+* If using the JVM, you can use [request filters](https://github.com/DiUS/pact-jvm/tree/master/pact-jvm-provider-gradle#modifying-the-requests-before-they-are-sent) to modify the request headers before they are sent to the Provider
+* Configure a relaxed OAuth2 validation service on the Provider that accepts any valid headers, so long as the match the spec (e.g. `Authorization` header). You might leverage the [provider states](http://docs.pact.io/documentation/provider_states.html) feature for this.
+* Use Ruby's `Timecop` or similar library to manipulate the runtime clock
+
+*NOTE*: Any option that modifies the request before sending to the running provider increases your chances of missing a key part of the interaction and therefore puts you at risk. Use carefully.
+
+See the following links for some further discussion:
+
+* https://github.com/realestate-com-au/pact/issues/49#issuecomment-65346357
+* https://groups.google.com/forum/#!searchin/pact-support/oauth%7Csort:relevance/pact-support/zTnDlOgdYhU/tq_Yx8MnIgAJ
+* https://groups.google.com/forum/#!topic/pact-support/tSyKZMxsECk
+* http://stackoverflow.com/questions/40777493/how-do-i-verify-pacts-against-an-api-that-requires-an-auth-token/40794800?noredirect=1#comment69346814_40794800
