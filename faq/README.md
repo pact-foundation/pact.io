@@ -93,9 +93,11 @@ When Pact reads the pact files for verification on the Provider side, it needs t
 
 #### Here are some options
 
-* If using the JVM, you can use [request filters](https://github.com/DiUS/pact-jvm/tree/master/pact-jvm-provider-gradle#modifying-the-requests-before-they-are-sent) to modify the request headers before they are sent to the Provider
+* Create a Mock authentication service used during testing - this gives you the best control.
+* If using the JVM, you can use [request filters](https://github.com/DiUS/pact-jvm/tree/master/pact-jvm-provider-gradle#modifying-the-requests-before-they-are-sent) to modify the request headers before they are sent to the Provider.
 * Configure a relaxed OAuth2 validation service on the Provider that accepts any valid headers, so long as the match the spec (e.g. `Authorization` header). You might leverage the [provider states](http://docs.pact.io/documentation/provider_states.html) feature for this.
-* Use Ruby's `Timecop` or similar library to manipulate the runtime clock
+* Use Ruby's `Timecop` or similar library to manipulate the runtime clock.
+
 
 *NOTE*: Any option that modifies the request before sending to the running provider increases your chances of missing a key part of the interaction and therefore puts you at risk. Use carefully.
 
