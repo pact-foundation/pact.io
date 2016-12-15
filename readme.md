@@ -57,8 +57,7 @@ For a great explanation of consumer-driven contracts (and Pact!), check out this
 ### Introductory articles
 
 * [Getting started with Pact](http://dius.com.au/2016/02/03/microservices-pact/)
-* [Simplifying micro-service testing with Pact](http://dius.com.au/2014/05/19/simplifying-micro-service-testing-with-pacts/)
-* [...and more!](blogs_videos_and_articles.html)
+* [...and more!](blogs_videos_and_articles.md)
 
 
 ### Getting Help
