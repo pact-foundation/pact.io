@@ -83,6 +83,30 @@ It's very important for the consumer team to know when pact verification fails, 
 
 Verify a pact by using a URL that you know the latest pact will be made available at. Do not rely on manual intervention (eg. someone copying a file across to the provider project) because this process will inevitably break down, and your verification task will give you a false positive. Do not try to "protect" your build from being broken by instigating a manual pact update process. The pact verify task is the canary of your integration - manual updates would be like giving your canary a gas mask.
 
+### How to prevent a consumer from deploying with an invalid contract
+
+Related to the previous question, is how we prevent the Consumer from releasing before ensuring the Provider also supports the contract.
+
+As a general rule, if the contract doesn't change, there is no need to run the Provider build, albeit there is currently no easy way to know this in the Broker (see feature request https://github.com/bethesque/pact_broker/issues/48). 
+
+Consider one or more of the following strategies:
+
+**Collaboration**
+
+Well, for starters, you _must_ be collaborating closely with the Provider team! 
+
+**Effective use of code branches**
+
+It is of course very important that new assumptions on the contract be validated by the Provider before the Consumer can be safely released. Have branches tested against the Provider before you merge into master.
+
+**Use source control to detect a modified contract:**
+
+If you also checked the master pact files into source control, your CI build could conditionally act - if the contract has changed, you must wait for a green provider build, if not you can safely deploy!
+
+**Use Pact Broker Webhooks:**
+
+Use [webhooks](https://github.com/bethesque/pact_broker/blob/master/lib/pact_broker/doc/views/webhooks.markdown) on the [Pact Broker](https://github.com/bethesque/pact_broker) to trigger a build on the Provider as soon as a new contract is submitted to the server.
+
 ### How do I test OAuth or other security headers?
 
 For interactions such as OAuth2 defined by a standard and implemented with a library implementing that standard, we would recommend _against_ using Pact for these scenarios. Standards are well defined and don't change often, and likely you have simpler testing options available (probably something your framework provides).
