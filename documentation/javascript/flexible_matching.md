@@ -58,7 +58,7 @@ Matching provides the ability to specify flexible length arrays. For example:
 Pact.Match.eachLike(obj, { min: 3 })
 ```
 
-Where `obj` can be any Javascript `object`, value or `Pact.Match`. It takes optional argument (`{ min: 3 }`) where min is greater than 0 and defaults to 1 if not provided. 
+Where `obj` can be any Javascript `object`, value or `Pact.Match`. It takes optional argument (`{ min: 3 }`) where min is greater than 0 and defaults to 1 if not provided.
 
 Below is an example that uses all of the Pact Matchers.
 
@@ -81,7 +81,7 @@ provider
     body: {
         "items": eachLike({
             size: somethingLike(10),
-            colour: term("red|green|blue", {generates: "blue"}),
+            colour: term({matcher: "red|green|blue", generate: "blue"}),
             tag: eachLike(somethingLike("jumper"))
         }, {min: 2})
     }
