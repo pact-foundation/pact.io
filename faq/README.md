@@ -1,5 +1,27 @@
 # FAQ
 
+## Table of Contents
+<!-- TOC depthFrom:3 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
+
+- [What is Pact good for?](#what-is-pact-good-for)
+- [What is Pact not good for?](#what-is-pact-not-good-for)
+- [Why doesn't Pact use JSON Schema?](#why-doesnt-pact-use-json-schema)
+- [Why does Pact use concrete JSON documents rather than using more flexible JSONPaths?](#why-does-pact-use-concrete-json-documents-rather-than-using-more-flexible-jsonpaths)
+- [Why is there no support for specifying optional attributes?](#why-is-there-no-support-for-specifying-optional-attributes)
+- [Why are the pacts generated and not static?](#why-are-the-pacts-generated-and-not-static)
+- [How do I test against the latest development and production versions of consumer APIs?](#how-do-i-test-against-the-latest-development-and-production-versions-of-consumer-apis)
+- [What does PACT stand for?](#what-does-pact-stand-for)
+- [Why Pact may not be the best tool for public testing APIs?](#why-pact-may-not-be-the-best-tool-for-public-testing-apis)
+- [Why Pact may not be the best tool for testing pass through APIs?](#why-pact-may-not-be-the-best-tool-for-testing-pass-through-apis)
+- [Do I still need end-to-end tests?](#do-i-still-need-end-to-end-tests)
+- [How can I handle versioning?](#how-can-i-handle-versioning)
+- [Using Pact where the Consumer team is different from the Provider team](#using-pact-where-the-consumer-team-is-different-from-the-provider-team)
+- [How to prevent a consumer from deploying with an invalid contract](#how-to-prevent-a-consumer-from-deploying-with-an-invalid-contract)
+- [How do I test OAuth or other security headers?](#how-do-i-test-oauth-or-other-security-headers)
+- [How do I test binary files in responses, such as a download?](#how-do-i-test-binary-files-in-responses-such-as-a-download)
+
+<!-- /TOC -->
+
 ### What is Pact good for?
 Pact is most valuable for designing and testing integrations where you (or your team/organisation/partner organisation) control the development of both the consumer and the provider, and the requirements of the consumer are going to be used to drive the features of the provider. It is fantastic tool for developing and testing intra-organisation microservices.
 
@@ -115,7 +137,7 @@ For APIs that _use_ these headers, things are a little more complicated, particu
 
 When Pact reads the pact files for verification on the Provider side, it needs to have a valid token, and if that token has been persisted in a Pact file it has probably expired.
 
-#### Here are some options
+**Here are some options**
 
 * Create a Mock authentication service used during testing - this gives you the best control.
 * If using the JVM, you can use [request filters](https://github.com/DiUS/pact-jvm/tree/master/pact-jvm-provider-gradle#modifying-the-requests-before-they-are-sent) to modify the request headers before they are sent to the Provider.
@@ -131,3 +153,25 @@ See the following links for some further discussion:
 * https://groups.google.com/forum/#!searchin/pact-support/oauth%7Csort:relevance/pact-support/zTnDlOgdYhU/tq_Yx8MnIgAJ
 * https://groups.google.com/forum/#!topic/pact-support/tSyKZMxsECk
 * http://stackoverflow.com/questions/40777493/how-do-i-verify-pacts-against-an-api-that-requires-an-auth-token/40794800?noredirect=1#comment69346814_40794800
+
+### How do I test binary files in responses, such as a download?
+
+We suggest matching on the core aspects of the interaction - the request itself, and the response headers e.g.
+
+```
+{
+   state: 'I have a picture that can be downloaded',
+   uponReceiving: 'a request to download some-file',
+   withRequest: {
+       method: 'GET',
+       path: '/download/somefile'        
+   },
+   willRespondWith: {
+       status: 200,
+       headers: 
+       {
+           'Content-disposition': 'attachment; filename=some-file.jpg'
+       }        
+   }
+}
+```
