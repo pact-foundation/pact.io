@@ -13,7 +13,51 @@ This is where the [Pact Broker](https://github.com/bethesque/pact_broker) comes 
 * Ability to decouple the release cycle of your `Consumer` and `Provider`
 * Ability to cross test the head/prod versions of `Pacts`
 
-For more information, head over to the Pact Broker [website](https://github.com/bethesque/pact_broker).
+Our sponsor [DiUS](https://www.dius.com.au) has kindly provided a [free hosted broker](https://pact.dius.com.au) to get you started quickly.
+
+### Language support
+
+**Ruby**
+Via the `pact_broker-client` gem:
+
+* [Publishing](https://github.com/bethesque/pact_broker-client#consumer)
+* [Provider verification](https://github.com/bethesque/pact_broker-client#provider)
+
+
+**Pact JVM - Gradle**
+* [Publishing ](https://github.com/DiUS/pact-jvm/tree/master/pact-jvm-provider-gradle#publishing-pact-files-to-a-pact-broker-version-227)
+* [Provider verification](https://github.com/DiUS/pact-jvm/tree/master/pact-jvm-provider-gradle#verifying-pact-files-from-a-pact-broker-version-311231)
+
+**Pact JVM - JUnit**
+* [Provider verification](https://github.com/DiUS/pact-jvm/tree/master/pact-jvm-provider-junit#download-pacts-from-a-pact-broker)
+
+**Pact JVM - SBT**
+* [Provider verification](https://github.com/DiUS/pact-jvm/tree/master/pact-jvm-provider-sbt#verifying-pact-files-from-a-pact-broker)
+
+**Pact JVM - Maven**
+* [Publishing](https://github.com/DiUS/pact-jvm/tree/master/pact-jvm-provider-maven#publishing-pact-files-to-a-pact-broker-version-320)
+* [Provider verification](https://github.com/DiUS/pact-jvm/tree/master/pact-jvm-provider-maven#verifying-pact-files-from-a-pact-broker-version-311231)
+
+**Golang**
+
+* [Publishing](https://github.com/pact-foundation/pact-go/#publishing-pacts-to-a-broker-and-tagging-pacts)
+* [Provider verification](https://github.com/pact-foundation/pact-go/#provider)
+
+**Pact JS**
+
+* [Publishing](https://github.com/pact-foundation/pact-js/#publishing-pacts-to-a-broker)
+* [Provider verification](https://github.com/pact-foundation/pact-js/#provider-api-testing)
+
+**Pact .NET**
+* [Publishing]()
+* [Provider verification](https://github.com/SEEK-Jobs/pact-net#service-provider)
+
+**Manual via HTTP**
+
+* See the [API definition](https://github.com/bethesque/pact_broker/wiki/Publishing-and-retrieving-pacts) with `cURL` examples
+
+
+For more information head over to the Pact Broker [website](https://github.com/bethesque/pact_broker).
 
 ## Alternative approaches
 
