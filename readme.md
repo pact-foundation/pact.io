@@ -45,6 +45,8 @@ For a JVM specific talk, [Deploy with Confidence!](https://www.youtube.com/watch
 
 For a great explanation of consumer-driven contracts (and Pact!), check out this talk from Atlassian at their 2016 summit: [Verifying Microservice Integrations with Contract Testing](https://www.youtube.com/watch?v=-6x6XBDf9sQ&feature=youtu.be).
 
+Hear how Soundcloud ["Move Fast and Consumer-Driven-Contract-Testing Things"](https://speakerdeck.com/alonpeer/move-fast-and-consumer-driven-contract-test-things) in their talk from MicroXchg 2017.
+
 ### Implementations
 - [Ruby Pact](https://github.com/realestate-com-au/pact)
 - [JVM Pact](https://github.com/DiUS/pact-jvm) and [Scala-Pact](https://github.com/ITV/scala-pact)
