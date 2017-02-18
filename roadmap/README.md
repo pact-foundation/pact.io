@@ -16,7 +16,11 @@ The Pact Community has come together to solve this problem. Our plan is to creat
 * Performing matching logic
 * Verifying Pacts
 
-This project is well underway with proof-of-concepts along the way confirming the approach, and v1 matching almost complete.
+This project is well underway with proof-of-concepts in JS and Golang, v3 matching and consumer lib complete.
+
+<p style="text-align: center;">
+<iframe src="https://docs.google.com/presentation/d/1lMaCj1b3JFdIC6c4F9ndDCskuxWvxGhFPhi15sbb9J0/embed?start=false&loop=false&delayms=3000" frameborder="0" width="700" height="422" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+</p>
 
 ## Node/JS [Status: Beta]
 
