@@ -37,14 +37,16 @@ OpenAPIs and Pact are designed with different ends in mind. The differences can 
 
 The Swagger / OpenAPI specification aims to standardise the description and structure of an API. It can tell you what APIs are available and what fields/structure it expects and can generate documentation/UI to interact with one. What it is not, is a testing framework.
 
-Pact on the other hand, is essentially a unit testing framework using _specification by example_. It just so happens that to be able to run those tests on the API consumer and provider side, it needs to generate an intermediate format to be able to communicate that structure - this is the specification. 
+Pact on the other hand, is essentially a unit testing framework using _specification by example_. It just so happens that to be able to run those tests on the API consumer and provider side, it needs to generate an intermediate format to be able to communicate that structure - this is the specification.
 
 In fact, the authors of the OpenAPI specification predicted such use cases by announcing:
 
 > Additional utilities can also take advantage of the resulting files, such as testing tools.
 Potentially, for example, we could use vendor extensions to document this extra metadata that is captured in our spec. This is one way the two projects could come together.
 
-If you are using Swagger, maybe take a look at [Swagger Request Validator](https://bitbucket.org/atlassian/swagger-request-validator), a plugin developed at Atlassian that aims to unify these worlds.
+If you are using Swagger, consider using [Swagger Mock Validator](https://bitbucket.org/atlassian/swagger-mock-validator), a plugin developed at Atlassian that aims to unify these worlds.
+
+Using in combination with Pact gives you confidence your API meets any published specification (for external clients), whilst giving you the confidence that any _known_ consumer requirements (internal) are satisfied.
 
 See [https://github.com/pact-foundation/pact-specification/issues/28](https://github.com/pact-foundation/pact-specification/issues/28) for more.
 
@@ -59,7 +61,7 @@ There are a few key problems with end-to-end (E2E) testing:
 
 The litmus test is this: if you can look someone straight in the eyes, and say that you don't spend a lot of time maintaining E2E environments or have constant challenges managing the tests, then it's time for another approach. If you have one or more people dedicated to managing release processes, this is probably a good sign you are heading in the wrong direction.
 
-If you really want to hang onto these, consider pushing a subset of your E2E scenarios further down your pipeline as a type of "Smoke Test", running just a few key scenarios prior to releasing to customers. 
+If you really want to hang onto these, consider pushing a subset of your E2E scenarios further down your pipeline as a type of "Smoke Test", running just a few key scenarios prior to releasing to customers.
 
 *NOTE: Obviously, there is an element of not wanting to throw the baby out with the bathwater here. Please factor accordingly *
 
@@ -74,7 +76,7 @@ Then you are probably developing for _many consumers_, am I right? If you don't 
 
 Good, you shouldn't. You should evaluate Pact on a smaller project to prove its worthiness before downing the Kool-aid.
 
-In fact, you don't even have to use Pact to implement contract testing and gain the glorious benefits - Pact just makes it easier. 
+In fact, you don't even have to use Pact to implement contract testing and gain the glorious benefits - Pact just makes it easier.
 
 ## OK, I'm convinced but I can't convince my friends
 
