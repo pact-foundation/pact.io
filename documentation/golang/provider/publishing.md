@@ -21,7 +21,7 @@ Use a cURL request like the following to PUT the pact to the right location,
 specifying your consumer name, provider name and consumer version.
 
 ```
-curl -v -XPUT \-H "Content-Type: application/json" \
+curl -v -XPUT -H "Content-Type: application/json" \
 -d@spec/pacts/a_consumer-a_provider.json \
 http://your-pact-broker/pacts/provider/A%20Provider/consumer/A%20Consumer/version/1.0.0
 ```
