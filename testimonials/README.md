@@ -34,6 +34,11 @@ Here are some of the companies who use Pact to make testing their microservices 
       <td style="border:none; vertical-align: middle"><img src="../media/logos/dius.png" alt="DiUS Logo"></td>
       <td style="border:none; vertical-align: middle"><img src="../media/logos/arquillian.png" alt="Arquillian Project Logo"></td>
     </tr>    
+    <tr style="border:none; background:none">
+      <td style="border:none; vertical-align: middle"><img src="../media/logos/lastminute.png" alt="lastminute.com"></td>
+      <td style="border:none; vertical-align: middle"><img src="../media/logos/cloudhealth-tech.png" alt="Cloudhealth Tech"></td>
+      <td style="border:none; vertical-align: middle"><img src="../media/logos/repairly.png" alt="Repairly"></td>
+    </tr>    
   </tbody>
 </table>
 
