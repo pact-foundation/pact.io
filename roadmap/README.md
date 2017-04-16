@@ -16,6 +16,20 @@ That being said, although each language will move at a different pace, as a comm
 
 <!-- /TOC -->
 
+## Aggregated development board
+
+Dashboard: https://huboard.com/pact-foundation/pact-specification
+
+Pact is comprised of many projects in different languages. Visualising all of
+the parallel development and the roadmap is challenging.
+
+To ease this, we are experimenting with an aggregated dashboard that brings
+together multiple projects into a single view.
+
+We hope this helps make our efforts more transparent, and encourages better
+collaboration across the many Pact authors and contributors.
+
+
 ## Specification [Status: v3]
 The [Pact Specification](https://github.com/pact-foundation/pact-specification/) outlines the features each major version of a release should contain for interoperability between languages. The most current approved version is v3.
 
