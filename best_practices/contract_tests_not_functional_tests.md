@@ -14,7 +14,7 @@ Then
   Expected Response is 200 OK
 ```
 
-Sticking to happy-paths is a risk of missing different response codes and potentially having the consumer misunderstand the way the provider behaves. So, let's had a failure scenario:
+Sticking to happy-paths is a risk of missing different response codes and potentially having the consumer misunderstand the way the provider behaves. So, let's look at a failure scenario:
 
 ```
 Given "there is already a user called Mary"
