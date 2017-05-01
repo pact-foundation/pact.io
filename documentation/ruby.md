@@ -2,6 +2,10 @@
 
 This getting started guide should help you get off the ground using Pact with Ruby. For more detail or advanced topics, head on over to the [Ruby Pact GitHub repository](https://github.com/realestate-com-au/pact).
 
+## Getting Started Guide
+
+This [workshop](https://github.com/DiUS/pact-workshop-ruby-v2) walks you through an example problem from start to finish, exploring most concepts that Pact supports. It takes approximately 2 hours to complete.
+
 ## Installation
 
 Add this line to your application's Gemfile:
