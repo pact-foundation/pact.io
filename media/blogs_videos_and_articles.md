@@ -15,5 +15,7 @@
 * [Karma Refactors to Microservices](http://www.infoq.com/news/2014/07/karma-microservices) - Jul 2014
 * [Simplifying microservices testing with pacts](http://dius.com.au/2014/05/19/simplifying-micro-service-testing-with-pacts/) - May 2014
 * [Consumer driven contract testing - Pact (.NET)](https://medium.com/@ericjwhuang/consumer-driven-contract-testing-pact-d791a3eac72a/) - Nov 2016
-
-
+* [Deploy with Confidence! Video from April Melb JVM Meetup](https://www.youtube.com/watch?v=h-79QmIV824) - June 2016
+* [Deploy with Confidence! Slides from April Melb JVM Meetup](media/Pact%20-%20Deploy%20with%20Confidence!.pdf).
+* [Verifying Microservice Integrations with Contract Testing - Atlassian at their 2016 summit](https://www.youtube.com/watch?v=-6x6XBDf9sQ&feature=youtu.be) - Oct 2016
+* [Move Fast and Consumer-Driven-Contract-Testing Things - Soundcloud MicroXchng 2017"](https://speakerdeck.com/alonpeer/move-fast-and-consumer-driven-contract-test-things) - Feb 2017

@@ -1,14 +1,7 @@
 # Go
 
-Pact Go is currently in *beta* and supports Pact Specification v2.
-
-### Getting started
-
-[Download](https://github.com/pact-foundation/pact-go/releases) the latest release
-and then [install](https://github.com/pact-foundation/pact-go#installation) Pact Go.
-
-Navigate through the side menu to learn more about using Pact with Golang, or head
-to the [Go Pact website](https://github.com/pact-foundation/pact-go) for more detail.
+[Pact Go](https://github.com/pact-foundation/pact-go/) currently supports Pact Specification v2,
+head over to the [website](https://github.com/pact-foundation/pact-go/) to get started.
 
 ### Go-Kit Example
 

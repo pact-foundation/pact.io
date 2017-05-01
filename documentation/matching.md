@@ -5,9 +5,6 @@ This section describes the various request/response matching techniques availabl
 ###### NOTE
 *If you are writing tests on the `Consumer` side to a different language on the `Provider` side, you must ensure you use a common Pact Specification between them or you will be unable to validate.*
 
-*e.g. If you are using v2 matching with the JS Consumer Pact DSL with a .NET provider, this will not work as the .NET provider only supports v1.1. In this case, you would need to use only v1.1 compatible matching on the `Consumer` side.*
-
-
 ### Regular expressions 
 
 Sometimes you will have keys in a request or response with values that are hard to know beforehand - timestamps and generated IDs are two examples.

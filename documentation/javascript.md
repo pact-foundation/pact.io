@@ -1,6 +1,8 @@
 # Javascript
 
-Pact support for JavaScript and Node JS is currently in active development.
+[Pact JS](https://github.com/pact-foundation/pact-js) is currently compliant to Pact Specification Version 2.0.
+
+Head to the [Pact JS website](https://github.com/pact-foundation/pact-js)to get started with Pact and JavaScript.
 
 ## Examples
 

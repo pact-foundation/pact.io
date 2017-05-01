@@ -51,7 +51,7 @@ Hear how Soundcloud ["Move Fast and Consumer-Driven-Contract-Testing Things"](ht
 - [Ruby Pact](https://github.com/realestate-com-au/pact)
 - [JVM Pact](https://github.com/DiUS/pact-jvm) and [Scala-Pact](https://github.com/ITV/scala-pact)
 - [.NET Pact](https://github.com/SEEK-Jobs/pact-net)
-- [JS Pact](https://github.com/DiUS/pact-consumer-js-dsl)
+- [JS Pact](https://github.com/pact-foundation/pact-js)
 - [Go Pact](https://github.com/pact-foundation/pact-go) (there is also a v1.1 native [Pact Go](https://github.com/SEEK-Jobs/pact-go))
 - [Swift / Objective-C Pact](https://github.com/DiUS/pact-consumer-swift)
 - [Python](https://github.com/pact-foundation/pact-python)
@@ -60,7 +60,7 @@ Hear how Soundcloud ["Move Fast and Consumer-Driven-Contract-Testing Things"](ht
 ### Introductory articles
 
 * [Getting started with Pact](http://dius.com.au/2016/02/03/microservices-pact/)
-* [...and more!](blogs_videos_and_articles.md)
+* [...and more!](media/blogs_videos_and_articles.md)
 
 
 ### Getting Help

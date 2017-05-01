@@ -51,7 +51,7 @@ This project is well underway with proof-of-concepts in JS and Golang, v3 matchi
 ## Python [Status: Alpha]
 
 We've had a large amount of interest from the community in a Python version of Pact,
-and it now has its beginnings at the [Pact Python](https://github.com/pact-foundation/pact-python/tree/initial-framework) GitHub repository.
+and it now has its beginnings at the [Pact Python](https://github.com/pact-foundation/pact-python) GitHub repository.
 
 Two contributors - Matthew Belvanz and Jose Salvatierra - will be leading this initiative.
 
