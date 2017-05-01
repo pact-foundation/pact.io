@@ -2,9 +2,9 @@
 
 This codebase provides a Javascript DSL for creating pacts. The following guides will help you get started in your favourite testing framework:
 
-* [Mocha / Node](documentation/javascript/mocha__node.md)
-* [Jasmine / Karma](documentation/javascript/jasmine__karma.md)
-* [Flexible Matching](documentation/javascript/flexible_matching.md)
+* [Mocha / Node](../mocha__node.md)
+* [Jasmine / Karma](../jasmine__karma.md)
+* [Flexible Matching](../flexible_matching.md)
 
 ## Pact Mock Service
 In order to write Pact tests on the `Consumer`, you first need to install the Pact Mock Service.

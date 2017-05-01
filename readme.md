@@ -54,6 +54,7 @@ Hear how Soundcloud ["Move Fast and Consumer-Driven-Contract-Testing Things"](ht
 - [JS Pact](https://github.com/DiUS/pact-consumer-js-dsl)
 - [Go Pact](https://github.com/pact-foundation/pact-go) (there is also a v1.1 native [Pact Go](https://github.com/SEEK-Jobs/pact-go))
 - [Swift / Objective-C Pact](https://github.com/DiUS/pact-consumer-swift)
+- [Python](https://github.com/pact-foundation/pact-python)
 
 
 ### Introductory articles
@@ -65,6 +66,6 @@ Hear how Soundcloud ["Move Fast and Consumer-Driven-Contract-Testing Things"](ht
 ### Getting Help
 You can get help on Pact from the following channels:
 
-* **Google users group:** https://groups.google.com/forum/#!forum/pact-support
+* **Stack Overflow**: https://stackoverflow.com/questions/tagged/pact
 * **Gitter:** Join the chat at https://gitter.im/realestate-com-au/pact and https://gitter.im/DiUS/pact-jvm
 * **Twitter:** @pact_up

@@ -3,7 +3,7 @@
 Here is a provider verification example. The steps to validate a Provider are as follows:
 
 1. Load the provider code base into your test
-1. Append 2 endpoints to the API - one to retrieve all available [provider states]([Pact Provider Verification](../../provider_states.md)), and another to set the current state.
+1. Append 2 endpoints to the API - one to retrieve all available [provider states](../../provider_states.md)), and another to set the current state.
 1. Configure and run the verifier
 
 ```
