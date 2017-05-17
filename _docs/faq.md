@@ -68,7 +68,7 @@ Secondly, if you think about it, if Pact supports making an assertion that eleme
 - Pact allows you to make the same request with a different "provider state", allowing you to test different HTTP response codes for the same endpoint, or test the same resource in different states.
 - Pact allows you to do regular expression matching.
 - Pact has native support for Ruby, the JVM, .Net, Go and Swift consumers, with a JavaScript wrapper using the Ruby mock server.
-- Pact has the [Pact Broker](https://github.com/bethesque/pact_broker) which provides auto-generated documentation, network diagrams, and enables cross testing of the production and head versions of your consumer and provider, allowing you to decouple your consumer and provider release cycles.
+- Pact has the [Pact Broker](https://github.com/pact-foundation/pact_broker) which provides auto-generated documentation, network diagrams, and enables cross testing of the production and head versions of your consumer and provider, allowing you to decouple your consumer and provider release cycles.
 
 In summary:
 
@@ -88,7 +88,7 @@ the confidence that you require.
 
 Consumer driven contracts to some extent allows you to do away with versioning. As long as all your contract tests pass, you should be able to deploy changes without versioning the API. If you need to make a breaking change to a provider, you can do it in a multiple step process - add the new fields/endpoints to the provider and deploy. Update the consumers to use the new fields/endpoints, then deploy. Remove the old fields/endpoints from the provider and deploy. At each step of the process, all the contract tests remain green.
 
-Using a [Pact Broker](https://github.com/bethesque/pact_broker), you can tag the production version of a pact when you make a release of a consumer. Then, any changes that you make to the provider can be checked against the production version of the pact, as well as the latest version, to ensure backward compatibility.
+Using a [Pact Broker](https://github.com/pact-foundation/pact_broker), you can tag the production version of a pact when you make a release of a consumer. Then, any changes that you make to the provider can be checked against the production version of the pact, as well as the latest version, to ensure backward compatibility.
 
 If you need to support multiple versions of the provider API concurrently, then you will probably be specifying which version your consumer uses by setting a header, or using a different URL component. As these are actually different requests, the interactions can be verified in the same pact without any problems.
 
