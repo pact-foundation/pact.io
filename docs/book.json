@@ -1,0 +1,22 @@
+{
+    "plugins": [
+        "edit-link",
+        "prism",
+        "-highlight",
+        "github",
+        "ga"
+    ],
+    "pluginsConfig": {
+        "edit-link": {
+            "base": "https://github.com/pact-foundation/pact-foundation.github.io/tree/test",
+            "label": "Edit This Page"
+        },
+        "github": {
+            "url": "https://github.com/pact-foundation/pact-foundation.github.io/"
+        },
+        "ga": {
+            "token": "UA-8926693-8",
+            "configuration": "auto"
+        }
+    }
+}
