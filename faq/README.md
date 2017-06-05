@@ -107,11 +107,17 @@ Verify a pact by using a URL that you know the latest pact will be made availabl
 
 ### How to prevent a consumer from deploying with an invalid contract
 
-Related to the previous question, is how we prevent the Consumer from releasing before ensuring the Provider also supports the contract.
+**Use Pact Broker Webhooks:**
 
-As a general rule, if the contract doesn't change, there is no need to run the Provider build, albeit there is currently no easy way to know this in the Broker (see feature request https://github.com/bethesque/pact_broker/issues/48). 
+Use [webhooks](https://github.com/pact-foundation/pact_broker/blob/master/lib/pact_broker/doc/views/webhooks.markdown) on the [Pact Broker](https://github.com/pact-foundation/pact_broker) to trigger a build on the Provider as soon as a changed contract is submitted to the server.
 
-Consider one or more of the following strategies:
+**Ensure the provider verification results are published back to the broker**
+
+As of version 2.0+ of the Pact Broker, and 1.11.1+ of the Pact Ruby implementation, provider verification results can be published back to the broker, and will be displayed on the index page. The consumer team should consult the verification status on the index page before deploying.
+
+One catch - it is only safe to deploy the consumer if it was verified against the _production_ version of the provider.
+
+Some other approaches to consider are:
 
 **Collaboration**
 
@@ -124,10 +130,6 @@ It is of course very important that new assumptions on the contract be validated
 **Use source control to detect a modified contract:**
 
 If you also checked the master pact files into source control, your CI build could conditionally act - if the contract has changed, you must wait for a green provider build, if not you can safely deploy!
-
-**Use Pact Broker Webhooks:**
-
-Use [webhooks](https://github.com/bethesque/pact_broker/blob/master/lib/pact_broker/doc/views/webhooks.markdown) on the [Pact Broker](https://github.com/bethesque/pact_broker) to trigger a build on the Provider as soon as a new contract is submitted to the server.
 
 ### How do I test OAuth or other security headers?
 
