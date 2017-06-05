@@ -71,7 +71,7 @@ If this is still a better situation for you than integration testing, or using a
 ### Why Pact may not be the best tool for testing pass through APIs?
 During pact verification, Pact does not test the side effects of a request being executed on a provider, it just checks that the response body matches the expected response body. If your API is merely passing on a message to a downstream system (eg. a queue) and does not validate the contents of the body before doing so, you could send anything you like in the request body, and the provider would respond the same way. The “contract” that you really want is between the consumer and the downstream system. Checking that the provider responded with a 200 OK does not give you any confidence that your consumer and the downstream system will work correctly in real life.
 
-What you really need is a “non-HTTP” pact between your consumer and the downstream system. Check out this gist for an example of how to use the Pact contract generation and matching code to test non-HTTP communications.
+What you really need is a “non-HTTP” pact between your consumer and the downstream system. Check out this [gist](https://gist.github.com/bethesque/0ee446a9f93db4dd0697) for an example of how to use the Pact contract generation and matching code to test non-HTTP communications.
 
 ### Do I still need end-to-end tests?
 
