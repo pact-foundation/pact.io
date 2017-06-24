@@ -4,7 +4,8 @@
         "prism",
         "-highlight",
         "github",
-        "ga"
+        "ga",
+        "toolbar-button"
     ],
     "pluginsConfig": {
         "edit-link": {
