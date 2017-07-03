@@ -4,24 +4,29 @@ At some point in your Pact journey, you are going to be generating lots of `Pact
 
 ## Pact Broker
 
-This is where the [Pact Broker](https://github.com/bethesque/pact_broker) comes in. It enables you to share your `Pacts` between projects, and make them useful for people too. It is the recommended way forward for serious Pact development, featuring:
+This is where the [Pact Broker](https://github.com/pact-foundation/pact_broker) comes in. It enables you to share your `Pacts` between projects, and make them useful for people too. It is the recommended way forward for serious Pact development, featuring:
 
 * Auto-generated documentation
-* Dynamically generated network diagrams
-* The ability to tag a `Pact` (i.e. "prod") so a `Provider` can verify itself against a fixed version of a `Pact` to ensure backwards compatibility.
+* Dynamically generated network diagrams so you can see which services talk to which other services.
+* The ability to tag a version of a pact `Pact` (i.e. "prod") so a `Provider` can verify itself against a fixed version of a `Pact` to ensure backwards compatibility.
+* The ability to use tags to allow development of new features without breaking your mainline development `Pact`.
 * Webhooks to trigger provider builds when a `Pact` is published.
-* Ability to decouple the release cycle of your `Consumer` and `Provider`
-* Ability to cross test the head/prod versions of `Pacts`
+* Provider verification results display
+* Change tracking between Pact versions so you can tell when a consumer has changed its expectations.
+
+Most importantly, the `Pact Broker` allows you to easily decouple the release cycle of your `Consumer` and `Provider`, which is one of the goals of writing microservices in the first place.
+
+You can find all the documentation for the `Pact Broker` in the [Pact Broker wiki](https://github.com/pact-foundation/pact_broker/wiki).
 
 Our sponsor [DiUS](https://www.dius.com.au) has kindly provided a [free hosted broker](https://pact.dius.com.au) to get you started quickly.
 
 ### Language support
 
 **Ruby**
-Via the `pact_broker-client` gem:
+via the `pact_broker-client` gem:
 
-* [Publishing](https://github.com/bethesque/pact_broker-client#consumer)
-* [Provider verification](https://github.com/bethesque/pact_broker-client#provider)
+* [Publishing](https://github.com/pact-foundation/pact_broker-client#consumer)
+* [Provider verification](https://github.com/pact-foundation/pact_broker-client#provider)
 
 
 **Pact JVM - Gradle**
