@@ -31,5 +31,5 @@
 * [Contributing](contributing/README.md)
 * [Contributors](about_pact/README.md)
 * [Who's using Pact?](testimonials/README.md)
-* [Who's using Pact?](media/blogs_videos_and_articles.md)
+* [Blogs, videos and articles](media/blogs_videos_and_articles.md)
 * [Roadmap](roadmap/README.md)
