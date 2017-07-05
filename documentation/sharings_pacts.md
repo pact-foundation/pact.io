@@ -54,7 +54,19 @@ via the `pact_broker-client` gem:
 * [Provider verification](https://github.com/pact-foundation/pact-js/#provider-api-testing)
 
 **Pact .NET**
-* [Publishing]()
+### Publishing
+
+Example publishing with PowerShell:
+
+```powershell
+$Headers = @{
+  Authorization = "Basic $([System.Convert]::ToBase64String([System.Text.Encoding]::ASCII.GetBytes("dXfltyFMgNOFZAxr8io9wJ37iUpY42M:O5AIZWxelWbLvqMd8PkAVycBJh2Psyg1")))"
+}
+$res = Invoke-WebRequest -Uri "https://test.pact.dius.com.au/pacts/provider/Animal%20Profile%20Service/consumer/Matching%20Service/version/1.0.0" -Headers $Headers -Method Put -InFile .\matching_service-animal_profile_service.json -ContentType "application/json"
+```
+
+See the [full API](https://github.com/pact-foundation/pact_broker/wiki/Publishing-and-retrieving-pacts).
+
 * [Provider verification](https://github.com/SEEK-Jobs/pact-net#service-provider)
 
 **Manual via HTTP**

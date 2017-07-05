@@ -10,7 +10,7 @@ That being said, although each language will move at a different pace, as a comm
 - [Table of Contents](#table-of-contents)
 - [Specification [Status: v3]](#specification-status-v3)
 - [Reference Library [Status: Alpha]](#reference-library-status-alpha)
-- [Python [Status: Alpha]](#python-status-alpha)
+- [Python [Status: v2]](#python-status-alpha)
 - [Node/JS [Status: v2]](#nodejs-status-v2)
 - [Golang [Status: v2]](#golang-status-v2)
 
