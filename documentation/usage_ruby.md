@@ -133,6 +133,9 @@ Now, rinse and repeat for other likely status codes that may be returned. For ex
 
 Create your API class using the framework of your choice (the Pact authors have a preference for [Webmachine][webmachine] and [Roar][roar]) - leave the methods unimplemented, we're doing Test First Develoment, remember?
 
+[webmachine]: https://github.com/webmachine/webmachine-ruby
+[roar]: https://github.com/trailblazer/roar
+
 #### 2. Tell your provider that it needs to honour the pact file you made earlier
 
 Require "pact/tasks" in your Rakefile.
