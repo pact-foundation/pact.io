@@ -3,3 +3,5 @@ build/
 dist/
 db.json
 package-lock.json
+public
+.cache
