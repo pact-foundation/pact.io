@@ -34,8 +34,8 @@ google_plus:
 fb_admins:
 fb_app_id:
 
-#less
+# less
 less:
   paths:
-    - themes/pact/source/less
+    - themes/pact/src/less/global.less
   compress: true
