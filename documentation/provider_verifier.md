@@ -76,15 +76,6 @@ pactverifier:
 
 Execute pact provider verification against a provider which implements the following:
 
-* an http get endpoint which returns pact provider_states by consumer
-
-		{
-			"myConsumer": [
-				"customer is logged in",
-				"customer has a million dollars"
-			]
-		}
-
 * an http post endpoint which sets the active pact consumer and provider state
 
 		consumer=web&state=customer%20is%20logged%20in
@@ -93,7 +84,6 @@ The following environment variables required:
 
 * `pact_urls` - a comma delimited list of pact file URL
 * `provider_base_url` - the base URL of the pact `Provider`
-* `provider_states_url` - the full URL of the endpoint which returns `Provider States` by consumer
 * `provider_states_active_url` - the full URL of the endpoint which sets the active pact `Consumer` and `Provider` state`
 
 *Updated Sample docker-compose.yml file:*
@@ -111,7 +101,6 @@ The following environment variables required:
 		environment:
 		- pact_urls=http://pact-host:9292/pacts/provider/MyProvider/consumer/myConsumer/latest
 		- provider_base_url=http://api:4000
-		- provider_states_url=http://api:4000/provider-states
 		- provider_states_active_url=http://api:4000/provider-states/active
 
 
