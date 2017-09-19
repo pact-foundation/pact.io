@@ -11,3 +11,4 @@ Head to the [Pact JS website](https://github.com/pact-foundation/pact-js) to get
 * [Pact with Mocha](https://github.com/pact-foundation/pact-js/tree/master/examples/mocha)
 * [Pact with Karma + Jasmine](https://github.com/pact-foundation/pact-js/tree/master/karma/jasmine)
 * [Pact with Karma + Mocha](https://github.com/pact-foundation/pact-js/tree/master/karma/mocha)
+* [Angular 4 + Mocha](https://github.com/stones/pact-angular-4-mocha)
