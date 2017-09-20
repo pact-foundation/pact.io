@@ -1,0 +1,31 @@
+{
+	"extends": "tslint:recommended",
+	"rules": {
+		"curly": true,
+		"indent": "tabs",
+		"no-console": false,
+		"max-line-length": 160,
+		"trailing-comma": false,
+		"object-literal-sort-keys": false,
+		"no-reference": false,
+		"no-trailing-whitespace": false,
+		"typedef-whitespace": false,
+		"whitespace": false,
+		"interface-name": false,
+		"ordered-imports": false,
+		"variable-name": false,
+		"no-var-requires": false,
+		"object-literal-shorthand": false,
+		"no-empty": false,
+		"max-classes-per-file": [
+			false
+		],
+		"prefer-const": false,
+		"no-unused-expression": false,
+		"forin": false,
+		"object-literal-key-quotes": false
+	},
+	"jsRules": {
+		"curly": true
+	}
+}

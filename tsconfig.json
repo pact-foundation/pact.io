@@ -1,0 +1,25 @@
+{
+	"compilerOptions": {
+		"module": "commonjs",
+		"target": "esnext",
+		"noImplicitAny": false,
+		"removeComments": true,
+		"noLib": false,
+		"emitDecoratorMetadata": true,
+		"experimentalDecorators": true,
+		"sourceMap": true,
+		"listFiles": true,
+		"isolatedModules": false,
+		"moduleResolution": "node",
+		"jsx": "react",
+		"lib": ["dom", "es2015", "es2017"],
+		"suppressImplicitAnyIndexErrors": true
+	},
+	"include": [
+		"src/**/*"
+	],
+	"exclude": [
+		"node_modules"
+	],
+	"compileOnSave": false
+}
