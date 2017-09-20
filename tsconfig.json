@@ -10,13 +10,14 @@
 		"sourceMap": true,
 		"listFiles": true,
 		"isolatedModules": false,
+		"allowJs": true,
 		"moduleResolution": "node",
 		"jsx": "react",
 		"lib": ["dom", "es2015", "es2017"],
 		"suppressImplicitAnyIndexErrors": true
 	},
 	"include": [
-		"src/**/*"
+		"src/**/*.tsx"
 	],
 	"exclude": [
 		"node_modules"

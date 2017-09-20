@@ -1,7 +1,4 @@
-/* eslint import/no-unresolved:"off" */
-/* eslint import/extensions:"off" */
-/* eslint global-require:"off" */
-import React from "react";
+import * as React from "react";
 // import favicon from "./favicon.png";
 
 let inlinedStyles = "";
@@ -15,8 +12,14 @@ if (process.env.NODE_ENV === "production") {
   }
 }
 
-export default class HTML extends React.Component {
-  render() {
+interface HtmlProps {
+	body?: any;
+	postBodyComponents?: any;
+	headComponents?: any;
+}
+
+module.exports = class HTML extends React.Component<HtmlProps> {
+  public render() {
     let css;
     if (process.env.NODE_ENV === "production") {
       css = (
@@ -48,4 +51,4 @@ export default class HTML extends React.Component {
       </html>
     );
   }
-}
+};
