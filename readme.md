@@ -1,5 +1,10 @@
 # Pact
 
+> noun  
+> A formal agreement between individuals or parties. _"the country negotiated a trade pact with the US"_  
+> synonyms:	agreement, protocol, deal, contract
+
+
 ### What is Pact?
 
 The Pact family of frameworks provide support for [Consumer Driven Contracts](http://martinfowler.com/articles/consumerDrivenContracts.html) testing.
