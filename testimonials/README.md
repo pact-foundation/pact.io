@@ -39,6 +39,11 @@ Here are some of the companies who use Pact to make testing their microservices 
       <td style="border:none; vertical-align: middle"><img src="../media/logos/cloudhealth-tech.png" alt="Cloudhealth Tech"></td>
       <td style="border:none; vertical-align: middle"><img src="../media/logos/repairly.png" alt="Repairly"></td>
     </tr>    
+    <tr style="border:none; background:none">
+      <td style="border:none; vertical-align: middle"><img src="../media/logos/rapid7.png" alt="https://www.rapid7.com/"></td>
+      <td style="border:none; vertical-align: middle"><img src="../media/logos/asos.png" alt="ASOS"></td>
+      <td style="border:none; vertical-align: middle"><img src="../media/logos/simplehq.png" alt="Simple"></td>
+    </tr>    
   </tbody>
 </table>
 
