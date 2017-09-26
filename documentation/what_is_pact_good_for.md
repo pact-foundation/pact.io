@@ -17,7 +17,7 @@ Pact is fantastic tool for developing and testing intra-organisation microservic
 # What is it not good for?
 
 * Testing APIs where the consumers cannot be individually identified (eg. public APIs).
-* Testing new or existing providers where the functionality is not being driven by the needs of the consumer (eg. public APIs)
+* Testing new or existing providers where the functionality is not being driven or altered by the needs of particular consumers (eg. a public API or an OAuth provider)
 * Testing providers where the consumer and provider teams do not have good communication channels.
 * Performance and load testing.
 * [Functional testing][functional-testing] of the provider - that is what the provider's own tests should do. Pact is about checking the contents and format of requests and responses.
