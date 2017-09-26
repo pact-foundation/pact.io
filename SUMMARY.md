@@ -3,6 +3,7 @@
 * [Introduction](blogs_vidios_and_articles.md)
 * [Getting Started](documentation/README.md)
    * [Terminology](documentation/how_does_pact_work.md)
+   * [What is Pact good for?](documentation/what_is_pact_good_for.md)
    * [Usage example](documentation/usage_ruby.md)
    * [Matching](documentation/matching.md)
        * [Gotchas](documentation/gotchas.md)
