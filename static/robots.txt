@@ -1,5 +1,0 @@
-User-agent: *
-Disallow: */tags/
-Disallow: */categories/
-
-sitemap: https://pact.io/sitemap.xml
