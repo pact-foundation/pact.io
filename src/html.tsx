@@ -12,13 +12,13 @@ if (process.env.NODE_ENV === "production") {
   }
 }
 
-interface HtmlProps {
+interface Props {
 	body?: any;
 	postBodyComponents?: any;
 	headComponents?: any;
 }
 
-module.exports = class HTML extends React.Component<HtmlProps> {
+module.exports = class HTML extends React.Component<Props> {
   public render() {
     let css;
     if (process.env.NODE_ENV === "production") {

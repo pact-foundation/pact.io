@@ -12,8 +12,8 @@
 		"isolatedModules": false,
 		"allowJs": true,
 		"moduleResolution": "node",
+		"allowSyntheticDefaultImports": true,
 		"jsx": "react",
-		"lib": ["dom", "es2015", "es2017"],
 		"suppressImplicitAnyIndexErrors": true
 	},
 	"include": [

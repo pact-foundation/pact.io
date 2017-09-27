@@ -1,22 +1,26 @@
-import React from "react";
+import * as React from "react";
 import Helmet from "react-helmet";
 import PostListing from "../components/post-listing/post-listing";
 import config from "../../data/site-config";
 
-export default class TagTemplate extends React.Component {
-  render() {
-    const tag = this.props.pathContext.tag;
-    const postEdges = this.props.data.allMarkdownRemark.edges;
-    return (
-      <div className="tag-container">
-        <Helmet title={`Posts tagged as "${tag}" | ${config.siteTitle}`} />
-        <PostListing postEdges={postEdges} />
-      </div>
-    );
-  }
+interface Props {
+	pathContext?: any;
+	data?: any;
 }
 
-/* eslint no-undef: "off"*/
+export default class TagTemplate extends React.Component<Props> {
+	public render() {
+		const tag = this.props.pathContext.tag;
+		const postEdges = this.props.data.allMarkdownRemark.edges;
+		return (
+			<div className="tag-container">
+				<Helmet title={`Posts tagged as "${tag}" | ${config.siteTitle}`}/>
+				<PostListing postEdges={postEdges}/>
+			</div>
+		);
+	}
+}
+
 export const pageQuery = graphql`
   query TagPage($tag: String) {
     allMarkdownRemark(

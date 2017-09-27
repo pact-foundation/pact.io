@@ -1,9 +1,20 @@
-import React, { Component } from "react";
+import * as React from "react";
 import Helmet from "react-helmet";
-import config from "../../../data/site-config";
+import config = require("../../../data/site-config");
 
-class SEO extends Component {
-  render() {
+export interface PostEdge {
+	node?: any;
+}
+
+interface Props {
+	postNode?: any;
+	postPath?: any;
+	postSEO?: any;
+	postEdges?: PostEdge[];
+}
+
+class SEO extends React.Component<Props> {
+  public render() {
     const { postNode, postPath, postSEO } = this.props;
     let title;
     let description;
@@ -25,7 +36,7 @@ class SEO extends Component {
     const realPrefix = config.pathPrefix === "/" ? "" : config.pathPrefix;
     image = config.siteUrl + realPrefix + image;
     const blogURL = config.siteUrl + config.pathPrefix;
-    const schemaOrgJSONLD = [
+    const schemaOrgJSONLD:any[] = [
       {
         "@context": "http://schema.org",
         "@type": "WebSite",
