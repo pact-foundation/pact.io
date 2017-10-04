@@ -24,6 +24,9 @@
     "url": "https://github.com/pact-foundation/pact.io/issues"
   },
   "main": "n/a",
+  "publishConfig": {
+    "access": "public"
+  },
   "dependencies": {
     "@pact-foundation/pact-logo": "^1.0.0",
     "bootstrap": "github:twbs/bootstrap#v3.3.7"
