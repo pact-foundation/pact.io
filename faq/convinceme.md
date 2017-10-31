@@ -50,6 +50,8 @@ Using in combination with Pact gives you confidence your API meets any published
 
 See [https://github.com/pact-foundation/pact-specification/issues/28](https://github.com/pact-foundation/pact-specification/issues/28) for more.
 
+Where Pact will really give you an advantage over using Swagger alone is when it comes to making changes to your API. Pact allows you to see the impact of making a change to an API within minutes, and gives you a concrete list of which teams to talk to, and what to discuss. Your tests will show you when the new functionality has been adopted by each consumer, and when any old functionality can be removed. On the other hand, releasing a new version of a Swagger specification and waiting for all the consumer teams (who may or may not actually use that particular feature) to respond to those changes could take weeks or months.
+
 ### ...but I already have an end-to-end (E2E) integration suite that runs for an hour?
 
 There are a few key problems with end-to-end (E2E) testing:
