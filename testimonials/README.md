@@ -15,7 +15,7 @@ Here are some of the companies who use Pact to make testing their microservices 
       <td style="border:none; vertical-align: middle"><img src="../media/logos/ibm.jpg" alt="IBM Logo"></td>
     </tr>
     <tr style="border:none; background:none">
-      <td style="border:none; vertical-align: middle"><img src="../media/logos/myob.png" alt="MYOB Logo"></td>
+      <td style="border:none; vertical-align: middle"><img src="../media/logos/shutterstock.png" alt="Shutterstock Logo"></td>
       <td style="border:none; vertical-align: middle"><img src="../media/logos/messagemedia.jpg" alt="MessageMedia Logo"></td>
       <td style="border:none; vertical-align: middle"><img src="../media/logos/ntt-data.jpg" alt="NTT Data Logo"></td>
     </tr>
