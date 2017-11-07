@@ -24,7 +24,7 @@ Please submit a PR to the gitbook if there is someone missing from this list! Th
 
 ### Ruby
 
-Original implementation: James Fraser, Sergei Matheson, Brent Snook, Ronald Holshausen, Beth Skurrie
+Original implementation: James Fraser, Sergei Matheson, Brent Snook, Ronald Holshausen
 
 Current maintainer: Beth Skurrie
 
