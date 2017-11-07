@@ -1,5 +1,7 @@
 # Contributors
 
+## Organizations
+
 The **Pact Foundation** is an organisation to foster collaboration between the various Pact Framework implementations.
 
 **Pact** and the **Pact Foundation** would not be possible without the companies who have graciously provided time and resources to the projects.
@@ -15,3 +17,41 @@ The **Pact Foundation** is an organisation to foster collaboration between the v
   </tbody>
 </table>
 </div>
+
+## People
+
+Please submit a PR to the gitbook if there is someone missing from this list! Thanks to everyone who has contributed. Pact is the success it is today because of the hard work of many people.
+
+### Ruby
+
+Original implementation: James Fraser, Sergei Matheson, Brent Snook, Ronald Holshausen, Beth Skurrie
+
+Current maintainer: Beth Skurrie
+
+### JVM
+
+Past contributors: Travis Dixon
+
+Current maintainer: Ron Holshausen
+
+### Javascript
+
+Past contributors: Tarcio Saraiva
+
+Current maintainers: Matt Fellows, Michel Boudreau
+
+### .net
+
+Current maintainer: Neil Campbell
+
+### Go
+
+Current maintainer: Matt Fellows
+
+### Python
+
+Current maintainer: Matthew Balvanz
+
+### php
+
+Current maintainer: Charles Mack
