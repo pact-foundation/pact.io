@@ -31,6 +31,7 @@
 * [Getting Help](getting_help/README.md)
 * [Contributing](contributing/README.md)
 * [Contributors](about_pact/README.md)
+* [History](about_pact/history.md)
 * [Who's using Pact?](testimonials/README.md)
 * [Blogs, videos and articles](media/blogs_videos_and_articles.md)
 * [Roadmap](roadmap/README.md)
