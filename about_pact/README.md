@@ -30,7 +30,7 @@ Current maintainer: Beth Skurrie
 
 ### JVM
 
-Past contributors: Travis Dixon
+Past contributors: Travis Dixon, Mike Farah, Andras Bubics
 
 Current maintainer: Ron Holshausen
 
