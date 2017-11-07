@@ -52,6 +52,10 @@ Current maintainer: Matt Fellows
 
 Current maintainer: Matthew Balvanz
 
+### Swift/Objective C
+
+Current maintainer: Andrew Spinks
+
 ### php
 
 Current maintainer: Charles Mack
