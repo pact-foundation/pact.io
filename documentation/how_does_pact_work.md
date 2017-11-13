@@ -9,8 +9,11 @@ A server that responds to an HTTP request from another component (the service co
 ### Mock Service Provider
 Used by tests in the `Consumer` project to mock out the actual service `Provider`, meaning that integration-like tests can be run without requiring the actual service `Provider` to be available.
 
+### Interaction
+A request and response pair. A pact consists of a collection of `interactions`.
+
 ### Pact file
-A file containing the JSON serialised requests and responses that were defined in the `Consumer` tests. This is the `Contract`.
+A file containing the JSON serialised `interactions` (requests and responses) that were defined in the `Consumer` tests. This is the `Contract`.
 
 ### Pact verification
 To verify a `Pact`, the requests contained in a `Pact` file are replayed against the `Provider` code, and the responses returned are checked to ensure they match those expected in the `Pact` file.
@@ -26,4 +29,4 @@ The [Pact Specification](https://github.com/pact-foundation/pact-specification) 
 
 Each language implementation of Pact needs to implement the rules of this specification, and advertise which version(s) are supported, corresponding closely to which features are available.
 
-The current version of the specification is [2.0](https://github.com/pact-foundation/pact-specification/tree/version-2), although not all implementations currently support this.
+The current version of the specification is [3.0](https://github.com/pact-foundation/pact-specification/tree/version-3) for the JVM implementation, and [2.0](https://github.com/pact-foundation/pact-specification/tree/version-2) for all others.
