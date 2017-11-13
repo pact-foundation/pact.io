@@ -40,7 +40,7 @@ Past contributors: Tarcio Saraiva
 
 Current maintainers: Matt Fellows, Michel Boudreau
 
-### .net
+### .NET
 
 Current maintainer: Neil Campbell
 
