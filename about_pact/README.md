@@ -56,6 +56,6 @@ Current maintainer: Matthew Balvanz
 
 Current maintainer: Andrew Spinks
 
-### php
+### PHP
 
 Current maintainer: Charles Mack
