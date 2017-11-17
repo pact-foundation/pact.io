@@ -3,7 +3,7 @@
 > When all you have is a hammer everything looks like a nail...
 
 Like every tool, there are situtations that Pact is great for, and situations where other tools would be better.
-In the right situation, Pact should make testing your integrations _less painful_ than traditional integration tests. 
+In the right situation, Pact should make testing your integrations _less painful_ than traditional integration tests.
 In the wrong situation, it will probably be just as painful!
 
 Pact is most valuable for designing and testing integrations where:
@@ -24,6 +24,6 @@ Pact is fantastic tool for developing and testing intra-organisation microservic
 * Situations where you cannot load data into the provider without using the API that you're actually testing (eg. public APIs). [Why?][pact-public-apis]
 * Testing "pass through" APIs, where the provider merely passes on the request contents to a downstream service without validating them. [Why?][pass-through-apis]
 
-[pact-public-apis]: https://github.com/realestate-com-au/pact/wiki/Why-Pact-may-not-be-the-best-tool-for-testing-public-APIs
-[pass-through-apis]: https://github.com/realestate-com-au/pact/wiki/Why-Pact-may-not-be-the-best-tool-for-testing-pass-through-APIs
+[pact-public-apis]: https://github.com/pact-foundation/pact-ruby/wiki/Why-Pact-may-not-be-the-best-tool-for-testing-public-APIs
+[pass-through-apis]: https://github.com/pact-foundation/pact-ruby/wiki/Why-Pact-may-not-be-the-best-tool-for-testing-pass-through-APIs
 [functional-testing]: https://docs.pact.io/best_practices/contract_tests_not_functional_tests.html

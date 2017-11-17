@@ -29,7 +29,7 @@ Pact is like VCR in reverse. VCR records actual provider behaviour, and verifies
 * The ability to immediately see which consumers will be broken if a change is made to the provider API.
 * When using the [Pact Broker](https://github.com/bethesque/pact_broker), the ability to map the relationships between your services.
 
-See [https://github.com/realestate-com-au/pact/wiki/FAQ#how-does-pact-differ-from-vcr](https://github.com/realestate-com-au/pact/wiki/FAQ#how-does-pact-differ-from-vcr) for more examples of similar technologies.
+See [https://github.com/pact-foundation/pact-ruby/wiki/FAQ#how-does-pact-differ-from-vcr](https://github.com/pact-foundation/pact-ruby/wiki/FAQ#how-does-pact-differ-from-vcr) for more examples of similar technologies.
 
 ### ...but I use Swagger/OpenAPI?
 

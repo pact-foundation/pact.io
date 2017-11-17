@@ -1,6 +1,6 @@
 # Ruby
 
-This getting started guide should help you get off the ground using Pact with Ruby. For more detail or advanced topics, head on over to the [Ruby Pact GitHub repository](https://github.com/realestate-com-au/pact).
+This getting started guide should help you get off the ground using Pact with Ruby. For more detail or advanced topics, head on over to the [Ruby Pact GitHub repository](https://github.com/pact-foundation/pact-ruby).
 
 ## Getting Started Guide
 
@@ -163,7 +163,7 @@ require 'pact/tasks'
 
 Create a `pact_helper.rb` in your service provider project. The recommended place is `spec/service_consumers/pact_helper.rb`.
 
-See [Verifying Pacts](https://github.com/realestate-com-au/pact/wiki/Verifying-pacts) and the [Provider](documentation/configuration.md#provider) section of the Configuration documentation for more information.
+See [Verifying Pacts](https://github.com/pact-foundation/pact-ruby/wiki/Verifying-pacts) and the [Provider](documentation/configuration.md#provider) section of the Configuration documentation for more information.
 
 ```ruby
 # In specs/service_consumers/pact_helper.rb
@@ -203,4 +203,4 @@ Yay! Your Animal Service `Provider` now honours the pact it has with your Zoo Ap
 
 ### Using provider states
 
-Each interaction in a pact is verified in isolation, with no context maintained from the previous interactions. So how do you test a request that requires data to already exist on the provider? Read about provider states [here](https://github.com/realestate-com-au/pact/wiki/Provider-states).
+Each interaction in a pact is verified in isolation, with no context maintained from the previous interactions. So how do you test a request that requires data to already exist on the provider? Read about provider states [here](https://github.com/pact-foundation/pact-ruby/wiki/Provider-states).

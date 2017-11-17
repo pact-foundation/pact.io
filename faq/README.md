@@ -33,7 +33,7 @@ Pact is most valuable for designing and testing integrations where you (or your 
 
 ### Why doesn't Pact use JSON Schema?
 
-Whether you define a schema or not, you will still need a concrete example of the response to return from the mock server, and a concrete example of the request to replay against the provider. If you just used a schema, then the code would have to generate an example, and generated values are not very helpful when used in tests, nor do they give any readable, meaningful documentation. If you use a schema *and* an example, then you are duplicating effort. The schema can almost be implied from an example. The ability to specify more flexible matching like "an array of any length" that is currently missing from v1 matching will be available in v2 matching (beta is out now, see [v2 flexible matching](https://github.com/realestate-com-au/pact/wiki/v2-flexible-matching)).
+Whether you define a schema or not, you will still need a concrete example of the response to return from the mock server, and a concrete example of the request to replay against the provider. If you just used a schema, then the code would have to generate an example, and generated values are not very helpful when used in tests, nor do they give any readable, meaningful documentation. If you use a schema *and* an example, then you are duplicating effort. The schema can almost be implied from an example. The ability to specify more flexible matching like "an array of any length" that is currently missing from v1 matching will be available in v2 matching (beta is out now, see [v2 flexible matching](https://github.com/pact-foundation/pact-ruby/wiki/v2-flexible-matching)).
 
 ### Why does Pact use concrete JSON documents rather than using more flexible JSONPaths?
 
@@ -41,7 +41,7 @@ Pact was written by a team that was using microservices that had read/write REST
 
 ### Why is there no support for specifying optional attributes?
 
-Firstly, it is assumed that you have control over the provider's data (and consumer's data) when doing the verification tests. If you don't, then maybe Pact is [not the best tool for your situation](https://github.com/realestate-com-au/pact#what-is-it-good-for).
+Firstly, it is assumed that you have control over the provider's data (and consumer's data) when doing the verification tests. If you don't, then maybe Pact is [not the best tool for your situation](https://github.com/pact-foundation/pact-ruby#what-is-it-good-for).
 
 Secondly, if you think about it, if Pact supports making an assertion that element `$.body.name` may be present in a response, then you write consumer code that can handle an optional `$.body.name`, but in fact, the provider gives `$.body.firstname`, no test will ever fail to tell you that you've made an incorrect assumption. Remember that a provider may return extra data without failing the contract, but it must provide at minimum the data you expect.
 
@@ -121,7 +121,7 @@ Some other approaches to consider are:
 
 **Collaboration**
 
-Well, for starters, you _must_ be collaborating closely with the Provider team! 
+Well, for starters, you _must_ be collaborating closely with the Provider team!
 
 **Effective use of code branches**
 
@@ -151,7 +151,7 @@ When Pact reads the pact files for verification on the Provider side, it needs t
 
 See the following links for some further discussion:
 
-* https://github.com/realestate-com-au/pact/issues/49#issuecomment-65346357
+* https://github.com/pact-foundation/pact-ruby/issues/49#issuecomment-65346357
 * https://groups.google.com/forum/#!searchin/pact-support/oauth%7Csort:relevance/pact-support/zTnDlOgdYhU/tq_Yx8MnIgAJ
 * https://groups.google.com/forum/#!topic/pact-support/tSyKZMxsECk
 * http://stackoverflow.com/questions/40777493/how-do-i-verify-pacts-against-an-api-that-requires-an-auth-token/40794800?noredirect=1#comment69346814_40794800
@@ -166,14 +166,14 @@ We suggest matching on the core aspects of the interaction - the request itself,
    uponReceiving: 'a request to download some-file',
    withRequest: {
        method: 'GET',
-       path: '/download/somefile'        
+       path: '/download/somefile'
    },
    willRespondWith: {
        status: 200,
-       headers: 
+       headers:
        {
            'Content-disposition': 'attachment; filename=some-file.jpg'
-       }        
+       }
    }
 }
 ```

@@ -147,7 +147,7 @@ require 'pact/tasks'
 
 Create a `pact_helper.rb` in your service provider project. The recommended place is `spec/service_consumers/pact_helper.rb`.
 
-See [Verifying Pacts](https://github.com/realestate-com-au/pact/wiki/Verifying-pacts) and the [Provider](documentation/configuration.md#provider) section of the Configuration documentation for more information.
+See [Verifying Pacts](https://github.com/pact-foundation/pact-ruby/wiki/Verifying-pacts) and the [Provider](documentation/configuration.md#provider) section of the Configuration documentation for more information.
 
 ```ruby
 # In specs/service_consumers/pact_helper.rb

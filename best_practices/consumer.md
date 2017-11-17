@@ -32,7 +32,7 @@ If you don’t care about verifying your interactions, you could use something l
 
 ### Make the latest pact available to the `Provider` via a URL
 
-See [Sharing pacts between `Consumer` and `Provider`](https://github.com/realestate-com-au/pact/wiki/Sharing-pacts-between-consumer-and-provider) for options to implement this.
+See [Sharing pacts between `Consumer` and `Provider`](https://github.com/pact-foundation/pact-ruby/wiki/Sharing-pacts-between-consumer-and-provider) for options to implement this.
 
 ### Ensure all calls to the `Provider` go through classes that have been tested with `Pact`
 
