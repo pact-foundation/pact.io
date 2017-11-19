@@ -19,6 +19,7 @@
 - [How to prevent a consumer from deploying with an invalid contract](#how-to-prevent-a-consumer-from-deploying-with-an-invalid-contract)
 - [How do I test OAuth or other security headers?](#how-do-i-test-oauth-or-other-security-headers)
 - [How do I test binary files in responses, such as a download?](#how-do-i-test-binary-files-in-responses-such-as-a-download)
+- [Why is the documentation so ugly?](#why-is-the-documentation-so-ugly)
 
 <!-- /TOC -->
 
@@ -177,3 +178,7 @@ We suggest matching on the core aspects of the interaction - the request itself,
    }
 }
 ```
+
+### Why is the documentation so ugly?
+
+Pact is an open source project and the majority of contributions to Pact are done in people's free time. Our number 1 priority is getting new features out, so the aesthetic aspects of our documentation have been somewhat neglected. If you have some skills in website design and implementation and you'd like to give back to the Pact community, please have a chat to us on the Pact [gitter](https://gitter.im/realestate-com-au/pact) channel.
