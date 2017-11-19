@@ -12,9 +12,9 @@ The Pact family of frameworks provide support for [Consumer Driven Contracts](ht
 ### Consumer Driven Contracts
 A `Contract` is a collection of agreements between a client (`Consumer`) and an API (`Provider`) that describes the interactions that can take place between them.
 
-Consumer Driven Contracts is a pattern that drives the development of the `Provider` from its `Consumers` point of view.
+Consumer Driven Contracts is a pattern that drives the development of the `Provider` from its `Consumers` point of view. It is TDD for services.
 
-**Pact** is a testing tool that guarantees those `Contracts` are satisfied.
+**Pact** is a testing tool that helps you write `Contracts`, and guarantees those `Contracts` are satisfied.
 
 ### Why do you want to use Pact
 
