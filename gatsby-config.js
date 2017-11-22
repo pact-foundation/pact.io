@@ -1,161 +1,70 @@
-const config = require("./data/site-config");
-
-const pathPrefix = config.pathPrefix === "/" ? "" : config.pathPrefix;
-
 module.exports = {
-	pathPrefix: config.pathPrefix,
-	siteMetadata: {
-		siteUrl: config.siteUrl + pathPrefix,
-		rssMetadata: {
-			site_url: config.siteUrl + pathPrefix,
-			feed_url: config.siteUrl + pathPrefix + config.siteRss,
-			title: config.siteTitle,
-			description: config.siteDescription,
-			// image_url: `${config.siteUrl + pathPrefix}/logos/logo-512.png`,
-			author: config.userName,
-			copyright: config.copyright
-		}
-	},
-	plugins: [
-		"gatsby-plugin-typescript",
-		"gatsby-plugin-less",
-		"gatsby-plugin-react-helmet",
-		{
-			resolve: "gatsby-source-filesystem",
-			options: {
-				name: "posts",
-				path: `${__dirname}/content/${config.blogPostDir}`
-			}
-		},
-		{
-			resolve: "gatsby-transformer-remark",
-			options: {
-				plugins: [
-					{
-						resolve: "gatsby-remark-images",
-						options: {
-							maxWidth: 690
-						}
-					},
-					{
-						resolve: "gatsby-remark-responsive-iframe"
-					},
-					"gatsby-remark-prismjs",
-					"gatsby-remark-copy-linked-files",
-					"gatsby-remark-autolink-headers"
-				]
-			}
-		},
-		{
-			resolve: "gatsby-plugin-google-analytics",
-			options: {
-				trackingId: config.googleAnalyticsID
-			}
-		},
-		{
-			resolve: "gatsby-plugin-nprogress",
-			options: {
-				color: config.themeColor
-			}
-		},
-		"gatsby-plugin-sharp",
-		"gatsby-plugin-catch-links",
-		"gatsby-plugin-twitter",
-		"gatsby-plugin-sitemap",
-		{
-			resolve: "gatsby-plugin-manifest",
-			options: {
-				name: config.siteTitle,
-				short_name: config.siteTitle,
-				description: config.siteDescription,
-				start_url: config.pathPrefix,
-				background_color: config.backgroundColor,
-				theme_color: config.themeColor,
-				display: "minimal-ui",
-				icons: [
-					/*{
-					  src: "/logos/logo-192x192.png",
-					  sizes: "192x192",
-					  type: "image/png"
-					},
-					{
-					  src: "/logos/logo-512x512.png",
-					  sizes: "512x512",
-					  type: "image/png"
-					}*/
-				]
-			}
-		},
-		"gatsby-plugin-offline",
-		{
-			resolve: "gatsby-plugin-feed",
-			options: {
-				setup(ref) {
-					const ret = ref.query.site.siteMetadata.rssMetadata;
-					ret.allMarkdownRemark = ref.query.allMarkdownRemark;
-					ret.generator = "GatsbyJS Material Starter";
-					return ret;
-				},
-				query: `
-        {
-          site {
-            siteMetadata {
-              rssMetadata {
-                site_url
-                feed_url
-                title
-                description
-                image_url
-                author
-                copyright
-              }
+  siteMetadata: {
+    title: `My website`
+  },
+  mapping: {
+    'MarkdownRemark.frontmatter.author': `AuthorJson`
+  },
+  plugins: [
+    // Expose `/data` to graphQL layer
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `data`,
+        path: `${__dirname}/data`
+      }
+    },
+
+    // Parse all markdown files (each plugin add/parse some data into graphQL layer)
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 690,
+              backgroundColor: `#f7f0eb`
             }
-          }
-        }
-      `,
-				feeds: [
-					{
-						serialize(ctx) {
-							const rssMetadata = ctx.query.site.siteMetadata.rssMetadata;
-							return ctx.query.allMarkdownRemark.edges.map(edge => ({
-								categories: edge.node.frontmatter.tags,
-								date: edge.node.frontmatter.date,
-								title: edge.node.frontmatter.title,
-								description: edge.node.excerpt,
-								author: rssMetadata.author,
-								url: rssMetadata.site_url + edge.node.fields.slug,
-								guid: rssMetadata.site_url + edge.node.fields.slug,
-								custom_elements: [{"content:encoded": edge.node.html}]
-							}));
-						},
-						query: `
-            {
-              allMarkdownRemark(
-                limit: 1000,
-                sort: { order: DESC, fields: [frontmatter___date] },
-              ) {
-                edges {
-                  node {
-                    excerpt
-                    html
-                    timeToRead
-                    fields { slug }
-                    frontmatter {
-                      title
-                      cover
-                      date
-                      category
-                      tags
-                    }
-                  }
-                }
-              }
-            }
-          `,
-						output: config.siteRss
-					}
-				]
-			}
-		}
-	]
+          },
+          `gatsby-remark-prismjs`,
+          `gatsby-remark-copy-linked-files`,
+          `gatsby-remark-autolink-headers`
+        ]
+      }
+    },
+
+    // Parse all images files
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
+
+    // Parse JSON files
+    `gatsby-transformer-json`,
+
+    // Add typescript stack into webpack
+    `gatsby-plugin-typescript`,
+
+    // This plugin takes your configuration and generates a
+    // web manifest file so your website can be added to your
+    // homescreen on Android.
+    /* eslint-disable camelcase */
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Gatsby website`,
+        short_name: `Gatsby website`,
+        start_url: `/`,
+        background_color: `#f7f7f7`,
+        theme_color: `#191919`,
+        display: `minimal-ui`
+      }
+    },
+    /* eslint-enable camelcase */
+
+    // This plugin generates a service worker and AppShell
+    // html file so the site works offline and is otherwise
+    // resistant to bad networks. Works with almost any
+    // site!
+    `gatsby-plugin-offline`
+  ]
 };

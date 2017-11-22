@@ -1,23 +1,23 @@
 {
 	"compilerOptions": {
+		"outDir": "./dist/",
+		"sourceMap": true,
+		"noImplicitAny": true,
 		"module": "commonjs",
 		"target": "esnext",
-		"noImplicitAny": false,
+		"jsx": "react",
+		"lib": ["dom", "esnext"],
 		"removeComments": true,
-		"noLib": false,
 		"emitDecoratorMetadata": true,
 		"experimentalDecorators": true,
-		"sourceMap": true,
 		"listFiles": true,
 		"isolatedModules": false,
 		"allowJs": true,
-		"moduleResolution": "node",
 		"allowSyntheticDefaultImports": true,
-		"jsx": "react",
 		"suppressImplicitAnyIndexErrors": true
 	},
 	"include": [
-		"src/**/*.tsx"
+		"./src/**/*"
 	],
 	"exclude": [
 		"node_modules"

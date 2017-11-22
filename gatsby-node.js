@@ -1,117 +1,129 @@
-const path = require("path");
-const _ = require("lodash");
-const webpackLodashPlugin = require("lodash-webpack-plugin");
+const path = require('path');
+const slash = require('slash');
+const {kebabCase, uniq, get, compact, times} = require('lodash');
 
-exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
-  const { createNodeField } = boundActionCreators;
-  let slug;
-  if (node.internal.type === "MarkdownRemark") {
-    const fileNode = getNode(node.parent);
-    const parsedFilePath = path.parse(fileNode.relativePath);
-    if (
-      Object.prototype.hasOwnProperty.call(node, "frontmatter") &&
-      Object.prototype.hasOwnProperty.call(node.frontmatter, "slug")
-    ) {
-      slug = `/${_.kebabCase(node.frontmatter.slug)}`;
-    }
-    if (
-      Object.prototype.hasOwnProperty.call(node, "frontmatter") &&
-      Object.prototype.hasOwnProperty.call(node.frontmatter, "title")
-    ) {
-      slug = `/${_.kebabCase(node.frontmatter.title)}`;
-    } else if (parsedFilePath.name !== "index" && parsedFilePath.dir !== "") {
-      slug = `/${parsedFilePath.dir}/${parsedFilePath.name}/`;
-    } else if (parsedFilePath.dir === "") {
-      slug = `/${parsedFilePath.name}/`;
-    } else {
-      slug = `/${parsedFilePath.dir}/`;
-    }
-    createNodeField({ node, name: "slug", value: slug });
+// Don't forget to update hard code values into:
+// - `templates/blog-page.tsx:23`
+// - `pages/blog.tsx:26`
+// - `pages/blog.tsx:121`
+const POSTS_PER_PAGE = 10;
+const cleanArray = arr => compact(uniq(arr));
+
+// Add Gatsby's extract-graphql Babel plugin (we'll chain it with babel-loader)
+const extractQueryPlugin = path.resolve(
+  __dirname,
+  `node_modules/gatsby/dist/utils/babel-plugin-extract-graphql.js`
+);
+
+// Temporary workaround to ensure Gatsby builds minified, production build of React.
+// https://github.com/fabien0102/gatsby-starter/issues/39#issuecomment-343647558
+exports.modifyWebpackConfig = ({config, stage}) => {
+  if (stage === 'build-javascript') {
+    config.loader('typescript', {
+      test: /\.tsx?$/,
+      loaders: [
+        `babel-loader?${JSON.stringify({presets: ['babel-preset-env'], plugins: [extractQueryPlugin]})}`,
+        'ts-loader'
+      ]
+    });
   }
 };
 
-exports.createPages = ({ graphql, boundActionCreators }) => {
-  const { createPage } = boundActionCreators;
+// Create slugs for files.
+// Slug will used for blog page path.
+exports.onCreateNode = ({node, boundActionCreators, getNode}) => {
+  const {createNodeField} = boundActionCreators;
+  let slug;
+  switch (node.internal.type) {
+    case `MarkdownRemark`:
+      const fileNode = getNode(node.parent);
+      const [basePath, name] = fileNode.relativePath.split('/');
+      slug = `/${basePath}/${name}/`;
+      break;
+  }
+  if (slug) {
+    createNodeField({node, name: `slug`, value: slug});
+  }
+};
+
+// Implement the Gatsby API `createPages`.
+// This is called after the Gatsby bootstrap is finished
+// so you have access to any information necessary to
+// programatically create pages.
+exports.createPages = ({graphql, boundActionCreators}) => {
+  const {createPage} = boundActionCreators;
 
   return new Promise((resolve, reject) => {
-    const postPage = path.resolve("src/templates/post.tsx");
-    const tagPage = path.resolve("src/templates/tag.tsx");
-    const categoryPage = path.resolve("src/templates/category.tsx");
-    resolve(
-      graphql(
-        `
-        {
-          allMarkdownRemark {
-            edges {
-              node {
-                frontmatter {
-                  tags
-                  category
-                }
-                fields {
-                  slug
-                }
+    const templates = ['blogPost', 'tagsPage', 'blogPage']
+      .reduce((mem, templateName) => {
+        return Object.assign({}, mem,
+        {[templateName]: path.resolve(`src/templates/${kebabCase(templateName)}.tsx`)});
+      }, {});
+
+    graphql(
+      `
+      {
+        posts: allMarkdownRemark {
+          edges {
+            node {
+              fields {
+                slug
+              }
+              frontmatter {
+                tags
               }
             }
           }
         }
-      `
-      ).then(result => {
-        if (result.errors) {
-          console.log(result.errors);
-          reject(result.errors);
-        }
+      }
+    `
+    ).then(result => {
+      if (result.errors) {
+        return reject(result.errors);
+      }
+      const posts = result.data.posts.edges.map(p => p.node);
 
-        const tagSet = new Set();
-        const categorySet = new Set();
-        result.data.allMarkdownRemark.edges.forEach(edge => {
-          if (edge.node.frontmatter.tags) {
-            edge.node.frontmatter.tags.forEach(tag => {
-              tagSet.add(tag);
-            });
-          }
-
-          if (edge.node.frontmatter.category) {
-            categorySet.add(edge.node.frontmatter.category);
-          }
-
+      // Create blog pages
+      posts
+        .filter(post => post.fields.slug.startsWith('/blog/'))
+        .forEach(post => {
           createPage({
-            path: edge.node.fields.slug,
-            component: postPage,
+            path: post.fields.slug,
+            component: slash(templates.blogPost),
             context: {
-              slug: edge.node.fields.slug
+              slug: post.fields.slug
             }
           });
         });
 
-        const tagList = Array.from(tagSet);
-        tagList.forEach(tag => {
+      // Create tags pages
+      posts
+        .reduce((mem, post) =>
+          cleanArray(mem.concat(get(post, 'frontmatter.tags')))
+        , [])
+        .forEach(tag => {
           createPage({
-            path: `/tags/${_.kebabCase(tag)}/`,
-            component: tagPage,
+            path: `/blog/tags/${kebabCase(tag)}/`,
+            component: slash(templates.tagsPage),
             context: {
               tag
             }
           });
         });
 
-        const categoryList = Array.from(categorySet);
-        categoryList.forEach(category => {
-          createPage({
-            path: `/categories/${_.kebabCase(category)}/`,
-            component: categoryPage,
-            context: {
-              category
-            }
-          });
+      // Create blog pagination
+      const pageCount = Math.ceil(posts.length / POSTS_PER_PAGE);
+      times(pageCount, index => {
+        createPage({
+          path: `/blog/page/${index + 1}/`,
+          component: slash(templates.blogPage),
+          context: {
+            skip: index * POSTS_PER_PAGE
+          }
         });
-      })
-    );
-  });
-};
+      });
 
-exports.modifyWebpackConfig = ({ config, stage }) => {
-  if (stage === "build-javascript") {
-    config.plugin("Lodash", webpackLodashPlugin, null);
-  }
+      resolve();
+    });
+  });
 };

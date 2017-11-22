@@ -1,54 +1,59 @@
+/* tslint:disable no-var-requires */
+/* tslint:disable no-console */
+
 import * as React from "react";
-// import favicon from "./favicon.png";
+import Helmet from "react-helmet";
 
-let inlinedStyles = "";
-if (process.env.NODE_ENV === "production") {
+// Load production style
+let styles: string;
+if (process.env.NODE_ENV === `production`) {
   try {
-    /* eslint import/no-webpack-loader-syntax: off */
-    inlinedStyles = require("!raw-loader!../public/styles.css");
-  } catch (e) {
-    /* eslint no-console: "off"*/
-    console.log(e);
+    styles = require("!raw-loader!../public/styles.css");
+  } catch (err) {
+    console.log(err);
   }
 }
 
-interface Props {
-	body?: any;
-	postBodyComponents?: any;
-	headComponents?: any;
+interface HtmlProps {
+  body: any;
+  postBodyComponents: any;
+  headComponents: any;
 }
 
-module.exports = class HTML extends React.Component<Props> {
-  public render() {
-    let css;
-    if (process.env.NODE_ENV === "production") {
-      css = (
-        <style
-          id="gatsby-inlined-css"
-          dangerouslySetInnerHTML={{ __html: inlinedStyles }}
+// Use `module.exports` to be compliante with `webpack-require` import method
+module.exports = (props: HtmlProps) => {
+  const head = Helmet.rewind();
+
+  const css = (process.env.NODE_ENV === `production`) ?
+    <style
+      id="gatsby-inlined-css"
+      dangerouslySetInnerHTML={{ __html: styles }}
+    />
+    : null;
+
+  return (
+    <html lang="en">
+      <head>
+        {props.headComponents}
+        <title>My website</title>
+        <meta charSet="utf-8" />
+        <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
         />
-      );
-    }
-    return (
-      <html lang="en">
-        <head>
-          <meta charSet="utf-8" />
-          <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1.0"
-          />
-          {this.props.headComponents}
-          {/*<link rel="shortcut icon" href={favicon} />*/}
-          {css}
-        </head>
-        <body>
-          <div
-            id="___gatsby"
-            dangerouslySetInnerHTML={{ __html: this.props.body }}
-          />
-          {this.props.postBodyComponents}
-        </body>
-      </html>
-    );
-  }
+        {head.title.toComponent()}
+        {head.meta.toComponent()}
+        {head.link.toComponent()}
+        {css}
+      </head>
+      <body>
+        <div
+          id="___gatsby"
+          dangerouslySetInnerHTML={{ __html: props.body }}
+        />
+        {props.postBodyComponents}
+      </body>
+    </html>
+  );
 };
