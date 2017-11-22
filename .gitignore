@@ -1,7 +1,7 @@
 node_modules
 build/
 dist/
-db.json
 package-lock.json
 public
 .cache
+.nuxt

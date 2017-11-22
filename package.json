@@ -24,40 +24,41 @@
     "url": "https://github.com/pact-foundation/pact.io/issues"
   },
   "main": "n/a",
-  "publishConfig": {
-    "access": "public"
-  },
   "dependencies": {
-    "@pact-foundation/pact-logo": "^1.0.0",
-    "bootstrap": "github:twbs/bootstrap#v3.3.7"
+    "axios": "^0.17.1",
+    "gsap": "^1.20.3",
+    "nuxt": "^1.0.0-rc11",
+    "nuxt-class-component": "^1.1.2",
+    "tachyons": "^4.9.0",
+    "vue-class-component": "^6.1.0",
+    "vue-property-decorator": "^6.0.0",
+    "vuex-class": "^0.3.0"
   },
   "devDependencies": {
-    "@phenomic/cli": "^1.0.0-alpha.8",
-    "@phenomic/core": "^1.0.0-alpha.8",
-    "@phenomic/preset-react-app": "^1.0.0-alpha.8",
-    "@types/react": "^16.0.7",
-    "react": "15.6.1",
-    "react-dom": "15.6.1",
-    "react-router": "^3.2.0",
-    "rimraf": "^2.6.2",
-    "ts-loader": "^2.3.7",
+    "@types/node": "^8.0.53",
+    "ts-loader": "^3.1.1",
+    "typescript": "^2.6.1",
     "ts-node": "^3.3.0",
-    "tslint": "^5.7.0",
-    "tslint-loader": "^3.5.3",
-    "typescript": "2.5.3",
-    "write-good": "^0.11.3"
+    "tslint": "^5.8.0",
+    "rimraf": "^2.6.2",
+    "write-good": "^0.11.3",
+    "remark-cli": "^4.0.0",
+    "remark-preset-lint-recommended": "^3.0.1"
   },
   "scripts": {
-    "clean": "rimraf -rf public .cache",
-    "build": "phenomic build",
-    "watch": "phenomic start",
-    "start": "npm run watch",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "clean": "rimraf -rf dist",
+    "watch": "nuxt",
     "lint": "npm run lint:src && npm run lint:md && npm run lint:english",
-    "lint:src": "eslint --ext .js,.jsx --ignore-pattern public,static .",
+    "lint:src": "tslint -p tsconfig.json",
     "lint:md": "remark content/posts/",
     "lint:english": "write-good './content/**/*.md'"
   },
-  "phenomic": {
-    "presets": ["@phenomic/preset-react-app"]
+  "remarkConfig": {
+    "plugins": [
+      "remark-preset-lint-recommended"
+    ]
   }
 }

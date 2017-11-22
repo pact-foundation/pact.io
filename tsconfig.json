@@ -1,7 +1,11 @@
 {
 	"compilerOptions": {
-		"module": "commonjs",
+		"module": "es2015",
 		"target": "es5",
+		"lib": [
+			"dom",
+			"es2015"
+		],
 		"noImplicitAny": false,
 		"removeComments": true,
 		"noLib": false,
@@ -13,14 +17,10 @@
 		"allowJs": true,
 		"moduleResolution": "node",
 		"allowSyntheticDefaultImports": true,
-		"jsx": "react",
-		"suppressImplicitAnyIndexErrors": true
+		"suppressImplicitAnyIndexErrors": true,
+		"noImplicitThis": false,
+		"strictNullChecks": true,
+		"baseUrl": "."
 	},
-	"include": [
-		"src/**/*.tsx"
-	],
-	"exclude": [
-		"node_modules"
-	],
 	"compileOnSave": false
 }
