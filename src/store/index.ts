@@ -23,9 +23,9 @@ export const getters = {
 
 export const actions = {
 	async nuxtServerInit({commit}) {
-		commit('setPeople', await getPeople(3))
+		commit('setPeople', await getPeople(3));
 	},
 	select({commit}, id) {
-		commit('select', id)
+		commit('select', id);
 	}
 };
