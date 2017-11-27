@@ -2,7 +2,7 @@
 title: 'Article #1'
 createdDate: '2017-05-02'
 updatedDate: '2017-11-22'
-author: Fabien BERNARD
+author: mboudreau
 tags:
   - test
 image: pexels-photo-59628.jpeg

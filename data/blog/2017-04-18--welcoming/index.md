@@ -2,7 +2,7 @@
 title: Welcoming
 createdDate: '2017-04-18'
 updatedDate: '2017-11-22'
-author: Fabien BERNARD
+author: mboudreau
 tags:
   - starter
   - gatsby

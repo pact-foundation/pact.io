@@ -16,7 +16,7 @@ module.exports = plop => {
         type: 'list',
         name: 'author',
         message: 'The author of blog post?',
-        choices: authors.map(author => ({name: author.id, value: author.id}))
+        choices: authors.map(author => ({name: author.id, value: author.name}))
       },
       {
         type: 'input',

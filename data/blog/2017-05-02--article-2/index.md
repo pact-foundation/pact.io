@@ -2,7 +2,7 @@
 title: 'Article #2'
 createdDate: '2017-05-02'
 updatedDate: '2017-11-22'
-author: Fabien BERNARD
+author: mboudreau
 tags:
   - test
 image: cup-of-coffee-laptop-office-macbook-89786.jpeg

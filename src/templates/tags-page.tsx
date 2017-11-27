@@ -47,6 +47,7 @@ query TemplateTagPage($tag: String) {
           }
           author {
             id
+            name
             avatar {
               children {
                 ... on ImageSharp {
