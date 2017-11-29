@@ -1335,6 +1335,7 @@ export interface AuthorJson extends Node {
   avatar: File | null;
   twitter: string | null;
   github: string | null;
+  website: string | null;
   internal: internal_12 | null;
 }
 

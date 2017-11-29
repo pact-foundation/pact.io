@@ -20,14 +20,14 @@ export default (props: BlogPostProps) => {
 
   const recents = props.data.recents.edges
     .map(({ node }) => {
-      const recentAvatar = node.frontmatter.author.avatar.children[0] as ImageSharp;
-      const recentCover = node.frontmatter.image.children[0] as ImageSharp;
+      const nodeAvatar = node.frontmatter.author.avatar.children[0] as ImageSharp;
+      const nodeCover = node.frontmatter.image.children[0] as ImageSharp;
       const extra = (
         <Comment.Group>
           <Comment>
             <Comment.Avatar
-              src={recentAvatar.responsiveResolution.src}
-              srcSet={recentAvatar.responsiveResolution.srcSet}
+              src={nodeAvatar.responsiveResolution.src}
+              srcSet={nodeAvatar.responsiveResolution.srcSet}
             />
             <Comment.Content>
               <Comment.Author style={{ fontWeight: 400 }}>
@@ -46,8 +46,8 @@ export default (props: BlogPostProps) => {
           <Card as={Link}
             to={node.fields.slug}
             image={{
-              src: recentCover.responsiveResolution.src,
-              srcSet: recentCover.responsiveResolution.srcSet,
+              src: nodeCover.responsiveResolution.src,
+              srcSet: nodeCover.responsiveResolution.srcSet,
             }}
             header={node.frontmatter.title}
             extra={extra}
@@ -115,6 +115,8 @@ export const pageQuery = graphql`
         name
         bio
         twitter
+        github
+        website
         avatar {
           children {
             ... on ImageSharp {
