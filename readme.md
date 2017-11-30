@@ -26,12 +26,13 @@ Consumer Driven Contracts is a pattern that drives the development of the `Provi
   </tr>
   <tr>
     <td>
-    Continuously evolve your codebase knowing that Pact will guarantee Contracts are met.
+    Continuously evolve your codebase knowing that Pact will guarantee contracts are met.
     </td>
     <td>
-    No need to setup end-to-end environments. No need for manual testing.</td>
+    No need to wait for slow e2e tests to know whether or not your applications will work together.
+    </td>
     <td>
-    Generation and verification of Contracts are automatically managed by Pact.
+    Generation and verification of contracts are automatically managed by Pact.
     </td>
   </tr>
 </table>
