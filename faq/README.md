@@ -78,11 +78,19 @@ What you really need is a “non-HTTP” pact between your consumer and the down
 
 **TL;DR: Yes**
 
-The answer to this question depends on your organisation's risk profile. There is generally a trade off between the amount of confidence you have that your system is bug free, and the speed with which you can respond to any bugs you find. A 10 hour test suite may make you feel secure that all the functionality of your system is working, but it will decrease your ability to put out a new release quickly when a bug is inevitably found.
+The real question is: how much, and in which environment - test or production? The answer to _this_ question depends on your organisation's risk profile. 
 
-If you work in an environment where you prioritise "agility" over "stability", then maybe you would be better off investing the time that you would have spent maintaining end-to-end tests in improving your production monitoring.
+There is generally a trade off between the amount of confidence you have that your system is bug free, and the speed with which you can respond to any bugs you find. A 10 hour test suite may make you feel secure that all the functionality of your system is working, but it will decrease your ability to put out a new release quickly when a bug is inevitably found.
 
-If you work in a more traditional "Big Bang Release" environment, a carefully selected small set of end-to-end tests that focus on the core business value provided by your system should provide the confidence you need to release. Consider "Semantic monitoring" (a type of "testing in production") as an alternative.
+If you work in an environment where you prioritise "agility" over "stability", then maybe you would be better off investing the time that you would have spent maintaining end-to-end tests in improving your ability to _find_ and _fix_ bugs more quickly. For example:
+
+* using semanitic monitoring techniques like synthetic transactions to let you know if any important functions are not working in production
+* adding correlation IDs to your code
+* setting up aggregated logging
+* improving your alerting
+* optimising your builds so that they run faster
+
+If you work in a more traditional "Big Bang Release" environment, choose end to end tests that focus on the core business value provided by your system, rather than on tests that try to check that the HTTP requests are being done correctly.
 
 ### How can I handle versioning?
 
