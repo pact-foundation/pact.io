@@ -4,7 +4,6 @@ See [Provider States](../provider_states.md) for an introduction into this advan
 
 The text in the provider state should make sense when you read it as follows (this is how the auto-generated documentation reads):
 
-
 Given **an alligator with the name Mary exists** \*
 Upon receiving **a request to retrieve an alligator by name** \*\* from Some Consumer
 With {"method" : "get", "path" : "/alligators/Mary" }
@@ -25,11 +24,13 @@ describe MyServiceProviderClient do
   describe "get_something" do
     context "when a thing exists" do
       before do
-        my_service.given("a thing exists").
-          upon_receiving("a request for a thing").with(method: 'get', path: '/thing').
-          will_respond_with(status: 200,
+        my_service.given('a thing exists').
+          upon_receiving('a request for a thing').
+          with(method: 'GET', path: '/thing').
+          will_respond_with(
+            status: 200,
             headers: { 'Content-Type' => 'application/json' },
-            body: { name: 'A small something'} )
+            body: { name: 'A small something'})
       end
 
       it "returns a thing" do
@@ -40,7 +41,8 @@ describe MyServiceProviderClient do
     context "when a thing does not exist" do
       before do
         my_service.given("a thing does not exist").
-          upon_receiving("a request for a thing").with(method: 'get', path: '/thing').
+          upon_receiving("a request for a thing").
+          with(method: 'get', path: '/thing').
           will_respond_with(status: 404)
       end
 
@@ -53,6 +55,16 @@ end
 ```
 
 ### Provider codebase
+
+#### Non-Ruby applications
+
+To allow the correct data to be set up before each interaction is replayed, you will need to create an HTTP endpoint (which may or may not actually be in the same application as your provider) that accepts a JSON document describing the state. The exact format of this document depends on whether you are using the JVM implementation, or one of the wrapped Ruby implementations (effectively everything that isn't JVM).
+
+The endpoint should set up the given provider state for the given consumer synchronously, and return an error if the provider state is not recognised. Namespacing your provider states within each consumer will avoid clashes if more than one consumer defines the same provider state with different data.
+
+See the [pact-provider-verifier](https://github.com/pact-foundation/pact-provider-verifier#api-with-provider-states) documentation for the exact details of implementing a `provider-states-setup-url`.
+
+#### Ruby
 
 To define service provider states that create the right data for the provider states described above, write the following in the service provider project. (The consumer name here must match the name of the consumer configured in your consumer project for it to correctly find these provider states.)
 
