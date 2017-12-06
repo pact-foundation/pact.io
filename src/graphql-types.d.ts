@@ -155,10 +155,12 @@ export interface MarkdownRemarkRootQueryTypeArgs {
 
 export interface AuthorJsonRootQueryTypeArgs {
   id: authorJsonIdQueryString_2 | null;
+  name: authorJsonNameQueryString_2 | null;
   bio: authorJsonBioQueryString_2 | null;
   avatar: authorJsonAvatarQueryString_2 | null;
   twitter: authorJsonTwitterQueryString_2 | null;
   github: authorJsonGithubQueryString_2 | null;
+  website: authorJsonWebsiteQueryString_2 | null;
   internal: authorJsonInternalInputObject_2 | null;
 }
 
@@ -2005,16 +2007,18 @@ export interface authorJsonConnectionSort {
   order: authorJsonConnectionSortOrderValues | null;
 }
 
-export type AuthorJsonConnectionSortByFieldsEnum = "id" | "bio" | "avatar" | "twitter" | "github" | "children" | "parent" | "internal___contentDigest" | "internal___type" | "internal___owner";
+export type AuthorJsonConnectionSortByFieldsEnum = "id" | "name" | "bio" | "avatar" | "twitter" | "github" | "website" | "children" | "parent" | "internal___contentDigest" | "internal___type" | "internal___owner";
 
 export type authorJsonConnectionSortOrderValues = "ASC" | "DESC";
 
 export interface filterAuthorJson {
   id: authorJsonConnectionIdQueryString_2 | null;
+  name: authorJsonConnectionNameQueryString_2 | null;
   bio: authorJsonConnectionBioQueryString_2 | null;
   avatar: authorJsonConnectionAvatarQueryString_2 | null;
   twitter: authorJsonConnectionTwitterQueryString_2 | null;
   github: authorJsonConnectionGithubQueryString_2 | null;
+  website: authorJsonConnectionWebsiteQueryString_2 | null;
   internal: authorJsonConnectionInternalInputObject_2 | null;
 }
 
@@ -2023,6 +2027,13 @@ export interface authorJsonConnectionIdQueryString_2 {
   ne: string | null;
   regex: string | null;
   glob: string | null;
+}
+
+export interface authorJsonConnectionNameQueryString_2 {
+	eq: string | null;
+	ne: string | null;
+	regex: string | null;
+	glob: string | null;
 }
 
 export interface authorJsonConnectionBioQueryString_2 {
@@ -2047,6 +2058,13 @@ export interface authorJsonConnectionTwitterQueryString_2 {
 }
 
 export interface authorJsonConnectionGithubQueryString_2 {
+  eq: string | null;
+  ne: string | null;
+  regex: string | null;
+  glob: string | null;
+}
+
+export interface authorJsonConnectionWebsiteQueryString_2 {
   eq: string | null;
   ne: string | null;
   regex: string | null;
@@ -2104,9 +2122,9 @@ export interface AuthorJsonEdge {
   previous: AuthorJson | null;
 }
 
-export type authorJsonDistinctEnum = "id" | "bio" | "avatar" | "twitter" | "github" | "parent" | "internal___contentDigest" | "internal___type" | "internal___owner";
+export type authorJsonDistinctEnum = "id" | "name" | "bio" | "avatar" | "twitter" | "github" | "website" | "parent" | "internal___contentDigest" | "internal___type" | "internal___owner";
 
-export type authorJsonGroupEnum = "id" | "bio" | "avatar" | "twitter" | "github" | "parent" | "internal___contentDigest" | "internal___type" | "internal___owner";
+export type authorJsonGroupEnum = "id" | "name" | "bio" | "avatar" | "twitter" | "github" | "website" | "parent" | "internal___contentDigest" | "internal___type" | "internal___owner";
 
 export interface authorJsonGroupConnectionConnection {
   pageInfo: PageInfo;
@@ -3358,6 +3376,13 @@ export interface authorJsonIdQueryString_2 {
   glob: string | null;
 }
 
+export interface authorJsonNameQueryString_2 {
+  eq: string | null;
+  ne: string | null;
+  regex: string | null;
+  glob: string | null;
+}
+
 export interface authorJsonBioQueryString_2 {
   eq: string | null;
   ne: string | null;
@@ -3380,6 +3405,13 @@ export interface authorJsonTwitterQueryString_2 {
 }
 
 export interface authorJsonGithubQueryString_2 {
+  eq: string | null;
+  ne: string | null;
+  regex: string | null;
+  glob: string | null;
+}
+
+export interface authorJsonWebsiteQueryString_2 {
   eq: string | null;
   ne: string | null;
   regex: string | null;
