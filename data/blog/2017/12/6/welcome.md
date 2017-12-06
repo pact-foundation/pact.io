@@ -1,7 +1,7 @@
 ---
 title: Welcoming
-createdDate: '2017-04-18'
-updatedDate: '2017-11-22'
+createdDate: 2017-12-06T00:00:00.000Z
+updatedDate: '2017-12-06'
 author: mboudreau
 tags:
   - starter
@@ -26,5 +26,3 @@ Morbi libero sem, molestie nec volutpat ac, volutpat eget dui. Phasellus ante tu
 const plop = "coucou";
 const toto = "tata";
 ```
-
-coucou `plop` comment tu vas ?

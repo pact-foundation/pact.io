@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `My website`
+    title: `Deploy with Confidence | Pact`
   },
   mapping: {
     'MarkdownRemark.frontmatter.author': `AuthorJson`

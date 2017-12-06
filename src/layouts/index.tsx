@@ -22,7 +22,7 @@ interface DefaultLayoutProps extends React.HTMLProps<HTMLDivElement> {
 }
 
 export default class DefaultLayout extends React.PureComponent<DefaultLayoutProps, void> {
-  render() {
+  public render() {
     const { pathname } = this.props.location;
     const isHome = pathname === "/";
 

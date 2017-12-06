@@ -1,13 +1,21 @@
 ---
 title: {{title}}
-createdDate: "{{createdDate}}"
-updatedDate: "{{createdDate}}"
-author: {{author}}{{tags}}
+createdDate: {{createdDate}}
+updatedDate: {{createdDate}}
+author: {{author}}
+tags: {{tags}}
 image: welcoming.png
 draft: {{draft}}
 ---
 
-My awesome article
+# ADD TITLE
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tristique lacus vitae diam posuere faucibus. In hac habitasse platea dictumst. Ut id arcu non risus tincidunt commodo. Sed felis leo, pharetra non porttitor sodales, sodales dictum tortor. Vivamus vel neque interdum, egestas urna ac, finibus tellus. Morbi et rhoncus ligula, nec volutpat dolor. Cras efficitur ipsum a facilisis laoreet. Duis ut libero eget mi convallis maximus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Pellentesque blandit sit amet erat vel semper.
+
+```javascript
+const plop = "coucou";
+const toto = "tata";
+```
 
 ## TODO
 

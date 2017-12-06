@@ -83,10 +83,8 @@
     "babel-loader": "7.1.1",
     "enzyme": "^3.2.0",
     "enzyme-adapter-react-16": "^1.1.0",
-    "eslint-config-xo-react": "0.14.0",
     "eslint-plugin-react": "^6.10.3",
     "flat": "^2.0.1",
-    "husky": "^0.14.3",
     "jest": "19.0.2",
     "lint-staged": "3.4.0",
     "mkdirp": "^0.5.1",
@@ -101,7 +99,7 @@
     "stylelint-config-standard": "^16.0.0",
     "ts-jest": "19.0.8",
     "tslint": "^5.8.0",
-    "xo": "^0.18.2"
+    "write-good": "^0.11.3"
   },
   "scripts": {
     "clean": "rimraf -rf public .cache",
@@ -111,13 +109,12 @@
     "serve": "node_modules/.bin/gatsby serve",
     "build": "node_modules/.bin/gatsby build",
     "build:pp": "node_modules/.bin/gatsby build --prefix-paths",
-    "lint": "npm run lint:ts && npm run lint:js && npm run lint:css && npm run lint:md && npm run lint:english",
+    "lint": "npm run lint:ts && npm run lint:css && npm run lint:md",
     "lint:ts": "tslint \"./src/**/*.ts\" \"./src/**/*.tsx\"",
     "lint:md": "remark .",
-    "lint:js": "xo",
     "lint:css": "stylelint \"src/**/*.css\"",
     "lint:scss": "stylelint src/**/*.scss --syntax scss",
-    "lint:english": "write-good './content/**/*.md'",
+    "lint:english": "write-good './data/blog/**/*.md'",
     "test": "npm run lint && jest",
     "test:watch": "jest --watch",
     "generate": "plop --plopfile ./generators/plopfile.js",
@@ -152,32 +149,6 @@
       "text",
       "html"
     ]
-  },
-  "lint-staged": {
-    "*.{ts,tsx}": [
-      "tslint --fix",
-      "git add"
-    ],
-    "*.{js,jsx}": [
-      "xo --fix",
-      "git add"
-    ],
-    "*.md": [
-      "node tools/update-post-date.js",
-      "remark -o",
-      "git add"
-    ],
-    "*.css": [
-      "stylelint"
-    ]
-  },
-  "xo": {
-    "extends": "xo-react/space",
-    "space": true,
-    "rules": {
-      "no-case-declarations": 0,
-      "default-case": 0
-    }
   },
   "remarkConfig": {
     "plugins": [
