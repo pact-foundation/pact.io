@@ -24,6 +24,7 @@ export default (props: TagsCardProps) => {
             const activeStyle = {
               fontWeight: "700",
             };
+
             return (
               <List.Item key={tag.fieldValue}>
                 <List.Icon name="tag" color={isActive ? "blue" : null} />

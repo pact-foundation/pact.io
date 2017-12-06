@@ -134,3 +134,4 @@ $RECYCLE.BIN/
 ### Gatsby ###
 public
 .cache
+__snapshots__
