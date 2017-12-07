@@ -3,9 +3,9 @@ import * as React from "react";
 import HeaderMenu from "../components/HeaderMenu/HeaderMenu";
 import SidebarMenu from "../components/SidebarMenu/SidebarMenu";
 import {Container, Icon, Segment, Sidebar} from "semantic-ui-react";
-import "../css/styles.css";
-import "../css/responsive.css";
-import "../css/semantic.min.css";
+import "../styles/styles.less";
+import "../styles/responsive.less";
+import "../styles/semantic.min.css"; // TODO: use bootstrap or anything else, semantic is kinda annoying
 import "prismjs/themes/prism-okaidia.css";
 
 export const menuItems = [

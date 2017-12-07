@@ -1,18 +1,17 @@
 /* tslint:disable no-var-requires */
-/* tslint:disable no-console */
 
 import * as React from "react";
 import Helmet from "react-helmet";
 
 // Load production style
-let styles: string;
+/*let styles: string;
 if (process.env.NODE_ENV === `production`) {
 	try {
 		styles = require("!raw-loader!../public/styles.css");
 	} catch (err) {
 		console.log(err);
 	}
-}
+}*/
 
 interface HtmlProps {
 	body: any;
@@ -20,22 +19,22 @@ interface HtmlProps {
 	headComponents: any;
 }
 
-// Use `module.exports` to be compliante with `webpack-require` import method
+// Use `module.exports` to be compliant with `webpack-require` import method
 module.exports = (props: HtmlProps) => {
 	const head = Helmet.rewind();
 
-	const css = (process.env.NODE_ENV === `production`) ?
+	/*const css = (process.env.NODE_ENV === `production`) ?
 		<style
 			id="gatsby-inlined-css"
 			dangerouslySetInnerHTML={{__html: styles}}
 		/>
-		: null;
+		: null;*/
 
 	return (
 		<html lang="en">
 		<head>
 			{props.headComponents}
-			<title>My website</title>
+			<title>Deploy with Confidence | Pact</title>
 			<meta charSet="utf-8"/>
 			<meta httpEquiv="X-UA-Compatible" content="IE=edge"/>
 			<meta
@@ -45,7 +44,7 @@ module.exports = (props: HtmlProps) => {
 			{head.title.toComponent()}
 			{head.meta.toComponent()}
 			{head.link.toComponent()}
-			{css}
+			{/*css*/}
 		</head>
 		<body>
 			<div

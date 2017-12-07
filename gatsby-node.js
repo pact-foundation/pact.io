@@ -42,7 +42,7 @@ exports.onCreateNode = ({node, boundActionCreators, getNode}) => {
 			filePathArray.push(filePathArray.pop().replace('.md', ''));
 			// Make sure it starts and ends with single slash
 			slug = `/${filePathArray.join('/')}/`;
-			console.log(`\n${slug}\n`);
+			// console.log(`\n${slug}\n`);
 			break;
 	}
 	if (slug) {

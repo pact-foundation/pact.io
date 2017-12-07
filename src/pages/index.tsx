@@ -1,6 +1,7 @@
 import * as React from "react";
 import Link from "gatsby-link";
 import HeaderMenu from "../components/HeaderMenu/HeaderMenu";
+import Particles from "react-particles-js";
 import {menuItems} from "../layouts";
 import {Button, Container, Grid, Header, Icon, Segment,} from "semantic-ui-react";
 
@@ -10,12 +11,11 @@ interface IndexPageProps {
 	};
 }
 
-// TODO: add particle cloud to splash
-
 export default (props: IndexPageProps) =>
 	<div>
 		{/* Master head */}
 		<Segment vertical inverted textAlign="center" className="masthead">
+			<Particles className="particles" canvasClassName="particleCanvas" />
 			<HeaderMenu
 				Link={Link} pathname={props.location.pathname} items={menuItems} inverted
 			/>
