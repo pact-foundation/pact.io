@@ -98,8 +98,7 @@
     "stylelint": "^7.10.1",
     "stylelint-config-standard": "^16.0.0",
     "ts-jest": "19.0.8",
-    "tslint": "^5.8.0",
-    "write-good": "^0.11.3"
+    "tslint": "^5.8.0"
   },
   "scripts": {
     "clean": "rimraf -rf public .cache",
@@ -114,7 +113,6 @@
     "lint:md": "remark .",
     "lint:css": "stylelint \"src/**/*.css\"",
     "lint:scss": "stylelint src/**/*.scss --syntax scss",
-    "lint:english": "write-good './data/blog/**/*.md'",
     "test": "npm run lint && jest",
     "test:watch": "jest --watch",
     "generate": "plop --plopfile ./generators/plopfile.js",

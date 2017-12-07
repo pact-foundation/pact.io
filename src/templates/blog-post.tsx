@@ -1,7 +1,7 @@
 import * as React from "react";
 import Link from "gatsby-link";
-import {Header, Container, Segment, Icon, Label, Button, Grid, Card, Image, Item, Comment} from "semantic-ui-react";
-import {MarkdownRemark, ImageSharp, MarkdownRemarkConnection} from "../graphql-types";
+import {Container, Header, Image, Item, Label, Segment} from "semantic-ui-react";
+import {ImageSharp, MarkdownRemark, MarkdownRemarkConnection} from "../graphql-types";
 import BlogTitle from "../components/BlogTitle";
 
 interface BlogPostProps {
@@ -19,42 +19,42 @@ export default (props: BlogPostProps) => {
 		.map((tag) => <Label key={tag}><Link to={`/blog/tags/${tag}/`}>{tag}</Link></Label>);
 
 	/*const recents = props.data.recents.edges
-		.map(({node}) => {
-			const nodeAvatar = node.frontmatter.author.avatar.children[0] as ImageSharp;
-			const nodeCover = node.frontmatter.image.children[0] as ImageSharp;
-			const extra = (
-				<Comment.Group>
-					<Comment>
-						<Comment.Avatar
-							src={nodeAvatar.responsiveResolution.src}
-							srcSet={nodeAvatar.responsiveResolution.srcSet}
-						/>
-						<Comment.Content>
-							<Comment.Author style={{fontWeight: 400}}>
-								{frontmatter.author.name}
-							</Comment.Author>
-							<Comment.Metadata style={{margin: 0}}>
-								{timeToRead} min read
-							</Comment.Metadata>
-						</Comment.Content>
-					</Comment>
-				</Comment.Group>
-			);
+	 .map(({node}) => {
+	 const nodeAvatar = node.frontmatter.author.avatar.children[0] as ImageSharp;
+	 const nodeCover = node.frontmatter.image.children[0] as ImageSharp;
+	 const extra = (
+	 <Comment.Group>
+	 <Comment>
+	 <Comment.Avatar
+	 src={nodeAvatar.responsiveResolution.src}
+	 srcSet={nodeAvatar.responsiveResolution.srcSet}
+	 />
+	 <Comment.Content>
+	 <Comment.Author style={{fontWeight: 400}}>
+	 {frontmatter.author.name}
+	 </Comment.Author>
+	 <Comment.Metadata style={{margin: 0}}>
+	 {timeToRead} min read
+	 </Comment.Metadata>
+	 </Comment.Content>
+	 </Comment>
+	 </Comment.Group>
+	 );
 
-			return (
-				<div key={node.fields.slug} style={{paddingBottom: "1em"}}>
-					<Card as={Link}
-					      to={node.fields.slug}
-					      image={{
-						      src: nodeCover.responsiveResolution.src,
-						      srcSet: nodeCover.responsiveResolution.srcSet,
-					      }}
-					      header={node.frontmatter.title}
-					      extra={extra}
-					/>
-				</div>
-			);
-		});*/
+	 return (
+	 <div key={node.fields.slug} style={{paddingBottom: "1em"}}>
+	 <Card as={Link}
+	 to={node.fields.slug}
+	 image={{
+	 src: nodeCover.responsiveResolution.src,
+	 srcSet: nodeCover.responsiveResolution.srcSet,
+	 }}
+	 header={node.frontmatter.title}
+	 extra={extra}
+	 />
+	 </div>
+	 );
+	 });*/
 
 	const recentCover = frontmatter.image.children[0] as ImageSharp;
 	return (
@@ -91,12 +91,12 @@ export default (props: BlogPostProps) => {
 				{tags}
 			</Segment>
 			{/* TODO: Fix recents for when there's only one post
-			<Segment vertical>
-				<Grid padded centered>
-					{recents}
-				</Grid>
-			</Segment>
-			*/}
+			 <Segment vertical>
+			 <Grid padded centered>
+			 {recents}
+			 </Grid>
+			 </Segment>
+			 */}
 		</Container>
 	);
 };
