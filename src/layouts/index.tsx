@@ -1,12 +1,9 @@
-import Link from "gatsby-link";
+/* tslint:disable:no-namespace */
+
 import * as React from "react";
-import HeaderMenu from "../components/HeaderMenu/HeaderMenu";
-import SidebarMenu from "../components/SidebarMenu/SidebarMenu";
-import {Container, Icon, Segment, Sidebar} from "semantic-ui-react";
-import "../styles/styles.less";
-import "../styles/responsive.less";
-import "../styles/semantic.min.css"; // TODO: use bootstrap or anything else, semantic is kinda annoying
-import "prismjs/themes/prism-okaidia.css";
+import {Container} from "reactstrap";
+import "../styles/global.scss";
+const FontAwesome = require("@fortawesome/react-fontawesome");
 
 export const menuItems = [
 	{name: "Home", path: "/", exact: true, icon: "home", inverted: true},
@@ -24,30 +21,43 @@ interface DefaultLayoutProps extends React.HTMLProps<HTMLDivElement> {
 export default class DefaultLayout extends React.PureComponent<DefaultLayoutProps, void> {
 	public render() {
 		const {pathname} = this.props.location;
-		const isHome = pathname === "/";
 
 		return (
-			<Sidebar.Pushable as={Segment}>
-				<SidebarMenu Link={Link} pathname={pathname} items={menuItems} visible={false}/>
-				<Sidebar.Pusher style={{minHeight: "100vh"}}>
-					{/* Header */}
-					{isHome ? null : <HeaderMenu
-						Link={Link} pathname={pathname} items={menuItems}
-					/>}
+			<Container fluid={true}>
+				{/* Header */}
+				{/*<HeaderMenu Link={Link} pathname={pathname} items={menuItems}/>*/}
 
-					{/* Render children pages */}
-					<div style={{paddingBottom: 60}}>
-						{this.props.children()}
-					</div>
+				{/* Render children pages */}
+				{/*<div style={{paddingBottom: 60}}>
+				 {this.props.children()}
+				 </div>*/}
 
-					{/* Footer */}
-					<Segment inverted vertical style={{position: "absolute", bottom: 0, width: "100%"}}>
-						<Container textAlign="center">
-							<p>Powered with <Icon name="heart"/> by Gatsby 1.0</p>
-						</Container>
-					</Segment>
-				</Sidebar.Pusher>
-			</Sidebar.Pushable>
+				{/* Footer */}
+				<Container className="footer">
+					<p>Powered with <FontAwesome icon="heart"/> by Gatsby 1.0</p>
+				</Container>
+			</Container>
 		);
 	}
+}
+
+declare class FontAwesomeIcon extends React.Component<FontAwesomeIcon.Props> {}
+declare namespace FontAwesomeIcon {
+	export type Props = React.HTMLProps<FontAwesomeIcon> | {
+		icon: object | any[] | string;
+		border?: boolean;
+		className?: string;
+		mask?: object | any[] | string;
+		fixedWidth?: boolean;
+		flip?: "horizontal" | "vertical" | "both";
+		listItem?: boolean;
+		pull?: "right" | "left" | "none";
+		pulse?: boolean;
+		name?: string;
+		rotation?: 90 | 180 | 270;
+		size?: "lg" | "xs" | "sm" | "1x" | "2x" | "3x" | "4x" | "5x" | "6x" | "7x" | "8x" | "9x" | "10x";
+		spin?: boolean;
+		symbol?: boolean | string;
+		transform?: string | object;
+	};
 }
