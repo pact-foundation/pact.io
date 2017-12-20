@@ -1,6 +1,13 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700,700italic,300italic,300");
 
 /*****
+FONTAWESOME
+******/
+@import "~@fortawesome/fontawesome-free-webfonts/scss/fontawesome";
+$fa-font-path: "https://use.fontawesome.com/releases/v5.0.2/webfonts";
+@import "~@fortawesome/fontawesome-free-webfonts/scss/fa-solid";
+
+/*****
 BOOTSTRAP
 ******/
 @import "~bootstrap/scss/functions";
@@ -21,24 +28,23 @@ BOOTSTRAP
 @import "~bootstrap/scss/button-group";
 //@import "~bootstrap/scss/input-group";
 //@import "~bootstrap/scss/custom-forms";
-//@import "~bootstrap/scss/nav";
-//@import "~bootstrap/scss/navbar";
+@import "~bootstrap/scss/nav";
+@import "~bootstrap/scss/navbar";
 //@import "~bootstrap/scss/card";
 //@import "~bootstrap/scss/breadcrumb";
 //@import "~bootstrap/scss/pagination";
 //@import "~bootstrap/scss/badge";
 //@import "~bootstrap/scss/jumbotron";
-//@import "~bootstrap/scss/alert";
+@import "~bootstrap/scss/alert";
 //@import "~bootstrap/scss/progress";
 //@import "~bootstrap/scss/media";
 //@import "~bootstrap/scss/list-group";
-//@import "~bootstrap/scss/close";
+@import "~bootstrap/scss/close";
 //@import "~bootstrap/scss/modal";
 //@import "~bootstrap/scss/tooltip";
 //@import "~bootstrap/scss/popover";
 //@import "~bootstrap/scss/carousel";
 @import "~bootstrap/scss/utilities";
-
 
 .hidden.menu {
 	display: none;

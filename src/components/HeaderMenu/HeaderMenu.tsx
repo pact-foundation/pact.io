@@ -1,32 +1,41 @@
 import * as React from "react";
-import {connect} from "react-redux";
-import {Dispatch} from "redux";
-import {toggleSidebar} from "../../store";
-import {Container, Icon, Menu} from "semantic-ui-react";
 import {MenuProps} from "../Menu";
+import {Collapse, Nav, Navbar, NavbarBrand, NavbarToggler, NavItem, NavLink} from "reactstrap";
 
 interface HeaderMenuProps extends MenuProps {
-	dispatch: Dispatch<any>;
 	inverted?: boolean;
 }
 
-export const HeaderMenu = ({items, pathname, Link, inverted, dispatch}: HeaderMenuProps) =>
-	<Container>
-		<Menu size="large" pointing secondary inverted={inverted}>
-			<Menu.Item as="a" className="mobile only" icon="sidebar" onClick={() => dispatch(toggleSidebar())}/>
-			<Menu.Item className="mobile hidden"><Icon name="spy" size="big"/></Menu.Item>
-			{items.map((item) => {
-				const active = (item.exact) ? pathname === item.path : pathname.startsWith(item.path);
-				return <Menu.Item
-					as={Link}
-					className="mobile hidden"
-					name={item.name}
-					to={item.path}
-					key={item.path}
-					active={active}
-				/>;
-			})}
-		</Menu>
-	</Container>;
+interface ToggleState {
+	isOpen: boolean;
+}
 
-export default connect()(HeaderMenu);
+export class HeaderMenu extends React.Component {
+	public readonly props: HeaderMenuProps;
+	public readonly state: ToggleState;
+
+	constructor(props: HeaderMenuProps) {
+		super(props);
+		this.state = {isOpen: false};
+	}
+
+	public toggle() {
+		this.state.isOpen = !this.state.isOpen;
+	}
+
+	public render() {
+		return (
+			<Navbar color="faded" light expand="md">
+				<NavbarBrand href="/">reactstrap</NavbarBrand>
+				<NavbarToggler onClick={this.toggle}/>
+				<Collapse isOpen={this.state.isOpen} navbar>
+					<Nav className="ml-auto" navbar>
+						{this.props.items.map((item) => {
+							const active = (item.exact) ? this.props.pathname === item.path : this.props.pathname.startsWith(item.path);
+							return <NavItem><NavLink href={item.path} active={active}/></NavItem>;
+						})}
+					</Nav>
+				</Collapse>
+			</Navbar>);
+	}
+}

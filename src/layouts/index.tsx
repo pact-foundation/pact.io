@@ -3,7 +3,7 @@
 import * as React from "react";
 import {Container} from "reactstrap";
 import "../styles/global.scss";
-const FontAwesome = require("@fortawesome/react-fontawesome");
+import {HeaderMenu} from "../components/HeaderMenu/HeaderMenu";
 
 export const menuItems = [
 	{name: "Home", path: "/", exact: true, icon: "home", inverted: true},
@@ -23,41 +23,23 @@ export default class DefaultLayout extends React.PureComponent<DefaultLayoutProp
 		const {pathname} = this.props.location;
 
 		return (
-			<Container fluid={true}>
+			<div>
 				{/* Header */}
-				{/*<HeaderMenu Link={Link} pathname={pathname} items={menuItems}/>*/}
+				<HeaderMenu pathname={pathname} items={menuItems}/>
+				<Container fluid={true}>
 
-				{/* Render children pages */}
-				{/*<div style={{paddingBottom: 60}}>
-				 {this.props.children()}
-				 </div>*/}
 
-				{/* Footer */}
-				<Container className="footer">
-					<p>Powered with <FontAwesome icon="heart"/> by Gatsby 1.0</p>
+					{/* Render children pages */}
+					{/*<div style={{paddingBottom: 60}}>
+					 {this.props.children()}
+					 </div>*/}
+
+					{/* Footer */}
+					<Container className="footer">
+						<p>Powered with <i className="fas fa-heart"></i> by Gatsby 1.0</p>
+					</Container>
 				</Container>
-			</Container>
+			</div>
 		);
 	}
-}
-
-declare class FontAwesomeIcon extends React.Component<FontAwesomeIcon.Props> {}
-declare namespace FontAwesomeIcon {
-	export type Props = React.HTMLProps<FontAwesomeIcon> | {
-		icon: object | any[] | string;
-		border?: boolean;
-		className?: string;
-		mask?: object | any[] | string;
-		fixedWidth?: boolean;
-		flip?: "horizontal" | "vertical" | "both";
-		listItem?: boolean;
-		pull?: "right" | "left" | "none";
-		pulse?: boolean;
-		name?: string;
-		rotation?: 90 | 180 | 270;
-		size?: "lg" | "xs" | "sm" | "1x" | "2x" | "3x" | "4x" | "5x" | "6x" | "7x" | "8x" | "9x" | "10x";
-		spin?: boolean;
-		symbol?: boolean | string;
-		transform?: string | object;
-	};
 }
