@@ -19,6 +19,9 @@ interface HtmlProps {
 	headComponents: any;
 }
 
+export const appTitle = "Pact";
+export const appTagline = "Deploy with Confidence";
+
 // Use `module.exports` to be compliant with `webpack-require` import method
 module.exports = (props: HtmlProps) => {
 	const head = Helmet.rewind();
@@ -34,7 +37,7 @@ module.exports = (props: HtmlProps) => {
 		<html lang="en">
 		<head>
 			{props.headComponents}
-			<title>Deploy with Confidence | Pact</title>
+			<title>{appTagline} | {appTitle}</title>
 			<meta charSet="utf-8"/>
 			<meta httpEquiv="X-UA-Compatible" content="IE=edge"/>
 			<meta

@@ -6,7 +6,7 @@ import * as React from "react";
 import {storiesOf} from "@storybook/react";
 import {action} from "@storybook/addon-actions";
 import {boolean, text, withKnobs} from "@storybook/addon-knobs";
-import {HeaderMenu} from "./HeaderMenu";
+import {Header} from "./header";
 
 const items = [
 	{name: "Home", path: "/", exact: true},
@@ -18,7 +18,7 @@ const LinkStub = (props: any) =>
 	<div {...props} onClick={action(props.to.toString())}>{props.children}</div>;
 const dispatchStub = (a: any) => action(a.type)(a) && a;
 
-storiesOf("HeaderMenu", module)
+storiesOf("Header", module)
 	.addDecorator(withKnobs)
 	.addDecorator(withReadme(HeaderMenuReadme))
 	.add("default", () => {
@@ -26,6 +26,6 @@ storiesOf("HeaderMenu", module)
 		const inverted = boolean("inverted", false);
 
 		return (
-			<HeaderMenu Link={LinkStub} items={items} pathname={pathname} inverted={inverted} dispatch={dispatchStub}/>
+			<Header Link={LinkStub} items={items} pathname={pathname} inverted={inverted} dispatch={dispatchStub}/>
 		);
 	});

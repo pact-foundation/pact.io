@@ -9,8 +9,7 @@ interface TagsCardProps extends React.HTMLProps<HTMLDivElement> {
 	tag?: string;
 }
 
-export default (props: TagsCardProps) => {
-	return (
+export default (props: TagsCardProps) =>
 		<Card>
 			<Card.Content>
 				<Card.Header>
@@ -39,5 +38,4 @@ export default (props: TagsCardProps) => {
 				</List>
 			</Card.Content>
 		</Card>
-	);
-};
+;

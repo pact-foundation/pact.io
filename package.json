@@ -26,6 +26,7 @@
   "main": "n/a",
   "dependencies": {
     "@fortawesome/fontawesome-free-webfonts": "^1.0.1",
+    "@pact-foundation/pact-logo": "^1.4.1",
     "babel-eslint": "^7.2.1",
     "bootstrap": "^4.0.0-beta.2",
     "change-case": "^3.0.1",

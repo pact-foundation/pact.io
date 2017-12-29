@@ -3,7 +3,8 @@
 import * as React from "react";
 import {Container} from "reactstrap";
 import "../styles/global.scss";
-import {HeaderMenu} from "../components/HeaderMenu/HeaderMenu";
+import {Header} from "../components/header/header";
+import Footer from "../components/footer/footer";
 
 export const menuItems = [
 	{name: "Home", path: "/", exact: true, icon: "home", inverted: true},
@@ -25,20 +26,17 @@ export default class DefaultLayout extends React.PureComponent<DefaultLayoutProp
 		return (
 			<div>
 				{/* Header */}
-				<HeaderMenu pathname={pathname} items={menuItems}/>
-				<Container fluid={true}>
-
-
+				<Header pathname={pathname} items={menuItems}/>
+				<Container>
 					{/* Render children pages */}
-					{/*<div style={{paddingBottom: 60}}>
-					 {this.props.children()}
-					 </div>*/}
-
-					{/* Footer */}
-					<Container className="footer">
-						<p>Powered with <i className="fas fa-heart"></i> by Gatsby 1.0</p>
-					</Container>
+					{
+						<div>
+							{this.props.children()}
+						</div>
+					}
 				</Container>
+				{/* Footer */}
+				<Footer />
 			</div>
 		);
 	}
