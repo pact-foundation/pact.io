@@ -11,7 +11,7 @@ interface IndexPageProps {
 
 export default (props: IndexPageProps) =>
 	<div>
-		<div className="landing-wrapper" style={{height: window.innerHeight + "px"}}>
+		<div className="landing-wrapper" style={{height: typeof window !== "undefined" ? window.innerHeight + "px" : "600px"}}>
 			<Particles className="particles" params={
 				{
 					"particles": {
