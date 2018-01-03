@@ -66,6 +66,25 @@ module.exports = {
 		// html file so the site works offline and is otherwise
 		// resistant to bad networks. Works with almost any
 		// site!
-		`gatsby-plugin-offline`
+		`gatsby-plugin-offline`,
+
+		{
+			resolve: `gatsby-plugin-favicon`,
+			options: {
+				logo: "./src/favicon.png",
+				injectHTML: true,
+				icons: {
+					android: true,
+					appleIcon: true,
+					appleStartup: true,
+					coast: false,
+					favicons: true,
+					firefox: true,
+					twitter: false,
+					yandex: false,
+					windows: false
+				}
+			}
+		}
 	]
 };

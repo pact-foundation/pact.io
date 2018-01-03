@@ -19,8 +19,8 @@ interface HtmlProps {
 	headComponents: any;
 }
 
-export const appTitle = "Pact";
-export const appTagline = "Deploy with Confidence";
+const appTitle = "Pact";
+const appTagline = "Deploy with Confidence";
 
 // Use `module.exports` to be compliant with `webpack-require` import method
 module.exports = (props: HtmlProps) => {
@@ -40,10 +40,7 @@ module.exports = (props: HtmlProps) => {
 			<title>{appTagline} | {appTitle}</title>
 			<meta charSet="utf-8"/>
 			<meta httpEquiv="X-UA-Compatible" content="IE=edge"/>
-			<meta
-				name="viewport"
-				content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
-			/>
+			<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
 			{head.title.toComponent()}
 			{head.meta.toComponent()}
 			{head.link.toComponent()}

@@ -3,14 +3,22 @@
 .landing-wrapper {
 	margin-top: -$header-top-margin;
 	padding-top: $header-top-margin;
-	
+
+	.text, .particles {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+	}
+
+	.text {
+		z-index: 1;
+	}
+
+	.particles {
+		background: #000;
+		z-index: 0;
+	}
 }
 
-.particles {
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	background: #000;
-}

@@ -7,9 +7,10 @@ import {Header} from "../components/header/header";
 import Footer from "../components/footer/footer";
 
 export const menuItems = [
-	{name: "Home", path: "/", exact: true, icon: "home", inverted: true},
-	{name: "About", path: "/about/", exact: true, icon: "info circle"},
-	{name: "Blog", path: "/blog/", exact: false, icon: "newspaper"},
+	{name: "Docs", path: "/docs/", exact: true},
+	{name: "Foundation", path: "/foundation/", exact: true},
+	{name: "Blog", path: "/blog/", exact: false},
+	{name: "Contribute", path: "/contribute/", exact: true}
 ];
 
 interface DefaultLayoutProps extends React.HTMLProps<HTMLDivElement> {

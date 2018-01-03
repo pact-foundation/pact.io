@@ -1,8 +1,6 @@
 import * as React from "react";
 import {MenuProps} from "../Menu";
-import {menuItems} from "../../layouts";
-import {Nav, Navbar, NavbarBrand, NavItem, NavLink} from "reactstrap";
-import {appTitle, appTagline} from "../../html";
+import {Nav, Navbar, NavbarBrand, NavItem} from "reactstrap";
 import "./header.scss";
 import GatsbyLink from "gatsby-link";
 
@@ -31,15 +29,13 @@ export class Header extends React.Component {
 		return (
 			<div className="navbar-padding">
 				<Navbar color="faded" fixed="top" dark expand="md">
-					<NavbarBrand href={menuItems[0].path} alt={appTagline + " | " + appTitle}>
-						<span className="pact pact-logo pact-md pact-white"/>
-					</NavbarBrand>
+					<GatsbyLink to="/" className="navbar-brand" about="Deploy with Confidence"><span className="pact pact-logo pact-md pact-white"/></GatsbyLink>
 					{/*<NavbarToggler onClick={this.toggle}/>*/}
 					{/*<Collapse isOpen={this.state.isOpen} navbar>*/}
 					<Nav className="ml-auto" navbar>
 						{this.props.items.map((item) => {
 							const active = (item.exact) ? this.props.pathname === item.path : this.props.pathname.startsWith(item.path);
-							return <NavItem key={item.path}><GatsbyLink to={item.path}>{item.name}</GatsbyLink></NavItem>;
+							return <NavItem key={item.path}><GatsbyLink to={item.path} className={"nav-link " + (active ? "active" : "")}>{item.name}</GatsbyLink></NavItem>;
 						})}
 					</Nav>
 					{/*</Collapse>*/}

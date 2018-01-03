@@ -1,9 +1,9 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700,700italic,300italic,300");
-
 /*****
 FONTAWESOME
 ******/
 @import "~@fortawesome/fontawesome-free-webfonts/scss/fontawesome";
+
 $fa-font-path: "https://use.fontawesome.com/releases/v5.0.2/webfonts";
 @import "~@fortawesome/fontawesome-free-webfonts/scss/fa-solid";
 
@@ -65,4 +65,24 @@ pre {
 	overflow: auto;
 	border-radius: 0.3em;
 	background: #272822;
+}
+
+.navbar-dark .navbar-nav {
+	.nav-link {
+		position: relative;
+		font-size:18px;
+
+		&.active {
+			&::after {
+				display: block;
+				content: " ";
+				position: absolute;
+				bottom: 6px;
+				left: 5px;
+				right: 5px;
+				height: 2px;
+				background: #fff;
+			}
+		}
+	}
 }
