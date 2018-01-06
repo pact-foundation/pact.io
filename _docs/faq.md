@@ -67,7 +67,7 @@ Secondly, if you think about it, if Pact supports making an assertion that eleme
 - Pact's contracts are dynamically generated artefacts. This makes them easier to maintain.
 - Pact allows you to make the same request with a different "provider state", allowing you to test different HTTP response codes for the same endpoint, or test the same resource in different states.
 - Pact allows you to do regular expression matching.
-- Pact has native support for Ruby, the JVM, .Net, Go and Swift consumers, with a JavaScript wrapper using the Ruby mock server.
+- Pact has native support for Ruby, the JVM, .Net, Go, PHP and Swift consumers, with a JavaScript wrapper using the Ruby mock server.
 - Pact has the [Pact Broker](https://github.com/pact-foundation/pact_broker) which provides auto-generated documentation, network diagrams, and enables cross testing of the production and head versions of your consumer and provider, allowing you to decouple your consumer and provider release cycles.
 
 In summary:
