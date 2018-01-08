@@ -21,6 +21,7 @@
    * [Go](documentation/go.md)
    * [Python](documentation/python.md)
    * [Swift](documentation/swift.md)
+   * [PHP](documentation/php.md)
    * [Other Languages](documentation/provider_verifier.md)
 * [Best practices](best_practices/README.md)
    * [Consumer](best_practices/consumer.md)
