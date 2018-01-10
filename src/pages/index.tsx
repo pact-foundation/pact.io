@@ -63,15 +63,15 @@ export default (props: IndexPageProps) =>
 
 			<div className="text container">
 				<div className="row h-100 align-items-md-center justify-content-md-center text-center">
-					<div className="col-sm-12 col-md-6 text-md-right">
+					<div className="left col-sm-12 col-md-6 text-md-right">
 						{/*<h1>API Chaos,<br/>Near Impossible to Test,<br/>Code with Confidence.<br/></h1>*/}
 						{/*<h1>Install Pact,<br/>Write Software,<br/>Test Thoroughly,<br/>Deploy with Confidence.<br/></h1>*/}
 						{/*<h1>Install, Code, Test,<br/>Deploy with Confidence.<br/></h1>*/}
 						{/*<h1>Microservices are chaotic,<br/>but they don't have to be.<br/></h1>*/}
 						<h1>Install easily,<br/>Code Beautifully,<br/>Test Rigorously,<br/>Deploy Confidently.<br/></h1>
 					</div>
-					<div className="col-sm-12 col-md-6 text-md-left">
-						<h1><span className="pact pact-logo pact-white pact-xl"></span></h1>
+					<div className="right col-sm-12 col-md-6 text-md-left">
+						<h1><span className="pact pact-logo pact-white"></span></h1>
 						<h5><em>The</em> cross-language microservice contract framework</h5>
 						<GatsbyLink to="/#learn-more" className="btn btn-outline-secondary">Learn More</GatsbyLink>
 						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;

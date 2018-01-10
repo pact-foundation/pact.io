@@ -15,12 +15,6 @@
 		bottom: 0;
 	}
 
-	@include media-breakpoint-down(sm) {
-		.text {
-			position: relative;
-		}
-	}
-
 	.text {
 		z-index: 1;
 	}
@@ -28,6 +22,31 @@
 	.particles {
 		background: $particles-background-color;
 		z-index: 0;
+	}
+
+	.right {
+		h1, h5 {
+			margin-bottom: 20px;
+		}
+
+		.pact {
+			font-size: 2em;
+			line-height: 0.74em;
+		}
+	}
+
+	@include media-breakpoint-down(sm) {
+		.text {
+			position: relative;
+		}
+
+		.left, .right {
+			margin-top: 30px;
+		}
+
+		h1 {
+			font-size: 2rem;
+		}
 	}
 }
 
