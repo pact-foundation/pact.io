@@ -68,7 +68,7 @@ export default (props: IndexPageProps) =>
 						{/*<h1>Install Pact,<br/>Write Software,<br/>Test Thoroughly,<br/>Deploy with Confidence.</h1>*/}
 						{/*<h1>Install, Code, Test,<br/>Deploy with Confidence.</h1>*/}
 						{/*<h1>Untangling Microservices.<br/>One test at a time.<br/>Since 2014.</h1>*/}
-						<h1>Install Effortlessly,<br/>Code Beautifully,<br/>Test Meticulously,<br/>Deploy Confidently.</h1>
+						<h1>Install Effortlessly,<br/>Code Beautifully,<br/>Test Meticulously,<br/><strong>Deploy Confidently.</strong></h1>
 					</div>
 					<div className="col-sm-12 col-md-6 text-md-left">
 						<h1><span className="pact pact-logo pact-white pact-xl"></span></h1>
