@@ -64,11 +64,11 @@ export default (props: IndexPageProps) =>
 			<div className="text container">
 				<div className="row h-100 align-items-md-center justify-content-md-center text-center">
 					<div className="left col-sm-12 col-md-6 text-md-right">
-						{/*<h1>API Chaos,<br/>Near Impossible to Test,<br/>Code with Confidence.<br/></h1>*/}
-						{/*<h1>Install Pact,<br/>Write Software,<br/>Test Thoroughly,<br/>Deploy with Confidence.<br/></h1>*/}
-						{/*<h1>Install, Code, Test,<br/>Deploy with Confidence.<br/></h1>*/}
-						{/*<h1>Microservices are chaotic,<br/>but they don't have to be.<br/></h1>*/}
-						<h1>Install easily,<br/>Code Beautifully,<br/>Test Rigorously,<br/>Deploy Confidently.<br/></h1>
+						{/*<h1>API Chaos,<br/>Near Impossible to Test,<br/>Code with Confidence.</h1>*/}
+						{/*<h1>Install Pact,<br/>Write Software,<br/>Test Thoroughly,<br/>Deploy with Confidence.</h1>*/}
+						{/*<h1>Install, Code, Test,<br/>Deploy with Confidence.</h1>*/}
+						{/*<h1>Untangling Microservices.<br/>One test at a time.<br/>Since 2014.</h1>*/}
+						<h1>Install Effortlessly,<br/>Code Beautifully,<br/>Test Meticulously,<br/><strong>Deploy Confidently.</strong></h1>
 					</div>
 					<div className="right col-sm-12 col-md-6 text-md-left">
 						<h1><span className="pact pact-logo pact-white"></span></h1>
