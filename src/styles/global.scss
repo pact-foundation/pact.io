@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700,700italic,300italic,300");
+
 /*****
 FONTAWESOME
 ******/
@@ -12,12 +13,11 @@ PACT LOGO
 ******/
 @import "~@pact-foundation/pact-logo/font/pact.css";
 
+@import "variables";
+
 /*****
 BOOTSTRAP
 ******/
-@import "~bootstrap/scss/functions";
-@import "~bootstrap/scss/variables";
-@import "~bootstrap/scss/mixins";
 @import "~bootstrap/scss/root";
 @import "~bootstrap/scss/print";
 @import "~bootstrap/scss/reboot";
@@ -51,8 +51,10 @@ BOOTSTRAP
 //@import "~bootstrap/scss/carousel";
 @import "~bootstrap/scss/utilities";
 
+
+
 html, body {
-	background: #333;
+	background: $background-color;
 	color: #fff;
 	font-family: 'Open Sans', sans-serif;
 	height: 100%;
@@ -65,24 +67,4 @@ pre {
 	overflow: auto;
 	border-radius: 0.3em;
 	background: #272822;
-}
-
-.navbar-dark .navbar-nav {
-	.nav-link {
-		position: relative;
-		font-size:18px;
-
-		&.active {
-			&::after {
-				display: block;
-				content: " ";
-				position: absolute;
-				bottom: 6px;
-				left: 5px;
-				right: 5px;
-				height: 2px;
-				background: #fff;
-			}
-		}
-	}
 }

@@ -2,8 +2,9 @@ import * as React from "react";
 import Particles from "react-particles-js";
 import "./index.scss";
 import GatsbyLink from "gatsby-link";
+import {Props, ReactPropTypes} from "react";
 
-interface IndexPageProps {
+interface IndexPageProps extends ReactPropTypes {
 	location: {
 		pathname: string;
 	};
@@ -26,7 +27,10 @@ export default (props: IndexPageProps) =>
 							"value": "#ffffff"
 						},
 						"shape": {
-							"type": "circle"
+							"type": "polygon",
+							"polygon" :{
+								"nb_sides": 6
+							}
 						},
 						"opacity": {
 							"value": 0.5,
@@ -39,7 +43,7 @@ export default (props: IndexPageProps) =>
 						"line_linked": {
 							"enable": true,
 							"distance": 200,
-							"color": "#ffffff",
+							"color": "#007bff",
 							"opacity": 0.5,
 							"width": 1
 						},
@@ -48,16 +52,34 @@ export default (props: IndexPageProps) =>
 							"speed": 2,
 							"direction": "none",
 							"random": true,
-							"out_mode": "out"
+							"out_mode": "out",
+							"attract": {
+								"enable": false
+							}
 						}
 					}
 				}
 			}/>
-			<div className="text text-center d-flex align-items-center justify-content-center">
-				<h1>API Chaos,<br/>Near Impossible to Test.<br/>Code with Confidence.<br/><span className="pact pact-text pact-white pact-xl"></span></h1>
-				<GatsbyLink to="/intro" className="btn btn-primary">Get Started</GatsbyLink>
-				<GatsbyLink to="/#learn-more" className="btn btn-outline-secondary">Learn More</GatsbyLink>
+
+			<div className="text container">
+				<div className="row h-100 align-items-md-center justify-content-md-center text-center">
+					<div className="col-sm-12 col-md-6 text-md-right">
+						{/*<h1>API Chaos,<br/>Near Impossible to Test,<br/>Code with Confidence.<br/></h1>*/}
+						{/*<h1>Install Pact,<br/>Write Software,<br/>Test Thoroughly,<br/>Deploy with Confidence.<br/></h1>*/}
+						{/*<h1>Install, Code, Test,<br/>Deploy with Confidence.<br/></h1>*/}
+						{/*<h1>Microservices are chaotic,<br/>but they don't have to be.<br/></h1>*/}
+						<h1>Install easily,<br/>Code Beautifully,<br/>Test Rigorously,<br/>Deploy Confidently.<br/></h1>
+					</div>
+					<div className="col-sm-12 col-md-6 text-md-left">
+						<h1><span className="pact pact-logo pact-white pact-xl"></span></h1>
+						<h5><em>The</em> cross-language microservice contract framework</h5>
+						<GatsbyLink to="/#learn-more" className="btn btn-outline-secondary">Learn More</GatsbyLink>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<GatsbyLink to="/intro" className="btn btn-primary">Get Started</GatsbyLink>
+					</div>
+				</div>
 			</div>
+
 		</div>
 		<div id="what">
 			Explain what's Pact

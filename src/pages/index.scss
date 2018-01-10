@@ -1,8 +1,11 @@
 @import "../styles/variables";
 
 .landing-wrapper {
-	margin-top: -$header-top-margin;
-	padding-top: $header-top-margin;
+	overflow: hidden;
+	@include media-breakpoint-up(md) {
+		margin-top: -$header-top-margin;
+		padding-top: $header-top-margin;
+	}
 
 	.text, .particles {
 		position: absolute;
@@ -12,12 +15,18 @@
 		bottom: 0;
 	}
 
+	@include media-breakpoint-down(sm) {
+		.text {
+			position: relative;
+		}
+	}
+
 	.text {
 		z-index: 1;
 	}
 
 	.particles {
-		background: #000;
+		background: $particles-background-color;
 		z-index: 0;
 	}
 }
