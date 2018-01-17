@@ -1,8 +1,8 @@
 import * as React from "react";
+import {ReactPropTypes} from "react";
 import Particles from "react-particles-js";
 import "./index.scss";
 import GatsbyLink from "gatsby-link";
-import {Props, ReactPropTypes} from "react";
 
 interface IndexPageProps extends ReactPropTypes {
 	location: {
@@ -10,9 +10,12 @@ interface IndexPageProps extends ReactPropTypes {
 	};
 }
 
+let canvasHeight = typeof window !== "undefined" ? window.innerHeight : 600;
+let canvasWidth = typeof window !== "undefined" ? window.innerWidth : 800;
+
 export default (props: IndexPageProps) =>
 	<div>
-		<div className="landing-wrapper" style={{height: typeof window !== "undefined" ? window.innerHeight + "px" : "600px"}}>
+		<div className="landing-wrapper" style={{height: canvasHeight + "px"}}>
 			<Particles className="particles" params={
 				{
 					"particles": {
@@ -20,7 +23,7 @@ export default (props: IndexPageProps) =>
 							"value": 40,
 							"density": {
 								"enable": true,
-								"value_area": 600
+								"value_area": Math.max(canvasWidth / 1.5, 600)
 							}
 						},
 						"color": {
@@ -28,7 +31,7 @@ export default (props: IndexPageProps) =>
 						},
 						"shape": {
 							"type": "polygon",
-							"polygon" :{
+							"polygon": {
 								"nb_sides": 6
 							}
 						},
@@ -72,7 +75,7 @@ export default (props: IndexPageProps) =>
 					</div>
 					<div className="right col-sm-12 col-md-6 text-md-left">
 						<h1><span className="pact pact-logo pact-white"></span></h1>
-						<h5><em>The</em> cross-language {/*microservice*/}distributed contract framework</h5>
+						<h5><em>The</em> cross-language distributed <br/>contract framework</h5>
 						<GatsbyLink to="/#learn-more" className="btn btn-outline-secondary">Learn More</GatsbyLink>
 						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 						<GatsbyLink to="/intro" className="btn btn-primary">Get Started</GatsbyLink>
@@ -81,13 +84,19 @@ export default (props: IndexPageProps) =>
 			</div>
 
 		</div>
-		<div id="what">
-			Explain what's Pact
+		<div id="stats">
+
 		</div>
-		<div id="users">
+		<div id="what">
+			<h1>So, What <em>is</em> Pact?</h1>
+			Pact is a contract test framework; it's a fancy way of saying that tests written with Pact make sure that any interaction between the Client (consumer) and a Server (provider) follow a
+			strict data contract which fails the test if any of the interactions are broken, hence the name "Pact". Alright, that was a lot of words, let's look at a quick example.
+		</div>
+		<div id="companies">
 			Show logos of who's using it
 		</div>
 		<div id="sponsors">
+			<h1>Our Wonderful Sponsors</h1>
 			Show logos of sponsors
 		</div>
 		<div id="foundation">

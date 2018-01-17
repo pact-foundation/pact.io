@@ -20,7 +20,7 @@ interface HtmlProps {
 }
 
 const appTitle = "Pact";
-const appTagline = "Deploy with Confidence";
+const appTagline = "Deploy Confidently.";
 
 // Use `module.exports` to be compliant with `webpack-require` import method
 module.exports = (props: HtmlProps) => {

@@ -113,7 +113,7 @@
     "clean": "rimraf -rf public .cache",
     "start": "npm run develop",
     "watch": "npm run develop",
-    "develop": "node_modules/.bin/gatsby develop",
+    "develop": "node_modules/.bin/gatsby develop -H 0.0.0.0",
     "serve": "node_modules/.bin/gatsby serve",
     "build": "node_modules/.bin/gatsby build",
     "build:pp": "node_modules/.bin/gatsby build --prefix-paths",

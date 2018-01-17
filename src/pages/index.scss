@@ -25,13 +25,38 @@
 	}
 
 	.right {
-		h1, h5 {
-			margin-bottom: 20px;
+		h1 {
+			margin-bottom: 13px;
+		}
+
+		h5 {
+			margin-bottom: 23px;
 		}
 
 		.pact {
 			font-size: 2em;
 			line-height: 0.74em;
+		}
+	}
+
+	@include media-breakpoint-down(md) {
+		h1 {
+			font-size: 2rem;
+		}
+		h5 {
+			font-size: 1rem;
+		}
+	}
+
+	@include media-breakpoint-only(md) {
+		.right {
+			h1 {
+				margin-bottom: 9px;
+			}
+
+			h5 {
+				margin-bottom: 13px;
+			}
 		}
 	}
 
@@ -45,7 +70,10 @@
 		}
 
 		h1 {
-			font-size: 2rem;
+			font-size: 1.75rem;
+		}
+		h5 {
+			font-size: 1rem;
 		}
 	}
 }
