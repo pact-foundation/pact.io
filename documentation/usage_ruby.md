@@ -2,6 +2,8 @@
 
 We're going to write an integration, with Pact tests, between a consumer, the Zoo App, and its provider, the Animal Service. In the Consumer project, we're going to need a model (the Alligator class) to represent the data returned from the Animal Service, and a client (the AnimalServiceClient) which will be responsible for making the HTTP calls to the Animal Service.
 
+Note that to create a pact, you _do_ need to write the code that executes the HTTP requests to your service (in your client class), but you _don't_ need to write the full stack of consumer code (eg. the UI). Ideally, the Pact tests should be "unit tests" for your client class, and they should just focus on ensuring that the request creation and response handling are correct. If you use pact for your UI tests, you'll end up with an explosion of redundant interactions that will make the verification process tedius, and that are only there because you want to test particular UI behaviour.
+
 ![Example](../media/zoo_app-animal_service.png)
 
 ### In the Zoo App (consumer) project
