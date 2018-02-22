@@ -101,7 +101,7 @@ end
 
 #### 5. Run the specs
 
-Of course, the above specs will fail because the Animal Service client method is not implemented. So next, implement your provider client methods.
+Of course, the above specs will fail because the Animal Service client method is not implemented. No pact file has been generated yet because only interactions that were correctly executed will be written to the file, and we don't have any of those yet.
 
 #### 6. Implement the Animal Service client consumer methods
 
