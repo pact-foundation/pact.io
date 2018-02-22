@@ -28,7 +28,7 @@ end
 
 #### 2. Create a skeleton Animal Service client class
 
-Imagine an Animal Service client class that looks something like this.
+Imagine an Animal Service client class that looks something like this. (By the way, don't use httparty if you're writing Ruby. Faraday is where it's at these days, I just haven't had time to update this example.)
 
 ```ruby
 require 'httparty'
@@ -101,10 +101,7 @@ end
 
 #### 5. Run the specs
 
-Running the AnimalServiceClient spec will generate a pact file in the configured pact dir (`spec/pacts` by default).
-Logs will be output to the configured log dir (`log` by default) that can be useful when diagnosing problems.
-
-Of course, the above specs will fail because the Animal Service client method is not implemented, so next, implement your provider client methods.
+Of course, the above specs will fail because the Animal Service client method is not implemented. So next, implement your provider client methods.
 
 #### 6. Implement the Animal Service client consumer methods
 
@@ -122,11 +119,18 @@ end
 
 #### 7. Run the specs again.
 
-Green! You now have a pact file that can be used to verify your expectations of the Animal Service provider project.
+Green! 
+
+Running the passing AnimalServiceClient spec will generate a pact file in the configured pact dir (`spec/pacts` by default).
+Logs will be output to the configured log dir (`log` by default) that can be useful when diagnosing problems.
+
+You now have a pact file that can be used to verify your expectations of the Animal Service provider project.
 
 Now, rinse and repeat for other likely status codes that may be returned. For example, consider how you want your client to respond to a:
+
 * 404 (return null, or raise an error?)
-* 500 (specifying that the response body should contain an error message, and ensuring that your client logs that error message will make your life much easier when things go wrong)
+* 400 (how should validation errors be handled, what will the body look like when there is one?)
+* 500 (specifying that the response body should contain an error message, and ensuring that your client logs that error message will make your life much easier when things go wrong. Note that it may be hard to force your provider to generate a 500 error on demand if you are not using Ruby. You may need to collaborate with your provider team to create a known provider state that will artificially return a 500 error, or you may just wish to use a standard unit test without a pact to test this.)
 * 401/403 if there is authorisation.
 
 ### In the Animal Service (provider) project
