@@ -2,6 +2,11 @@
 
 This section describes the various request/response matching techniques available in your `Consumer` tests. Note the examples below demonstrate use of the Ruby DSL, please refer to your particular language and framework as implementations differ.
 
+## Best practice
+As a rule of thumb, you generally want to use exact matching when you're setting up the expectations for a request (`upon_receiving(...).with(...)`) because you're under control of the data at this stage, and according to Postel's Law, we want to be "strict" with what we send out. Note that the request matching does not allow "unexpected" values to be present in JSON request bodies.
+
+You want to be _as loose as possible_ with the matching for the response (`will_respond_with(...)`) though. This stops the tests being brittle on the provider side. Generally speaking, it doesn't matter what value the provider actually returns during verification, as long as the types match. When you need certain formats in the values (eg. URLS), you can use `terms` (see docs below). Really really consider before you start introducing too many matchers however - for example, yes, the provider might be currently returning a GUID, but would anything in your consumer really break if they returned a different format of string ID? (If it did, that's a nasty code smell!) Note that during provider verification, following Postel's Law of being "relaxed" with what we accept, "unexpected" values in JSON response bodies are ignored. This is expected and is perfectly OK. Another consumer may have an expectation about that field.
+
 ###### NOTE
 *If you are writing tests on the `Consumer` side to a different language on the `Provider` side, you must ensure you use a common Pact Specification between them or you will be unable to validate.*
 
