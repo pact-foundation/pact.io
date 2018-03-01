@@ -5,7 +5,7 @@
 
 - [What is Pact good for?](#what-is-pact-good-for)
 - [What is Pact not good for?](#what-is-pact-not-good-for)
-- [Who would typically implement Pact?][#who-would-typically-implement-pact]
+- [Who would typically implement Pact?](#who-would-typically-implement-pact)
 - [Why doesn't Pact use JSON Schema?](#why-doesnt-pact-use-json-schema)
 - [Why does Pact use concrete JSON documents rather than using more flexible JSONPaths?](#why-does-pact-use-concrete-json-documents-rather-than-using-more-flexible-jsonpaths)
 - [Why is there no support for specifying optional attributes?](#why-is-there-no-support-for-specifying-optional-attributes)
