@@ -52,6 +52,10 @@ Firstly, it is assumed that you have control over the provider's data (and consu
 
 Secondly, if you think about it, if Pact supports making an assertion that element `$.body.name` may be present in a response, then you write consumer code that can handle an optional `$.body.name`, but in fact, the provider gives `$.body.firstname`, no test will ever fail to tell you that you've made an incorrect assumption. Remember that a provider may return extra data without failing the contract, but it must provide at minimum the data you expect.
 
+The same goes for specifying an array with length 0 or more. If all your provider verification data returned 0 length arrays, all your verification tests would pass without you ever having validated the contents of the array. This is why you can only specify an array with minimum length 1 OR a zero length array.
+
+Remember that unlike a schema, which describes all possible states of a document, Pact is "contract by examples". If you need to assert that multiple states are possible, then you need to provide an example for each of those states. Consider if it's _really_ important to you before you do add a Pact test for each and every state however. Remember that each interaction comes with a "cost" of maintenance and execution time, and you need to consider if it is worth the cost in your particular situation.
+
 ### Why are the pacts generated and not static?
 
 * Maintainability: Pact is "contract by example", and the examples may involve large quantities of JSON. Maintaining the JSON files by hand would be both time consuming and error prone. By dynamically creating the pacts, you have the option to keep your expectations in fixture files, or to generate them from your domain (the recommended approach, as it ensures your domain objects and their JSON representations in the pacts can never get out of sync).
