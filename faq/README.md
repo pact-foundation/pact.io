@@ -5,6 +5,7 @@
 
 - [What is Pact good for?](#what-is-pact-good-for)
 - [What is Pact not good for?](#what-is-pact-not-good-for)
+- [Who would typically implement Pact?][#who-would-typically-implement-pact]
 - [Why doesn't Pact use JSON Schema?](#why-doesnt-pact-use-json-schema)
 - [Why does Pact use concrete JSON documents rather than using more flexible JSONPaths?](#why-does-pact-use-concrete-json-documents-rather-than-using-more-flexible-jsonpaths)
 - [Why is there no support for specifying optional attributes?](#why-is-there-no-support-for-specifying-optional-attributes)
@@ -27,14 +28,19 @@
 Pact is most valuable for designing and testing integrations where you (or your team/organisation/partner organisation) control the development of both the consumer and the provider, and the requirements of the consumer are going to be used to drive the features of the provider. It is fantastic tool for developing and testing intra-organisation microservices.
 
 ### What is Pact not good for?
+* Testing APIs where the number of consumers is so great that direct relationships cannot be maintained between the consumer teams and the provider team.
 * Performance and load testing.
 * Functional testing of the provider - that is what the provider’s own tests should do. Pact is about checking the contents and format of requests and responses.
 * Situations where you cannot load data into the provider without using the API that you’re actually testing (eg. public APIs). Why?
 * Testing “pass through” APIs, where the provider merely passes on the request contents to a downstream service without validating them. Why?
 
+### Who would typically implement Pact?
+
+Pact is generally implemented by developers, during development. Business analysts and testers can still benefit from the presence of contracts by using them to understand the underlying interactions between the applications.
+
 ### Why doesn't Pact use JSON Schema?
 
-Whether you define a schema or not, you will still need a concrete example of the response to return from the mock server, and a concrete example of the request to replay against the provider. If you just used a schema, then the code would have to generate an example, and generated values are not very helpful when used in tests, nor do they give any readable, meaningful documentation. If you use a schema *and* an example, then you are duplicating effort. The schema can almost be implied from an example. The ability to specify more flexible matching like "an array of any length" that is currently missing from v1 matching will be available in v2 matching (beta is out now, see [v2 flexible matching](https://github.com/pact-foundation/pact-ruby/wiki/v2-flexible-matching)).
+Whether you define a schema or not, you will still need a concrete example of the response to return from the mock server, and a concrete example of the request to replay against the provider. If you just used a schema, then the code would have to generate an example, and generated values are not very helpful when used in tests, nor do they give any readable, meaningful documentation. If you use a schema *and* an example, then you are duplicating effort. The schema can almost be implied from an example.
 
 ### Why does Pact use concrete JSON documents rather than using more flexible JSONPaths?
 
@@ -78,7 +84,7 @@ What you really need is a “non-HTTP” pact between your consumer and the down
 
 **TL;DR: Yes**
 
-The real question is: how much, and in which environment - test or production? The answer to _this_ question depends on your organisation's risk profile. 
+The real question is: how many, and in which environment - test or production? The answer to _this_ question depends on your organisation's risk profile. 
 
 There is generally a trade off between the amount of confidence you have that your system is bug free, and the speed with which you can respond to any bugs you find. A 10 hour test suite may make you feel secure that all the functionality of your system is working, but it will decrease your ability to put out a new release quickly when a bug is inevitably found.
 
