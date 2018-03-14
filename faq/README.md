@@ -52,7 +52,7 @@ Firstly, it is assumed that you have control over the provider's data (and consu
 
 Secondly, if Pact supports making an assertion that element `$.body.name` may be present in a response, then you write consumer code that can handle an optional `$.body.name`, but in fact, the provider gives `$.body.firstname`, no test will ever fail to tell you that you've made an incorrect assumption. Remember that a provider may return extra data without failing the contract, but it must provide at minimum the data you expect.
 
-The same goes for specifying "<VALUE> or null". If all your provider verification test data returned nulls for this key, you might think that you had validated the "<VALUE>", but in fact, you never had. You could get a completely different "<VALUE>" for this key in production, which may then cause issues.
+The same goes for specifying "\<VALUE\> or null". If all your provider verification test data returned nulls for this key, you might think that you had validated the "\<VALUE\>", but in fact, you never had. You could get a completely different "<VALUE>" for this key in production, which may then cause issues.
 
 The same goes for specifying an array with length 0 or more. If all your provider verification data returned 0 length arrays, all your verification tests would pass without you ever having validated the contents of the array. This is why you can only specify an array with minimum length 1 OR a zero length array.
 
@@ -88,7 +88,7 @@ What you really need is a “non-HTTP” pact between your consumer and the down
 
 ### Do I still need end-to-end tests?
 
-**TL;DR: Yes**
+**TL;DR: It depends**
 
 The real question is: how many, and in which environment - test or production? The answer to _this_ question depends on your organisation's risk profile. 
 
