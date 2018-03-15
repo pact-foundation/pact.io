@@ -19,7 +19,7 @@ If you are using a Pact Broker to exchange pacts, then avoid using random data i
 ###### NOTE
 *If you are writing tests on the `Consumer` side to a different language on the `Provider` side, you must ensure you use a common Pact Specification between them or you will be unable to validate.*
 
-## Pat matching features
+## Pact matching features
 
 ### Regular expressions 
 
