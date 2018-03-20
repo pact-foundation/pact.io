@@ -1,5 +1,6 @@
 # Blogs, Videos and Articles
 
+* [It's not hard to test smart](https://www.youtube.com/watch?v=79GKBYSqMIo) - Dec 2018
 * [Consumer-driven contracts with Pact and PHP](http://www.andykelk.net/tech/consumer-driven-contracts-with-pact-and-php) - 9 Sep 2015
 * [Pacts to the rescue!](http://www.infoq.com/presentations/pact) API Days (Video) - Feb 2015
 * [Martin Fowler's Microservices resource guide](http://martinfowler.com/microservices/) - July 2015
