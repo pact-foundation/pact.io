@@ -6,15 +6,15 @@ Ensuring that the API is being called correctly in contract tests can be somewha
 
 Ensuring a consumer is using the right query params for a search is a classic example of this. Query params with invalid names are likely to be ignored, resulting in the following situation:
 
-1. Consumer declares in the pact: given "an alligator with name Mary exists" upon receiving a request for "/search-alligators?name=Mary" will return a list of alligators with min length one and the name "Mary".
+1. Consumer declares in the pact: given `an alligator with name Mary exists` upon receiving a request for `/search-alligators?name=Mary` will return a list of alligators with min length one and the name "Mary".
 1. The provider team sets up the relevant provider state by creating one alligator with the name Mary.
 1. The pact verification passes
 1. Consumer and provider deploy
-1. A user perfomrms a search for alligators by name and EVERY SINGLE ALLIGATOR IN THE DATABASE is returned!
+1. A user performs a search for alligators by name and EVERY SINGLE ALLIGATOR IN THE DATABASE is returned!
 
 How did this happen? We had a contract test for this and it passed, right?
 
-Actually, the correct parameter to use in the alligator was "firstname" not "name". When we ran the pact verification, the "name" query param was ignored, and it was interpreted as "/search-alligators", which then returned all the alligators - which was just the one that was in the database at the time, and it was called "Mary".
+Actually, the correct parameter to use in the alligator was "firstname" not "name". When we ran the pact verification, the "name" query param was ignored, and it was interpreted as `/search-alligators`, which then returned all the alligators - which was just the one that was in the database at the time, and it was called "Mary".
 
 We have a test that gave us a false positive.
 
@@ -22,6 +22,6 @@ So how do we avoid this situation?
 
 It takes cooperation on both sides of the contract. As you would hopefully have read elsewhere, we don't want to fall into the trap of using our contracts to do functional testing. Those tests belong in the provider's codebase. But in this situation, unfortunately the only way to check that we have used the right parameter name is to check the results that are returned. Here is one solution.
 
-1. Consumer declares in the pact: given "an alligator with name Mary exists and an alligator named John exists" upon receiving a request for "/search-alligators?name=Mary" will return a list of alligators with length _exactly one_ and the name "Mary".
+1. Consumer declares in the pact: given `an alligator with name Mary exists and an alligator named John exists` upon receiving a request for `/search-alligators?name=Mary` will return a list of alligators with length _exactly one_ and the name "Mary".
 1. The provider team sets up the relevant provider state by creating one alligator with the name Mary _AND one alligator named John_.
 1. The pact verification correctly fails - because two alligators were returned.
