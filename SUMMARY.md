@@ -27,6 +27,7 @@
    * [Consumer](best_practices/consumer.md)
        * [Contract Tests vs Functional Tests](best_practices/contract_tests_not_functional_tests.md)
    * [Provider](best_practices/provider.md)
+       * [Using provider states effectively](using_provider_states_effectively.md)
 * [FAQ](faq/README.md)
    * [Convince me](faq/convinceme.md)
 * [Getting Help](getting_help/README.md)
