@@ -20,7 +20,7 @@ We have a test that gave us a false positive.
 
 So how do we avoid this situation? 
 
-The easiest solution to ensure that the right parameters are used for a query is for the provider to echo the params that it used from the query in its response.
+The easiest solution to ensure that the right parameters are used for a query is for the provider to echo the params that it used from the query in its response. Note, this only works if the provider just extracts the params it cares about - if it echoes the entire query string, it would defeat the purpose!
 
 eg. Given `an alligator with name Mary exists` upon receiving a request for `/search-alligators?name=Mary` will return `{"query": {"name": ["Mary"]}, "alligators": [...] }`
 
