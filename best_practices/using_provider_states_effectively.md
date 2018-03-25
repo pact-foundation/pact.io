@@ -20,7 +20,15 @@ We have a test that gave us a false positive.
 
 So how do we avoid this situation? 
 
-It takes cooperation on both sides of the contract. As you would hopefully have read elsewhere, we don't want to fall into the trap of using our contracts to do functional testing. Those tests belong in the provider's codebase. But in this situation, unfortunately the only way to check that we have used the right parameter name is to check the results that are returned. Here is one solution.
+The easiest solution to ensure that the right parameters are used for a query is for the provider to echo the params that it used from the query in its response.
+
+eg. Given `an alligator with name Mary exists` upon receiving a request for `/search-alligators?name=Mary` will return `{"query": {"name": ["Mary"]}, "alligators": [...] }`
+
+If the above pact was verified by the provider, it would correctly fail because it would return `{"query": {}}`. Once the consumer updated its test to expect `/search-alligators?firstname=Mary` and `{"query": {"firstname": ["Mary"]}, "alligators": [...] }` it would pass.
+
+If that is not possible, then an alternative but more complicated set up is required.
+
+This solution takes cooperation on both sides of the contract. As you would hopefully have read elsewhere, we don't want to fall into the trap of using our contracts to do functional testing. Those tests belong in the provider's codebase. But in this situation, unfortunately the only way to check that we have used the right parameter name is to check the results that are returned. Here is one solution.
 
 1. Consumer declares in the pact: given `an alligator with name Mary exists and an alligator named John exists` upon receiving a request for `/search-alligators?name=Mary` will return a list of alligators with length _exactly one_ and the name "Mary".
 1. The provider team sets up the relevant provider state by creating one alligator with the name Mary _AND one alligator named John_.
