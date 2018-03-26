@@ -26,36 +26,40 @@ Please submit a PR to the gitbook if there is someone missing from this list! Th
 
 Original implementation: James Fraser, Sergei Matheson, Brent Snook, Ronald Holshausen
 
-Current maintainer: Beth Skurrie
+Current maintainer: [Beth Skurrie](https://github.com/bethesque/)
 
 ### JVM
 
 Past contributors: Travis Dixon, Mike Farah, Andras Bubics
 
-Current maintainer: Ron Holshausen
+Current maintainer: [Ron Holshausen](https://github.com/uglyog)
 
 ### Javascript
 
 Past contributors: Tarcio Saraiva
 
-Current maintainers: Matt Fellows, Michel Boudreau
+Current maintainers: [Matt Fellows](https://github.com/mefellows), [Michel Boudreau]()
 
 ### .NET
 
-Current maintainer: Neil Campbell
+Current maintainer: [Neil Campbell](https://github.com/neilcampbell)
 
 ### Go
 
-Current maintainer: Matt Fellows
+Current maintainer: [Matt Fellows](https://github.com/mefellows)
 
 ### Python
 
-Current maintainer: Matthew Balvanz
+Current maintainer: [Matthew Balvanz](https://github.com/matthewbalvanz-wf)
 
 ### Swift/Objective C
 
-Current maintainer: Andrew Spinks
+Current maintainer: [Andrew Spinks](https://github.com/andrewspinks)
 
 ### PHP
 
-Current maintainer: Charles Mack
+Current maintainer: [Charles Mack](https://github.com/mattermack)
+
+### Scala ITV
+
+Current maintainer: [Dave Smith](https://github.com/davesmith00000)
