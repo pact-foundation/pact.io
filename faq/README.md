@@ -73,7 +73,11 @@ See [this article](http://rea.tech/enter-the-pact-matrix-or-how-to-decouple-the-
 
 ### What does PACT stand for?
 
-It doesn't stand for anything. It is the word "pact", as in, another word for a contract. Google defines a "pact" as "a formal agreement between individuals or parties." That sums it up pretty well.
+ * Pretty Awesome Contract Testing?
+ * Provider And Consumer Tests?
+ * ???
+ 
+Actually, it doesn't stand for anything. It is the word "pact", as in, another word for a contract. Google defines a "pact" as "a formal agreement between individuals or parties." That sums it up pretty well.
 
 ### Why Pact may not be the best tool for public testing APIs?
 Each interaction in a pact should be verified in isolation, with no context maintained from the previous interactions. Tests that depend on the outcome of previous tests are brittle and land you back in integration test hell, which is the nasty place you’re trying to escape by using pacts.
