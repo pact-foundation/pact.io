@@ -14,7 +14,7 @@ Ensuring a consumer is using the right query params for a search is a classic ex
 
 How did this happen? We had a contract test for this and it passed, right?
 
-Actually, the correct parameter to use in the alligator was "firstname" not "name". When we ran the pact verification, the "name" query param was ignored, and it was interpreted as `/search-alligators`, which then returned all the alligators - which was just the one that was in the database at the time, and it was called "Mary".
+Actually, the correct parameter to use for the alligator search was "firstname", not "name". When we ran the pact verification, the "name" query param was ignored, and it was interpreted as `/search-alligators`, which then returned all the alligators - which was just the one that was in the database at the time, and it was called "Mary".
 
 We have a test that gave us a false positive.
 
