@@ -2,7 +2,7 @@
 
 > When all you have is a hammer everything looks like a nail...
 
-Like every tool, there are situtations that Pact is great for, and situations where other tools would be better.
+Like every tool, there are situations that Pact is great for, and situations where other tools would be better.
 In the right situation, Pact should make testing your integrations _less painful_ than traditional integration tests.
 In the wrong situation, it will probably be just as painful!
 
