@@ -75,7 +75,7 @@ export default (props: IndexPageProps) =>
 					</div>
 					<div className="right col-sm-12 col-md-6 text-md-left">
 						<h1><span className="pact pact-logo pact-white"></span></h1>
-						<h5><em>The</em> cross-language distributed <br/>contract framework</h5>
+						<h5><em>The</em> cross-language distributed <br/>contract testing framework</h5>
 						<GatsbyLink to="/#learn-more" className="btn btn-outline-secondary">Learn More</GatsbyLink>
 						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 						<GatsbyLink to="/intro" className="btn btn-primary">Get Started</GatsbyLink>
