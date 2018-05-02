@@ -10,6 +10,7 @@
    * [Verifying Pacts](documentation/verifying_pacts.md)
    * [Provider states](documentation/provider_states.md)
    * [Sharing Pacts with the Pact Broker](documentation/sharings_pacts.md)
+   * [Local API stubs](documentation/stubs.md)
 * [Implementation guides](documentation/implementation_guides.md)
    * [Ruby](documentation/ruby.md)
        * [Verifying Pacts](documentation/ruby/verifying_pacts.md)
