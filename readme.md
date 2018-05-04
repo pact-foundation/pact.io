@@ -51,7 +51,20 @@ Pact tests are only successful if each step completes without error.
 
 Usually, the interaction definition and consumer test are written together, such as this example from [this Pact walkthrough guide](https://dius.com.au/2014/05/19/simplifying-micro-service-testing-with-pacts/):
 
-__IMAGE walkthrough__
+```ruby
+# Describe the interaction
+before
+do     
+  event_api.upon_receiving('A POST request with an event').
+    with(method: :post, path: '/events', headers: {'Content-Type' => 'application/json'}, body: event_json).
+    will_respond_with(status: 200, headers: {'Content-Type' => 'application/json'})
+end
+
+# Trigger the client code to generate the request and receive the response
+it 'is successful' do
+  expect(subject.save_event(event)).to be_true
+end
+```
 
 Although there is conceptually a lot going on in a pact interaction test, the actual test code is very straightforward. This is a major selling point of Pact.
 
