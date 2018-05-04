@@ -1,15 +1,14 @@
 # Summary
 
-* [Getting Started](documentation/README.md)
-   * [Terminology](documentation/how_does_pact_work.md)
-   * [What is Pact good for?](documentation/what_is_pact_good_for.md)
-   * [Usage example](documentation/usage_ruby.md)
+ * [Terminology](documentation/terminology.md)
+   * [Getting started](documentation/usage_ruby.md)
    * [Matching](documentation/matching.md)
        * [Gotchas](documentation/gotchas.md)
    * [Verifying Pacts](documentation/verifying_pacts.md)
    * [Provider states](documentation/provider_states.md)
    * [Sharing Pacts with the Pact Broker](documentation/sharings_pacts.md)
    * [Local API stubs](documentation/stubs.md)
+   * [What is Pact good for?](documentation/what_is_pact_good_for.md)
 * [Implementation guides](documentation/implementation_guides.md)
    * [Ruby](documentation/ruby.md)
        * [Verifying Pacts](documentation/ruby/verifying_pacts.md)
