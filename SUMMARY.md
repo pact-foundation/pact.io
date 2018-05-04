@@ -9,6 +9,7 @@
    * [Sharing Pacts with the Pact Broker](documentation/sharings_pacts.md)
    * [Local API stubs](documentation/stubs.md)
    * [What is Pact good for?](documentation/what_is_pact_good_for.md)
+   * [Further reading](documentation/further_reading.md)
 * [Implementation guides](documentation/implementation_guides.md)
    * [Ruby](documentation/ruby.md)
        * [Verifying Pacts](documentation/ruby/verifying_pacts.md)
