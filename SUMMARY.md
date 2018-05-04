@@ -7,6 +7,7 @@
    * [Verifying Pacts](documentation/verifying_pacts.md)
    * [Provider states](documentation/provider_states.md)
    * [Sharing Pacts with the Pact Broker](documentation/sharings_pacts.md)
+   * [Versioning in the Pact Broker](documentation/versioning_in_the_pact_broker.md)
    * [Local API stubs](documentation/stubs.md)
    * [What is Pact good for?](documentation/what_is_pact_good_for.md)
    * [Further reading](documentation/further_reading.md)
