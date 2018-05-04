@@ -1,8 +1,21 @@
-## Usage - an example scenario
+## Getting started
 
-We're going to write an integration, with Pact tests, between a consumer, the Zoo App, and its provider, the Animal Service. In the Consumer project, we're going to need a model (the Alligator class) to represent the data returned from the Animal Service, and a client (the AnimalServiceClient) which will be responsible for making the HTTP calls to the Animal Service.
+To get started, you will need to and install the relevant pact components for the language(s) you're using for your consumer (or provider). These need not be the same for both consumer and provider - part of the value of the Pact format is that different frameworks and languages can be used for consumers and providers.
 
-Note that to create a pact, you _do_ need to write the code that executes the HTTP requests to your service (in your client class), but you _don't_ need to write the full stack of consumer code (eg. the UI). Ideally, the Pact tests should be "unit tests" for your client class, and they should just focus on ensuring that the request creation and response handling are correct. If you use pact for your UI tests, you'll end up with an explosion of redundant interactions that will make the verification process tedius, and that are only there because you want to test particular UI behaviour.
+You can find instructions for each language on the [implementation guides](documentation/implementation_guides.md) page.
+
+### An example scenario
+
+Here we have an example describing Pact tests between a consumer (the Zoo App), and its provider (the Animal Service).
+
+In the Consumer project, we're going to need:
+
+* A model (the Alligator class) to represent the data returned from the Animal Service
+* A client (the AnimalServiceClient) which will be responsible for making the HTTP calls to the Animal Service.
+
+Note that to create a pact, you _do_ need to write the code that executes the HTTP requests to your service (in your client class), but you _don't_ need to write the full stack of consumer code (eg. the UI).
+
+Ideally, the Pact tests should be "unit tests" for your client class, and they should just focus on ensuring that the request creation and response handling are correct. If you use pact for your UI tests, you'll end up with an explosion of redundant interactions that will make the verification process tedious. Remember that pact is for testing the contract used for communication, and not for testing particular UI behaviour or business logic.
 
 ![Example](../media/zoo_app-animal_service.png)
 
@@ -28,7 +41,7 @@ end
 
 #### 2. Create a skeleton Animal Service client class
 
-Imagine an Animal Service client class that looks something like this. (By the way, don't use httparty if you're writing Ruby. Faraday is where it's at these days, I just haven't had time to update this example.)
+Perhaps we have an Animal Service client class that looks something like this (please excuse the use of httparty):
 
 ```ruby
 require 'httparty'
@@ -44,7 +57,7 @@ end
 ```
 #### 3. Configure the mock Animal Service
 
-The following code will create a mock service on localhost:1234 which will respond to your application's queries over HTTP as if it were the real "Animal Service" app. It also creates a mock provider object which you will use to set up your expectations. The method name to access the mock service provider will be what ever name you give as the service argument - in this case "animal_service"
+The following code will create a mock service on `localhost:1234` which will respond to your application's queries over HTTP as if it were the real Animal Service app. It also creates a mock provider object which you will use to set up your expectations. The method name to access the mock service provider will be what ever name you give as the service argument - in this case `animal_service`.
 
 ```ruby
 # In /spec/service_providers/pact_helper.rb
@@ -119,7 +132,7 @@ end
 
 #### 7. Run the specs again.
 
-Green! 
+Green!
 
 Running the passing AnimalServiceClient spec will generate a pact file in the configured pact dir (`spec/pacts` by default).
 Logs will be output to the configured log dir (`log` by default) that can be useful when diagnosing problems.
