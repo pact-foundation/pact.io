@@ -12,6 +12,12 @@ Pact is most valuable for designing and testing integrations where:
 * The requirements of the consumer(s) are going to be used to drive the features of the provider.
 * There is a small enough number of consumers for a given provider that the provider team can manage an individual relationship with each consumer team.
 
+The primary advantages are:
+
+* You can continuously evolve your codebase knowing that Pact will guarantee contracts are met.
+* You can find out _before_ you deploy whether or not your applications will work together - there is no need to wait for slow e2e tests.
+* The generation and verification of contracts is automatically managed by Pact.
+
 Pact is fantastic tool for developing and testing intra-organisation microservices.
 
 # What is it not good for?
@@ -29,3 +35,7 @@ Pact is fantastic tool for developing and testing intra-organisation microservic
 [pass-through-apis]: https://github.com/pact-foundation/pact-ruby/wiki/Why-Pact-may-not-be-the-best-tool-for-testing-pass-through-APIs
 [functional-testing]: https://docs.pact.io/best_practices/contract_tests_not_functional_tests.html
 [isolated-tests]: https://docs.pact.io/best_practices/consumer.html
+
+# If you are unsure
+
+If you're unsure whether Pact will be valuable for your team, see this [this page in the FAQ](faq/convinceme.html).
