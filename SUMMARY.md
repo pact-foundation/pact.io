@@ -1,7 +1,7 @@
 # Summary
 
- * [Terminology](documentation/terminology.md)
-   * [Getting started](documentation/usage_ruby.md)
+* [Terminology](documentation/terminology.md)
+* [Getting started](documentation/usage_ruby.md)
    * [Matching](documentation/matching.md)
        * [Gotchas](documentation/gotchas.md)
    * [Verifying Pacts](documentation/verifying_pacts.md)
@@ -33,7 +33,7 @@
    * [Convince me](faq/convinceme.md)
 * [Getting Help](getting_help/README.md)
 * [Contributing](contributing/README.md)
-* [Contributors](about_pact/README.md)
+   * [Contributors](about_pact/README.md)
 * [History](about_pact/history.md)
 * [Who's using Pact?](testimonials/README.md)
 * [Blogs, videos and articles](media/blogs_videos_and_articles.md)
