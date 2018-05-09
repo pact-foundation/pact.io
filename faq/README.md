@@ -40,7 +40,7 @@ Pact is generally implemented by developers, during development. Business analys
 
 ### Why doesn't Pact use JSON Schema?
 
-Whether you define a schema or not, you will still need a concrete example of the response to return from the mock server, and a concrete example of the request to replay against the provider. If you just used a schema, then the code would have to generate an example, and generated 
+Whether you define a schema or not, you will still need a concrete example of the response to return from the mock server, and a concrete example of the request to replay against the provider. If you just used a schema, then the code would have to generate an example, and generated
 
 
 s are not very helpful when used in tests, nor do they give any readable, meaningful documentation. If you use a schema *and* an example, then you are duplicating effort. The schema can almost be implied from an example.
@@ -76,7 +76,7 @@ See [this article](http://rea.tech/enter-the-pact-matrix-or-how-to-decouple-the-
  * Pretty Awesome Contract Testing?
  * Provider And Consumer Tests?
  * ???
- 
+
 Actually, it doesn't stand for anything. It is the word "pact", as in, another word for a contract. Google defines a "pact" as "a formal agreement between individuals or parties." That sums it up pretty well.
 
 ### Why Pact may not be the best tool for public testing APIs?
@@ -97,7 +97,7 @@ What you really need is a “non-HTTP” pact between your consumer and the down
 
 **TL;DR: It depends**
 
-The real question is: how many, and in which environment - test or production? The answer to _this_ question depends on your organisation's risk profile. 
+The real question is: how many, and in which environment - test or production? The answer to _this_ question depends on your organisation's risk profile.
 
 There is generally a trade off between the amount of confidence you have that your system is bug free, and the speed with which you can respond to any bugs you find. A 10 hour test suite may make you feel secure that all the functionality of your system is working, but it will decrease your ability to put out a new release quickly when a bug is inevitably found.
 

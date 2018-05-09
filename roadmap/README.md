@@ -7,7 +7,6 @@ That being said, although each language will move at a different pace, as a comm
 ## Table of Contents
 <!-- TOC depthFrom:2 depthTo:3 withLinks:1 updateOnSave:1 orderedList:0 -->
 
-- [Table of Contents](#table-of-contents)
 - [Specification [Status: v3]](#specification-status-v3)
 - [Reference Library [Status: Alpha]](#reference-library-status-alpha)
 - [Python [Status: v2]](#python-status-alpha)

@@ -8,4 +8,4 @@ Provider states also allow the consumer to make the same request with different 
 
 Keep in mind that a provider state is all about the state of the *provider* (eg. what data is there, how it is going to handle a given response), not about the state of the consumer, or about what is in the request.
 
-Refer to the the [Ruby example ](./ruby/provider_states.md)to see how this plays out in code.
+Refer to the the [Ruby example](/implementation_guides/ruby/provider_states.md) to see how this plays out in code.

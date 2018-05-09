@@ -13,7 +13,7 @@ Ruby, JS, the JVM and Android:
 
 ## Supported Languages
 
-* [Ruby](ruby.md)
+* [Ruby](./ruby/README.md)
 * [JVM](jvm.md)
 * [.NET](net.md)
 * [Javascript](javascript.md)

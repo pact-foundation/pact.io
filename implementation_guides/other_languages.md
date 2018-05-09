@@ -10,7 +10,7 @@ This setup simplifies Pact Provider verification process in any language.
 
 **Features**:
 
-* Verify Pacts published to a [Pact Broker](https://github.com/bethesque/pact_broker)
+* Verify Pacts published to a [Pact Broker](https://github.com/pact-foundation/pact_broker)
 * Verify local `*.json` Pacts for testing in a development environment
 * Pre-configured Docker image with Ruby installed and a sane, default `src/Rakefile` keeping things DRY
 * Works with Pact [provider states](https://github.com/pact-foundation/pact-ruby/wiki/Provider-states) should you need them

@@ -1,10 +1,9 @@
 # Getting help
 
-Join us on Slack:
+The best place to ask for help is the slack team: [![slack](http://slack.pact.io/badge.svg)](http://slack.pact.io)
 
-<script async defer src="https://pact-slack.herokuapp.com/slackin.js?large"></script>
-
-or, you can get help on Pact from the following channels:
+You can also get help on Pact from the following channels:
 
 * **Stack Overflow**: https://stackoverflow.com/questions/tagged/pact
-* **Twitter:** [@pact-up](https://twitter.com/pact_up) Follow us for news about new features.
+* **Twitter:** [@pact_up](https://twitter.com/pact_up)
+* **Slack:** Join the chat at [slack.pact.io](http://slack.pact.io)
