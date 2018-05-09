@@ -1,33 +1,36 @@
 # FAQ
 
 ## Table of Contents
+
 <!-- TOC depthFrom:3 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
 
-- [What is Pact good for?](#what-is-pact-good-for)
-- [What is Pact not good for?](#what-is-pact-not-good-for)
-- [Who would typically implement Pact?](#who-would-typically-implement-pact)
-- [Why doesn't Pact use JSON Schema?](#why-doesnt-pact-use-json-schema)
-- [Why does Pact use concrete JSON documents rather than using more flexible JSONPaths?](#why-does-pact-use-concrete-json-documents-rather-than-using-more-flexible-jsonpaths)
-- [Why is there no support for specifying optional attributes?](#why-is-there-no-support-for-specifying-optional-attributes)
-- [Why are the pacts generated and not static?](#why-are-the-pacts-generated-and-not-static)
-- [How do I test against the latest development and production versions of consumer APIs?](#how-do-i-test-against-the-latest-development-and-production-versions-of-consumer-apis)
-- [What does PACT stand for?](#what-does-pact-stand-for)
-- [Why Pact may not be the best tool for public testing APIs?](#why-pact-may-not-be-the-best-tool-for-public-testing-apis)
-- [Why Pact may not be the best tool for testing pass through APIs?](#why-pact-may-not-be-the-best-tool-for-testing-pass-through-apis)
-- [Do I still need end-to-end tests?](#do-i-still-need-end-to-end-tests)
-- [How can I handle versioning?](#how-can-i-handle-versioning)
-- [Using Pact where the Consumer team is different from the Provider team](#using-pact-where-the-consumer-team-is-different-from-the-provider-team)
-- [How to prevent a consumer from deploying with an invalid contract](#how-to-prevent-a-consumer-from-deploying-with-an-invalid-contract)
-- [How do I test OAuth or other security headers?](#how-do-i-test-oauth-or-other-security-headers)
-- [How do I test binary files in responses, such as a download?](#how-do-i-test-binary-files-in-responses-such-as-a-download)
-- [Why is the documentation so ugly?](#why-is-the-documentation-so-ugly)
+* [What is Pact good for?](#what-is-pact-good-for)
+* [What is Pact not good for?](#what-is-pact-not-good-for)
+* [Who would typically implement Pact?](#who-would-typically-implement-pact)
+* [Why doesn't Pact use JSON Schema?](#why-doesnt-pact-use-json-schema)
+* [Why does Pact use concrete JSON documents rather than using more flexible JSONPaths?](#why-does-pact-use-concrete-json-documents-rather-than-using-more-flexible-jsonpaths)
+* [Why is there no support for specifying optional attributes?](#why-is-there-no-support-for-specifying-optional-attributes)
+* [Why are the pacts generated and not static?](#why-are-the-pacts-generated-and-not-static)
+* [How do I test against the latest development and production versions of consumer APIs?](#how-do-i-test-against-the-latest-development-and-production-versions-of-consumer-apis)
+* [What does PACT stand for?](#what-does-pact-stand-for)
+* [Why Pact may not be the best tool for public testing APIs?](#why-pact-may-not-be-the-best-tool-for-public-testing-apis)
+* [Why Pact may not be the best tool for testing pass through APIs?](#why-pact-may-not-be-the-best-tool-for-testing-pass-through-apis)
+* [Do I still need end-to-end tests?](#do-i-still-need-end-to-end-tests)
+* [How can I handle versioning?](#how-can-i-handle-versioning)
+* [Using Pact where the Consumer team is different from the Provider team](#using-pact-where-the-consumer-team-is-different-from-the-provider-team)
+* [How to prevent a consumer from deploying with an invalid contract](#how-to-prevent-a-consumer-from-deploying-with-an-invalid-contract)
+* [How do I test OAuth or other security headers?](#how-do-i-test-oauth-or-other-security-headers)
+* [How do I test binary files in responses, such as a download?](#how-do-i-test-binary-files-in-responses-such-as-a-download)
+* [Why is the documentation so ugly?](#why-is-the-documentation-so-ugly)
 
 <!-- /TOC -->
 
 ### What is Pact good for?
+
 Pact is most valuable for designing and testing integrations where you (or your team/organisation/partner organisation) control the development of both the consumer and the provider, and the requirements of the consumer are going to be used to drive the features of the provider. It is fantastic tool for developing and testing intra-organisation microservices.
 
 ### What is Pact not good for?
+
 * Testing APIs where the number of consumers is so great that direct relationships cannot be maintained between the consumer teams and the provider team.
 * Performance and load testing.
 * Functional testing of the provider - that is what the provider’s own tests should do. Pact is about checking the contents and format of requests and responses.
@@ -42,8 +45,7 @@ Pact is generally implemented by developers, during development. Business analys
 
 Whether you define a schema or not, you will still need a concrete example of the response to return from the mock server, and a concrete example of the request to replay against the provider. If you just used a schema, then the code would have to generate an example, and generated
 
-
-s are not very helpful when used in tests, nor do they give any readable, meaningful documentation. If you use a schema *and* an example, then you are duplicating effort. The schema can almost be implied from an example.
+s are not very helpful when used in tests, nor do they give any readable, meaningful documentation. If you use a schema _and_ an example, then you are duplicating effort. The schema can almost be implied from an example.
 
 ### Why does Pact use concrete JSON documents rather than using more flexible JSONPaths?
 
@@ -73,13 +75,14 @@ See [this article](http://rea.tech/enter-the-pact-matrix-or-how-to-decouple-the-
 
 ### What does PACT stand for?
 
- * Pretty Awesome Contract Testing?
- * Provider And Consumer Tests?
- * ???
+* Pretty Awesome Contract Testing?
+* Provider And Consumer Tests?
+* ???
 
 Actually, it doesn't stand for anything. It is the word "pact", as in, another word for a contract. Google defines a "pact" as "a formal agreement between individuals or parties." That sums it up pretty well.
 
 ### Why Pact may not be the best tool for public testing APIs?
+
 Each interaction in a pact should be verified in isolation, with no context maintained from the previous interactions. Tests that depend on the outcome of previous tests are brittle and land you back in integration test hell, which is the nasty place you’re trying to escape by using pacts.
 
 So how do you test a request that requires data to already exist on the provider? Provider states allow you to set up data on the provider by injecting it straight into the datasource before the interaction is run, so that it can make a response that matches what the consumer expects. They also allow the consumer to make the same request with different expected responses (eg. different response codes, or the same resource with a different subset of data).
@@ -89,6 +92,7 @@ If you use Pact to test a public API, the only way to set up the right provider 
 If this is still a better situation for you than integration testing, or using another tool like VCR, then go for it!
 
 ### Why Pact may not be the best tool for testing pass through APIs?
+
 During pact verification, Pact does not test the side effects of a request being executed on a provider, it just checks that the response body matches the expected response body. If your API is merely passing on a message to a downstream system (eg. a queue) and does not validate the contents of the body before doing so, you could send anything you like in the request body, and the provider would respond the same way. The “contract” that you really want is between the consumer and the downstream system. Checking that the provider responded with a 200 OK does not give you any confidence that your consumer and the downstream system will work correctly in real life.
 
 What you really need is a “non-HTTP” pact between your consumer and the downstream system. Check out this [gist](https://gist.github.com/bethesque/0ee446a9f93db4dd0697) for an example of how to use the Pact contract generation and matching code to test non-HTTP communications.
@@ -120,6 +124,7 @@ Using a [Pact Broker](https://github.com/bethesque/pact_broker), you can tag the
 If you need to support multiple versions of the provider API concurrently, then you will probably be specifying which version your consumer uses by setting a header, or using a different URL component. As these are actually different requests, the interactions can be verified in the same pact without any problems.
 
 ### Using Pact where the Consumer team is different from the Provider team
+
 Pact is "consumer driven contracts", not "dictator driven contracts". Just because it's called "consumer driven" doesn't mean that the team writing the consumer gets to write a pact and throw it at the provider team without talking about it. The pact should be the starting point of a collaborative effort.
 
 The way Pact works, it's the pact verification task (in the provider codebase) that fails when a consumer expects things that are different from what a provider responds with, even if the consumer itself is "wrong". This is a little unfortunate, but it's the nature of the beast.
@@ -174,8 +179,7 @@ When Pact reads the pact files for verification on the Provider side, it needs t
 * Configure a relaxed OAuth2 validation service on the Provider that accepts any valid headers, so long as the match the spec (e.g. `Authorization` header). You might leverage the [provider states](http://docs.pact.io/documentation/provider_states.html) feature for this.
 * Use Ruby's `Timecop` or similar library to manipulate the runtime clock.
 
-
-*NOTE*: Any option that modifies the request before sending to the running provider increases your chances of missing a key part of the interaction and therefore puts you at risk. Use carefully.
+_NOTE_: Any option that modifies the request before sending to the running provider increases your chances of missing a key part of the interaction and therefore puts you at risk. Use carefully.
 
 See the following links for some further discussion:
 
@@ -209,3 +213,21 @@ We suggest matching on the core aspects of the interaction - the request itself,
 ### Why is the documentation so ugly?
 
 Pact is an open source project and the majority of contributions to Pact are done in people's free time. Our number 1 priority is getting new features out, so the aesthetic aspects of our documentation have been somewhat neglected. If you have some skills in website design and implementation and you'd like to give back to the Pact community, please have a chat to us on the Pact [gitter](https://gitter.im/realestate-com-au/pact) channel.
+
+### Can I test GraphQL?
+
+Yes.
+
+See below, or the [Pact JS example](https://github.com/pact-foundation/pact-js/tree/feat/message-pact/examples/graphql).
+
+### I use GraphQL, SOAP, Protobufs ... do I need contract tests?
+
+This is a hard one. All we can do is provide some general advice, which can be easily summarised as this:
+
+> if there is a possibility that the provider and consumer can get out of sync, then contract tests can help
+
+GraphQL is simply an abstraction over HTTP, and it is entirely possible that the consumer and provider get out of sync. Writing contract tests with Pact turns out to be a relatively trivial exercise, once you understand how the interactions work under the hood.
+
+SOAP is the same. Yes, there is a strongly defined schema, however if the provider changes that schema and deploys before a consumer has updated, boom - client down.
+
+Protobufs is something we are still thinking about, and we've yet to test it with Pact in the wild. It does appear unnecessary as it has mechanisms to deal with backwards compatibility - but if you're willing to investigate, please chat to us and tell us how you go :)
