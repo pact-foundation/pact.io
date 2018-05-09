@@ -2,7 +2,7 @@
 
 Join us on Slack:
 
-<script async defer src="https://pact-slack.herokuapp.com/slackin.js"></script>
+<script async defer src="https://pact-slack.herokuapp.com/slackin.js?large"></script>
 
 or, you can get help on Pact from the following channels:
 
