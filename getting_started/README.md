@@ -2,7 +2,7 @@
 
 To get started, you will need to and install the relevant pact components for the language(s) you're using for your consumer (or provider). These need not be the same for both consumer and provider - part of the value of the Pact format is that different frameworks and languages can be used for consumers and providers.
 
-You can find instructions for each language on the [implementation guides](documentation/implementation_guides.md) page.
+You can find instructions for each language on the [implementation guides](/implementation_guides/README.md) page.
 
 ### An example scenario
 
@@ -166,7 +166,7 @@ require 'pact/tasks'
 
 Create a `pact_helper.rb` in your service provider project. The recommended place is `spec/service_consumers/pact_helper.rb`.
 
-See [Verifying Pacts](https://github.com/pact-foundation/pact-ruby/wiki/Verifying-pacts) and the [Provider](documentation/configuration.md#provider) section of the Configuration documentation for more information.
+For more information, see [Verifying Pacts](/getting_started/verifying_pacts.md) and the provider configuration documentation for your Pact implementation language (if you are following this example, here is the [Ruby documentation](https://github.com/pact-foundation/pact-ruby/wiki/Verifying-pacts)).
 
 ```ruby
 # In specs/service_consumers/pact_helper.rb

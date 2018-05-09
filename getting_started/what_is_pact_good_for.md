@@ -33,9 +33,9 @@ Pact is fantastic tool for developing and testing intra-organisation microservic
 
 [pact-public-apis]: https://github.com/pact-foundation/pact-ruby/wiki/Why-Pact-may-not-be-the-best-tool-for-testing-public-APIs
 [pass-through-apis]: https://github.com/pact-foundation/pact-ruby/wiki/Why-Pact-may-not-be-the-best-tool-for-testing-pass-through-APIs
-[functional-testing]: https://docs.pact.io/best_practices/contract_tests_not_functional_tests.html
-[isolated-tests]: https://docs.pact.io/best_practices/consumer.html
+[functional-testing]: /best_practices/contract_tests_not_functional_tests.md
+[isolated-tests]: /best_practices/consumer.md
 
 # If you are unsure
 
-If you're unsure whether Pact will be valuable for your team, see this [this page in the FAQ](faq/convinceme.html).
+If you're unsure whether Pact will be valuable for your team, see this [this page in the FAQ](/faq/convinceme.html).

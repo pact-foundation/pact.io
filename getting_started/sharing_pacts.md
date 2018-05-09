@@ -26,7 +26,7 @@ Features:
 * Displays provider verificaton results so you know if you can deploy safely.
 * Provides a "matrix" of compatible consumer and provider versions, so you know which versions can be safely deployed together.
 * Provides badges to display pact verification statuses in your READMEs.
-* Enables an application version to be tagged (ie. "prod", "feat/customer-preferences") to allow repository-like workflows. 
+* Enables an application version to be tagged (ie. "prod", "feat/customer-preferences") to allow repository-like workflows.
 * Provides webhooks to trigger actions when pacts change eg. run provider build, notify a Slack channel.
 * View diffs between Pact versions so you can tell what expectations have changed.
 * [Docker Pact Broker][docker]
@@ -93,7 +93,7 @@ See the [full API](https://github.com/pact-foundation/pact_broker/wiki/Publishin
 
 **Manual via HTTP**
 
-* See the [API definition](https://github.com/bethesque/pact_broker/wiki/Publishing-and-retrieving-pacts) with `cURL` examples
+* See the [API definition](https://github.com/pact-foundation/pact_broker/wiki/Publishing-and-retrieving-pacts) with `cURL` examples
 
 
 For more information head over to the Pact Broker [website](https://github.com/bethesque/pact_broker).
