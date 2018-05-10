@@ -39,17 +39,9 @@ You'll also need to give Pact some metadata about your setup. This is done with 
 
     jasmine.DEFAULT_TIMEOUT_INTERVAL = 10000; //* This is to give the pact mock server time to start
 
-    beforeAll(done => {
-      provider.setup() // this sets up the server ready for interactions
-      .then(() => done());
-    });
-
-    afterAll(done => {
-      provider
-        .finalize()  // This tears down the server
-        .then(provider.verify) // This makes sure there are no interactions sneaking in after the last test
-        .then(done);
-    });
+    beforeAll(() => provider.setup()); // Create mock provider
+    afterEach(() => provider.verify()); // Ensure the mock provider verifies expected interactions for each test
+    afterAll(() => provider.finalize()); // Tear down the mock and write the pact
 
 Then you can write tests of the form `<filename>.test.pact.js`:
 
@@ -94,7 +86,6 @@ Then you can write tests of the form `<filename>.test.pact.js`:
             .then(response => {
               expect(response).toEqual(/* check the response here, using the default values provided to the Pact DSL */);
             })
-            .then(() => provider.verify())
             .then(done);
         });
       });  
@@ -110,7 +101,7 @@ If successful, this will produce a pact file in `./pacts/`. If the test was unsu
 
 If you need more information, the [Pact JS readme](https://github.com/pact-foundation/pact-js) has detailed information.
 
-Additionally, the following examples may be useful:
+Additionally, these complete examples are useful guides:
 
 * [Complete Example (Node env)](https://github.com/pact-foundation/pact-js/tree/master/examples/e2e)
 * [Pact with Jest (Node env)](https://github.com/pact-foundation/pact-js/tree/master/examples/jest)
