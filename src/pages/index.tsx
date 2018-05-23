@@ -15,7 +15,7 @@ let canvasWidth = typeof window !== "undefined" ? window.innerWidth : 800;
 
 export default (props: IndexPageProps) =>
 	<div>
-		<div className="landing-wrapper" style={{height: canvasHeight + "px"}}>
+		<header className="landing-wrapper" style={{height: canvasHeight + "px"}}>
 			<Particles className="particles" params={
 				{
 					"particles": {
@@ -76,31 +76,29 @@ export default (props: IndexPageProps) =>
 					<div className="right col-sm-12 col-md-6 text-md-left">
 						<h1><span className="pact pact-logo pact-white"></span></h1>
 						<h5><em>The</em> cross-language distributed <br/>contract testing framework</h5>
-						<GatsbyLink to="/#learn-more" className="btn btn-outline-secondary">Learn More</GatsbyLink>
+						<GatsbyLink to="#learn-more" className="btn btn-outline-secondary">Learn More</GatsbyLink>
 						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-						<GatsbyLink to="/intro" className="btn btn-primary">Get Started</GatsbyLink>
+						<GatsbyLink to="/get-started" className="btn btn-primary">Get Started</GatsbyLink>
 					</div>
 				</div>
 			</div>
 
-		</div>
-		<div id="stats">
-
-		</div>
-		<div id="what">
+		</header>
+		<section id="learn-more">
 			<h1>So, What <em>is</em> Pact?</h1>
 			Pact is a contract test framework; it's a fancy way of saying that tests written with Pact make sure that any interaction between the Client (consumer) and a Server (provider) follow a
 			strict data contract which fails the test if any of the interactions are broken, hence the name "Pact". Alright, that was a lot of words, let's look at a quick example.
-		</div>
-		<div id="companies">
-			Show logos of who's using it
-		</div>
-		<div id="sponsors">
-			<h1>Our Wonderful Sponsors</h1>
+		</section>
+		<section id="sponsors">
+			<h1>Our Wonderful Sponsors & Backers</h1>
 			Show logos of sponsors
-		</div>
-		<div id="foundation">
+			<a href="http://donate.pact.io">Donate on Open Collective</a>
+		</section>
+		<section id="stats">
+
+		</section>
+		<section id="foundation">
 			Show the members of the foundation
-		</div>
+		</section>
 	</div>
 ;

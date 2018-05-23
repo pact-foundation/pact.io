@@ -7,6 +7,7 @@ import {Header} from "../components/header/header";
 import Footer from "../components/footer/footer";
 
 export const menuItems = [
+	{name: "Get Started", path: "/get-started/", exact: true},
 	{name: "Docs", path: "/docs/", exact: true},
 	{name: "Foundation", path: "/foundation/", exact: true},
 	{name: "Blog", path: "/blog/", exact: false},

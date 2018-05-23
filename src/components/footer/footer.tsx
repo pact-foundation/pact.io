@@ -4,7 +4,7 @@ import "./footer.scss";
 import GatsbyLink from "gatsby-link";
 
 export default () =>
-	<div className="footer">
+	<footer className="footer">
 		<Container>
 			<div className="row">
 				<div className="col-12">
@@ -12,5 +12,5 @@ export default () =>
 				</div>
 			</div>
 		</Container>
-	</div>
+	</footer>
 ;
