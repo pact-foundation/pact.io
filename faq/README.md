@@ -41,10 +41,8 @@ Pact is most valuable for designing and testing integrations where you (or your 
 ### Who would typically implement Pact?
 
 Pact is generally implemented by developers, during development. Business analysts and testers can still benefit from the presence of contracts by using them to understand the underlying interactions between the applications.
-
-<a name="can-i-generate-my-pact-file"/>
    
-### Can I generate my pact file from something like Swagger?
+### Can I generate my pact file from something like Swagger? {#can-i-generate-my-pact-file}
 
 Contract testing allows you to take an integration test that gives you slow feedback and replace it with two sets of "unit" tests that give you fast feedback - one set for the consumer, using a mock provider, and one set for the provider, using a "mock consumer". The pact file is the artifact that keeps these two sets of tests in sync. To generate the pact file from anything other than the consumer tests would be to defeat the purpose of this type of contract testing. The reason the pact file exists is to ensure the tests in both projects are kept in sync - it is not an end in itself. Generating a pact file from something like a Swagger document would be like marking your own exam, and would do nothing to ensure that the code in the consumer and provider are compatibile with each other.
 
