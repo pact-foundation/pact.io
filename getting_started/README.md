@@ -1,6 +1,6 @@
 ## Getting started
 
-To get started, you will need to and install the relevant pact components for the language(s) you're using for your consumer (or provider). These need not be the same for both consumer and provider - part of the value of the Pact format is that different frameworks and languages can be used for consumers and providers.
+To get started, you will need to install the relevant pact components for the language(s) you're using for your consumer (or provider). These need not be the same for both consumer and provider - part of the value of the Pact format is that different frameworks and languages can be used for consumers and providers.
 
 You can find instructions for each language on the [implementation guides](/implementation_guides/README.md) page.
 
