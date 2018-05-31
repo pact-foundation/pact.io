@@ -41,7 +41,9 @@ Pact is most valuable for designing and testing integrations where you (or your 
 ### Who would typically implement Pact?
 
 Pact is generally implemented by developers, during development. Business analysts and testers can still benefit from the presence of contracts by using them to understand the underlying interactions between the applications.
-   
+
+The consumer team is responsible for implementing the Pact tests in the consumer codebase that will generate the contract, and for publishing it to a shared location (usually a [Pact Broker][pact-broker]). The provider team is responsible for setting up the Pact verification task in the provider codebase, and for writing the code that sets up the correct data for each `provider state` described in the contract. Both teams are responsible for collaborating and communicating about the API and its usage! Remember that contracts are not a substitute for good communication between teams.
+
 ### Can I generate my pact file from something like Swagger?
 
 Contract testing allows you to take an integration test that gives you slow feedback and replace it with two sets of "unit" tests that give you fast feedback - one set for the consumer, using a mock provider, and one set for the provider, using a "mock consumer". The pact file is the artifact that keeps these two sets of tests in sync. To generate the pact file from anything other than the consumer tests would be to defeat the purpose of this type of contract testing. The reason the pact file exists is to ensure the tests in both projects are kept in sync - it is not an end in itself. Generating a pact file from something like a Swagger document would be like marking your own exam, and would do nothing to ensure that the code in the consumer and provider are compatibile with each other.
@@ -236,3 +238,5 @@ GraphQL is simply an abstraction over HTTP, and it is entirely possible that the
 SOAP is the same. Yes, there is a strongly defined schema, however if the provider changes that schema and deploys before a consumer has updated, boom - client down.
 
 Protobufs is something we are still thinking about, and we've yet to test it with Pact in the wild. It does appear unnecessary as it has mechanisms to deal with backwards compatibility - but if you're willing to investigate, please chat to us and tell us how you go :)
+
+[pact-broker]: https://github.com/pact-foundation/pact_broker
