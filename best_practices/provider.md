@@ -25,7 +25,7 @@ Consider making a separate `Pact` with the downstream system and using shared fi
 
 See [this gist](https://gist.github.com/bethesque/43eef1bf47afea4445c8b8bdebf28df0) for some conceptual background.
 
-## Publish verification results to the Pact Broker
+#### Publish verification results to the Pact Broker
 
 As of version 2.0+ of the Pact Broker, and 1.11.1+ of the Pact Ruby implementation, provider verification results can be [published](https://github.com/pact-foundation/pact_broker/wiki/Provider-verification-results) back to the broker, and will be displayed on the index page. The consumer team should consult the verification status on the index page before deploying.
 
