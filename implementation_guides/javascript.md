@@ -52,8 +52,6 @@ Then you can write tests of the form `<filename>.test.pact.js`:
     describe('The API', () => {
       let url = 'http://localhost';
 
-      const EXPECTED_BODY = {
-
       // Copy this block once per interaction under test
       describe(/* The API interaction being tested in words (string) */, () => {
         beforeEach(() => {
