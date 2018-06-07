@@ -3,13 +3,14 @@
 <a name="use-pact-for-contract-testing"/>
 
 ### Use `Pact` for contract testing, not functional testing of the provider
-* Functional testing is about ensuring the provider does the right thing with a request. These tests belong in the provider codebase, and it's not the job of the consumer team to be writing them. 
-* Contract testing is about making sure your consumer team and provider team have a shared understanding of what the requests and responses will be.
-* Pact tests should focus on 
- * exposing _bugs_ in how the consumer creates the requests or handles responses
- * exposing _misunderstandings_ about how the provider behaves
-* Pact tests should **not** focus on
- * exposing bugs in the provider (though this might come up as a by product)
+
+- Functional testing is about ensuring the provider does the right thing with a request. These tests belong in the provider codebase, and it's not the job of the consumer team to be writing them.
+- Contract testing is about making sure your consumer team and provider team have a shared understanding of what the requests and responses will be.
+- Pact tests should focus on
+- exposing _bugs_ in how the consumer creates the requests or handles responses
+- exposing _misunderstandings_ about how the provider behaves
+- Pact tests should **not** focus on
+- exposing bugs in the provider (though this might come up as a by product)
 
 You can read more about the difference between contract and functional tests [here](/best_practices/contract_tests_not_functional_tests.md).
 
@@ -19,9 +20,9 @@ You can read more about the difference between contract and functional tests [he
 
 ### Use `Pact` for isolated (unit) tests
 
-* as a mock (calls to mocks are verified after a test) not a stub (calls to stubs are not verified). Using `Pact` as a stub defeats the purpose of using `Pacts`.
-* for *isolated tests* (ie. unit tests) of the class(es) that will be responsible for making the HTTP calls from your `Consumer` application to your `Provider` application, not for integrated tests of your entire consumer codebase.
-* *carefully*, for any sort of functional or integrated tests within your consumer codebase.
+- as a mock (calls to mocks are verified after a test) not a stub (calls to stubs are not verified). Using `Pact` as a stub defeats the purpose of using `Pacts`.
+- for _isolated tests_ (ie. unit tests) of the class(es) that will be responsible for making the HTTP calls from your `Consumer` application to your `Provider` application, not for integrated tests of your entire consumer codebase.
+- _carefully_, for any sort of functional or integrated tests within your consumer codebase.
 
 **Why?**
 
@@ -29,8 +30,8 @@ If you use `Pact` with exact matching for integrated tests, you will drive yours
 
 ### Think carefully about how you use it for non-isolated tests (functional, integration tests)
 
-* Keep your isolated, exact match tests. These will make sure that you’re mapping the right data from your domain objects into your requests.
-* For the integration tests, use loose, type based matching for the requests to avoid brittleness, and pull out the setup into a method that can be shared between tests so that you do not end up with a million interactions to verify (this will help because the interactions collection in the `Pact` acts like a set, and discards exact duplicates).
+- Keep your isolated, exact match tests. These will make sure that you’re mapping the right data from your domain objects into your requests.
+- For the integration tests, use loose, type based matching for the requests to avoid brittleness, and pull out the setup into a method that can be shared between tests so that you do not end up with a million interactions to verify (this will help because the interactions collection in the `Pact` acts like a set, and discards exact duplicates).
 
 If you don’t care about verifying your interactions, you could use something like Webmock for your integrated tests, and use shared fixtures for requests/responses between these tests and the `Pact` tests to ensure that you have some level of verification happening.
 
@@ -53,3 +54,7 @@ Each interaction is tested in isolation, meaning you can’t do a PUT/POST/PATCH
 To ensure you don’t have a Garbage In Garbage Out situation, expect the response body to contain the newly updated values of the resource, and all will be well.
 
 If, for performance reasons, you don’t want to include the updated resource in the response, another way to avoid GIGO is to use a shared fixture between a GET response body, and a PUT/POST request body. That way, you know that the fields you are PUTing or POSTing are the same fields that you will be GETing.
+
+### Use `can-i-deploy`
+
+Use the [can-i-deploy](https://github.com/pact-foundation/pact_broker/wiki/Provider-verification-results) feature of the [Pact Broker CLI](https://github.com/pact-foundation/pact_broker-client#can-i-deploy). It will give you a definitive answer if the version of your consumer that is being deployed, is compatible with all of its providers.
