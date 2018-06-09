@@ -28,22 +28,25 @@ Here are some of the companies who use Pact to make testing their microservices 
       <td style="border:none; vertical-align: middle"><img src="../media/logos/ratesetter.png" alt="Ratesetter Logo"></td>
       <td style="border:none; vertical-align: middle"><img src="../media/logos/aqovia.png" alt="Aqovia Logo"></td>
       <td style="border:none; vertical-align: middle"><img src="../media/logos/carsales.png" alt="Carsales Logo"></td>
-    </tr>    
+    </tr>
     <tr style="border:none; background:none">
       <td style="border:none; vertical-align: middle"><img src="../media/logos/seek.jpg" alt="SEEK Jobs Logo"></td>
       <td style="border:none; vertical-align: middle"><img src="../media/logos/dius.png" alt="DiUS Logo"></td>
       <td style="border:none; vertical-align: middle"><img src="../media/logos/arquillian.png" alt="Arquillian Project Logo"></td>
-    </tr>    
+    </tr>
     <tr style="border:none; background:none">
       <td style="border:none; vertical-align: middle"><img src="../media/logos/lastminute.png" alt="lastminute.com"></td>
       <td style="border:none; vertical-align: middle"><img src="../media/logos/cloudhealth-tech.png" alt="Cloudhealth Tech"></td>
       <td style="border:none; vertical-align: middle"><img src="../media/logos/repairly.png" alt="Repairly"></td>
-    </tr>    
+    </tr>
     <tr style="border:none; background:none">
       <td style="border:none; vertical-align: middle"><img src="../media/logos/rapid7.png" alt="https://www.rapid7.com/"></td>
       <td style="border:none; vertical-align: middle"><img src="../media/logos/asos.png" alt="ASOS"></td>
       <td style="border:none; vertical-align: middle"><img src="../media/logos/simplehq.png" alt="Simple"></td>
-    </tr>    
+    </tr>
+    <tr style="border:none; background:none">
+      <td style="border:none; vertical-align: middle"><img src="../media/logos/ithaka.png" alt="ITHAKA Logo"></td>
+    </tr>
   </tbody>
 </table>
 
