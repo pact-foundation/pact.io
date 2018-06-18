@@ -45,7 +45,7 @@ Do not hand create any HTTP requests directly in your `Consumer` app. Testing th
 
 ### Ensure the models you use in other tests could actually be created from the responses you expect
 
-Sure, you’ve checked that your client deserialises the HTTP response into the Alligator you expect, but then you need to make sure when you create an Alligator another test, that you create it with valid attributes (eg. is the Alligator’s last_login_time a Time or a DateTime?). One way to do this is to use factories or fixtures to create the models for all your tests. See this gist for a more detailed explanation.
+Sure, you’ve checked that your client deserialises the HTTP response into the Alligator you expect, but then you need to make sure when you create an Alligator another test, that you create it with valid attributes (eg. is the Alligator’s last_login_time a Time or a DateTime?). One way to do this is to use factories or fixtures to create the models for all your tests. See this [gist](https://gist.github.com/bethesque/69ae590e8312523e5337) for a more detailed explanation.
 
 ### Beware of Garbage In, Garbage Out with PUT/POST/PATCH
 
