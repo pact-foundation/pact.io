@@ -50,9 +50,7 @@ Contract testing allows you to take an integration test that gives you slow feed
 
 ### Why doesn't Pact use JSON Schema?
 
-Whether you define a schema or not, you will still need a concrete example of the response to return from the mock server, and a concrete example of the request to replay against the provider. If you just used a schema, then the code would have to generate an example, and generated
-
-s are not very helpful when used in tests, nor do they give any readable, meaningful documentation. If you use a schema _and_ an example, then you are duplicating effort. The schema can almost be implied from an example.
+Whether you define a schema or not, you will still need a concrete example of the response to return from the mock server, and a concrete example of the request to replay against the provider. If you just used a schema, then the code would have to generate an example, and generated schemas are not very helpful when used in tests, nor do they give any readable, meaningful documentation. If you use a schema _and_ an example, then you are duplicating effort. The schema can almost be implied from an example.
 
 ### Why does Pact use concrete JSON documents rather than using more flexible JSONPaths?
 
