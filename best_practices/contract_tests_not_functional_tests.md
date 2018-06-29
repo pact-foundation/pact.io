@@ -54,7 +54,7 @@ Then
   Expected Response body is { "error": "username can only contain letters" }
 ```
 
-We've gone past the contract testing as this point, we're actually testing that the *User Service* implements the validation rules correctly: this is functional testing, and it should be covered by the *User Service* in its own codebase.
+We've gone past the contract testing at this point, we're actually testing that the *User Service* implements the validation rules correctly: this is functional testing, and it should be covered by the *User Service* in its own codebase.
 
 What is the harm in this... more testing is good, right? The issue here is that these scenarios are going too far and create an unnecessarily tight contract - what if the *User Service* Team decides that actually 20 characters is too restrictive for username and increases it to 50 characters? What if now numbers are allowed in the username? Any Consumer should be unaffected by any of these changes, unfortunately the *Users Service* will break our Pact just by loosening the validation rules. These are not breaking changes, but by over-specifying our scenarios we are stopping the *User Service* Team from implementing them.
 
