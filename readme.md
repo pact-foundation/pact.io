@@ -106,6 +106,6 @@ If we pair the test and verification process for each interaction, the contract 
 
 *Pact tests should be data independent*. Pact tests are best when successful verification doesn’t depend on the specific data that the provider returns. See this guide for best practices when describing interactions.
 
-*Contract tests are not functional tests*. It can be tempting to use contract tests to test provider behaviour and functionality. Experience shows this to leads to painful experiences with brittle tests. See [this guide for contract testing best practices](https://docs.pact.io/best_practices/contract_tests_not_functional_tests.html).
+*Contract tests should focus on what the consumer needs*. It can be tempting to use contract tests to write general functional tests for the provider. Experience shows this to leads to painful experiences with brittle tests. See [this guide for contract testing best practices](https://docs.pact.io/best_practices/contract_tests_vs_functional_tests.html).
 
 *Use the broker to integrate Pact with your CI infrastructure.* Integrating Pact with your continuous integration infrastructure is a major win for safe and successful deployment. See this guide for Pact integration best practices
