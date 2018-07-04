@@ -2,6 +2,9 @@
 @import "~bootstrap/scss/functions";
 @import "~bootstrap/scss/variables";
 
-$background-color: #222;
-$particles-background-color: #050928;
+$dark-blue: #050928;
+//$background-color: #222;
+$body-bg: #f6f6f6;
+$body-color: $dark-blue;
+$particles-background-color: $dark-blue;
 $header-top-margin: 60px;

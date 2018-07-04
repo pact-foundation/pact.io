@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700,700italic,300italic,300");
-
 /*****
 FONTAWESOME
 ******/
@@ -51,11 +50,9 @@ BOOTSTRAP
 //@import "~bootstrap/scss/carousel";
 @import "~bootstrap/scss/utilities";
 
-
-
 html, body {
-	background: $background-color;
-	color: #fff;
+	//background: $background-color;
+	//color: $text-color;
 	font-family: 'Open Sans', sans-serif;
 	height: 100%;
 }
@@ -67,4 +64,14 @@ pre {
 	overflow: auto;
 	border-radius: 0.3em;
 	background: #272822;
+}
+
+section {
+	margin-top: 50px;
+	margin-bottom: 50px;
+
+	@include media-breakpoint-up(md) {
+		margin-top: 100px;
+		margin-bottom: 100px;
+	}
 }

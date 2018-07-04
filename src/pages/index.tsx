@@ -14,7 +14,7 @@ let canvasHeight = typeof window !== "undefined" ? window.innerHeight : 600;
 let canvasWidth = typeof window !== "undefined" ? window.innerWidth : 800;
 
 export default (props: IndexPageProps) =>
-	<div>
+	<div className="page-index">
 		<header className="landing-wrapper" style={{height: canvasHeight + "px"}}>
 			<Particles className="particles" params={
 				{
@@ -84,21 +84,23 @@ export default (props: IndexPageProps) =>
 			</div>
 
 		</header>
-		<section id="learn-more">
-			<h1>So, What <em>is</em> Pact?</h1>
-			Pact is a contract test framework; it's a fancy way of saying that tests written with Pact make sure that any interaction between the Client (consumer) and a Server (provider) follow a
-			strict data contract which fails the test if any of the interactions are broken, hence the name "Pact". Alright, that was a lot of words, let's look at a quick example.
-		</section>
-		<section id="sponsors">
-			<h1>Our Wonderful Sponsors & Backers</h1>
-			Show logos of sponsors
-			<a href="http://donate.pact.io">Donate on Open Collective</a>
-		</section>
-		<section id="stats">
+		<div className="content">
+			<section id="learn-more">
+				<h1>So, What is Pact?</h1>
+				Pact is a contract test framework; it's a fancy way of saying that tests written with Pact make sure that any interaction between the Client (consumer) and a Server (provider) follow a
+				strict data contract which fails the test if any of the interactions are broken, hence the name "Pact". Alright, that was a lot of words, let's look at a quick example.
+			</section>
+			<section id="sponsors">
+				<h1>Our Wonderful Sponsors & Backers</h1>
+				Show logos of sponsors
+				<a href="http://donate.pact.io">Donate on Open Collective</a>
+			</section>
+			<section id="stats">
 
-		</section>
-		<section id="foundation">
-			Show the members of the foundation
-		</section>
+			</section>
+			<section id="foundation">
+				Show the members of the foundation
+			</section>
+		</div>
 	</div>
 ;

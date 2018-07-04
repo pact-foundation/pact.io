@@ -1,80 +1,91 @@
 @import "../styles/variables";
 
-.landing-wrapper {
-	overflow: hidden;
-	@include media-breakpoint-up(md) {
-		margin-top: -$header-top-margin;
-		padding-top: $header-top-margin;
-	}
+.page-index {
 
-	.text, .particles {
-		position: absolute;
-		top: 0;
-		left: 0;
-		right: 0;
-		bottom: 0;
-	}
-
-	.text {
-		z-index: 1;
-	}
-
-	.particles {
-		background: $particles-background-color;
-		z-index: 0;
-	}
-
-	.right {
+	.content {
+		font-size: 1.2em;
 		h1 {
-			margin-bottom: 13px;
-		}
-
-		h5 {
-			margin-bottom: 23px;
-		}
-
-		.pact {
-			font-size: 2em;
-			line-height: 0.74em;
+			margin-bottom: 1.5rem;
 		}
 	}
 
-	@include media-breakpoint-down(md) {
-		h1 {
-			font-size: 2rem;
-		}
-		h5 {
-			font-size: 1rem;
-		}
-	}
+	.landing-wrapper {
+		overflow: hidden;
+		color: #fff;
 
-	@include media-breakpoint-only(md) {
+		@include media-breakpoint-up(md) {
+			margin-top: -$header-top-margin;
+			padding-top: $header-top-margin;
+		}
+
+		.text, .particles {
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+		}
+
+		.text {
+			z-index: 1;
+		}
+
+		.particles {
+			background: $particles-background-color;
+			z-index: 0;
+		}
+
 		.right {
 			h1 {
-				margin-bottom: 9px;
+				margin-bottom: 13px;
 			}
 
 			h5 {
-				margin-bottom: 13px;
+				margin-bottom: 23px;
+			}
+
+			.pact {
+				font-size: 2em;
+				line-height: 0.74em;
+			}
+		}
+
+		@include media-breakpoint-down(md) {
+			h1 {
+				font-size: 2rem;
+			}
+			h5 {
+				font-size: 1rem;
+			}
+		}
+
+		@include media-breakpoint-only(md) {
+			.right {
+				h1 {
+					margin-bottom: 9px;
+				}
+
+				h5 {
+					margin-bottom: 13px;
+				}
+			}
+		}
+
+		@include media-breakpoint-down(sm) {
+			.text {
+				position: relative;
+			}
+
+			.left, .right {
+				margin-top: 30px;
+			}
+
+			h1 {
+				font-size: 1.75rem;
+			}
+			h5 {
+				font-size: 1rem;
 			}
 		}
 	}
-
-	@include media-breakpoint-down(sm) {
-		.text {
-			position: relative;
-		}
-
-		.left, .right {
-			margin-top: 30px;
-		}
-
-		h1 {
-			font-size: 1.75rem;
-		}
-		h5 {
-			font-size: 1rem;
-		}
-	}
 }
-
