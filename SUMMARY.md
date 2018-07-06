@@ -1,5 +1,6 @@
 # Summary
 
+* [Introduction](readme.md)
 * [Terminology](terminology/README.md)
 * [Getting started](getting_started/README.md)
    * [Matching](getting_started/matching.md)
