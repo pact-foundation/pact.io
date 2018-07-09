@@ -38,4 +38,4 @@ Pact is fantastic tool for developing and testing intra-organisation microservic
 
 # If you are unsure
 
-If you're unsure whether Pact will be valuable for your team, see this [this page in the FAQ](/faq/convince-me.md).
+If you're unsure whether Pact will be valuable for your team, see this [this page in the FAQ](/faq/convinceme.md).
