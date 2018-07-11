@@ -34,7 +34,7 @@ Features:
 
 Most importantly, the `Pact Broker` allows you to easily decouple the release cycle of your `Consumer` and `Provider`, which is one of the goals of writing microservices in the first place.
 
-## Getting started
+### Getting started
 
 Read the pages in the Pact Broker [Quick start guide](https://github.com/pact-foundation/pact_broker/wiki#quick-start-guide) to get up and running with the basics.
 
