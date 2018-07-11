@@ -34,6 +34,10 @@ Features:
 
 Most importantly, the `Pact Broker` allows you to easily decouple the release cycle of your `Consumer` and `Provider`, which is one of the goals of writing microservices in the first place.
 
+## Getting started
+
+Read the pages in the Pact Broker [Quick start guide](https://github.com/pact-foundation/pact_broker/wiki#quick-start-guide) to get up and running with the basics.
+
 You can find all the documentation for the `Pact Broker` in the [Pact Broker wiki](https://github.com/pact-foundation/pact_broker/wiki).
 
 Our sponsor [DiUS](https://www.dius.com.au) has kindly provided a [free hosted broker](https://pact.dius.com.au) to get you started quickly.
