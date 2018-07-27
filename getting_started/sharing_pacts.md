@@ -1,12 +1,12 @@
-# Sharing Pacts
+# Sharing pacts and verification results
 
-At some point in your Pact journey, you are going to be generating lots of `Pact` files for your `Provider` to verify, ensuring the `Provider` has access to the latest version of the `Pacts` at all times. This is great, but very quickly this becomes cumbersome to manage.
+The consumer CI generates pact files during the execution of its isolated tests. The provider CI generates verification results during the execution of its isolated tests. These artifacts need to be shared between the projects.
 
 ## Pact Broker
 
-This is where the [Pact Broker](https://github.com/pact-foundation/pact_broker) comes in. It enables you to share your `Pacts` between projects, and make them useful for people too. It is the recommended way forward for serious Pact development.
+This is where the [Pact Broker](https://github.com/pact-foundation/pact_broker) comes in. It enables you to share your pacts and verification results between projects, and make them useful for people too. It is the recommended way forward for serious Pact development.
 
-It:
+The Pact Broker:
 
 * allows you to release customer value quickly and confidently by [deploying your services indendently][decouple] and avoiding the bottleneck of integration tests
 * solves the problem of how to share contracts and verification results between consumer and provider projects
