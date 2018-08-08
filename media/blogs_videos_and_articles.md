@@ -25,3 +25,5 @@ If you've seen a really good talk that's not on this list, please submit a PR to
 * [Verifying Microservice Integrations with Contract Testing - Atlassian at their 2016 summit](https://www.youtube.com/watch?v=-6x6XBDf9sQ&feature=youtu.be) - Oct 2016
 * [Move Fast and Consumer-Driven-Contract-Testing Things - Soundcloud MicroXchng 2017"](https://speakerdeck.com/alonpeer/move-fast-and-consumer-driven-contract-test-things) - Feb 2017
 * [Consumer Driven Contract Testing with Pact and Docker - Harry Winser](https://vimeo.com/239429848) - Oct 2017
+* [Consumer Driven Contract Testing with Pact and Docker - Harry Winser (YT backup)](https://www.youtube.com/watch?v=pnWVYeDVo2s) - Oct 2017
+
