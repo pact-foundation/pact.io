@@ -80,7 +80,7 @@ Pact.provider_states_for 'My Service Consumer' do
     end
 
     tear_down do
-      # Any tear down steps to clean up your code
+      # Any tear down steps to clean up the provider state
     end
   end
 
