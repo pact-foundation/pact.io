@@ -18,7 +18,7 @@ This setup simplifies Pact Provider verification process in any language.
 The two solutions below use the [Docker](https://github.com/DiUS/pact-provider-verifier-docker) image
 and the [Pact Provider Verifier](https://github.com/pact-foundation/pact-provider-verifier)
 Gem. For advanced usage, you can use
-[Pact Provider Proxy](https://github.com/bethesque/pact-provider-proxy) Gem
+[Pact Provider Proxy](https://github.com/pact-foundation/pact-provider-proxy) Gem
 directly, however in most cases the Pact Provider Verifier should cover your needs.
 
 ### How it works

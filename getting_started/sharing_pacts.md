@@ -100,7 +100,7 @@ See the [full API](https://github.com/pact-foundation/pact_broker/wiki/Publishin
 * See the [API definition](https://github.com/pact-foundation/pact_broker/wiki/Publishing-and-retrieving-pacts) with `cURL` examples
 
 
-For more information head over to the Pact Broker [website](https://github.com/bethesque/pact_broker).
+For more information head over to the Pact Broker [website](https://github.com/pact-foundation/pact_broker).
 
 ## Alternative approaches
 
