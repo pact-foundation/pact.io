@@ -58,18 +58,17 @@ We've gone past the contract testing at this point, we're actually testing that 
 
 What is the harm in this... more testing is good, right? The issue here is that these scenarios are going too far and create an unnecessarily tight contract - what if the *User Service* Team decides that actually 20 characters is too restrictive for username and increases it to 50 characters? What if now numbers are allowed in the username? Any Consumer should be unaffected by any of these changes, unfortunately the *Users Service* will break our Pact just by loosening the validation rules. These are not breaking changes, but by over-specifying our scenarios we are stopping the *User Service* Team from implementing them.
 
-So let's go back to our scenarios and instead only test the way the *User Service* reacts to bad input:
+So let's go back to our scenarios and instead choose just one simple example to test the way the *User Service* reacts to bad input:
 
 ```
-Given that username "bad_username" is invalid
 When "creating a user with an invalid username"
-  POST /users { "username": "bad_username", ... }
+  POST /users { "username": "bad_username_that_breaks_some_rule_that_you_are_fairly_confident_will_not_change", ... }
 Then
   Response is 400 Bad Request
   Response body is { "error": "<any string>" }
 ```
 
-Subtle, but so much more flexible! Now the *User Service* Team can change their validation rules without breaking the Pact we give them... we don't really care what's the maximum length of the username or what type of characters are allowed, we only care that if we send something wrong, then we understand the way the *User Service* responds to us.
+Subtle, but so much more flexible! Now the *User Service* Team can change (most) of their validation rules without breaking the Pact we give them... we don't really care about each individual business rule, we only care that if we send something wrong, then we understand the way the *User Service* responds to us.
 
 When writing a test for an interaction, ask yourself what you are trying to cover. Contracts should be about catching:
 
