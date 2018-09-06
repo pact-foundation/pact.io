@@ -19,6 +19,8 @@ In general, a contract is between a _consumer_ (for example, a client that wants
 
 Pact is a [consumer-driven](http://martinfowler.com/articles/consumerDrivenContracts.html) contract testing tool. This means the contract is written as part of the consumer tests. A major advantage of this pattern is that only parts of the communication that are actually used by the consumer(s) get tested. This in turn means that any provider behaviour not used by current consumers is free to change without breaking tests.
 
+Unlike a schema or specification (eg. OAS), which is a static artifact that describes all possible states of a resource, a Pact contract is enforced by executing a collection of test cases, each of which describes a single concrete request/response pair - Pact is, in effect, "contract by example".
+
 ### How a pact test works
 
 A contract between a consumer and provider is called a _pact_. Each pact is a collection of _interactions_. Each interaction describes:
