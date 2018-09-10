@@ -37,7 +37,7 @@ global.provider = new Pact({
 ```
  Global setup for Jest is handled with `pactTestWrapper.js`:
 ```javascript
-jasmine.DEFAULT_TIMEOUT_INTERVAL = 10000; //* This is to give the pact mock server time to start
+jasmine.DEFAULT_TIMEOUT_INTERVAL = 10000; // This is to give the pact mock server time to start
 
 beforeAll(() => provider.setup()); // Create mock provider
 afterEach(() => provider.verify()); // Ensure the mock provider verifies expected interactions for each test
