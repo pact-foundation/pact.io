@@ -1,6 +1,7 @@
 # Table of contents
 
-* [Introduction](README.MD)
+* [Contents](README.md)
+* [Introduction](readme.md)
 * [Terminology](terminology.md)
 * [Getting started](getting_started/README.md)
   * [Matching](getting_started/matching/README.md)
