@@ -1,4 +1,4 @@
-# Sharing pacts and verification results
+# Sharing Pacts with the Pact Broker
 
 The consumer CI generates pact files during the execution of its isolated tests. The provider CI generates verification results during the execution of its isolated tests. These artifacts need to be shared between the projects.
 
@@ -8,11 +8,11 @@ This is where the [Pact Broker](https://github.com/pact-foundation/pact_broker) 
 
 The Pact Broker:
 
-* allows you to release customer value quickly and confidently by [deploying your services indendently][decouple] and avoiding the bottleneck of integration tests
+* allows you to release customer value quickly and confidently by [deploying your services indendently](http://techblog.realestate.com.au/enter-the-pact-matrix-or-how-to-decouple-the-release-cycles-of-your-microservices/) and avoiding the bottleneck of integration tests
 * solves the problem of how to share contracts and verification results between consumer and provider projects
 * tells you which versions of your applications can be deployed safely together
 * automatically versions your contracts
-* allows you to ensure backwards compatibility between multiple consumer and provider versions (eg. in a mobile or multi-tenant environment)
+* allows you to ensure backwards compatibility between multiple consumer and provider versions \(eg. in a mobile or multi-tenant environment\)
 * provides API documentation of your applications that is guaranteed to be up-to date
 * shows you real examples of how your services interact
 * allows you to visualise the relationships between your services
@@ -26,11 +26,11 @@ Features:
 * Displays provider verificaton results so you know if you can deploy safely.
 * Provides a "matrix" of compatible consumer and provider versions, so you know which versions can be safely deployed together.
 * Provides badges to display pact verification statuses in your READMEs.
-* Enables an application version to be tagged (ie. "prod", "feat/customer-preferences") to allow repository-like workflows.
+* Enables an application version to be tagged \(ie. "prod", "feat/customer-preferences"\) to allow repository-like workflows.
 * Provides webhooks to trigger actions when pacts change eg. run provider build, notify a Slack channel.
 * View diffs between Pact versions so you can tell what expectations have changed.
-* [Docker Pact Broker][docker]
-* A [CLI][cli] for encorporating the Pact workflow into your continuous integration process.
+* [Docker Pact Broker](https://hub.docker.com/r/dius/pact-broker)
+* A [CLI](https://github.com/pact-foundation/pact-ruby-standalone/releases) for encorporating the Pact workflow into your continuous integration process.
 
 Most importantly, the `Pact Broker` allows you to easily decouple the release cycle of your `Consumer` and `Provider`, which is one of the goals of writing microservices in the first place.
 
@@ -48,24 +48,26 @@ Our sponsor [DiUS](https://www.dius.com.au) has kindly provided a [free hosted b
 
 For Mac, Windows and Linux. Allows you to integrate the contracts workflow into your CI. Download [here](https://github.com/pact-foundation/pact-ruby-standalone/releases).
 
-**Ruby**
-via the `pact_broker-client` gem:
+**Ruby** via the `pact_broker-client` gem:
 
 * [Publishing](https://github.com/pact-foundation/pact_broker-client#consumer)
 * [Provider verification](https://github.com/pact-foundation/pact_broker-client#provider)
 
-
 **Pact JVM - Gradle**
+
 * [Publishing ](https://github.com/DiUS/pact-jvm/tree/master/pact-jvm-provider-gradle#publishing-pact-files-to-a-pact-broker-version-227)
 * [Provider verification](https://github.com/DiUS/pact-jvm/tree/master/pact-jvm-provider-gradle#verifying-pact-files-from-a-pact-broker-version-311231)
 
 **Pact JVM - JUnit**
+
 * [Provider verification](https://github.com/DiUS/pact-jvm/tree/master/pact-jvm-provider-junit#download-pacts-from-a-pact-broker)
 
 **Pact JVM - SBT**
+
 * [Provider verification](https://github.com/DiUS/pact-jvm/tree/master/pact-jvm-provider-sbt#verifying-pact-files-from-a-pact-broker)
 
 **Pact JVM - Maven**
+
 * [Publishing](https://github.com/DiUS/pact-jvm/tree/master/pact-jvm-provider-maven#publishing-pact-files-to-a-pact-broker-version-320)
 * [Provider verification](https://github.com/DiUS/pact-jvm/tree/master/pact-jvm-provider-maven#verifying-pact-files-from-a-pact-broker-version-311231)
 
@@ -80,11 +82,12 @@ via the `pact_broker-client` gem:
 * [Provider verification](https://github.com/pact-foundation/pact-js/#provider-api-testing)
 
 **Pact .NET**
+
 ### Publishing
 
 Example publishing with PowerShell:
 
-```powershell
+```text
 $Headers = @{
   Authorization = "Basic $([System.Convert]::ToBase64String([System.Text.Encoding]::ASCII.GetBytes("dXfltyFMgNOFZAxr8io9wJ37iUpY42M:O5AIZWxelWbLvqMd8PkAVycBJh2Psyg1")))"
 }
@@ -99,29 +102,23 @@ See the [full API](https://github.com/pact-foundation/pact_broker/wiki/Publishin
 
 * See the [API definition](https://github.com/pact-foundation/pact_broker/wiki/Publishing-and-retrieving-pacts) with `cURL` examples
 
-
 For more information head over to the Pact Broker [website](https://github.com/pact-foundation/pact_broker).
 
 ## Alternative approaches
 
-##### 1. `Consumer` CI build commits pact to `Provider` codebase
+#### 1. `Consumer` CI build commits pact to `Provider` codebase
 
 Pretty self explanatory.
 
-##### 2. Publish pacts as CI build artefacts
+#### 2. Publish pacts as CI build artefacts
 
 Work out the URL to the pact created by the most recent successful build, and configure the pact:verify task to point to this URL.
 
-##### 3. Use Github/Bitbucket URL
+#### 3. Use Github/Bitbucket URL
 
 This only works for repositories that don't require authentication to read. Make sure that you always regenerate the pacts before committing if you make any changes to the pact specs, and that the specs are always passing before you commit, because you don't want to verify the pact from a broken build.
 
-##### 4. Publish pacts to Amazon S3
+#### 4. Publish pacts to Amazon S3
 
-[Pact::Retreaty](https://github.com/fairfaxmedia/pact-retreaty) is a tool which provides a ultra light mechanism for
-pushing and pulling pact contracts to/from S3.
+[Pact::Retreaty](https://github.com/fairfaxmedia/pact-retreaty) is a tool which provides a ultra light mechanism for pushing and pulling pact contracts to/from S3.
 
-
-[decouple]: http://techblog.realestate.com.au/enter-the-pact-matrix-or-how-to-decouple-the-release-cycles-of-your-microservices/
-[cli]: https://github.com/pact-foundation/pact-ruby-standalone/releases
-[docker]: https://hub.docker.com/r/dius/pact-broker

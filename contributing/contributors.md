@@ -6,17 +6,9 @@ The **Pact Foundation** is an organisation to foster collaboration between the v
 
 **Pact** and the **Pact Foundation** would not be possible without the companies who have graciously provided time and resources to the projects.
 
-<div style="text-align:center">
-<table style="width:500; margin:auto">
-  <tbody>
-    <tr style="border:none; background:none">
-      <td style="border:none; vertical-align: middle"><img src="../media/logos/seek.jpg" alt="SEEK Jobs Logo"></td>
-      <td style="border:none; vertical-align: middle"><img src="../media/logos/dius.png" alt="DiUS Logo"></td>
-      <td style="border:none; vertical-align: middle"><img src="../media/logos/itv.png" alt="ITV"></td>
-    </tr>
-  </tbody>
-</table>
-</div>
+| ![SEEK Jobs Logo](../.gitbook/assets/seek%20%281%29.jpg) | ![DiUS Logo](../.gitbook/assets/dius.png) | ![ITV](../.gitbook/assets/itv.png) |
+| :--- | :--- | :--- |
+
 
 ## People
 
@@ -38,7 +30,7 @@ Current maintainer: [Ron Holshausen](https://github.com/uglyog)
 
 Past contributors: Tarcio Saraiva
 
-Current maintainers: [Matt Fellows](https://github.com/mefellows), [Michel Boudreau]()
+Current maintainers: [Matt Fellows](https://github.com/mefellows), [Michel Boudreau](contributors.md)
 
 ### .NET
 
@@ -63,3 +55,4 @@ Current maintainer: [Charles Mack](https://github.com/mattermack)
 ### Scala ITV
 
 Current maintainer: [Dave Smith](https://github.com/davesmith00000)
+

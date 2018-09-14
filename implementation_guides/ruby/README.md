@@ -10,22 +10,29 @@ This [workshop](https://github.com/DiUS/pact-workshop-ruby-v2) walks you through
 
 Add this line to your application's Gemfile:
 
-    gem 'pact'
+```text
+gem 'pact'
+```
 
 And then execute:
 
-    $ bundle
+```text
+$ bundle
+```
 
 Or install it yourself as:
 
-    $ gem install pact
+```text
+$ gem install pact
+```
 
 ## Usage - an example scenario
 
-We're going to write an integration, with Pact tests, between a `Consumer`, the Zoo App, and its `Provider`, the Animal Service. In the `Consumer` project, we're going to need to need a model (the Alligator class) to represent the data returned from the Animal Service, and a client (the `AnimalServiceClient`) which will be responsible for making the HTTP calls to the Animal Service.
+We're going to write an integration, with Pact tests, between a `Consumer`, the Zoo App, and its `Provider`, the Animal Service. In the `Consumer` project, we're going to need to need a model \(the Alligator class\) to represent the data returned from the Animal Service, and a client \(the `AnimalServiceClient`\) which will be responsible for making the HTTP calls to the Animal Service.
 
-![Example](../../media/zoo_app-animal_service.png)
-### In the Zoo App (`Consumer`) project
+![Example](../../.gitbook/assets/zoo_app-animal_service.png)
+
+### In the Zoo App \(`Consumer`\) project
 
 #### 1. Start with your model
 
@@ -61,6 +68,7 @@ class AnimalServiceClient
   end
 end
 ```
+
 #### 3. Configure the mock Animal Service
 
 The following code will create a mock service on `localhost:1234` which will respond to your application's queries over HTTP as if it were the real "Animal Service" app. It also creates a mock provider object which you will use to set up your expectations. The method name to access the mock service provider will be what ever name you give as the service argument - in this case `animal_service`
@@ -118,8 +126,7 @@ end
 
 #### 5. Run the specs
 
-Running the `AnimalServiceClient` spec will generate a pact file in the configured pact dir (`spec/pacts` by default).
-Logs will be output to the configured log dir (`log` by default) that can be useful when diagnosing problems.
+Running the `AnimalServiceClient` spec will generate a pact file in the configured pact dir \(`spec/pacts` by default\). Logs will be output to the configured log dir \(`log` by default\) that can be useful when diagnosing problems.
 
 Of course, the above specs will fail because the Animal Service client method is not implemented, so next, implement your provider client methods.
 
@@ -142,15 +149,16 @@ end
 Green! You now have a pact file that can be used to verify your expectations of the Animal Service provider project.
 
 Now, rinse and repeat for other likely status codes that may be returned. For example, consider how you want your client to respond to a:
-* `404` (return null, or raise an error?)
-* `500` (specifying that the response body should contain an error message, and ensuring that your client logs that error message will make your life much easier when things go wrong)
+
+* `404` \(return null, or raise an error?\)
+* `500` \(specifying that the response body should contain an error message, and ensuring that your client logs that error message will make your life much easier when things go wrong\)
 * `401/403` if there is authorisation.
 
-### In the Animal Service (`Provider`) project
+### In the Animal Service \(`Provider`\) project
 
 #### 1. Create the skeleton API classes
 
-Create your API class using the framework of your choice (the Pact authors have a preference for [Webmachine][webmachine] and [Roar][roar]) - leave the methods unimplemented, we're doing Test First Development, remember?
+Create your API class using the framework of your choice \(the Pact authors have a preference for \[Webmachine\]\[webmachine\] and \[Roar\]\[roar\]\) - leave the methods unimplemented, we're doing Test First Development, remember?
 
 #### 2. Tell your provider that it needs to honour the pact file you made earlier
 
@@ -163,7 +171,7 @@ require 'pact/tasks'
 
 Create a `pact_helper.rb` in your service provider project. The recommended place is `spec/service_consumers/pact_helper.rb`.
 
-See [Verifying Pacts](https://github.com/pact-foundation/pact-ruby/wiki/Verifying-pacts) and [the configuration documentation](./configuration.md) for more information.
+See [Verifying Pacts](https://github.com/pact-foundation/pact-ruby/wiki/Verifying-pacts) and [the configuration documentation](configuration.md) for more information.
 
 ```ruby
 # In specs/service_consumers/pact_helper.rb
@@ -185,13 +193,17 @@ end
 
 #### 3. Run your failing specs
 
-    $ rake pact:verify
+```text
+$ rake pact:verify
+```
 
 Congratulations! You now have a failing spec to develop against.
 
 At this stage, you'll want to be able to run your specs one at a time while you implement each feature. At the bottom of the failed `pact:verify` output you will see the commands to rerun each failed interaction individually. A command to run just one interaction will look like this:
 
-    $ rake pact:verify PACT_DESCRIPTION="a request for an alligator" PACT_PROVIDER_STATE="an alligator exists"
+```text
+$ rake pact:verify PACT_DESCRIPTION="a request for an alligator" PACT_PROVIDER_STATE="an alligator exists"
+```
 
 #### 4. Implement enough to make your first interaction spec pass
 
@@ -204,3 +216,4 @@ Yay! Your Animal Service `Provider` now honours the pact it has with your Zoo Ap
 ### Using provider states
 
 Each interaction in a pact is verified in isolation, with no context maintained from the previous interactions. So how do you test a request that requires data to already exist on the provider? Read about provider states [here](https://github.com/pact-foundation/pact-ruby/wiki/Provider-states).
+

@@ -2,23 +2,28 @@
 
 [Pact JS](https://github.com/pact-foundation/pact-js) is currently compliant to Pact Specification Version 2.0.
 
-## Quickstart guide (Consumer)
+## Quickstart guide \(Consumer\)
 
-For a Consumer using Jest and node (for example, an app created with `create-react-app`):
+For a Consumer using Jest and node \(for example, an app created with `create-react-app`\):
 
 First, you'll need to add the Pact library:
 
-    npm install --save-dev '@pact-foundation/pact'
+```text
+npm install --save-dev '@pact-foundation/pact'
+```
 
 Then, add the following script to your `package.json`:
-```
+
+```text
 scripts: {
   ...
   "pactTest":
   "export NODE_ENV=pactTest && jest --testRegex \"/*(.test.pact.js)\" --runInBand --setupFiles ./pactSetup.js --setupTestFrameworkScriptFile ./pactTestWrapper.js"
 }
 ```
-You'll also need to give Pact some metadata about your setup. This is done with `pactSetup.js`:    
+
+You'll also need to give Pact some metadata about your setup. This is done with `pactSetup.js`:
+
 ```javascript
 const path = require('path');
 const { Pact } = require('@pact-foundation/pact');
@@ -35,7 +40,9 @@ global.provider = new Pact({
   provider: /* the name of your provider */
 });
 ```
- Global setup for Jest is handled with `pactTestWrapper.js`:
+
+Global setup for Jest is handled with `pactTestWrapper.js`:
+
 ```javascript
 jasmine.DEFAULT_TIMEOUT_INTERVAL = 10000; // This is to give the pact mock server time to start
 
@@ -43,7 +50,9 @@ beforeAll(() => provider.setup()); // Create mock provider
 afterEach(() => provider.verify()); // Ensure the mock provider verifies expected interactions for each test
 afterAll(() => provider.finalize()); // Tear down the mock and write the pact
 ```
+
 Then you can write tests of the form `<filename>.test.pact.js`:
+
 ```javascript
 import { Pact } from '@pact-foundation/pact';
 import { api } from /* wherever */;   // This is your client-side API layer
@@ -89,9 +98,12 @@ describe('The API', () => {
   });  
 });
 ```
+
 Once this is all setup, you can run your first pact test:
 
-    $ npm run pactTest
+```text
+$ npm run pactTest
+```
 
 If successful, this will produce a pact file in `./pacts/`. If the test was unsuccessful, you can view detailed output in `./logs/mockserver-integration.log`.
 
@@ -101,9 +113,10 @@ If you need more information, the [Pact JS readme](https://github.com/pact-found
 
 Additionally, these complete examples are useful guides:
 
-* [Complete Example (Node env)](https://github.com/pact-foundation/pact-js/tree/master/examples/e2e)
-* [Pact with Jest (Node env)](https://github.com/pact-foundation/pact-js/tree/master/examples/jest)
+* [Complete Example \(Node env\)](https://github.com/pact-foundation/pact-js/tree/master/examples/e2e)
+* [Pact with Jest \(Node env\)](https://github.com/pact-foundation/pact-js/tree/master/examples/jest)
 * [Pact with Mocha](https://github.com/pact-foundation/pact-js/tree/master/examples/mocha)
 * [Pact with Karma + Jasmine](https://github.com/pact-foundation/pact-js/tree/master/karma/jasmine)
 * [Pact with Karma + Mocha](https://github.com/pact-foundation/pact-js/tree/master/karma/mocha)
 * [Angular 4 + Mocha](https://github.com/stones/pact-angular-4-mocha)
+

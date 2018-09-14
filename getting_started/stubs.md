@@ -1,4 +1,4 @@
-# API Stubs
+# Local API stubs
 
 Pact contracts are easily turned into locally running API stubs. Pact contracts lack advanced features such as predicates that you might find in tools like [mountebank](http://www.mbtest.org/), however they are useful for many situations - such as e2e tests with tools like Protractor and Karma.
 
@@ -8,7 +8,7 @@ To get started, from your consumer code base you have a number of ways to run yo
 
 Assuming you have a local directory containing your pact files at `./pacts`:
 
-```
+```text
 docker pull pactfoundation/pact-stub-server
 docker run -t -p 8080:8080 -v "$(pwd)/pacts/:/app/pacts" pactfoundation/pact-stub-server -p 8080 -d pacts
 
@@ -24,7 +24,7 @@ See the [project page](https://github.com/pact-foundation/pact-stub-server) for 
 
 Download the [Ruby CLI Tools](https://github.com/pact-foundation/pact-ruby-standalone/releases) and install into your `PATH`.
 
-```
+```text
 Usage:
   pact-stub-service PACT ...
 
@@ -53,12 +53,13 @@ The location of this will differ across OS and implementation, but is fairly tri
 
 _package.json_:
 
-```
+```text
 "scripts": {
   "stubs": "$(find . -name pact-stub-service | grep -e 'bin/pact-stub-service$' | head -n 1) ./pacts/foo-bar.json --port 8080"
 }
 ```
 
-Running `npm run stubs` will start a stub server on port `8080` for the given pact file(s) which you can then use for local development.
+Running `npm run stubs` will start a stub server on port `8080` for the given pact file\(s\) which you can then use for local development.
 
 See more under "pact-stub-service" on the [project page](https://github.com/pact-foundation/pact-ruby-standalone/releases)
+
