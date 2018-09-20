@@ -19,6 +19,17 @@ Research tells us that integration tests are more costly in terms of time, effor
 
 ## Common Excuses
 
+### ...but we're all on the same team, we don't need to use contracts
+
+You might all be on the same team now but:
+
+* new people join teams and they won't have all the context that your team currently has
+* people leave and take their knowledge with them
+* organisations get restructured, and product ownership changes
+* people are falliable, and communication doesn't always happen, despite everyone's best intent
+
+Something to note - the team that orginally wrote Pact was "all on the same team".
+
 ### ...but I already have a local Mock Server \(e.g. VCR, MockServer\)
 
 Pact is like VCR in reverse. VCR records actual provider behaviour, and verifies that the consumer behaves as expected. Pact records consumer behaviour, and verifies that the provider behaves as expected. The advantages Pact provides are:
