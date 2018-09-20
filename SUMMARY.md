@@ -30,6 +30,7 @@
     * [Contract Tests vs Functional Tests](best_practices/consumer/contract_tests_not_functional_tests.md)
   * [Provider](best_practices/provider/README.md)
     * [Using provider states effectively](best_practices/provider/using_provider_states_effectively.md)
+  * [Effective Pact Setup Guide](best_practices/pact_nirvana.md)
 * [FAQ](faq/README.md)
   * [Convince me](faq/convinceme.md)
 * [Getting Help](getting_help.md)
@@ -40,4 +41,3 @@
 * [Blog](http://blog.pact.io)
 * [Community videos and articles](blogs_videos_and_articles.md)
 * [Roadmap](roadmap.md)
-
