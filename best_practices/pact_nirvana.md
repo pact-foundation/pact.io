@@ -110,7 +110,7 @@ service that allows your projects to exchange pacts and verification results in
 an automated way.
 
 While you can use Pact without a Pact Broker, using one allows
-you to get the most out Pact. The Pact Broker is designed to operate within your
+you to get the most out of Pact. The Pact Broker is designed to operate within your
 test frameworks and CI system, and as such, has integration points in each of
 the Pact implementations to publish and retrieve contracts and results.
 
