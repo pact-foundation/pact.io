@@ -210,7 +210,7 @@ versions that have been tested against each other using Pact. You can view the
 Pact Matrix for any pair of applications by going opening
 `/matrix/provider/PROVIDER/consumer/CONSUMER` in your Pact Broker.
 
-![Pact matrix](media/best_practices/pact-matrix.png)
+![Pact matrix](/media/best_practices/pact-matrix.png)
 
 
 One very important thing to note is that a verification is associated with the
