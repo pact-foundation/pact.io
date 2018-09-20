@@ -30,8 +30,7 @@
     - [Contract Tests vs Functional Tests](best_practices/contract_tests_not_functional_tests.md)
   - [Provider](best_practices/provider.md)
     - [Using provider states effectively](best_practices/using_provider_states_effectively.md)
-  - [General]
-    - [Release Pipeline Guide](best_practices/pact_nirvana.md)
+  - [Effective Pact Setup Guide](best_practices/pact_nirvana.md)
 - [FAQ](faq/README.md)
   - [Convince me](faq/convinceme.md)
 - [Getting Help](getting_help/README.md)
