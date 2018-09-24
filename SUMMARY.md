@@ -1,6 +1,7 @@
 # Table of contents
 
 * [Introduction](README.md)
+* [How Pact works](getting_started/how_pact_works.md)
 * [Terminology](terminology.md)
 * [Getting started](getting_started/README.md)
   * [Matching](getting_started/matching/README.md)
