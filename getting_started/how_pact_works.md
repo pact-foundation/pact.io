@@ -35,8 +35,7 @@ Usually, the interaction definition and consumer test are written together, such
 
 ```ruby
 # Describe the interaction
-before
-do     
+before do
   event_api.upon_receiving('A POST request with an event').
     with(method: :post, path: '/events', headers: {'Content-Type' => 'application/json'}, body: event_json).
     will_respond_with(status: 200, headers: {'Content-Type' => 'application/json'})
