@@ -1,4 +1,4 @@
 # Best practices
 
-![Best Practices Dr Evil](http://cdn.meme.am/instances/500x/67304044.jpg)
+![Best Practices Dr Evil](https://i.imgflip.com/2it25q.jpg)
 
