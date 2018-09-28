@@ -54,8 +54,8 @@ afterAll(() => provider.finalize()); // Tear down the mock and write the pact
 Then you can write tests of the form `<filename>.test.pact.js`:
 
 ```javascript
-import { Pact } from '@pact-foundation/pact';
-import { api } from /* wherever */;   // This is your client-side API layer
+const { Pact } = require('@pact-foundation/pact');
+const { api } require(/* wherever */);   // This is your client-side API layer
 
 
 describe('The API', () => {

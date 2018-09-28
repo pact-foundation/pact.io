@@ -76,7 +76,7 @@ The litmus test is this: if you can look someone straight in the eyes, and say t
 
 If you really want to hang onto these, consider pushing a subset of your E2E scenarios further down your pipeline as a type of "Smoke Test", running just a few key scenarios prior to releasing to customers.
 
-_NOTE: Obviously, there is an element of not wanting to throw the baby out with the bathwater here. Please factor accordingly_ 
+_NOTE: Obviously, there is an element of not wanting to throw the baby out with the bathwater here. Please factor accordingly_
 
 ### ...but I use Docker?
 

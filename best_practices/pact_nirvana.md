@@ -1,19 +1,12 @@
-Guide for Effective Pact Setup
-==============================
+# Effective Pact Setup Guide
 
 Or _"The steps for reaching Pact Nirvana"_
 
-This is a technical guide for developers who want to use Pact to implement consumer
-driven contract testing.
+This is a technical guide for developers who want to use Pact to implement consumer driven contract testing.
 
-By the end of the guide, you will
-understand how to create a release pipeline that allows you to independently
-deploy any application with the confidence that it will work correctly with the
-other applications in its environment - without having to run a suite of end to
-end tests.
+By the end of the guide, you will understand how to create a release pipeline that allows you to independently deploy any application with the confidence that it will work correctly with the other applications in its environment - without having to run a suite of end to end tests.
 
-Although many guides assume a greenfields project with no existing code, this
-document is intended to also be useful for retrofitting Pact into an existing project.
+Although many guides assume a greenfields project with no existing code, this document is intended to also be useful for retrofitting Pact into an existing project.
 
 Before you read this document, you should:
 
@@ -23,106 +16,87 @@ Before you read this document, you should:
 
 ### How to use this document
 
-Each integration is different. Each organisation has different history and
-culture, and each team may have different processes for development, testing,
-and deployment. Each of these differences affect the best choices for Pact
-workflow.
+Each integration is different. Each organisation has different history and culture, and each team may have different processes for development, testing, and deployment. Each of these differences affect the best choices for Pact workflow.
 
-However, there are many similarities in the steps necessary on the journey to a
-full-featured and effective Pact setup (_"Pact Nirvana"_). This document
-describes those steps.
+However, there are many similarities in the steps necessary on the journey to a full-featured and effective Pact setup \(_"Pact Nirvana"_\). This document describes those steps.
 
-Feel free to pick and choose the steps that apply best to your team.
-You may implement only the first few steps described below, and just use Pact as
-a precursor to your standard integration tests; or you may throw away your
-integration tests altogether and reach “Pact Nirvana”.
+Feel free to pick and choose the steps that apply best to your team. You may implement only the first few steps described below, and just use Pact as a precursor to your standard integration tests; or you may throw away your integration tests altogether and reach “Pact Nirvana”.
 
-As Pact has been implemented in many different languages, this document will
-outline the theory for each step. You will need to consult the documentation of
-your chosen language to learn the relevant syntax for each task. See the [implementation guides](/implementation_guides/README.md) section for more information.
+As Pact has been implemented in many different languages, this document will outline the theory for each step. You will need to consult the documentation of your chosen language to learn the relevant syntax for each task. See the [implementation guides](../implementation_guides/) section for more information.
 
 ### What are the steps for reaching Pact Nirvana?
 
 1. Talk
-1. Spike
-1. Write and verify a Pact for a real consumer and provider
-1. Automate the contract and verification results exchange
-1. Create a workflow that allows contracts to change without breaking your builds
-1. Ensure your provider is backwards compatible with production consumers
-1. Check verification results before deploying
-1. Ensure your consumer is backwards compatible with production providers
-1. Prevent missing verifications
+2. Spike
+3. Write and verify a Pact for a real consumer and provider
+4. Automate the contract and verification results exchange
+5. Create a workflow that allows contracts to change without breaking your builds
+6. Ensure your provider is backwards compatible with production consumers
+7. Check verification results before deploying
+8. Ensure your consumer is backwards compatible with production providers
+9. Prevent missing verifications
 
 ## 1. Talk
 
-Contracts are not a replacement for good communication between or within teams.
-In fact, contracts require collaboration and communication. One could make the
-argument that this is one of the main reasons to leverage Pact and enforce
-communication pathways in large internal and external development organizations.
+Contracts are not a replacement for good communication between or within teams. In fact, contracts require collaboration and communication. One could make the argument that this is one of the main reasons to leverage Pact and enforce communication pathways in large internal and external development organizations.
 
-Contracts are not a magical silver bullet that will allow you to hide in your
-developer caves and toss built artifacts at each other until everything passes.
-It is important for all teams to be invested in the process.
+Contracts are not a magical silver bullet that will allow you to hide in your developer caves and toss built artifacts at each other until everything passes. It is important for all teams to be invested in the process.
 
-Collaborate about the problems, collaborate over the design, and keep the
-communication channels open.
+Collaborate about the problems, collaborate over the design, and keep the communication channels open.
 
-## 2. Spike (Optional)
+## 2. Spike \(Optional\)
 
-If you have not used Pact before, consider trying it out on a [spike](https://en.wikipedia.org/wiki/Spike_(software_development))
-application first.
+If you have not used Pact before, consider trying it out on a \[spike\]\([https://en.wikipedia.org/wiki/Spike\_\(software\_development](https://en.wikipedia.org/wiki/Spike_%28software_development)\)\) application first.
 
 1. Using the technology stacks of your consumer and provider
-respectively, write a consumer test for a single endpoint (eg `GET /helloworld`).
-1. Generate the pact file.
-1. Send it to the provider team. This doesn't have to be fancy, you can just email the file.
-1. Get the provider team to implement the provider, and verify the pact.
 
-Next, you could try adding provider states and matchers. Make sure you
-understand how the pact generation and verification steps work.
+   respectively, write a consumer test for a single endpoint \(eg `GET /helloworld`\).
+
+2. Generate the pact file.
+3. Send it to the provider team. This doesn't have to be fancy, you can just email the file.
+4. Get the provider team to implement the provider, and verify the pact.
+
+Next, you could try adding provider states and matchers. Make sure you understand how the pact generation and verification steps work.
 
 ## 3. Write and verify a real Pact
 
-The hardest thing about setting up Pact in any company is getting buy in from
-all the teams. Everyone needs to be on the same page to make Pact work.
+The hardest thing about setting up Pact in any company is getting buy in from all the teams. Everyone needs to be on the same page to make Pact work.
 
 A good way to determine if Pact works for you is to write and verify a pact for a real consumer and provider.
 
-1. Write a Pact test in your consumer project (consult [the documentation](/implementation_guides/README.md) for your
-chosen language) and generate the pact.
-1. Ship the pact file to the provider team - it still doesn’t matter how yet, we’ll get on to that in the next step.
-1. Verify the pact against the provider (again, consult the documentation for your chosen language)
-1. Talk about it.
-1. Decide whether or not Pact is the right tool for you, taking into account
-that there are situations for which Pact is
-[a good solution](https://docs.pact.io/faq/#what-is-pact-good-for), and
-situations for which Pact is [not a good solution](https://docs.pact.io/faq/#what-is-pact-not-good-for).
+1. Write a Pact test in your consumer project \(consult [the documentation](../implementation_guides/) for your
 
+   chosen language\) and generate the pact.
+
+2. Ship the pact file to the provider team - it still doesn’t matter how yet, we’ll get on to that in the next step.
+3. Verify the pact against the provider \(again, consult the documentation for your chosen language\)
+4. Talk about it.
+5. Decide whether or not Pact is the right tool for you, taking into account
+
+   that there are situations for which Pact is
+
+   [a good solution](https://docs.pact.io/faq/#what-is-pact-good-for), and
+
+   situations for which Pact is [not a good solution](https://docs.pact.io/faq/#what-is-pact-not-good-for).
 
 ## 4. Automate the contract and verification results exchange
 
-Now you have two different sets of tests in two different codebases. The
-artifacts that tie these tests together are the Pact file, and the verification
-results. The next step is to automate the exchange of these artifacts.
+Now you have two different sets of tests in two different codebases. The artifacts that tie these tests together are the Pact file, and the verification results. The next step is to automate the exchange of these artifacts.
 
-The [Pact Broker](https://github.com/pact-foundation/pact_broker) is a
-service that allows your projects to exchange pacts and verification results in
-an automated way.
+The [Pact Broker](https://github.com/pact-foundation/pact_broker) is a service that allows your projects to exchange pacts and verification results in an automated way.
 
-While you can use Pact without a Pact Broker, using one allows
-you to get the most out of Pact. The Pact Broker is designed to operate within your
-test frameworks and CI system, and as such, has integration points in each of
-the Pact implementations to publish and retrieve contracts and results.
+While you can use Pact without a Pact Broker, using one allows you to get the most out of Pact. The Pact Broker is designed to operate within your test frameworks and CI system, and as such, has integration points in each of the Pact implementations to publish and retrieve contracts and results.
 
-The Pact Broker and its clients are open source tools (though you can get your own hosted
-instance of the Broker at [https://pact.dius.com.au/](https://pact.dius.com.au/))
+The Pact Broker and its clients are open source tools \(though you can get your own hosted instance of the Broker at [https://pact.dius.com.au/](https://pact.dius.com.au/)\)
 
 1. Read the Pact Broker [home page](https://github.com/pact-foundation/pact_broker),
-(taking note of the various deployment options available to you) and the [quick start guide](https://github.com/pact-foundation/pact_broker/wiki#quick-start-guide).
-1. Deploy a Pact Broker to a network that has access to both consumer and provider CI systems so it can trigger builds.
-1. Configure your consumer build to publish its pact to the broker (consult the documentation for your chosen language)
-1. Configure your provider build to fetch the pact from the broker and publish the verification results (consult the documentation for your chosen language)
-1. Configure a [webhook](https://github.com/pact-foundation/pact_broker/wiki/Webhooks) to kick off a provider build when a pact changes.
+
+   \(taking note of the various deployment options available to you\) and the [quick start guide](https://github.com/pact-foundation/pact_broker/wiki#quick-start-guide).
+
+2. Deploy a Pact Broker to a network that has access to both consumer and provider CI systems so it can trigger builds.
+3. Configure your consumer build to publish its pact to the broker \(consult the documentation for your chosen language\)
+4. Configure your provider build to fetch the pact from the broker and publish the verification results \(consult the documentation for your chosen language\)
+5. Configure a [webhook](https://github.com/pact-foundation/pact_broker/wiki/Webhooks) to kick off a provider build when a pact changes.
 
 Useful links:
 
@@ -140,40 +114,24 @@ You now have a workflow where:
 * The verification results are published back to the broker
 * Any change to the pact triggers a provider build
 
-One of the complications introduced by the Pact workflow is that new
-interactions are usually added to the contract before the functionality has been
-implemented in the provider. Using the workflow described above, a provider
-build will be kicked off when you publish a contract with new interactions in
-it. This build will (correctly) fail during the verification task. This is not
-ideal, as the failure is expected. To solve this, we need to allow contracts to
-change without breaking the builds.
+One of the complications introduced by the Pact workflow is that new interactions are usually added to the contract before the functionality has been implemented in the provider. Using the workflow described above, a provider build will be kicked off when you publish a contract with new interactions in it. This build will \(correctly\) fail during the verification task. This is not ideal, as the failure is expected. To solve this, we need to allow contracts to change without breaking the builds.
 
-“Tagging” application versions in the broker allows you to introduce new
-expectations to a Pact without breaking your provider builds. This is an approach
-similar to git feature branches, where you can keep an unbreaking main line of
-development, while adding new, breaking interactions on the side.
+“Tagging” application versions in the broker allows you to introduce new expectations to a Pact without breaking your provider builds. This is an approach similar to git feature branches, where you can keep an unbreaking main line of development, while adding new, breaking interactions on the side.
 
-To achieve this, when a pact is published, the associated pacticipant version
-should be tagged with an identifier that will be used by the provider to
-differentiate between the “main line” safe pacts (eg. tagged “master”) and the
-potentially breaking pacts (eg. tagged “feat-new-foobar”).
+To achieve this, when a pact is published, the associated pacticipant version should be tagged with an identifier that will be used by the provider to differentiate between the “main line” safe pacts \(eg. tagged “master”\) and the potentially breaking pacts \(eg. tagged “feat-new-foobar”\).
 
-To keep a green build in your provider’s CI, the CI should verify the pact for
-the latest version tagged with “master”, rather than verifying the latest
-overall pact.
+To keep a green build in your provider’s CI, the CI should verify the pact for the latest version tagged with “master”, rather than verifying the latest overall pact.
 
-If you use feature branches for your consumer development, it is recommended to
-tag the pacticipant version with the name of the branch. If you use feature
-toggles, the tag could be the name of the feature toggle.
+If you use feature branches for your consumer development, it is recommended to tag the pacticipant version with the name of the branch. If you use feature toggles, the tag could be the name of the feature toggle.
 
-1. Configure a tag name to be used for every consumer build that publishes a pact (again, see your Pact language docs). The recommended default is to dynamically determine and use the name of your git/svn branch. If this doesn’t work for you, then you could hardcode it to something like “master”.
-1. Change the pact that is being verified in the provider configuration from being the pact for the latest version to the pact for the latest master version (or whatever tag name you have chosen for your main line of development in step 1).
-1. Now, when you want to add new expectations to a pact, do it on a feature branch of your codebase (or with a feature toggle). If you are dynamically using the branch name as the broker tag, you don’t need to do anything further, however, if you have hardcoded your tag name or are using a feature toggle, you’ll need to manually set the tag to an appropriate value.
-1. Use the “feature pact” as a starting point to discuss the desired new features with the provider team. Remember section 1 on “Talking”!
-1. Once the interface has been agreed on, implement the new functionality in the provider using the feature pact, verifying it locally rather than in the CI, until the new expectations are passing. You may wish to use branches or feature toggles to keep your provider builds green.
-1. Once the feature pact has been verified successfully, and that provider code is in master, the consumer can merge in their own changes to master.
+1. Configure a tag name to be used for every consumer build that publishes a pact \(again, see your Pact language docs\). The recommended default is to dynamically determine and use the name of your git/svn branch. If this doesn’t work for you, then you could hardcode it to something like “master”.
+2. Change the pact that is being verified in the provider configuration from being the pact for the latest version to the pact for the latest master version \(or whatever tag name you have chosen for your main line of development in step 1\).
+3. Now, when you want to add new expectations to a pact, do it on a feature branch of your codebase \(or with a feature toggle\). If you are dynamically using the branch name as the broker tag, you don’t need to do anything further, however, if you have hardcoded your tag name or are using a feature toggle, you’ll need to manually set the tag to an appropriate value.
+4. Use the “feature pact” as a starting point to discuss the desired new features with the provider team. Remember section 1 on “Talking”!
+5. Once the interface has been agreed on, implement the new functionality in the provider using the feature pact, verifying it locally rather than in the CI, until the new expectations are passing. You may wish to use branches or feature toggles to keep your provider builds green.
+6. Once the feature pact has been verified successfully, and that provider code is in master, the consumer can merge in their own changes to master.
 
-In addition to some of the language-specific Pact tools (eg Grade), tagging can be done with the (pact broker CLI)[https://github.com/pact-foundation/pact_broker-client#create-version-tag].
+In addition to some of the language-specific Pact tools \(eg Grade\), tagging can be done with the \(pact broker CLI\)\[[https://github.com/pact-foundation/pact\_broker-client\#create-version-tag](https://github.com/pact-foundation/pact_broker-client#create-version-tag)\].
 
 Useful link:
 
@@ -181,86 +139,46 @@ Useful link:
 
 ## 6. Use tags to ensure your provider is compatible with your production consumer
 
-It's all very well knowing that your consumer/provider are compatible with the
-head versions of each other, but if you want to be able to deploy your consumer
-and provider independently, you also need to be sure that your provider is
-compatible with the production version of your consumer. The ability to do this
-is a major selling point of Pact.
+It's all very well knowing that your consumer/provider are compatible with the head versions of each other, but if you want to be able to deploy your consumer and provider independently, you also need to be sure that your provider is compatible with the production version of your consumer. The ability to do this is a major selling point of Pact.
 
-Tagging also allows you to ensure backwards compatibility between production and
-head versions of your applications by allowing the provider to verify the pact
-associated with the latest production version as well as the latest master
-version. This enables the safe deployment workflow described in step 7.
+Tagging also allows you to ensure backwards compatibility between production and head versions of your applications by allowing the provider to verify the pact associated with the latest production version as well as the latest master version. This enables the safe deployment workflow described in step 7.
 
-1. Add a step to your deployment process so that when the consumer is deployed to production, the relevant pacticipant version in the broker is tagged as the “production” version. This functionality is provided by the (pact broker CLI)[https://github.com/pact-foundation/pact_broker-client#create-version-tag]
+1. Add a step to your deployment process so that when the consumer is deployed to production, the relevant pacticipant version in the broker is tagged as the “production” version. This functionality is provided by the \(pact broker CLI\)\[[https://github.com/pact-foundation/pact\_broker-client\#create-version-tag](https://github.com/pact-foundation/pact_broker-client#create-version-tag)\]
 2. Add the “production” tagged pact to the list of pacts the provider will verify.
 
 ## 7. Use The Pact “Matrix” as a gateway to deployments
 
-Before you deploy to a production environment, you need to know whether or not
-your app is compatible with the versions of the other apps that already exist in
-that environment. The old-fashioned way of managing these dependencies involved
-deploying sets of pre-tested applications together, creating a bottleneck and
-meaning that speedy development and testing on one application may be negated by
-slow development and testing on another.
+Before you deploy to a production environment, you need to know whether or not your app is compatible with the versions of the other apps that already exist in that environment. The old-fashioned way of managing these dependencies involved deploying sets of pre-tested applications together, creating a bottleneck and meaning that speedy development and testing on one application may be negated by slow development and testing on another.
 
-The Pact way of managing these dependencies is to use the Pact Matrix - this is
-the matrix created when you create a table of all the consumer and provider
-versions that have been tested against each other using Pact. You can view the
-Pact Matrix for any pair of applications by going opening
-`/matrix/provider/PROVIDER/consumer/CONSUMER` in your Pact Broker.
+The Pact way of managing these dependencies is to use the Pact Matrix - this is the matrix created when you create a table of all the consumer and provider versions that have been tested against each other using Pact. You can view the Pact Matrix for any pair of applications by going opening `/matrix/provider/PROVIDER/consumer/CONSUMER` in your Pact Broker.
 
-![Pact matrix](/media/best_practices/pact-matrix.png)
+![Pact matrix](../.gitbook/assets/pact-matrix.png)
 
+One very important thing to note is that a verification is associated with the pact _content_ itself, not to a specific consumer version. This means that if a pact does not change between publications, any previous verifications can automatically be applied to the new pact publication, effectively “pre-verifying” it. \(For this reason, it is best not to use any random data in a pact, as this will cause the broker to consider it a new revision of the pact.\) Linking a verification to the pact content rather than to the application version also means that we can do a “cartesian join” of pacts/verifications, resulting in many more “compatible” versions than would otherwise be the case.
 
-One very important thing to note is that a verification is associated with the
-pact _content_ itself, not to a specific consumer version. This means that if a
-pact does not change between publications, any previous verifications can
-automatically be applied to the new pact publication, effectively
-“pre-verifying” it. (For this reason, it is best not to use any random data in a
-pact, as this will cause the broker to consider it a new revision of the pact.)
-Linking a verification to the pact content rather than to the application
-version also means that we can do a “cartesian join” of pacts/verifications,
-resulting in many more “compatible” versions than would otherwise be the case.
+The way you check if you are safe to deploy is to determine if there is a row in the matrix that contains the version of the application you’re about to deploy and the version of the other application that already exists in that environment. You can do this with the [`can-i-deploy`](https://github.com/pact-foundation/pact_broker-client#can-i-deploy) tool, which will be described in more detail below.
 
+The need for this check increases proportionately with the time that elapses between your pact test execution and your release. If you practice continuous deployment, and you go straight from a test build into a production deployment build, then you can be pretty sure that the version of the other application that is in production probably hasn’t changed in the meantime. If there is a considerable amount of time, however, it is best to do a compatibility check again just before deploying.
 
-The way you check if you are safe to deploy is to determine if there is a row in
-the matrix that contains the version of the application you’re about to deploy
-and the version of the other application that already exists in that
-environment. You can do this with the [`can-i-deploy`](https://github.com/pact-foundation/pact_broker-client#can-i-deploy) tool, which will be described
-in more detail below.
+For example, if you run a pact verification on Monday that verifies the recommended “master” and “production” pacts, but you don’t deploy the provider artifact until Friday, the version of the consumer that is now in production may have changed.
 
-The need for this check increases proportionately with the time that elapses
-between your pact test execution and your release. If you practice continuous
-deployment, and you go straight from a test build into a production deployment
-build, then you can be pretty sure that the version of the other application
-that is in production probably hasn’t changed in the meantime. If there is a
-considerable amount of time, however, it is best to do a compatibility check
-again just before deploying.
+Alternatively, a pact may have been verified by the “master” version of the provider, but that version of the provider may not yet have been deployed to production. The consumer cannot be deployed to production until the version of the provider that it depends on is in production \(unless it has been specifically written to fail gracefully, which is actually the best approach, but is one that isn’t always followed\).
 
-For example, if you run a pact verification on Monday that verifies the
-recommended “master” and “production” pacts, but you don’t deploy the provider
-artifact until Friday, the version of the consumer that is now in production may
-have changed.
-
-Alternatively, a pact may have been verified by the “master” version of the
-provider, but that version of the provider may not yet have been deployed to
-production. The consumer cannot be deployed to production until the version of
-the provider that it depends on is in production (unless it has been
-specifically written to fail gracefully, which is actually the best approach,
-but is one that isn’t always followed).
-
-The [`can-i-deploy`](https://github.com/pact-foundation/pact_broker-client#can-i-deploy)
-tool is a CLI that has been written to query the Matrix to ensure that you are
-safe to deploy.
+The [`can-i-deploy`](https://github.com/pact-foundation/pact_broker-client#can-i-deploy) tool is a CLI that has been written to query the Matrix to ensure that you are safe to deploy.
 
 1. Add a step to your deployment process that uses the `can-i-deploy` tool to
-ensure that the version that you are about to deploy is compatible with the
-production versions of its integration partners.
+
+   ensure that the version that you are about to deploy is compatible with the
+
+   production versions of its integration partners.
+
 2. Add a step to your deployment process so that when the application is
-deployed to production, the relevant pacticipant version in the broker is tagged
-as the “production” version. This functionality is provided by the
-[pact-broker client CLI](https://github.com/pact-foundation/pact_broker-client#create-version-tag)
+
+   deployed to production, the relevant pacticipant version in the broker is tagged
+
+   as the “production” version. This functionality is provided by the
+
+   [pact-broker client CLI](https://github.com/pact-foundation/pact_broker-client#create-version-tag)
 
 Useful link:
 
@@ -268,28 +186,17 @@ Useful link:
 
 ## 8. Prevent missing verifications
 
-Step 7 means that you can now know that the production provider has
-successfully verified the pact from the consumer version you’re about to deploy.
-However, in some cases, the production version of the provider may never have
-run a CI against your candidate pact, because your candidate consumer pact
-may not have existed when the CI for that provider version was run.
+Step 7 means that you can now know that the production provider has successfully verified the pact from the consumer version you’re about to deploy. However, in some cases, the production version of the provider may never have run a CI against your candidate pact, because your candidate consumer pact may not have existed when the CI for that provider version was run.
 
-To reach Pact Nirvana, the final step is to have a CI build that checks out the
-code for the _production_ version of your provider, and have it verify the same
-pacts that the head version does. If you have followed the recommended strategy
-of tagging provider versions in the broker on deployment to production, you can
-use the Pact Broker CLI to determine which version of the provider is currently in
-production:
+To reach Pact Nirvana, the final step is to have a CI build that checks out the code for the _production_ version of your provider, and have it verify the same pacts that the head version does. If you have followed the recommended strategy of tagging provider versions in the broker on deployment to production, you can use the Pact Broker CLI to determine which version of the provider is currently in production:
 
-```
+```text
 pact-broker describe-version --pacticipant PACTICIPANT --latest prod
 ```
 
-Make sure that the provider application version used when publishing the
-verification can be reverse engineered to a reference to a point in your
-source control (eg a Git commit hash).
-
+Make sure that the provider application version used when publishing the verification can be reverse engineered to a reference to a point in your source control \(eg a Git commit hash\).
 
 Useful link:
 
 * [Best practices for pacticipant version numbers](../getting_started/versioning_in_the_pact_broker.md)
+

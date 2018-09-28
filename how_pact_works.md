@@ -1,16 +1,16 @@
 # How Pact works
 
-Remember these definitions from the [introduction](/README.md):
+Remember these definitions from the [introduction](./):
 
-* **Consumer**: A client that wants receive some data (for example, a web front end, or a message receiving endpoint).
-* **Provider**: A service or server that provides the data (for example, an API on a server that provides the data the client needs, or the service that sends messages).
+* **Consumer**: A client that wants receive some data \(for example, a web front end, or a message receiving endpoint\).
+* **Provider**: A service or server that provides the data \(for example, an API on a server that provides the data the client needs, or the service that sends messages\).
 
 A contract between a consumer and provider is called a _pact_. Each pact is a collection of _interactions_. Each interaction describes:
 
 * An expected request - describing what the consumer is expected to send to the provider \(this is always present for synchronous interactions like HTTP requests, but not required for asynchronous interactions like message queues\)
 * a minimal expected response - describing the parts of the response the consumer wants the provider to return.
 
-![Pact interaction](/media/introduction/pact-base.png)
+![Pact interaction](.gitbook/assets/pact-base%20%281%29.png)
 
 The first step in writing a pact test is to describe this interaction.
 
@@ -22,7 +22,7 @@ Each interaction is tested using the pact framework, driven by the unit test fra
 
 Following the diagram:
 
-![Pact interaction](/media/introduction/pact-overview.png)
+![Pact interaction](.gitbook/assets/pact-overview%20%281%29.png)
 
 1. Using the Pact DSL, the expected request and response are registered with the mock service.
 2. The consumer test code fires a real request to a mock provider \(created by the Pact framework\).
@@ -51,13 +51,13 @@ Although there is conceptually a lot going on in a pact interaction test, the ac
 
 In Pact, each interaction is considered to be independent. This means that each test only tests one interaction. If you need to describe interactions that depend on each other, you can use _provider states_ to do it. Provider states allow you describe the preconditions on the provider required to generate the expected response - for example, the existence of specific user data. This is explained further in the provider verification section below.
 
-![Pact interaction with provider state](/media/introduction/pact-base-extended.png)
+![Pact interaction with provider state](.gitbook/assets/pact-base-extended.png)
 
 Instead of writing a test that says “create user 123, then log in”, you would write two separate interactions - one that says “create user 123”, and one with provider state “user 123 exists” that says “log in as user 123”.
 
 Once all of the interactions have been tested on the consumer side, the Pact framework generates a _pact file_, which describes each interaction:
 
-![Pact file](/media/introduction/pact-file.png)
+![Pact file](.gitbook/assets/pact-file.png)
 
 This pact file can be used to verify the provider.
 
@@ -65,7 +65,7 @@ This pact file can be used to verify the provider.
 
 In contrast to the consumer tests, provider verification is entirely driven by the Pact framework:
 
-![Provider verification](/media/introduction/pact-verification.png)
+![Provider verification](.gitbook/assets/pact-verification%20%281%29.png)
 
 In provider verification, each request is sent to the provider, and the actual response it generates is compared with the minimal expected response described in the consumer test.
 
@@ -73,13 +73,13 @@ Provider verification passes if each request generates a response that contains 
 
 In many cases, your provider will need to be in a particular state \(such as “user 123 is logged in”, or “customer 456 has an invoice \#678”\). The Pact framework supports this by letting you set up the data described by the provider state before the interaction is replayed:
 
-![Provider verification with state](/media/introduction/pact-verification-states.png)
+![Provider verification with state](.gitbook/assets/pact-verification-states%20%282%29.png)
 
 ## Putting it all together
 
 Here’s a repeat of the two diagrams above:
 
-![Pact test and verify](/media/introduction/pact-test-and-verify.png)
+![Pact test and verify](.gitbook/assets/pact-test-and-verify%20%282%29.png)
 
 If we pair the test and verification process for each interaction, the contract between the consumer and provider is fully tested without having to spin up the services together.
 
@@ -89,4 +89,5 @@ _Contract tests should focus on the messages \(requests and responses\) rather t
 
 _Pact tests should be data independent_. Pact tests are best when successful verification doesn’t depend on the specific data that the provider returns. See this guide for best practices when describing interactions.
 
-_Use the broker to integrate Pact with your CI infrastructure._ Integrating Pact with your continuous integration infrastructure is a major win for safe and successful deployment. [See this guide for Pact integration best practices](/best_practices/pact_nirvana.md)
+_Use the broker to integrate Pact with your CI infrastructure._ Integrating Pact with your continuous integration infrastructure is a major win for safe and successful deployment. [See this guide for Pact integration best practices](best_practices/pact_nirvana.md)
+

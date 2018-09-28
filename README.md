@@ -26,4 +26,5 @@ Unlike a schema or specification \(eg. OAS\), which is a static artifact that de
 
 ## Next steps
 
-To learn more, read [how a pact test works](/getting_started/how_pact_works.md).
+To learn more, read [how a pact test works](how_pact_works.md).
+
