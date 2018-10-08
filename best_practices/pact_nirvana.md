@@ -46,7 +46,7 @@ Collaborate about the problems, collaborate over the design, and keep the commun
 
 ## 2. Spike \(Optional\)
 
-If you have not used Pact before, consider trying it out on a \[spike\]\([https://en.wikipedia.org/wiki/Spike\_\(software\_development](https://en.wikipedia.org/wiki/Spike_%28software_development)\)\) application first.
+If you have not used Pact before, consider trying it out on a [spike](https://en.wikipedia.org/wiki/Spike\_\(software\_development\)) application first.
 
 1. Using the technology stacks of your consumer and provider
 
