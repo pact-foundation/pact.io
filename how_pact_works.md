@@ -2,7 +2,7 @@
 
 Remember these definitions from the [introduction](./):
 
-* **Consumer**: A client that wants receive some data \(for example, a web front end, or a message receiving endpoint\).
+* **Consumer**: A client that wants to receive some data \(for example, a web front end, or a message receiving endpoint\).
 * **Provider**: A service or server that provides the data \(for example, an API on a server that provides the data the client needs, or the service that sends messages\).
 
 A contract between a consumer and provider is called a _pact_. Each pact is a collection of _interactions_. Each interaction describes:
