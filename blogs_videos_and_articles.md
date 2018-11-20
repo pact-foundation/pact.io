@@ -4,7 +4,6 @@ Check out the official Pact blog at [blog.pact.io](http://blog.pact.io)
 
 If you've seen a really good talk that's not on this list, please submit a PR to this page with the new link.
 
-* [It's not hard to test smart](https://www.youtube.com/watch?v=79GKBYSqMIo) - Dec 2018
 * [Consumer-driven contracts with Pact and PHP](http://www.andykelk.net/tech/consumer-driven-contracts-with-pact-and-php) - 9 Sep 2015
 * [Pacts to the rescue!](http://www.infoq.com/presentations/pact) API Days \(Video\) - Feb 2015
 * [Martin Fowler's Microservices resource guide](http://martinfowler.com/microservices/) - July 2015
@@ -26,4 +25,5 @@ If you've seen a really good talk that's not on this list, please submit a PR to
 * [Move Fast and Consumer-Driven-Contract-Testing Things - Soundcloud MicroXchng 2017"](https://speakerdeck.com/alonpeer/move-fast-and-consumer-driven-contract-test-things) - Feb 2017
 * [Consumer Driven Contract Testing with Pact and Docker - Harry Winser](https://vimeo.com/239429848) - Oct 2017
 * [Consumer Driven Contract Testing with Pact and Docker - Harry Winser \(YT backup\)](https://www.youtube.com/watch?v=pnWVYeDVo2s) - Oct 2017
-
+* [It's not hard to test smart](https://www.youtube.com/watch?v=79GKBYSqMIo) - Dec 2017
+* [Service Evolution with Consumer Driven Contracts and Pact (.Net)](http://adamrodger.github.io/blog/2018/07/05/consumer-driven-contracts.html) - July 2018
