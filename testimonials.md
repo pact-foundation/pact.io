@@ -11,7 +11,7 @@ Here are some of the companies who use Pact to make testing their microservices 
 | ![SEEK Jobs Logo](.gitbook/assets/seek.jpg) | ![DiUS Logo](.gitbook/assets/dius%20%281%29.png) | ![Arquillian Project Logo](.gitbook/assets/arquillian.png) |  |  |
 | ![lastminute.com](.gitbook/assets/lastminute.png) | ![Cloudhealth Tech](.gitbook/assets/cloudhealth-tech%20%281%29.png) | ![Repairly](.gitbook/assets/repairly%20%281%29.png) |  |  |
 | ![https://www.rapid7.com/](.gitbook/assets/rapid7%20%281%29.png) | ![ASOS](.gitbook/assets/asos%20%281%29.png) | ![Simple](.gitbook/assets/simplehq.png) |  |  |
-| ![ITHAKA Logo](.gitbook/assets/ithaka.png) |  |  |  |  |
+| ![ITHAKA Logo](.gitbook/assets/ithaka.png) | ![rightmove](.gitbook/assets/rightmove-logo.png) |  |  |  |
 
 Not on this list? [Contact us](https://twitter.com/pact_up)!
 
@@ -22,4 +22,3 @@ Not on this list? [Contact us](https://twitter.com/pact_up)!
 > "In 2016, ITV fulfilled over a billion on-demand TV requests to our 17 million registered users across 27 platforms. Pact Consumer Driven Contract testing has become an essential tool in our development pipeline to ensure our various back end systems, APIs and third party clients smoothly integrate with each other. Using Pact we have eliminated the need for tightly coupled integration test environments in favour of isolated micro-services that can be tested and deployed independently, safe in the knowledge that they honor the functionality expected of their consumers."
 
 _Daniel Oades, Principal Developer In Test,_ [_ITV_](http://itv.com/)
-
