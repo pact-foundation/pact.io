@@ -23,7 +23,6 @@ If you've seen a really good talk that's not on this list, please submit a PR to
 * [Deploy with Confidence! Slides from April Melb JVM Meetup](https://github.com/pact-foundation/pact.io/tree/9da206b230a2f794aab2eb927a70e9c53e693810/media/media/Pact%20-%20Deploy%20with%20Confidence!.pdf).
 * [Verifying Microservice Integrations with Contract Testing - Atlassian at their 2016 summit](https://www.youtube.com/watch?v=-6x6XBDf9sQ&feature=youtu.be) - Oct 2016
 * [Move Fast and Consumer-Driven-Contract-Testing Things - Soundcloud MicroXchng 2017"](https://speakerdeck.com/alonpeer/move-fast-and-consumer-driven-contract-test-things) - Feb 2017
-* [Consumer Driven Contract Testing with Pact and Docker - Harry Winser](https://vimeo.com/239429848) - Oct 2017
-* [Consumer Driven Contract Testing with Pact and Docker - Harry Winser \(YT backup\)](https://www.youtube.com/watch?v=pnWVYeDVo2s) - Oct 2017
+* [Consumer Driven Contract Testing with Pact and Docker - Harry Winser](https://www.youtube.com/watch?v=pnWVYeDVo2s) - Oct 2017
 * [It's not hard to test smart](https://www.youtube.com/watch?v=79GKBYSqMIo) - Dec 2017
 * [Service Evolution with Consumer Driven Contracts and Pact (.Net)](http://adamrodger.github.io/blog/2018/07/05/consumer-driven-contracts.html) - July 2018
