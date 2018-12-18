@@ -14,7 +14,7 @@ You want to be _as loose as possible_ with the matching for the response \(`will
 
 ### Random data - avoid it
 
-If you are using a Pact Broker to exchange pacts, then avoid using random data in your pacts. If a new pact is published that is exactly the same as a previous version that has already been verified, the existing verification results will be applied to the new pact publication. This means that you don't have to wait for the provider verification to run before deploying your consumer - you can go straight to prod. Random data makes it look like the contract has changed, and therefore you loose this optimisation.
+If you are using a Pact Broker to exchange pacts, then avoid using random data in your pacts. If a new pact is published that is exactly the same as a previous version that has already been verified, the existing verification results will be applied to the new pact publication. This means that you don't have to wait for the provider verification to run before deploying your consumer - you can go straight to prod. Random data makes it look like the contract has changed, and therefore you lose this optimisation.
 
 #### NOTE
 
