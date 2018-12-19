@@ -46,7 +46,7 @@ Our sponsor [DiUS](https://www.dius.com.au) has kindly provided a [free hosted b
 
 **Command line interface**
 
-For Mac, Windows and Linux. Allows you to integrate the contracts workflow into your CI. Download [here](https://github.com/pact-foundation/pact-ruby-standalone/releases).
+For Mac, Windows and Linux. Allows you to integrate the contracts workflow into your CI. Download [here](https://github.com/pact-foundation/pact_broker-client).
 
 **Ruby** via the `pact_broker-client` gem:
 
