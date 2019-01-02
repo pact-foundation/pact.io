@@ -12,7 +12,7 @@ There are conceptually three resources that can have versions in the Pact Broker
 
 Users of Pact never need to worry about pact contract versions, since this is done automatically by the pact broker. However, consumer and provider application numbers need to be set in a principled way, even in pre-production.
 
-A related concept is the Pact Matrix, which contains the verification status for all possible pairs of consumer and provider application versions. Following the rules for pacticipant application versions will mean that you’ll be able to get the maximum value out of the Pact Matrix.
+A related concept is the Pact Matrix, which contains the verification status for all possible pairs of consumer and provider application versions. Following the rules for participant application versions will mean that you’ll be able to get the maximum value out of the Pact Matrix.
 
 ## Consumer application versions
 
