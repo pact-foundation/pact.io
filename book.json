@@ -4,8 +4,7 @@
         "prism",
         "-highlight",
         "github",
-        "ga",
-        "toolbar-button"
+        "ga"
     ],
     "pluginsConfig": {
         "edit-link": {
@@ -18,11 +17,6 @@
         "ga": {
             "token": "UA-8926693-8",
             "configuration": "auto"
-        },
-        "toolbar-button": {
-            "icon": "fa-globe",
-            "label": "中",
-            "url": "https://www.pact.net.cn"
         }
     }
 }
