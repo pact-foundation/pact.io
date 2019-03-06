@@ -8,7 +8,7 @@
     ],
     "pluginsConfig": {
         "edit-link": {
-            "base": "https://github.com/pact-foundation/pact-foundation.github.io/tree/test",
+            "base": "https://github.com/pact-foundation/pact-foundation.github.io/tree/documentation",
             "label": "Edit This Page"
         },
         "github": {
