@@ -26,11 +26,11 @@ Past contributors: Travis Dixon, Mike Farah, Andras Bubics
 
 Current maintainer: [Ron Holshausen](https://github.com/uglyog)
 
-### Javascript
+### Javascript & Node
 
 Past contributors: Tarcio Saraiva
 
-Current maintainers: [Matt Fellows](https://github.com/mefellows), [Michel Boudreau](contributors.md)
+Current maintainers: [Matt Fellows](https://github.com/mefellows), [Michel Boudreau](https://github.com/mboudreau)
 
 ### .NET
 
