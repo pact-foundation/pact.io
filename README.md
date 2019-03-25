@@ -1,5 +1,7 @@
 # Introduction
 
+![Pact logo](media/pact-logo.png)
+
 > **Pact** \(noun\):
 >
 > A formal agreement between individuals or parties.  
