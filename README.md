@@ -1,7 +1,5 @@
 # Introduction
 
-![Pact logo](media/pact-logo.png)
-
 > **Pact** \(noun\):
 >
 > A formal agreement between individuals or parties.  
@@ -9,6 +7,8 @@
 >
 > Synonyms: agreement, protocol, deal, contract  
 > ~ [Oxford Dictionaries](https://en.oxforddictionaries.com/definition/pact)
+
+![](media/pact-logo.png)
 
 Pact is a contract testing tool. Contract testing is a way to ensure that services \(such as an API provider and a client\) can communicate with each other. Without contract testing, the only way to know that services can communicate is by using expensive and brittle integration tests.
 
