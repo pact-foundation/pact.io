@@ -27,14 +27,13 @@ As Pact has been implemented in many different languages, this document will out
 ### What are the steps for reaching Pact Nirvana?
 
 1. Talk
-2. Spike
-3. Write and verify a Pact for a real consumer and provider
+2. Spike (Optional)
+3. Write and verify a real Pact
 4. Automate the contract and verification results exchange
-5. Create a workflow that allows contracts to change without breaking your builds
-6. Ensure your provider is backwards compatible with production consumers
-7. Check verification results before deploying
-8. Ensure your consumer is backwards compatible with production providers
-9. Prevent missing verifications
+5. Allow contracts to change without breaking your builds
+6. Use tags to ensure your provider is compatible with your production consumer
+7. Use The Pact “Matrix” as a gateway to deployments
+8. Prevent missing verifications
 
 ## 1. Talk
 
