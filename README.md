@@ -3,7 +3,7 @@
 > **Pact** \(noun\):
 >
 > A formal agreement between individuals or parties.  
-> _"The country negotiated a trade pact with the US"_
+> _"The European Union did not negotiate a trade pact with the UK"_
 >
 > Synonyms: agreement, protocol, deal, contract  
 > ~ [Oxford Dictionaries](https://en.oxforddictionaries.com/definition/pact)
