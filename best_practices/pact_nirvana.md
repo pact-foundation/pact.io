@@ -71,13 +71,7 @@ A good way to determine if Pact works for you is to write and verify a pact for 
 2. Ship the pact file to the provider team - it still doesn’t matter how yet, we’ll get on to that in the next step.
 3. Verify the pact against the provider \(again, consult the documentation for your chosen language\)
 4. Talk about it.
-5. Decide whether or not Pact is the right tool for you, taking into account
-
-   that there are situations for which Pact is
-
-   [a good solution](https://docs.pact.io/faq/#what-is-pact-good-for), and
-
-   situations for which Pact is [not a good solution](https://docs.pact.io/faq/#what-is-pact-not-good-for).
+5. Decide whether or not Pact is the right tool for you, taking into account that there are situations for which Pact is [a good solution](https://docs.pact.io/faq/#what-is-pact-good-for), and situations for which Pact is [not a good solution](https://docs.pact.io/faq/#what-is-pact-not-good-for).
 
 ## 4. Automate the contract and verification results exchange
 
@@ -89,10 +83,7 @@ While you can use Pact without a Pact Broker, using one allows you to get the mo
 
 The Pact Broker and its clients are open source tools \(though you can get your own hosted instance of the Broker at [https://pact.dius.com.au/](https://pact.dius.com.au/)\)
 
-1. Read the Pact Broker [home page](https://github.com/pact-foundation/pact_broker),
-
-   \(taking note of the various deployment options available to you\) and the [quick start guide](https://github.com/pact-foundation/pact_broker/wiki#quick-start-guide).
-
+1. Read the Pact Broker [home page](https://github.com/pact-foundation/pact_broker), \(taking note of the various deployment options available to you\) and the [quick start guide](https://github.com/pact-foundation/pact_broker/wiki#quick-start-guide).
 2. Deploy a Pact Broker to a network that has access to both consumer and provider CI systems so it can trigger builds.
 3. Configure your consumer build to publish its pact to the broker \(consult the documentation for your chosen language\)
 4. Configure your provider build to fetch the pact from the broker and publish the verification results \(consult the documentation for your chosen language\)
@@ -166,19 +157,9 @@ Alternatively, a pact may have been verified by the “master” version of the 
 
 The [`can-i-deploy`](https://github.com/pact-foundation/pact_broker-client#can-i-deploy) tool is a CLI that has been written to query the Matrix to ensure that you are safe to deploy.
 
-1. Add a step to your deployment process that uses the `can-i-deploy` tool to
+1. Add a step to your deployment process that uses the `can-i-deploy` tool to ensure that the version that you are about to deploy is compatible with the production versions of its integration partners.
 
-   ensure that the version that you are about to deploy is compatible with the
-
-   production versions of its integration partners.
-
-2. Add a step to your deployment process so that when the application is
-
-   deployed to production, the relevant pacticipant version in the broker is tagged
-
-   as the “production” version. This functionality is provided by the
-
-   [pact-broker client CLI](https://github.com/pact-foundation/pact_broker-client#create-version-tag)
+2. Add a step to your deployment process so that when the application is deployed to production, the relevant pacticipant version in the broker is tagged as the “production” version. This functionality is provided by the [pact-broker client CLI](https://github.com/pact-foundation/pact_broker-client#create-version-tag)
 
 Useful link:
 
