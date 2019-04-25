@@ -101,9 +101,9 @@ The Pact Broker and its clients are open source tools \(though you can get your 
 Useful links:
 
 * [Installing a Docker Pact Broker](https://hub.docker.com/r/dius/pact-broker)
-* [Publishing verification results](https://github.com/pact-foundation/pact/_broker/wiki/Provider-verification-results)
-* [Configuring webhooks in the Pact Broker](https://github.com/pact-foundation/pact/_broker/wiki/Webhooks)
-* [Adding verification badges to your READMEs](https://github.com/pact-foundation/pact/_broker/wiki/Provider-verification-badges)
+* [Publishing verification results](https://github.com/pact-foundation/pact_broker/wiki/Provider-verification-results)
+* [Configuring webhooks in the Pact Broker](https://github.com/pact-foundation/pact_broker/wiki/Webhooks)
+* [Adding verification badges to your READMEs](https://github.com/pact-foundation/pact_broker/wiki/Provider-verification-badges)
 
 ## 5. Allow contracts to change without breaking your builds
 
@@ -182,7 +182,7 @@ The [`can-i-deploy`](https://github.com/pact-foundation/pact_broker-client#can-i
 
 Useful link:
 
-* [Checking verification results using the can-i-deploy CLI](https://github.com/pact-foundation/pact/_broker-client#can-i-deploy)
+* [Checking verification results using the can-i-deploy CLI](https://github.com/pact-foundation/pact_broker-client#can-i-deploy)
 
 ## 8. Prevent missing verifications
 
