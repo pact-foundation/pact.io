@@ -101,7 +101,9 @@ What you really need is a “non-HTTP” pact between your consumer and the down
 
 **TL;DR: It depends**
 
-The real question is: how many, and in which environment - test or production? The answer to _this_ question depends on your organisation's risk profile.
+Contract tests replace a certain class of system integration test (the ones you do to make sure that you're using the API correctly and that the API responds the way you expect). They don't replace the tests that ensure that the core business logic of your services is working.
+
+The real question is: how many end-to-end tests do you really need, and in which environment - test or production? The answer to _this_ question depends on your organisation's risk profile.
 
 There is generally a trade off between the amount of confidence you have that your system is bug free, and the speed with which you can respond to any bugs you find. A 10 hour test suite may make you feel secure that all the functionality of your system is working, but it will decrease your ability to put out a new release quickly when a bug is inevitably found.
 
