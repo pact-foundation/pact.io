@@ -85,9 +85,11 @@ The Pact Broker and its clients are open source tools \(though you can get your 
 
 1. Read the Pact Broker [home page](https://github.com/pact-foundation/pact_broker), \(taking note of the various deployment options available to you\) and the [quick start guide](https://github.com/pact-foundation/pact_broker/wiki#quick-start-guide).
 2. Deploy a Pact Broker to a network that has access to both consumer and provider CI systems so it can trigger builds.
-3. Configure your consumer build to publish its pact to the broker \(consult the documentation for your chosen language\)
-4. Configure your provider build to fetch the pact from the broker and publish the verification results \(consult the documentation for your chosen language\)
-5. Configure a [webhook](https://github.com/pact-foundation/pact_broker/wiki/Webhooks) to kick off a provider build when a pact changes.
+3. Configure your consumer build to run the Pact tests and publish its pact to the broker \(consult the documentation for your chosen language\) as part of its main build. Consumer Pact tests typically run after the unit tests.
+4. Configure your provider build to fetch the pact from the broker and publish the verification results \(consult the documentation for your chosen language\) as part of its main build. This would typically happen after the isolated tests, and before deploying to a test environment.
+5. Create a new CI job that performs just the provider pact verification step for a given pact URL \(consult the documentation for your chosen language for how to configure this\). The job should accept the URL of the changed pact in the HTTP request parameters or body.
+6. Configure a [webhook](https://github.com/pact-foundation/pact_broker/wiki/Webhooks) to kick off the provider verification build when a pact changes, and use [webhook templates](https://github.com/pact-foundation/pact_broker/blob/master/lib/pact_broker/doc/views/webhooks.markdown#dynamic-variable-substitution
+) to pass the URL of the changed pact to the build.
 
 Useful links:
 
