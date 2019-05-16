@@ -99,8 +99,7 @@ The Pact Broker and its clients are open source tools \(though you can get your 
 ### D. Configure pact to be verified when contract changes
 
 1. Create a new CI job that performs just the provider pact verification step for a given pact URL \(consult the documentation for your chosen language for how to configure this\). The job should accept the URL of the changed pact in the HTTP request parameters or body.
-2. Configure a [webhook](https://github.com/pact-foundation/pact_broker/wiki/Webhooks) to kick off the provider verification build when a pact changes, and use [webhook templates](https://github.com/pact-foundation/pact_broker/blob/master/lib/pact_broker/doc/views/webhooks.markdown#dynamic-variable-substitution
-) to pass the URL of the changed pact to the build.
+2. Configure a [webhook](https://github.com/pact-foundation/pact_broker/wiki/Webhooks) to kick off the provider verification build when a pact changes, and use [webhook templates](https://github.com/pact-foundation/pact_broker/blob/master/lib/pact_broker/doc/views/webhooks.markdown#dynamic-variable-substitution) to pass the URL of the changed pact to the build.
 
 As you have two different builds running the pact verifications (one when the provider changes, one when the contract changes) it is best to use a provider version number that is deterministic (eg. does not include your CI build number) so that a verification from either job is recorded with the same version number. This will help you when it comes to using the `can-i-deploy` tool in step 7. Please read the section on [versioning in the Pact Broker](https://docs.pact.io/getting_started/versioning_in_the_pact_broker) to ensure your version numbers will help you get the most out of your Pact Broker.
 
