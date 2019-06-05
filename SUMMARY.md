@@ -10,6 +10,7 @@
   * [Provider states](getting_started/provider_states.md)
   * [Sharing Pacts with the Pact Broker](getting_started/sharing_pacts.md)
   * [Versioning in the Pact Broker](getting_started/versioning_in_the_pact_broker.md)
+  * [Pending pacts](pending.md)
   * [Local API stubs](getting_started/stubs.md)
   * [What is Pact good for?](getting_started/what_is_pact_good_for.md)
   * [Further reading](getting_started/further_reading.md)
