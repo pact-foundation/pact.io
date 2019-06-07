@@ -33,6 +33,7 @@
   * [Provider](best_practices/provider/README.md)
     * [Using provider states effectively](best_practices/provider/using_provider_states_effectively.md)
   * [Effective Pact Setup Guide](best_practices/pact_nirvana.md)
+* [Feature support](feature_support.md)
 * [FAQ](faq/README.md)
   * [Convince me](faq/convinceme.md)
 * [Getting Help](getting_help.md)
