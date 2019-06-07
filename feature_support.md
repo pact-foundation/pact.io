@@ -21,4 +21,5 @@ There are multiple implementations of Pact, and while we try to keep feature par
 | Run a single interaction when verifying a pact                         | Y        | Y       | Y         | *        | *       | *        | *           | ?       | ?          |
 
 `#` - these implementations wrap the shared "pact-ruby-standalone" executable
+
 `*` - the feature is available in the underlying shared implementation but may not have been exposed in the native "wrapper" code yet. If you are interested in this feature, but cannot see any documentation for it in your implementation, please raise an issue in the relevant repository.
