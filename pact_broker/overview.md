@@ -1,9 +1,11 @@
+# Overview
+
 The Pact Broker is a service that supports contract testing by enabling the exchange of pacts and verification results.
 
 ## How a Continuous Integration machine interacts with a Pact Broker
 
 * The consumer CI build generates the pacts during execution of its isolated tests, and then publishes the generated pacts.
-* The provider CI retrieves the pacts, performs the verification locally, and then publishes the verification results back to the broker. 
+* The provider CI retrieves the pacts, performs the verification locally, and then publishes the verification results back to the broker.
 * Consumer and provider CI deployment builds check with the broker before deploying to ensure the application version they are about deploy will be compatible with the versions of the other applications that are already in that environment.
 
 ## Pacts
@@ -12,7 +14,7 @@ A pact is published using the consumer name, the provider name, and the consumer
 
 ## Pacticipants
 
-`Consumer` and `provider` applications are known as `pacticipants` (a bad pun which the Pact Broker author now regrets.) A `pacticipant` may be both a `consumer` and a `provider`. Pacticipants are automatically created when a pact is published for the first time. 
+`Consumer` and `provider` applications are known as `pacticipants` (a bad pun which the Pact Broker author now regrets.) A `pacticipant` may be both a `consumer` and a `provider`. Pacticipants are automatically created when a pact is published for the first time.
 
 ## Pacticipant versions
 
