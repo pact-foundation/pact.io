@@ -105,7 +105,7 @@ As you have two different builds running the pact verifications (one when the pr
 
 Useful links:
 
-* [Installing a Docker Pact Broker](https://hub.docker.com/r/dius/pact-broker)
+* [Installing a Docker Pact Broker](https://hub.docker.com/r/pactfoundation/pact-broker)
 * [Publishing verification results](https://github.com/pact-foundation/pact_broker/wiki/Provider-verification-results)
 * [Configuring webhooks in the Pact Broker](https://github.com/pact-foundation/pact_broker/wiki/Webhooks)
 * [Adding verification badges to your READMEs](https://github.com/pact-foundation/pact_broker/wiki/Provider-verification-badges)

@@ -113,7 +113,6 @@ Use the HAL browser to view documentation as you browse.
 * Click on the HAL Browser link to have a poke around the API.
 * Click on the book icon under "docs" to view documentation related to a given relation.
 
-
 ## For reals
 
 ### Hosted
@@ -145,7 +144,7 @@ You can use the [Pact Broker Docker image][docker] or [Terraform on AWS][terrafo
 [pact]: https://github.com/pact-foundation/pact-ruby
 [nerf]: https://github.com/pact-foundation/pact_broker/wiki/pact-broker-ci-nerf-gun
 [different-teams]: https://github.com/pact-foundation/pact-ruby/wiki/Using-pact-where-the-consumer-team-is-different-from-the-provider-team
-[docker]: https://hub.docker.com/r/dius/pact-broker
+[docker]: https://hub.docker.com/r/pactfoundation/pact-broker
 [terraform]: https://github.com/nadnerb/terraform-pact-broker
 [hosted]: https://pact.dius.com.au/?utm_source=github&utm_campaign=GITHUB_BROKER&utm_medium=github
 [wiki]: https://github.com/pact-foundation/pact_broker/wiki
