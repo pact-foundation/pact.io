@@ -17,4 +17,5 @@ These workshops walk you through an example problem from start to finish, explor
 * [Javascript](javascript.md)
 * [Go](go.md)
 * [Swift / Objective-C](swift.md)
+* [PHP](php.md)
 
