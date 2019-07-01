@@ -57,7 +57,7 @@
       * [Pacticipants](pact_broker/advanced_topics/pacticipant.md)
       * [Pact diff](pact_broker/advanced_topics/api_docs/pact_diff.md)
     * [UI documentation](pact_broker/advanced_topics/ui_docs/ui_docs.md)
-    * [Troubeshooting](pact_broker/advanced_topics/troubleshooting.md)
+    * [Troubleshooting](pact_broker/advanced_topics/troubleshooting.md)
   * [Administration](pact_broker/administration/administration.md)
     * [Delete resources](pact_broker/administration/delete_resources.md)
   * [Configuration](pact_broker/configuration/configuration.md)
