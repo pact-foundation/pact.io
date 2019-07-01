@@ -29,7 +29,7 @@ Features:
 * Enables an application version to be tagged \(ie. "prod", "feat/customer-preferences"\) to allow repository-like workflows.
 * Provides webhooks to trigger actions when pacts change eg. run provider build, notify a Slack channel.
 * View diffs between Pact versions so you can tell what expectations have changed.
-* [Docker Pact Broker](https://hub.docker.com/r/dius/pact-broker)
+* [Docker Pact Broker](https://hub.docker.com/r/pactfoundation/pact-broker)
 * A [CLI](https://github.com/pact-foundation/pact-ruby-standalone/releases) for encorporating the Pact workflow into your continuous integration process.
 
 Most importantly, the `Pact Broker` allows you to easily decouple the release cycle of your `Consumer` and `Provider`, which is one of the goals of writing microservices in the first place.
