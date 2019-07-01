@@ -1,6 +1,6 @@
 # Set up Checklist
 
-This is a high level check list of things that need to be done when setting up an integration to be tested with Pact using the Pact Broker. As there are many Pact implementations in different languages, you will need to consult the documentation for your language to find out how to implement each step. See [The steps to reaching Pact Nirvana](https://docs.google.com/document/d/e/2PACX-1vRf1kSDccImNipOOm1G-bjcSs-ifbZjf1v54K-dIcq8BLKeFPAAm_bf_p71UKqkRMIx30QWWL-kN8TI/pub) for an in depth explanation of the purpose of each step.
+This is a high level check list of things that need to be done when setting up an integration to be tested with Pact using the Pact Broker. As there are many Pact implementations in different languages, you will need to consult the documentation for your language to find out how to implement each step. See the [Effect Pact Setup Guide](/best_practices/pact_nirvana) for an in depth explanation of the purpose of each step.
 
 ## Basic
 
@@ -8,7 +8,7 @@ This will get you to the stage where your consumer and provider have a pact that
 
 ### Anyone
 
-* [ ] Set up an instance of the [Pact Broker](https://github.com/pact-foundation/pact_broker#for-reals)
+* [ ] Set up an instance of the Pact Broker
 
 ### Consumer team
 
@@ -43,6 +43,6 @@ This set up will ensure that you can only deploy compatible versions of your con
 
 This step should not be necessary if you deploy both consumer and provider at similar and regular intervals, but you may get in to a situation where you're trying to deploy a new version of the consumer to production, but `can-i-deploy` fails because you have never verified the production version of the provider against the latest version of the consumer. To get around this you can either 1. deploy the latest version of the provider (recommended if possible) or 2. check out the production version of the provider codebase, and run the pact verification task against the pact for the consumer version you're trying to deploy.
 
-[can-i-deploy]: https://github.com/pact-foundation/pact_broker/wiki/can-i-deploy
+[can-i-deploy]: /pact_broker/can_i_deploy
 [webhooks]: https://github.com/pact-foundation/pact_broker/wiki/Webhooks
 [tag]: https://github.com/pact-foundation/pact_broker-client#create-version-tag
