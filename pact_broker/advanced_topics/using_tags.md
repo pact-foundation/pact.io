@@ -4,9 +4,9 @@ Tags are simple String values that that belong to pacticipant (application) vers
 
 Pact Broker version tags can be used for multiple purposes.
 
-* Tags can be used to enable you to test consumer and provider `head` and `prod` versions against each other. This allows you to decouple the release cycles of your consumer and provider. Read more about this [here][backwards].
+* Tags can be used to enable you to test consumer and provider `head` and `prod` versions against each other. This allows you to decouple the release cycles of your consumer and provider. Read more about this [here](tags/backwards_compatibility.md).
 
-* Tags can be used to enable you to add new interactions without breaking all the builds. Read more about this [here][feature].
+* Tags can be used to enable you to add new interactions without breaking all the builds. Read more about this [here](tags/new_interactions.md).
 
 Note that the tag is actually placed on the `version` resource, not the `pact` itself (conceptually, you are indicating that that particular version of the application is a "prod" version, or a "feature-xyz" version). The URL structures, however, then allow you to retrieve pacts by the tags on their associated versions.
 
@@ -58,8 +58,6 @@ The provider CI would then be configured to verify the required branches using t
 
 If you release from master, then the production version of the consumer application should be tagged with `prod` as part of the release process. The provider CI should verify the `latest-untagged` and `latest/prod` endpoints described above. You can also [manually tag][feature] pacts with the tag name of your choice to allow you to add in new interactions without breaking the provider CI.
 
-[backwards]: https://github.com/pact-foundation/pact_broker/wiki/How-to-ensure-backwards-compatibility-by-tagging-pacts
-[feature]: https://github.com/pact-foundation/pact_broker/wiki/How-to-add-new-interactions-without-breaking-everything
 [pact-broker-client]: https://github.com/pact-foundation/pact_broker-client
 [pact-broker-client-tag]: https://github.com/pact-foundation/pact_broker-client#create-version-tag
 [can-i-deploy]: https://github.com/pact-foundation/pact_broker/wiki/can-i-deploy
