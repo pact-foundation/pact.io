@@ -59,6 +59,7 @@
     * [UI documentation](pact_broker/advanced_topics/ui_docs/ui_docs.md)
     * [Troubleshooting](pact_broker/advanced_topics/troubleshooting.md)
   * [Administration](pact_broker/administration/administration.md)
+    * [Maintenance](pact_broker/administration/maintenance.md)
     * [Deleting resources](pact_broker/administration/deleting_resources.md)
   * [Configuration](pact_broker/configuration/configuration.md)
   * [Upgrading](pact_broker/upgrading.md)
