@@ -118,7 +118,7 @@ In a hurry? Hate having to run your own infrastructure? Check out the [Hosted Pa
 
 ### Container solutions
 
-You can use the [Pact Broker Docker image][docker] or [Terraform on AWS][terraform]. See the [wiki][reverse-proxy-docs] for instructions on using a reverse proxy with SSL.
+You can use the [Pact Broker Docker image][docker] or [Terraform on AWS][terraform]. See the [wiki](configuration/configuration.md#running-the-broker-behind-a-reverse-proxy) for instructions on using a reverse proxy with SSL.
 
 ### Rolling your own
 
@@ -133,7 +133,7 @@ You can use the [Pact Broker Docker image][docker] or [Terraform on AWS][terrafo
     * example Sequel configuration for mysql `{adapter: "mysql2", database: "pact_broker", username: 'pact_broker', password: 'pact_broker', :encoding => 'utf8'}`
 `
 * Please ensure you use `encoding: 'utf8'` in your Sequel options to avoid encoding issues.
-* For production usage, use a web application server like [Phusion Passenger](https://www.phusionpassenger.com) or [Nginx](http://nginx.org/) to serve the Pact Broker application. You'll need to read up on the documentation for these yourself as it is beyond the scope of this documentation. See the [wiki][reverse-proxy-docs] for instructions on using a reverse proxy with SSL.
+* For production usage, use a web application server like [Phusion Passenger](https://www.phusionpassenger.com) or [Nginx](http://nginx.org/) to serve the Pact Broker application. You'll need to read up on the documentation for these yourself as it is beyond the scope of this documentation. See the [wiki](configuration/configuration.md#running-the-broker-behind-a-reverse-proxy) for instructions on using a reverse proxy with SSL.
 * Ensure the environment variable `RACK_ENV` is set to `production`.
 * Deploy to your location of choice.
 
@@ -145,7 +145,6 @@ You can use the [Pact Broker Docker image][docker] or [Terraform on AWS][terrafo
 [terraform]: https://github.com/nadnerb/terraform-pact-broker
 [hosted]: https://pact.dius.com.au/?utm_source=github&utm_campaign=GITHUB_BROKER&utm_medium=github
 [wiki]: https://github.com/pact-foundation/pact_broker/wiki
-[reverse-proxy-docs]: https://github.com/pact-foundation/pact_broker/wiki/Configuration#running-the-broker-behind-a-reverse-proxy
 [stackoverflow]: http://stackoverflow.com/questions/tagged/pact-broker
 [twitter]: https://twitter.com/pact_up
 [slack]: https://slack.pact.io/
