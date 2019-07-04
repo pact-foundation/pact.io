@@ -144,7 +144,7 @@ Verify a pact by using a URL that you know the latest pact will be made availabl
 
 **Use** `can-i-deploy`**:**
 
-Use the [can-i-deploy](https://github.com/pact-foundation/pact_broker/wiki/Provider-verification-results) feature of the [Pact Broker CLI](https://github.com/pact-foundation/pact_broker). It will give you a definitive answer if the version of your consumer that is being deployed, is compatible with all of its providers.
+Use the [can-i-deploy](../pact_broker/advanced_topics/provider_verification_results.md) feature of the [Pact Broker CLI](https://github.com/pact-foundation/pact_broker). It will give you a definitive answer if the version of your consumer that is being deployed, is compatible with all of its providers.
 
 For this to work you need to...
 
@@ -158,7 +158,7 @@ Some other approaches to consider are:
 
 **Use Pact Broker Webhooks:**
 
-Trigger a build or Slack notification using [webhooks](https://github.com/pact-foundation/pact_broker/blob/master/lib/pact_broker/doc/views/webhooks.markdown) on the Provider as soon as a changed contract is submitted to the server.
+Trigger a build or Slack notification using [webhooks](../pact_broker/advanced_topics/api_docs/webhooks.md) on the Provider as soon as a changed contract is submitted to the server.
 
 **Collaboration**
 
@@ -182,7 +182,7 @@ When Pact reads the pact files for verification on the Provider side, it needs t
 * If using the JVM, you can use [request filters](https://github.com/DiUS/pact-jvm/tree/master/pact-jvm-provider-gradle#modifying-the-requests-before-they-are-sent) to modify the request headers before they are sent to the Provider.
 * Configure a relaxed OAuth2 validation service on the Provider that accepts any valid headers, so long as the match the spec \(e.g. `Authorization` header\). You might leverage the [provider states](http://docs.pact.io/documentation/provider_states.html) feature for this.
 * Use Ruby's `Timecop` or similar library to manipulate the runtime clock.
-* Use the `--custom-provider-header` option if you are using one of the implementations that wraps the Ruby standalone \(Javascript, Go, Python, .NET\). 
+* Use the `--custom-provider-header` option if you are using one of the implementations that wraps the Ruby standalone \(Javascript, Go, Python, .NET\).
 
 _NOTE_: Any option that modifies the request before sending to the running provider increases your chances of missing a key part of the interaction and therefore puts you at risk. Use carefully.
 

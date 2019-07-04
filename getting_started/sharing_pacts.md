@@ -38,7 +38,7 @@ Most importantly, the `Pact Broker` allows you to easily decouple the release cy
 
 Read the pages in the Pact Broker [quick start guide](https://github.com/pact-foundation/pact_broker/wiki#quick-start-guide) to get up and running with the basics. You'll find a helpful checklist of changes you need to make to integrate Pact into your CI pipeline, as well as links to more detailed information on Broker usage.
 
-You can find all the documentation for the `Pact Broker` in the [Pact Broker wiki](https://github.com/pact-foundation/pact_broker/wiki).
+You can find all the documentation for the `Pact Broker` in the [Pact Broker wiki](../pact_broker/README.md).
 
 Our sponsor [DiUS](https://www.dius.com.au) has kindly provided a [free hosted broker](https://pact.dius.com.au) to get you started quickly.
 
@@ -94,13 +94,13 @@ $Headers = @{
 $res = Invoke-WebRequest -Uri "https://test.pact.dius.com.au/pacts/provider/Animal%20Profile%20Service/consumer/Matching%20Service/version/1.0.0" -Headers $Headers -Method Put -InFile .\matching_service-animal_profile_service.json -ContentType "application/json"
 ```
 
-See the [full API](https://github.com/pact-foundation/pact_broker/wiki/Publishing-and-retrieving-pacts).
+See the [full API](../pact_broker/publishing_and_retrieving_pacts.md).
 
 * [Provider verification](https://github.com/SEEK-Jobs/pact-net#service-provider)
 
 **Manual via HTTP**
 
-* See the [API definition](https://github.com/pact-foundation/pact_broker/wiki/Publishing-and-retrieving-pacts) with `cURL` examples
+* See the [API definition](../pact_broker/publishing_and_retrieving_pacts.md) with `cURL` examples
 
 For more information head over to the Pact Broker [website](https://github.com/pact-foundation/pact_broker).
 

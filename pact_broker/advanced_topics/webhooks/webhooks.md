@@ -1,6 +1,6 @@
 #Webhooks
 
-Webhooks allow you to trigger an HTTP request when a pact is changed, a pact is published, or a verification is published. The most common use case for webhooks is to trigger a provider build every time a pact changes, and to trigger a consumer build every time a verification is published. 
+Webhooks allow you to trigger an HTTP request when a pact is changed, a pact is published, or a verification is published. The most common use case for webhooks is to trigger a provider build every time a pact changes, and to trigger a consumer build every time a verification is published.
 
 Webhooks can be used in conjunction with the [can-i-deploy][can-i-deploy] tool (a CLI that allows you to easily check the verification status of your pacts), to allow you to fully automate the CI/CD process for all the applications that use the Pact Broker, ensuring both sides of the contract are fulfilled before deploying.
 
@@ -38,7 +38,7 @@ If your consumer and provider builds are both within the same private network, y
 * `Consumer deploy job` - deploys consumer
 
 ### Provider CI
-* `Pact verification job` - runs pact verification tests, and publishes the verification results back to the broker. If your provider tests run quickly, you may choose to reuse your "normal" provider CI job, or you may choose to create a separate CI job that just executes the pact verifications. To speed things up even more, you can configure a custom pact verification task for your webhook, so that only the pact that has changed is verified. To do this, you can use webhook [template parameters][dynamic-variable-substitution] to pass the URL of the changed pact through to the CI, which can then pass it in to the custom verification task. See the pact verification configuration documentation for your language.
+* `Pact verification job` - runs pact verification tests, and publishes the verification results back to the broker. If your provider tests run quickly, you may choose to reuse your "normal" provider CI job, or you may choose to create a separate CI job that just executes the pact verifications. To speed things up even more, you can configure a custom pact verification task for your webhook, so that only the pact that has changed is verified. To do this, you can use webhook [template parameters](../api_docs/webhooks.md#dynamic-variable-substitution) to pass the URL of the changed pact through to the CI, which can then pass it in to the custom verification task. See the pact verification configuration documentation for your language.
 
 * `Provider test job` - your normal provider pipeline. Runs unit tests, runs pact verification tests, publishes verification results. Typically, the pacts with `dev` and the `prod` tags would be verified during this job.
 
@@ -47,12 +47,10 @@ If your consumer and provider builds are both within the same private network, y
 * `provider_verification_published` webhook - triggers `Consumer pact check job`. This webhook will be triggered every time a verification is published. The `can-i-deploy` tool will need to be used in conjunction with a query to the state of your own infrastructure to let you decide whether or not you need to deploy the consumer. ie. the provider may verify the same version of the pact multiple times, invoking the webhook each time, but you only want to deploy a certain version of your consumer once.
 
 # Related resources
-* [[Debugging webhooks]]
-* [Webhook API documentation][webhook-api-docs] - note that there is not yet a UI for creating webhooks. If you're interested in creating one, contact us on the Pact Broker [gitter][gitter] channel.
+* [Debugging webhooks](debugging_webhooks.md)
+* [Webhook API documentation](../api_docs/webhooks.md) - note that there is not yet a UI for creating webhooks. If you're interested in creating one, contact us on the Pact Broker [gitter][gitter] channel.
 * [can-i-deploy documentation][can-i-deploy] - Documentation for the Pact Broker `can-i-deploy` CLI, which allows you to retrieve the verification results and determine whether your application is safe to deploy.
-* [[Webhook template library]] - a library of useful webhook templates
+* [Webhook template library](template_lib.md) - a library of useful webhook templates
 
 [can-i-deploy]: https://github.com/pact-foundation/pact_broker-client#can-i-deploy
 [gitter]: https://gitter.im/pact-foundation/pact_broker
-[webhook-api-docs]: https://github.com/pact-foundation/pact_broker/blob/master/lib/pact_broker/doc/views/webhooks.markdown
-[dynamic-variable-substitution]: https://github.com/pact-foundation/pact_broker/blob/master/lib/pact_broker/doc/views/webhooks.markdown#dynamic-variable-substitution

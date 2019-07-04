@@ -28,11 +28,11 @@ Bad examples:
 
 If you _do_ use a build number in your version number (eg. `major.minor.<buildnumber>`) then you can ensure your version number corresponds to a known commit by creating a git tag with the version number for every build. This is good practice anyway, and it means you have a way to check out that particular version of the provider if you want to [test the "matrix"][testing-the-matrix].
 
-One of the advantages of using the git sha is that you can report the pact verification status back to your repository as a [commit status](https://github.com/pact-foundation/pact_broker/wiki/Webhook-template-library#github---publish-commit-status).
+One of the advantages of using the git sha is that you can report the pact verification status back to your repository as a [commit status](advanced_topics/webhooks/template_lib.md#github---publish-commit-status).
 
 ## Sorting
 
-_Note that there is an outstanding [bug](https://github.com/pact-foundation/pact_broker/issues/175) in relation to version number parsing, so please configure your broker to [order versions by date][order-versions-by-date]._
+_Note that there is an outstanding [bug](https://github.com/pact-foundation/pact_broker/issues/175) in relation to version number parsing, so please configure your broker to [order versions by date](configuration/configuration.md#ordering-versions-by-date)._
 
 By default, the broker expects semantic versions (which are now not recommended unless they include the repository reference as metadata). When sorting by date, the broker sorts by the creation date of the pacticipant version.
 
@@ -40,5 +40,4 @@ Note that pacts are sorted by the order of their pacticipant version, not by the
 
 The only time that there is a difference in behaviour between semantic ordering and date ordering is if you published a semantic version out of order. For example, if you checked out an older version of your codebase (eg. for [testing the matrix][testing-the-matrix]) and published a pact or verification from that older codebase and it somehow created a version number that didn't already exist in the broker (perhaps because you put a build number in the version number), its `created_at` date would be later than any of the other versions, and it would then be considered the "latest".
 
-[order-versions-by-date]: https://github.com/pact-foundation/pact_broker/wiki/Configuration#ordering-versions-by-date
 [testing-the-matrix]: http://rea.tech/enter-the-pact-matrix-or-how-to-decouple-the-release-cycles-of-your-microservices/
