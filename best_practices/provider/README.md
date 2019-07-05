@@ -27,11 +27,11 @@ See [this gist](https://gist.github.com/bethesque/43eef1bf47afea4445c8b8bdebf28d
 
 ### Publish verification results to the Pact Broker
 
-As of version 2.0+ of the Pact Broker, and 1.11.1+ of the Pact Ruby implementation, provider verification results can be [published](https://github.com/pact-foundation/pact_broker/wiki/Provider-verification-results) back to the broker, and will be displayed on the index page. The consumer team should consult the verification status on the index page before deploying.
+As of version 2.0+ of the Pact Broker, and 1.11.1+ of the Pact Ruby implementation, provider verification results can be [published](../../pact_broker/advanced_topics/provider_verification_results.md) back to the broker, and will be displayed on the index page. The consumer team should consult the verification status on the index page before deploying.
 
 One catch - it is only safe to deploy the consumer if it was verified against the _production_ version of the provider.
 
 ## Use `can-i-deploy`
 
-Use the [can-i-deploy](https://github.com/pact-foundation/pact_broker/wiki/Provider-verification-results) feature of the [Pact Broker CLI](https://github.com/pact-foundation/pact_broker-client#can-i-deploy). It will give you a definitive answer if the version of your provider that is being deployed, is compatible with all of its known consumers.
+Use the [can-i-deploy](../../pact_broker/advanced_topics/provider_verification_results.md) feature of the [Pact Broker CLI](https://github.com/pact-foundation/pact_broker-client#can-i-deploy). It will give you a definitive answer if the version of your provider that is being deployed, is compatible with all of its known consumers.
 

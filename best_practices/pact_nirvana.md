@@ -11,7 +11,7 @@ Although many guides assume a greenfields project with no existing code, this do
 Before you read this document, you should:
 
 * have a basic understanding of the concepts of both [consumer driven contracts](https://martinfowler.com/articles/consumerDrivenContracts.html) and Pact,
-* have read the [Pact Broker Overview](https://github.com/pact-foundation/pact_broker/wiki/Overview)
+* have read the [Pact Broker Overview](../pact_broker/overview.md)
 * have read the section on [Pacticipant version numbers](../getting_started/versioning_in_the_pact_broker.md)
 
 ### How to use this document
@@ -85,7 +85,7 @@ The Pact Broker and its clients are open source tools \(though you can get your 
 
 ### A. Set up a Pact Broker
 
-1. Read the Pact Broker [home page](https://github.com/pact-foundation/pact_broker), \(taking note of the various deployment options available to you\) and the [quick start guide](https://github.com/pact-foundation/pact_broker/wiki#quick-start-guide).
+1. Read the Pact Broker [home page](https://github.com/pact-foundation/pact_broker), \(taking note of the various deployment options available to you\) and the [quick start guide](../pact_broker/README.md).
 2. Deploy a Pact Broker to a network that has access to both consumer and provider CI systems so it can trigger builds.
 
 ### B. Configure pact publication
@@ -99,16 +99,16 @@ The Pact Broker and its clients are open source tools \(though you can get your 
 ### D. Configure pact to be verified when contract changes
 
 1. Create a new CI job that performs just the provider pact verification step for a given pact URL \(consult the documentation for your chosen language for how to configure this\). The job should accept the URL of the changed pact in the HTTP request parameters or body.
-2. Configure a [webhook](https://github.com/pact-foundation/pact_broker/wiki/Webhooks) to kick off the provider verification build when a pact changes, and use [webhook templates](https://github.com/pact-foundation/pact_broker/blob/master/lib/pact_broker/doc/views/webhooks.markdown#dynamic-variable-substitution) to pass the URL of the changed pact to the build.
+2. Configure a [webhook](../pact_broker/advanced_topics/webhooks/webhooks.md) to kick off the provider verification build when a pact changes, and use [webhook templates](https://github.com/pact-foundation/pact_broker/blob/master/lib/pact_broker/doc/views/webhooks.markdown#dynamic-variable-substitution) to pass the URL of the changed pact to the build.
 
 As you have two different builds running the pact verifications (one when the provider changes, one when the contract changes) it is best to use a provider version number that is deterministic (eg. does not include your CI build number) so that a verification from either job is recorded with the same version number. This will help you when it comes to using the `can-i-deploy` tool in step 7. Please read the section on [versioning in the Pact Broker](https://docs.pact.io/getting_started/versioning_in_the_pact_broker) to ensure your version numbers will help you get the most out of your Pact Broker.
 
 Useful links:
 
 * [Installing a Docker Pact Broker](https://hub.docker.com/r/pactfoundation/pact-broker)
-* [Publishing verification results](https://github.com/pact-foundation/pact_broker/wiki/Provider-verification-results)
-* [Configuring webhooks in the Pact Broker](https://github.com/pact-foundation/pact_broker/wiki/Webhooks)
-* [Adding verification badges to your READMEs](https://github.com/pact-foundation/pact_broker/wiki/Provider-verification-badges)
+* [Publishing verification results](../pact_broker/advanced_topics/provider_verification_results.md)
+* [Configuring webhooks in the Pact Broker](../pact_broker/advanced_topics/webhooks/webhooks.md)
+* [Adding verification badges to your READMEs](../pact_broker/advanced_topics/provider_verification_badges.md)
 * [Versioning in the Pact Broker](https://docs.pact.io/getting_started/versioning_in_the_pact_broker)
 
 ## 5. Allow contracts to change without breaking your builds
