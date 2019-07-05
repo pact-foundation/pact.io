@@ -28,7 +28,7 @@ Your Pact provider library will allow you to set the "provider version tags" tha
 
 _Note: making use of this feature is recommended for experienced Pact users, however, if you are just starting with Pact, you can skip it for now._
 
-When you deploy an application that uses Pact to a given environment (eg `test`, `prod`) then you should tag the relevant pacticipant version with the name of the stage using the [create version tag][pact-broker-client-tag] command from the [Pact Broker client][pact-broker-client]. This allows you to use the [can-i-deploy][can-i-deploy] tool to ensure that other applications that are deployed to the same environment can check to make sure they're compatible with the version you just deployed.
+When you deploy an application that uses Pact to a given environment (eg `test`, `prod`) then you should tag the relevant pacticipant version with the name of the stage using the [create version tag][pact-broker-client-tag] command from the [Pact Broker client][pact-broker-client]. This allows you to use the [can-i-deploy](../can_i_deploy.md) tool to ensure that other applications that are deployed to the same environment can check to make sure they're compatible with the version you just deployed.
 
 ## Retrieving pacts
 
@@ -60,4 +60,3 @@ If you release from master, then the production version of the consumer applicat
 
 [pact-broker-client]: https://github.com/pact-foundation/pact_broker-client
 [pact-broker-client-tag]: https://github.com/pact-foundation/pact_broker-client#create-version-tag
-[can-i-deploy]: https://github.com/pact-foundation/pact_broker/wiki/can-i-deploy
