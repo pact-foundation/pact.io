@@ -31,8 +31,8 @@ Pact is most valuable for designing and testing integrations where you \(or your
 * Testing APIs where the number of consumers is so great that direct relationships cannot be maintained between the consumer teams and the provider team.
 * Performance and load testing.
 * Functional testing of the provider - that is what the provider’s own tests should do. Pact is about checking the contents and format of requests and responses.
-* Situations where you cannot load data into the provider without using the API that you’re actually testing \(eg. public APIs\). Why?
-* Testing “pass through” APIs, where the provider merely passes on the request contents to a downstream service without validating them. Why?
+* Situations where you cannot load data into the provider without using the API that you’re actually testing \(eg. public APIs\). [Why?](https://github.com/pact-foundation/pact-ruby/wiki/Why-Pact-may-not-be-the-best-tool-for-testing-public-APIs)
+* Testing “pass through” APIs, where the provider merely passes on the request contents to a downstream service without validating them. [Why?](https://github.com/pact-foundation/pact-ruby/wiki/Why-Pact-may-not-be-the-best-tool-for-testing-pass-through-APIs)
 
 ### Who would typically implement Pact?
 
