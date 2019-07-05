@@ -144,7 +144,6 @@ You can use the [Pact Broker Docker image][docker] or [Terraform on AWS][terrafo
 [docker]: https://hub.docker.com/r/pactfoundation/pact-broker
 [terraform]: https://github.com/nadnerb/terraform-pact-broker
 [hosted]: https://pact.dius.com.au/?utm_source=github&utm_campaign=GITHUB_BROKER&utm_medium=github
-[wiki]: https://github.com/pact-foundation/pact_broker/wiki
 [stackoverflow]: http://stackoverflow.com/questions/tagged/pact-broker
 [twitter]: https://twitter.com/pact_up
 [slack]: https://slack.pact.io/
