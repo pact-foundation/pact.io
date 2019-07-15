@@ -124,20 +124,20 @@ One of the complications introduced by the Pact workflow is that new interaction
 
 “Tagging” application versions in the broker allows you to introduce new expectations to a Pact without breaking your provider builds. This is an approach similar to git feature branches, where you can keep an unbreaking main line of development, while adding new, breaking interactions on the side.
 
-To achieve this, when a pact is published, the associated pacticipant version should be tagged with an identifier that will be used by the provider to differentiate between the “main line” safe pacts \(eg. tagged “master”\) and the potentially breaking pacts \(eg. tagged “feat-new-foobar”\).
+To achieve an unbreaking mainline, when a pact is published, the associated pacticipant version should be tagged with an identifier that will be used by the provider to differentiate between the “main line” safe pacts \(eg. tagged “master”\) and the potentially breaking pacts \(eg. tagged “feat-new-foobar”\).
 
-To keep a green build in your provider’s CI, the CI should verify the pact for the latest version tagged with “master”, rather than verifying the latest overall pact.
+To keep a green build, in your provider’s CI only verify the pact for the latest version tagged with “master”, rather than verifying the latest overall pact.
 
-If you use feature branches for your consumer development, it is recommended to tag the pacticipant version with the name of the branch. If you use feature toggles, the tag could be the name of the feature toggle.
+If you use feature branches for your consumer development, it is recommended to tag the pacticipant version with the name of the branch. If you use feature toggles, the tag could be the name of the feature toggle. The [Pact Broker CLI](https://github.com/pact-foundation/pact_broker-client#create-version-tag) tool can be used to create tags easily.
 
-1. Configure a tag name to be used for every consumer build that publishes a pact \(again, see your Pact language docs\). The recommended default is to dynamically determine and use the name of your git/svn branch. If this doesn’t work for you, then you could hardcode it to something like “master”.
-2. Change the pact that is being verified in the provider configuration from being the pact for the latest version to the pact for the latest master version \(or whatever tag name you have chosen for your main line of development in step 1\).
-3. Now, when you want to add new expectations to a pact, do it on a feature branch of your codebase \(or with a feature toggle\). If you are dynamically using the branch name as the broker tag, you don’t need to do anything further, however, if you have hardcoded your tag name or are using a feature toggle, you’ll need to manually set the tag to an appropriate value.
-4. Use the “feature pact” as a starting point to discuss the desired new features with the provider team. Remember section 1 on “Talking”!
-5. Once the interface has been agreed on, implement the new functionality in the provider using the feature pact, verifying it locally rather than in the CI, until the new expectations are passing. You may wish to use branches or feature toggles to keep your provider builds green.
-6. Once the feature pact has been verified successfully, and that provider code is in master, the consumer can merge in their own changes to master.
+1. Configure a tag name to be used for every consumer build that publishes a pact \(again, see your Pact language docs\). The recommended default is to dynamically determine and use the name of your git/svn branch. If this doesn’t work for you, then you could hardcode it to something like “master” or “stable”.
+2. Change the pact that is being verified in the provider configuration from being the pact for the latest version to the pact for the latest master version \(or whatever tag name you have chosen for your main line of development in step 1\).  This allows your CI to always verify against the latest “master”, keeping the provider build green.
+3. Now, when you want to add new expectations to a pact, do it on a feature branch of your consumer codebase \(or with a feature toggle\). If you are dynamically using the branch name as the broker tag, you don’t need to do anything further. However, if you have hardcoded your tag name or are using a feature toggle, you’ll need to manually set the tag to an appropriate value.
+4. Use the new “feature pact” as a starting point to discuss the desired new features with the provider team. Remember section 1 on “Talking”!
+5. Once the interface has been agreed on, implement the new functionality in the provider using the feature pact and verify it locally rather than in the CI until the new expectations are passing. Your provider should still be verifying against “master” - so any new changes will not cause the build to break. 
+6. Once the feature pact has been locally verified and you have committed the new provider code to master only then can the consumer  merge in their own changes to master. To reiterate: verify feature pact locally in the provider, add the new code to the provider, merge the consumer changes after the provider.
 
-In addition to some of the language-specific Pact tools \(eg Grade\), tagging can be done with the [pact broker CLI](https://github.com/pact-foundation/pact_broker-client#create-version-tag).
+In addition to some of the language-specific Pact tools \(eg Grade\), tagging can be done with the [Pact Broker CLI](https://github.com/pact-foundation/pact_broker-client#create-version-tag).
 
 Useful link:
 
