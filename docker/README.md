@@ -17,7 +17,7 @@ Images from the `"pactfoundation"` [repository] can be considered official:
 
 Many teams choose to use Alpine Linux due to its tiny footprint, and smaller security surface area.
 
-For Pact implementations that leverage the underlying [Ruby binary](/feature_support) for their implementation, you'll need to ensure the following dependencies are met:
+For Pact implementations that leverage the underlying [Ruby binary](feature_support.md) for their implementation, you'll need to ensure the following dependencies are met:
 
 - Bash (it's not enough to have Ash)
 - Standard CAs for TLS network communication
