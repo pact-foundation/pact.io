@@ -55,21 +55,21 @@ For Mac, Windows and Linux. Allows you to integrate the contracts workflow into 
 
 **Pact JVM - Gradle**
 
-* [Publishing ](https://github.com/DiUS/pact-jvm/tree/master/pact-jvm-provider-gradle#publishing-pact-files-to-a-pact-broker-version-227)
-* [Provider verification](https://github.com/DiUS/pact-jvm/tree/master/pact-jvm-provider-gradle#verifying-pact-files-from-a-pact-broker-version-311231)
+* [Publishing ](https://github.com/DiUS/pact-jvm/tree/master/provider/pact-jvm-provider-gradle#publishing-pact-files-to-a-pact-broker)
+* [Provider verification](https://github.com/DiUS/pact-jvm/tree/master/provider/pact-jvm-provider-gradle#verifying-pact-files-from-a-pact-broker)
 
 **Pact JVM - JUnit**
 
-* [Provider verification](https://github.com/DiUS/pact-jvm/tree/master/pact-jvm-provider-junit#download-pacts-from-a-pact-broker)
+* [Provider verification](https://github.com/DiUS/pact-jvm/tree/master/provider/pact-jvm-provider-junit#download-pacts-from-a-pact-broker)
 
 **Pact JVM - SBT**
 
-* [Provider verification](https://github.com/DiUS/pact-jvm/tree/master/pact-jvm-provider-sbt#verifying-pact-files-from-a-pact-broker)
+* [Provider verification](https://github.com/DiUS/pact-jvm/tree/master/provider/pact-jvm-provider-sbt#verifying-pact-files-from-a-pact-broker)
 
 **Pact JVM - Maven**
 
-* [Publishing](https://github.com/DiUS/pact-jvm/tree/master/pact-jvm-provider-maven#publishing-pact-files-to-a-pact-broker-version-320)
-* [Provider verification](https://github.com/DiUS/pact-jvm/tree/master/pact-jvm-provider-maven#verifying-pact-files-from-a-pact-broker-version-311231)
+* [Publishing](https://github.com/DiUS/pact-jvm/tree/master/provider/pact-jvm-provider-maven#publishing-pact-files-to-a-pact-broker)
+* [Provider verification](https://github.com/DiUS/pact-jvm/tree/master/provider/pact-jvm-provider-maven#verifying-pact-files-from-a-pact-broker)
 
 **Golang**
 
