@@ -53,5 +53,5 @@ If, for performance reasons, you don’t want to include the updated resource in
 
 ## Use `can-i-deploy`
 
-Use the [can-i-deploy](https://github.com/pact-foundation/pact_broker/wiki/Provider-verification-results) feature of the [Pact Broker CLI](https://github.com/pact-foundation/pact_broker-client#can-i-deploy). It will give you a definitive answer if the version of your consumer that is being deployed, is compatible with all of its providers.
+Use the [can-i-deploy](../../pact_broker/advanced_topics/provider_verification_results.md) feature of the [Pact Broker CLI](https://github.com/pact-foundation/pact_broker-client#can-i-deploy). It will give you a definitive answer if the version of your consumer that is being deployed, is compatible with all of its providers.
 

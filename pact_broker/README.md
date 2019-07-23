@@ -139,12 +139,11 @@ You can use the [Pact Broker Docker image][docker] or [Terraform on AWS][terrafo
 
 [decouple]: http://techblog.realestate.com.au/enter-the-pact-matrix-or-how-to-decouple-the-release-cycles-of-your-microservices/
 [pact]: https://github.com/pact-foundation/pact-ruby
-[nerf]: https://github.com/pact-foundation/pact_broker/wiki/pact-broker-ci-nerf-gun
+[nerf]: nerf.md
 [different-teams]: https://github.com/pact-foundation/pact-ruby/wiki/Using-pact-where-the-consumer-team-is-different-from-the-provider-team
 [docker]: https://hub.docker.com/r/pactfoundation/pact-broker
 [terraform]: https://github.com/nadnerb/terraform-pact-broker
 [hosted]: https://pact.dius.com.au/?utm_source=github&utm_campaign=GITHUB_BROKER&utm_medium=github
-[wiki]: https://github.com/pact-foundation/pact_broker/wiki
 [stackoverflow]: http://stackoverflow.com/questions/tagged/pact-broker
 [twitter]: https://twitter.com/pact_up
 [slack]: https://slack.pact.io/

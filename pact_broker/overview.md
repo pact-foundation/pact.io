@@ -18,7 +18,7 @@ A pact is published using the consumer name, the provider name, and the consumer
 
 ## Pacticipant versions
 
-A pacticipant has many pacticipant versions (ie. application versions). A version is identified by its [version number](pacticipant_version_numbers.md) which would typically be a git sha (or subversion revision number), or a semantic version number with a repository reference as metadata. A pacticipant version resource will be automatically created every time a pact or a verification result is published (if it did not already exist). A pacticipant version will have a pact associated with it if it is a consumer version, and it will have a verification result it if is a provider version.
+A pacticipant has many pacticipant versions (ie. application versions). A version is identified by its [version number][pacticipant-version-numbers] which would typically be a git sha (or subversion revision number), or a semantic version number with a repository reference as metadata. A pacticipant version resource will be automatically created every time a pact or a verification result is published (if it did not already exist). A pacticipant version will have a pact associated with it if it is a consumer version, and it will have a verification result it if is a provider version.
 
 ## Verifications
 
@@ -65,4 +65,5 @@ The HAL specification also provides a built in method for providing documentatio
 * Note that if you publish a pact, the consumer, provider and consumer version resources are automatically created, however, if you delete a pact, they are not automatically deleted, so you may have orphan data lying around that will give you inconsistent results when you query the broker.
 
 [can-i-deploy]: https://github.com/pact-foundation/pact_broker-client#can-i-deploy
+[pacticipant-version-numbers]: pacticipant_version_numbers.md
 
