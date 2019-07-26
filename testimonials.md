@@ -12,6 +12,7 @@ Here are some of the companies who use Pact to make testing their microservices 
 | ![lastminute.com](.gitbook/assets/lastminute.png)                | ![Cloudhealth Tech](.gitbook/assets/cloudhealth-tech%20%281%29.png) | ![Repairly](.gitbook/assets/repairly%20%281%29.png)          |
 | ![https://www.rapid7.com/](.gitbook/assets/rapid7%20%281%29.png) | ![ASOS](.gitbook/assets/asos%20%281%29.png)                         | ![Simple](.gitbook/assets/simplehq.png)                      |
 | ![ITHAKA Logo](.gitbook/assets/ithaka.png)                       | ![rightmove](.gitbook/assets/rightmove-logo.png)                    | ![treatwell](.gitbook/assets/treatwell-logo.png)             |
+| ![Novatec Consulting Logo](.gitbook/assets/novatec.jpg)          |
 
 Not on this list? [Contact us](https://twitter.com/pact_up)!
 
