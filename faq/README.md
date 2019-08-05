@@ -42,7 +42,7 @@ The consumer team is responsible for implementing the Pact tests in the consumer
 
 ### Can I generate my pact file from something like Swagger?
 
-Contract testing allows you to take an integration test that gives you slow feedback and replace it with two sets of "unit" tests that give you fast feedback - one set for the consumer, using a mock provider, and one set for the provider, using a "mock consumer". The pact file is the artifact that keeps these two sets of tests in sync. To generate the pact file from anything other than the consumer tests (or to hand code it) would be to defeat the purpose of this type of contract testing. The reason the pact file exists is to ensure the tests in both projects are kept in sync - it is not an end in itself. Generating a pact file from something like a Swagger document would be like marking your own exam, and would do nothing to ensure that the code in the consumer and provider are compatibile with each other.
+Contract testing allows you to take an integration test that gives you slow feedback and replace it with two sets of "unit" tests that give you fast feedback - one set for the consumer, using a mock provider, and one set for the provider, using a "mock consumer". The pact file is the artifact that keeps these two sets of tests in sync. To generate the pact file from anything other than the consumer tests \(or to hand code it\) would be to defeat the purpose of this type of contract testing. The reason the pact file exists is to ensure the tests in both projects are kept in sync - it is not an end in itself. Generating a pact file from something like a Swagger document would be like marking your own exam, and would do nothing to ensure that the code in the consumer and provider are compatibile with each other.
 
 ### Why doesn't Pact use JSON Schema?
 
@@ -101,7 +101,7 @@ What you really need is a “non-HTTP” pact between your consumer and the down
 
 **TL;DR: It depends**
 
-Contract tests replace a certain class of system integration test (the ones you do to make sure that you're using the API correctly and that the API responds the way you expect). They don't replace the tests that ensure that the core business logic of your services is working.
+Contract tests replace a certain class of system integration test \(the ones you do to make sure that you're using the API correctly and that the API responds the way you expect\). They don't replace the tests that ensure that the core business logic of your services is working.
 
 The real question is: how many end-to-end tests do you really need, and in which environment - test or production? The answer to _this_ question depends on your organisation's risk profile.
 
@@ -178,26 +178,26 @@ When Pact reads the pact files for verification on the Provider side, it needs t
 
 **Here are some options**
 
-- Create a Mock authentication service used during testing - this gives you the best control.
-- If using the JVM, you can use [request filters](https://github.com/DiUS/pact-jvm/tree/master/pact-jvm-provider-gradle#modifying-the-requests-before-they-are-sent) to modify the request headers before they are sent to the Provider.
-- If using Pact JS you can use [request filters](https://github.com/pact-foundation/pact-js#modify-requests-prior-to-verification-request-filters)
-- If using Pact Go you can use [request filters](https://github.com/pact-foundation/pact-go#request-filtering)
-- Configure a relaxed OAuth2 validation service on the Provider that accepts any valid headers, so long as the match the spec \(e.g. `Authorization` header\). You might leverage the [provider states](http://docs.pact.io/documentation/provider_states.html) feature for this.
-- Use Ruby's `Timecop` or similar library to manipulate the runtime clock.
-- Use the `--custom-provider-header` option if you are using one of the implementations that wraps the Ruby standalone and there are no other options \(Python, .NET\).
+* Create a Mock authentication service used during testing - this gives you the best control.
+* If using the JVM, you can use [request filters](https://github.com/DiUS/pact-jvm/tree/master/pact-jvm-provider-gradle#modifying-the-requests-before-they-are-sent) to modify the request headers before they are sent to the Provider.
+* If using Pact JS you can use [request filters](https://github.com/pact-foundation/pact-js#modify-requests-prior-to-verification-request-filters)
+* If using Pact Go you can use [request filters](https://github.com/pact-foundation/pact-go#request-filtering)
+* Configure a relaxed OAuth2 validation service on the Provider that accepts any valid headers, so long as the match the spec \(e.g. `Authorization` header\). You might leverage the [provider states](http://docs.pact.io/documentation/provider_states.html) feature for this.
+* Use Ruby's `Timecop` or similar library to manipulate the runtime clock.
+* Use the `--custom-provider-header` option if you are using one of the implementations that wraps the Ruby standalone and there are no other options \(Python, .NET\).
 
 _NOTE_: Any option that modifies the request before sending to the running provider increases your chances of missing a key part of the interaction and therefore puts you at risk. Use carefully.
 
 See the following links for some further discussion:
 
-- [https://github.com/pact-foundation/pact-ruby/issues/49\#issuecomment-65346357](https://github.com/pact-foundation/pact-ruby/issues/49#issuecomment-65346357)
-- [https://groups.google.com/forum/\#!searchin/pact-support/oauth\|sort:relevance/pact-support/zTnDlOgdYhU/tq_Yx8MnIgAJ](https://groups.google.com/forum/#!searchin/pact-support/oauth|sort:relevance/pact-support/zTnDlOgdYhU/tq_Yx8MnIgAJ)
-- [https://groups.google.com/forum/\#!topic/pact-support/tSyKZMxsECk](https://groups.google.com/forum/#!topic/pact-support/tSyKZMxsECk)
-- [http://stackoverflow.com/questions/40777493/how-do-i-verify-pacts-against-an-api-that-requires-an-auth-token/40794800?noredirect=1\#comment69346814_40794800](http://stackoverflow.com/questions/40777493/how-do-i-verify-pacts-against-an-api-that-requires-an-auth-token/40794800?noredirect=1#comment69346814_40794800)
+* [https://github.com/pact-foundation/pact-ruby/issues/49\#issuecomment-65346357](https://github.com/pact-foundation/pact-ruby/issues/49#issuecomment-65346357)
+* [https://groups.google.com/forum/\#!searchin/pact-support/oauth\|sort:relevance/pact-support/zTnDlOgdYhU/tq\_Yx8MnIgAJ](https://groups.google.com/forum/#!searchin/pact-support/oauth|sort:relevance/pact-support/zTnDlOgdYhU/tq_Yx8MnIgAJ)
+* [https://groups.google.com/forum/\#!topic/pact-support/tSyKZMxsECk](https://groups.google.com/forum/#!topic/pact-support/tSyKZMxsECk)
+* [http://stackoverflow.com/questions/40777493/how-do-i-verify-pacts-against-an-api-that-requires-an-auth-token/40794800?noredirect=1\#comment69346814\_40794800](http://stackoverflow.com/questions/40777493/how-do-i-verify-pacts-against-an-api-that-requires-an-auth-token/40794800?noredirect=1#comment69346814_40794800)
 
 ### How do I test auth cookies?
 
-You have a Provider that sends a `Set-Cookie` header, which is a core part of the contract, and your consumer (usually a website) needs to send back a `Cookie: ...` header to authenticate.
+You have a Provider that sends a `Set-Cookie` header, which is a core part of the contract, and your consumer \(usually a website\) needs to send back a `Cookie: ...` header to authenticate.
 
 The core of the challenge here, is that you're not really writing any code on the consumer side that implements this contract - the browser does it for you.
 
@@ -206,9 +206,9 @@ In this instance you have a few options:
 1. Not include them in the tests. After all, the consumer code doesn't know about them and you can mock the validation on the provider side if needed
 2. Include them in the Pact tests, and validate the structure + contents of them on the provider side.
 
-(1) doesn't fully represent the true contract, but (2) would require more code/effort.
+\(1\) doesn't fully represent the true contract, but \(2\) would require more code/effort.
 
-In this case, we suggest you need to weigh up the pros/cons. From a purely theoretical perspective, the answer is “you should include it”. But taking a more balanced view, we say test what gives you value. If the cookie is always going to be implicitly added by the browser (because that’s how browser’s behave) and it’s a scenario unlikely to give your team more (useful) information about how the system behaves, whilst costing you effort in maintaining it. Then maybe it’s not worth it.
+In this case, we suggest you need to weigh up the pros/cons. From a purely theoretical perspective, the answer is “you should include it”. But taking a more balanced view, we say test what gives you value. If the cookie is always going to be implicitly added by the browser \(because that’s how browser’s behave\) and it’s a scenario unlikely to give your team more \(useful\) information about how the system behaves, whilst costing you effort in maintaining it. Then maybe it’s not worth it.
 
 Sorry, life isn't black and white!
 
@@ -255,3 +255,4 @@ GraphQL is simply an abstraction over HTTP, and it is entirely possible that the
 SOAP is the same. Yes, there is a strongly defined schema, however if the provider changes that schema and deploys before a consumer has updated, boom - client down.
 
 Protobufs is something we are still thinking about, and we've yet to test it with Pact in the wild. It does appear unnecessary as it has mechanisms to deal with backwards compatibility - but if you're willing to investigate, please chat to us and tell us how you go :\)
+

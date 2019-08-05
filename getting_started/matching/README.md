@@ -128,7 +128,7 @@ animal_service.given("an alligator named Mary exists").
 
 ### Query params
 
-Query params can be specified as a string or a hash. When specified as a string, an exact match will be performed. You may use a Pact::Term, but only over the query string as a whole. *Note that the query params must already be URL encoded in the expectation, and thus must be a string.*
+Query params can be specified as a string or a hash. When specified as a string, an exact match will be performed. You may use a Pact::Term, but only over the query string as a whole. _Note that the query params must already be URL encoded in the expectation, and thus must be a string._
 
 ```ruby
 animal_service.given("some alligators exist").

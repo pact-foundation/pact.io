@@ -1,12 +1,14 @@
-#Webhook template library
+# Webhooks template library
+
+## Webhook template library
 
 Please feel free add any that you think might be useful to others.
 
-# Github - publish commit status
+## Github - publish commit status
 
 Report the pact verification status back to the consumer project in Github.
 
-```json
+```javascript
 {
   "consumer": {
     "name": "<consumer name>"
@@ -37,9 +39,9 @@ Report the pact verification status back to the consumer project in Github.
 }
 ```
 
-# Slack - post notification
+## Slack - post notification
 
-```
+```text
 {
   "request": {
     "method": "POST",
@@ -54,9 +56,9 @@ Report the pact verification status back to the consumer project in Github.
 }
 ```
 
-# Travis - trigger build
+## Travis - trigger build
 
-```json
+```javascript
 {
   "events": [{
     "name": "contract_content_changed"
@@ -80,11 +82,11 @@ Report the pact verification status back to the consumer project in Github.
 }
 ```
 
-For more information on triggering Travis builds, see https://docs.travis-ci.com/user/triggering-builds
+For more information on triggering Travis builds, see [https://docs.travis-ci.com/user/triggering-builds](https://docs.travis-ci.com/user/triggering-builds)
 
-# Bamboo - trigger build
+## Bamboo - trigger build
 
-```json
+```javascript
 {
   "request": {
     "method": "POST",
@@ -98,8 +100,9 @@ For more information on triggering Travis builds, see https://docs.travis-ci.com
 }
 ```
 
-# Visual Studio Team Services - trigger build
-```
+## Visual Studio Team Services - trigger build
+
+```text
 {
   "request": {
     "method": "POST",
@@ -120,9 +123,11 @@ For more information on triggering Travis builds, see https://docs.travis-ci.com
 }
 ```
 
-# CircleCI - trigger workflow build
-N.B - currently need to use a personal API token (ideally for a machine user)
-```
+## CircleCI - trigger workflow build
+
+N.B - currently need to use a personal API token \(ideally for a machine user\)
+
+```text
 {
   "events": [
     {
@@ -140,11 +145,11 @@ N.B - currently need to use a personal API token (ideally for a machine user)
     }
   }
 }
-
 ```
 
-# Bitbucket-pipeline trigger build of a branch
-```
+## Bitbucket-pipeline trigger build of a branch
+
+```text
 {
   "events": [{
     "name": "contract_content_changed"
@@ -167,6 +172,9 @@ N.B - currently need to use a personal API token (ideally for a machine user)
   }
 }
 ```
+
 Ref:
+
 * [Bitbucket API page](https://developer.atlassian.com/bitbucket/api/2/reference/resource/repositories/%7Bworkspace%7D/%7Brepo_slug%7D/pipelines/)
 * [Bitbucket App Password](https://confluence.atlassian.com/bitbucket/app-passwords-828781300.html)
+

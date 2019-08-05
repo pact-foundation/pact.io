@@ -1,4 +1,4 @@
-#Editing UI Documentation
+# UI documentation
 
 ## Index
 

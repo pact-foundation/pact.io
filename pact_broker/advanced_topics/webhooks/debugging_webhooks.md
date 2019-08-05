@@ -1,10 +1,10 @@
-# Debugging webhooks
+# Debugging Webhooks
 
 Webhooks are executed when either the pact content changes, or a verification is published.
 
 ## Testing webhook execution
 
-You can find the full list of webhooks at `/webhooks` (or open the API Browser, and click on the `GET` button for the `pb:webhooks` relation).
+You can find the full list of webhooks at `/webhooks` \(or open the API Browser, and click on the `GET` button for the `pb:webhooks` relation\).
 
 Navigate to the webhook you want to test by clicking on the `GET` button for the desired webhook under the `pb:webhooks` relation in the Links section.
 
@@ -23,3 +23,4 @@ The Embedded Resources section will give you links to the execution logs.
 If you see no evidence of any attempted executions, look in the application logs.
 
 If you see no logs related to a webhook, it means that the json content was the same as the previous version, so the webhook will not be triggered. If you see "No webhook found for consumer ..." then the json had changed, but there are no webhooks found. If you see "Scheduling job for ..." then the content has changed, a webhook has been found, and a background job has been created to execute it.
+

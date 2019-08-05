@@ -36,9 +36,9 @@ Most importantly, the `Pact Broker` allows you to easily decouple the release cy
 
 ### Getting started
 
-Read the pages in the Pact Broker [quick start guide](README.md) to get up and running with the basics. You'll find a helpful checklist of changes you need to make to integrate Pact into your CI pipeline, as well as links to more detailed information on Broker usage.
+Read the pages in the Pact Broker [quick start guide](./) to get up and running with the basics. You'll find a helpful checklist of changes you need to make to integrate Pact into your CI pipeline, as well as links to more detailed information on Broker usage.
 
-You can find all the documentation for the `Pact Broker` in the [Pact Broker wiki](../pact_broker/README.md).
+You can find all the documentation for the `Pact Broker` in the [Pact Broker wiki](../pact_broker/).
 
 Our sponsor [DiUS](https://www.dius.com.au) has kindly provided a [free hosted broker](https://pact.dius.com.au) to get you started quickly.
 

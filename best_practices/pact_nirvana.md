@@ -46,7 +46,7 @@ Collaborate about the problems, collaborate over the design, and keep the commun
 
 ## 2. Spike \(Optional\)
 
-If you have not used Pact before, consider trying it out on a [spike](https://en.wikipedia.org/wiki/Spike\_\(software\_development\)) application first.
+If you have not used Pact before, consider trying it out on a [spike](https://en.wikipedia.org/wiki/Spike_%28software_development%29) application first.
 
 1. Using the technology stacks of your consumer and provider
 
@@ -79,13 +79,19 @@ Now you have two different sets of tests in two different codebases. The artifac
 
 The [Pact Broker](https://github.com/pact-foundation/pact_broker) is a service that allows your projects to exchange pacts and verification results in an automated way.
 
-While you can use Pact without a Pact Broker, using one allows you to get the most out of Pact. Without the Broker, you will have to work out how to create your own feedback loop that lets you know the results of the pact verifications, and your pacts will not enable to you release your services independently and safely using the `can-i-deploy` tool (more on this later).
+While you can use Pact without a Pact Broker, using one allows you to get the most out of Pact. Without the Broker, you will have to work out how to create your own feedback loop that lets you know the results of the pact verifications, and your pacts will not enable to you release your services independently and safely using the `can-i-deploy` tool \(more on this later\).
 
-The Pact Broker and its clients are open source tools \(though you can get your own hosted instance of the Broker at [https://pactflow.io/](https://pactflow.io/)\)
+{% hint style="info" %}
+**Quick Start**
+
+The Pact Broker is an open source tool that requires you to deploy, administer and host it yourself. If you would prefer a plug-and-play option, we've created [Pactflow](https://pactflow.io/%29), a fully managed Pact Broker with additional features to simplify teams getting started and scaling with Pact.
+
+Get started for free on our [Developer Plan](https://pactflow.io/pricing/).
+{% endhint %}
 
 ### A. Set up a Pact Broker
 
-1. Read the Pact Broker [home page](https://github.com/pact-foundation/pact_broker), \(taking note of the various deployment options available to you\) and the [quick start guide](https://github.com/pact-foundation/pact_broker/wiki#quick-start-guide).
+1. Read the Pact Broker [home page](https://github.com/pact-foundation/pact_broker), \(taking note of the various deployment options available to you\) and the [quick start guide](https://github.com/pact-foundation/pact_broker/wiki#quick-start-guide), or sign up to a hosted Developer plan at [Pactflow](https://pactflow.io/).
 2. Deploy a Pact Broker to a network that has access to both consumer and provider CI systems so it can trigger builds.
 
 ### B. Configure pact publication
@@ -101,7 +107,7 @@ The Pact Broker and its clients are open source tools \(though you can get your 
 1. Create a new CI job that performs just the provider pact verification step for a given pact URL \(consult the documentation for your chosen language for how to configure this\). The job should accept the URL of the changed pact in the HTTP request parameters or body.
 2. Configure a [webhook](https://github.com/pact-foundation/pact_broker/wiki/Webhooks) to kick off the provider verification build when a pact changes, and use [webhook templates](https://github.com/pact-foundation/pact_broker/blob/master/lib/pact_broker/doc/views/webhooks.markdown#dynamic-variable-substitution) to pass the URL of the changed pact to the build.
 
-As you have two different builds running the pact verifications (one when the provider changes, one when the contract changes) it is best to use a provider version number that is deterministic (eg. does not include your CI build number) so that a verification from either job is recorded with the same version number. This will help you when it comes to using the `can-i-deploy` tool in step 7. Please read the section on [versioning in the Pact Broker](https://docs.pact.io/getting_started/versioning_in_the_pact_broker) to ensure your version numbers will help you get the most out of your Pact Broker.
+As you have two different builds running the pact verifications \(one when the provider changes, one when the contract changes\) it is best to use a provider version number that is deterministic \(eg. does not include your CI build number\) so that a verification from either job is recorded with the same version number. This will help you when it comes to using the `can-i-deploy` tool in step 7. Please read the section on [versioning in the Pact Broker](https://docs.pact.io/getting_started/versioning_in_the_pact_broker) to ensure your version numbers will help you get the most out of your Pact Broker.
 
 Useful links:
 
@@ -122,7 +128,7 @@ You now have a workflow where:
 
 One of the complications introduced by the "consumer driven" nature of the workflow is that new interactions are usually added to the contract before the functionality has been implemented in the provider. Using the workflow described above, a provider build will be kicked off when you publish a contract with new interactions in it. This build will \(correctly\) fail during the verification task. This is not ideal, as the failure is expected. To solve this, we need to allow contracts to change without breaking the builds.
 
-"Tagging" application versions in the broker allows you to introduce new expectations to a pact without breaking your provider builds. Tags are simple text labels that are applied to application versions, and you can think of the time ordered series of pacts that belong to each tag as forming a "pseudo branch". These psuedo branches can be used in a similar way to git feature branches, where you can keep an unbreaking stable line of development, while adding new, breaking interactions on the side. 
+"Tagging" application versions in the broker allows you to introduce new expectations to a pact without breaking your provider builds. Tags are simple text labels that are applied to application versions, and you can think of the time ordered series of pacts that belong to each tag as forming a "pseudo branch". These psuedo branches can be used in a similar way to git feature branches, where you can keep an unbreaking stable line of development, while adding new, breaking interactions on the side.
 
 To achieve these "pseudo branches", when a pact is published, the associated pacticipant version should be tagged with an identifier that will be used by the provider to differentiate between the stable, safe pacts \(eg. tagged "master"\) and the potentially breaking pacts \(eg. tagged "feat-new-foobar"\).
 
@@ -131,7 +137,7 @@ To keep a green build, in your provider’s CI only verify the pact for the late
 If you use feature branches for your consumer development, it is recommended to tag the pacticipant version with the name of the branch. If you use feature toggles, the tag could be the name of the feature toggle. The [Pact Broker CLI](https://github.com/pact-foundation/pact_broker-client#create-version-tag) tool can be used to create tags easily.
 
 1. Configure a tag name to be used for every consumer build that publishes a pact \(again, see your Pact language docs\). The recommended default is to dynamically determine and use the name of your git/svn branch. If this doesn’t work for you, then you could hardcode it to something like "master" or "stable".
-2. In the provider verification configuration, change the pact that is being verified from the latest pact to the latest pact for the stable tag (see the relevant documentation for your library).  This will help keep your provider builds green.
+2. In the provider verification configuration, change the pact that is being verified from the latest pact to the latest pact for the stable tag \(see the relevant documentation for your library\).  This will help keep your provider builds green.
 3. Now, when you want to add new expectations to a pact, do it on a feature branch of your consumer codebase \(or with a feature toggle\). If you are dynamically using the branch name as the broker tag, you don’t need to do anything further. However, if you have hardcoded your tag name or are using a feature toggle, you’ll need to manually set the tag to an appropriate value.
 4. Use the new "feature pact" as a starting point to discuss the desired new features with the provider team. Remember section 1 on "Talking"!
 5. Once the interface has been agreed on, implement the new functionality in the provider using the feature pact and verify it locally rather than in the CI until the new expectations are passing. Your provider should still be verifying against the stable tag on the CI, so any new changes will not cause the build to break.
@@ -173,7 +179,6 @@ Alternatively, a pact may have been verified by the “master” version of the 
 The [`can-i-deploy`](https://github.com/pact-foundation/pact_broker-client#can-i-deploy) tool is a CLI that has been written to query the Matrix to ensure that you are safe to deploy.
 
 1. Add a step to your deployment process that uses the `can-i-deploy` tool to ensure that the version that you are about to deploy is compatible with the production versions of its integration partners.
-
 2. Add a step to your deployment process so that when the application is deployed to production, the relevant pacticipant version in the broker is tagged as the “production” version. This functionality is provided by the [pact-broker client CLI](https://github.com/pact-foundation/pact_broker-client#create-version-tag)
 
 Useful link:

@@ -1,3 +1,9 @@
+---
+description: >-
+  How to convince your team, your boss or yourself that Contract Testing is a
+  good ide
+---
+
 # Convince me
 
 * Faster execution.
@@ -7,9 +13,21 @@
 * No separate integration environment\(s\) required to be managed for automated integration tests - pact tests run in standalone CI builds.
 * Integration flows that would traditionally require running multiple services at the same time can be broken down and each integration point tested separately.
 
+## What is this contract testing thing?
+
+When compared to E2E testing approaches, contract testing enables you to create consistent curves in your pipeline speed and complexity that look more like the below chart, whilst maintaining many of the safety guarantees of E2E test approaches:
+
+![From https://blog.pactflow.io/why-contract-testing/](../.gitbook/assets/screenshot-25-1.png)
+
+If you want to understand more on the "why", you can read the full article [here](https://blog.pactflow.io/why-contract-testing/).
+
+## How to get started contract testing?
+
+Once you have a grasp of what contract testing is and how it might solve some of your challenges, the next thing is working out how to get started in your environment. [This guide ](https://blog.pactflow.io/why-contract-testing/)will help you start that journey.
+
 ## What if I think end-to-end \(E2E\) integration tests are good?
 
-Read the following:
+Read the following to un-convince yourself:
 
 * [http://googletesting.blogspot.com.au/2015/04/just-say-no-to-more-end-to-end-tests.html](http://googletesting.blogspot.com.au/2015/04/just-say-no-to-more-end-to-end-tests.html)
 * [http://blog.thecodewhisperer.com/permalink/integrated-tests-are-a-scam](http://blog.thecodewhisperer.com/permalink/integrated-tests-are-a-scam)
