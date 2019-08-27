@@ -1,7 +1,7 @@
 ---
 description: >-
   How to convince your team, your boss or yourself that Contract Testing is a
-  good ide
+  good idea
 ---
 
 # Convince me
