@@ -19,6 +19,7 @@
     * [Verifying Pacts](implementation_guides/ruby/verifying_pacts.md)
     * [Provider States](implementation_guides/ruby/provider_states.md)
     * [Configuration](implementation_guides/ruby/configuration.md)
+    * [Gotchas](implementation_guides/ruby/gotchas.md)
   * [JVM](implementation_guides/jvm.md)
   * [.NET](implementation_guides/net.md)
   * [Javascript](implementation_guides/javascript.md)
