@@ -1,20 +1,16 @@
 # Introduction
 
-> **Pact** \(noun\):
->
-> A formal agreement between individuals or parties.  
-> _"The country negotiated a trade pact with the US"_
->
-> Synonyms: agreement, protocol, deal, contract  
-> ~ [Oxford Dictionaries](https://en.oxforddictionaries.com/definition/pact)
-
 ![](.gitbook/assets/pact-logo.png)
 
-Pact is a contract testing tool. Contract testing is a way to ensure that services \(such as an API provider and a client\) can communicate with each other. Without contract testing, the only way to know that services can communicate is by using expensive and brittle integration tests.
+Pact is a contract testing tool. Contract tests assert that inter-application messages conform to a shared understanding which is documented in a contract. Without contract testing, the only way to ensure that applications will work correctly together is by using expensive and brittle integration tests.
 
 Do you [set your house on fire to test your smoke alarm?](https://dius.com.au/2014/05/19/simplifying-micro-service-testing-with-pacts/) No, you test the contract it holds with your ears by using the testing button. Pact provides that testing button for your code, allowing you to safely confirm that your applications will work together without having to deploy the world first.
 
 ## Contract Testing
+
+Contract testing ensures that a pair of applications will work correctly together by using automated test suites that check each application in isolation to ensure that the messages they exchange conform to a shared understanding which is documented in a "contract".
+
+In practise, a common way of achieving this is to check that all the calls against your test doubles [return the same results](https://martinfowler.com/bliki/ContractTest.html) as a call to the external service would.
 
 Contract testing is immediately applicable anywhere where you have two services that need to communicate - such as an API client and a web front-end. Although a single client and a single service is a common use case, contract testing really shines in an environment with many services \(as is common for a microservice architecture\). Having well-formed contract tests makes it easy for developers to avoid version hell. Contract testing is the killer app for microservice development and deployment.
 
