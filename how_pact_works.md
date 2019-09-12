@@ -21,7 +21,7 @@ The first step in writing a pact test is to describe this interaction.
 
 Consumer Pact tests operate on each interaction described earlier to say "assuming the provider returns the expected response for this request, does the consumer code correctly generate the request and handle the expected response?".
 
-Each interaction is tested using the pact framework, driven by the unit test framework inside the consumer codebase:
+Each interaction is tested using the Pact framework, driven by the unit test framework inside the consumer codebase:
 
 Following the diagram:
 
