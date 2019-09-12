@@ -10,7 +10,7 @@ Do you [set your house on fire to test your smoke alarm?](https://dius.com.au/20
 
 Contract testing ensures that a pair of applications will work correctly together by using automated test suites that check each application in isolation to ensure that the messages they exchange conform to a shared understanding which is documented in a "contract".
 
-In practise, a common way of achieving this is to check that all the calls against your test doubles [return the same results](https://martinfowler.com/bliki/ContractTest.html) as a call to the external service would.
+In practise, a common way of achieving this is to check that all the calls to your test doubles [return the same results](https://martinfowler.com/bliki/ContractTest.html) as a call to the real application would.
 
 Contract testing is immediately applicable anywhere where you have two services that need to communicate - such as an API client and a web front-end. Although a single client and a single service is a common use case, contract testing really shines in an environment with many services \(as is common for a microservice architecture\). Having well-formed contract tests makes it easy for developers to avoid version hell. Contract testing is the killer app for microservice development and deployment.
 
