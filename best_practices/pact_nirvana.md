@@ -27,7 +27,7 @@ As Pact has been implemented in many different languages, this document will out
 ### What are the steps for reaching Pact Nirvana?
 
 1. Talk
-2. Spike (Optional)
+2. Spike \(Optional\)
 3. Write and verify a real Pact
 4. Automate the contract and verification results exchange
 5. Allow contracts to change without breaking your builds

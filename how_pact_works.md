@@ -2,16 +2,16 @@
 
 Remember these definitions from the [introduction](./):
 
-* **Consumer**: An application that makes use of the functionality or data from another application to do its job. For applications that use HTTP, the consumer is always the application that initiates the HTTP request (eg. the web front end), regardless of the direction of data flow. For applications that use queues, the consumer is the application that reads the message from the queue.
-* **Provider**: An application (often called a service) that provides functionality or data for other applications to use, often via an API. For applications that use HTTP, the provider is the application that returns the response. For applications that use queues, the provider (also called _producer_) is the application that writes the messages to the queue.
+* **Consumer**: An application that makes use of the functionality or data from another application to do its job. For applications that use HTTP, the consumer is always the application that initiates the HTTP request \(eg. the web front end\), regardless of the direction of data flow. For applications that use queues, the consumer is the application that reads the message from the queue.
+* **Provider**: An application \(often called a service\) that provides functionality or data for other applications to use, often via an API. For applications that use HTTP, the provider is the application that returns the response. For applications that use queues, the provider \(also called _producer_\) is the application that writes the messages to the queue.
 
 A contract between a consumer and provider is called a _pact_. Each pact is a collection of _interactions_. Each interaction describes:
 
 * For HTTP:
-    * An expected request - describing what the consumer is expected to send to the provider
-    * A minimal expected response - describing the parts of the response the consumer wants the provider to return.
+  * An expected request - describing what the consumer is expected to send to the provider
+  * A minimal expected response - describing the parts of the response the consumer wants the provider to return.
 * For messages:
-    * The minimal expected message - describing the parts of the message that the consumer wants to use.
+  * The minimal expected message - describing the parts of the message that the consumer wants to use.
 
 ![Pact interaction](.gitbook/assets/pact-base%20%281%29.png)
 

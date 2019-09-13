@@ -20,7 +20,7 @@ In general, a contract is between a _consumer_ \(for example, a client that want
 
 ## Consumer Driven Contracts
 
-Pact is _[consumer-driven](http://martinfowler.com/articles/consumerDrivenContracts.html)_ contract testing tool. This means the contract is written as part of the automated consumer tests. A major advantage of this pattern is that only parts of the communication that are actually used by the consumer\(s\) get tested. This in turn means that any provider behaviour not used by current consumers is free to change without breaking tests.
+Pact is [_consumer-driven_](http://martinfowler.com/articles/consumerDrivenContracts.html) contract testing tool. This means the contract is written as part of the automated consumer tests. A major advantage of this pattern is that only parts of the communication that are actually used by the consumer\(s\) get tested. This in turn means that any provider behaviour not used by current consumers is free to change without breaking tests.
 
 Unlike a schema or specification \(eg. OAS\), which is a static artifact that describes all possible states of a resource, a Pact contract is enforced by executing a collection of test cases, each of which describes a single concrete request/response pair - Pact is, in effect, "contract by example".
 

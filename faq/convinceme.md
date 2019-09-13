@@ -6,12 +6,27 @@ description: >-
 
 # Convince me
 
-* Faster execution.
-* Reliable responses from mock service reduce likelihood of flakey tests.
-* Causes of failure are easier to identify as only one component is being tested at a time.
-* Design of service provider is improved by considering first how the data is actually going to be used, rather than how it is most easily retrieved and serialised.
-* No separate integration environment\(s\) required to be managed for automated integration tests - pact tests run in standalone CI builds.
-* Integration flows that would traditionally require running multiple services at the same time can be broken down and each integration point tested separately.
+The main thing that any organisation cares about when it comes to software development is cost. When building a product, your time is probably the biggest cost to an organisation. One of the other significant costs is compute resources \(eg. cloud provider, private data centre\). While there will be initial overhead in learning how to use contract tests and integrating them into your build pipeline, using contract tests in conjunction with \(or as a replacement for\) traditional end-to-end integration tests will be cheaper in the long run, for several reasons.
+
+* Contract tests save _development time_ by:
+  * providing very fast feedback to developers and testers, and \[fast feedback loops speed up software delivery\]\([https://dzone.com/articles/how-to-use-fast-feedback-loops](https://dzone.com/articles/how-to-use-fast-feedback-loops)\).
+  * clearly identifying where the problem is when they fail
+  * enabling test failures to be debugged locally on a developer's machine rather than having to rely on system logs.
+  * reducing the amount of time spent on test failures caused by environmental issues rather than integration bugs
+* Contract tests save _compute time and resources_ by:
+  * reducing the number of, or even eliminating, tests that need to run in a deployed environment
+  * executing faster than the integration tests they replace
+* _Consumer driven_ contract tests save _development time_ by:
+  * ensuring that only the parts of the API that will actually be used get developed
+
+Try keeping track of how long your team currently spends on:
+
+* Building and maintaining your test environments
+* Writing and executing integration tests
+* Debugging integration tests failures
+* Fixing flakey integration tests
+
+Wouldn't it be a better use of your time working on fast, reliable tests that allowed you to respond to change quickly, rather than slowing you down?
 
 ## What is this contract testing thing?
 
