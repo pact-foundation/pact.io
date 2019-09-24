@@ -1,6 +1,2 @@
 # Python
-
-[Pact Python](https://github.com/pact-foundation/pact-python/) is currently in active development and supports Pact Specification v2.
-
-Head over to the [website](https://github.com/pact-foundation/pact-python/) to get started.
-
+[Pactman](https://github.com/reecetech/pactman/) supports Pact Specifications 1.1, 2 and 3.
