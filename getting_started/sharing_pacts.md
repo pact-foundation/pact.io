@@ -2,6 +2,14 @@
 
 The consumer CI generates pact files during the execution of its isolated tests. The provider CI generates verification results during the execution of its isolated tests. These artifacts need to be shared between the projects.
 
+{% hint style="info" %}
+**NOTE**
+
+The Pact Broker is an open source tool that requires you to deploy, administer and host it yourself. If you would prefer a plug-and-play option, we've created [Pactflow](https://pactflow.io), a fully managed Pact Broker with additional features to simplify teams getting started and scaling with Pact.
+
+Get started for free on our [Developer Plan](https://pactflow.io/pricing/).
+{% endhint %}
+
 ## Pact Broker
 
 This is where the [Pact Broker](https://github.com/pact-foundation/pact_broker) comes in. It enables you to share your pacts and verification results between projects, and make them useful for people too. It is the recommended way forward for serious Pact development.

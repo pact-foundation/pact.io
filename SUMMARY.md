@@ -1,9 +1,10 @@
 # Table of contents
 
 * [Introduction](README.md)
-* [How Pact works](how_pact_works.md)
-* [Terminology](terminology.md)
-* [Getting started](getting_started/README.md)
+* [5 minute guide](5-minute-getting-started-guide.md)
+* [Getting Started](getting_started/README.md)
+  * [How Pact works](getting_started/how_pact_works.md)
+  * [Terminology](getting_started/terminology.md)
   * [Matching](getting_started/matching/README.md)
     * [Gotchas](getting_started/matching/gotchas.md)
   * [Verifying Pacts](getting_started/verifying_pacts.md)
@@ -56,8 +57,8 @@
       * [Publishing pacts](pact_broker/advanced_topics/api_docs/publish_pact.md)
       * [Publishing verification results](pact_broker/advanced_topics/api_docs/publish_verification_result.md)
       * [Webhooks](pact_broker/advanced_topics/api_docs/webhooks.md)
-      * [Pacticipants](pact_broker/advanced_topics/api_docs/pacticipant.md)
       * [Pact diff](pact_broker/advanced_topics/api_docs/pact_diff.md)
+      * [Pacticipants](pact_broker/advanced_topics/api_docs/pacticipant.md)
     * [UI documentation](pact_broker/advanced_topics/ui_docs.md)
     * [Troubleshooting](pact_broker/advanced_topics/troubleshooting.md)
   * [Administration](pact_broker/administration/README.md)

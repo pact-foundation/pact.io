@@ -1,4 +1,16 @@
+---
+description: 'Fast, easy and reliable testing for your APIs and microservices'
+---
+
 # Introduction
+
+_Fast, easy and reliable testing for your APIs and microservices._
+
+Pact is a tool for testing APIs and microservices. It uses an alternative approach to end-to-end integrated tests, called _contract testing_. Contract testing is a way to ensure that services \(such as an API provider and a client\) can communicate with each other. Without contract testing, the only way to know that services can communicate is by using expensive and brittle integration tests.
+
+In general, a contract is between a _consumer_ \(for example, a website that needs to receive some data\) and a _provider_ \(for example, an API on a server that provides the data\). In microservice architectures, the traditional terms _client_ and _server_ are not always appropriate -- for example, when communication is achieved through message queues. For this reason, we stick to _consumer_ and _provider_ in this documentation.
+
+Get started, with our [5 minute guide](getting_started/).
 
 ![](.gitbook/assets/pact-logo.png)
 
@@ -26,5 +38,5 @@ Unlike a schema or specification \(eg. OAS\), which is a static artifact that de
 
 ## Next steps
 
-To learn more, read [how a pact test works](how_pact_works.md).
+To learn more, read [how a pact test works](getting_started/how_pact_works.md).
 
