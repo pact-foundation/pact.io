@@ -84,7 +84,7 @@ module.exports = [
 
 ### 2. Create an Order API client 
 
-Here we have our external collaborator client. It's job is to both make the external request to the Order API and convert the response into the internal Order model as per above:
+Here we have our external collaborator client. Its job is to both make the external request to the Order API and convert the response into the internal Order model as per above:
 
 {% code-tabs %}
 {% code-tabs-item title="orderClient.js" %}
