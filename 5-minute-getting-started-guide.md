@@ -6,7 +6,7 @@ description: From zero to running Pact tests in 5 mins
 
 This getting started guide runs purely in the browser, with the intention to get you across the key concepts quickly. As we go through, there will be code snippets to demonstrate concepts. These are not runnable, but are there to assist with explanation. When there is code to run, you will be presented with a REPL as per below. Simply hit the green ▶ button, and the output will be displayed in the terminal below. Give it a shot now:
 
-{% embed url="https://repl.it/@mefellows/Getting-Started-Intro" %}
+{% embed url="https://repl.it/@mefellows/Getting-Started-Intro" caption="" %}
 
 ## An example scenario: Order API
 
@@ -25,7 +25,7 @@ Note that to create a pact, you _do_ need to write the code that executes the HT
 
 Ideally, the Pact tests should be "unit tests" for your client class, and they should just focus on ensuring that the request creation and response handling are correct. If you use pact for your UI tests, you'll end up with an explosion of redundant interactions that will make the verification process tedious. Remember that pact is for testing the contract used for communication, and not for testing particular UI behaviour or business logic.
 
-Usually, your application will be broken down into a number of sub-components, depending on what type of application your consumer is \(e.g. a Web application or another API\).  This is how you might visualise the coverage of a consumer Pact test:
+Usually, your application will be broken down into a number of sub-components, depending on what type of application your consumer is \(e.g. a Web application or another API\). This is how you might visualise the coverage of a consumer Pact test:
 
 ![Scope of a consumer Pact test](.gitbook/assets/consumer-test-coverage.png)
 
@@ -33,7 +33,7 @@ Here, a _Collaborator_ is a component who's job is to communicate with another s
 
 ### 1. Start with your model
 
-Imagine a simple model class that looks something like this \(order.js\). The attributes for an Order live on a remote server, and will need to be retrieved by an HTTP call to the Order API. 
+Imagine a simple model class that looks something like this \(order.js\). The attributes for an Order live on a remote server, and will need to be retrieved by an HTTP call to the Order API.
 
 {% code-tabs %}
 {% code-tabs-item title="order.js" %}
@@ -77,12 +77,11 @@ module.exports = [
     ],
   },
 ]
-
 ```
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
-### 2. Create an Order API client 
+### 2. Create an Order API client
 
 Here we have our external collaborator client. Its job is to both make the external request to the Order API and convert the response into the internal Order model as per above:
 
@@ -108,7 +107,7 @@ const fetchOrders = () => {
 
 ### 3. Configure the mock Order API
 
-The following code will create a mock service on `localhost:1234` which will respond to your application's queries over HTTP as if it were the real Order API. It also creates a mock provider object which you will use to set up your expectations. 
+The following code will create a mock service on `localhost:1234` which will respond to your application's queries over HTTP as if it were the real Order API. It also creates a mock provider object which you will use to set up your expectations.
 
 ```javascript
 // Setup Pact
@@ -124,7 +123,7 @@ const provider = new Pact({
 await provider.setup()
 ```
 
-### 4. Write a test 
+### 4. Write a test
 
 {% code-tabs %}
 {% code-tabs-item title="order.spec.js" %}
@@ -197,9 +196,9 @@ For this purpose, we are going to use a hosted Pact Broker from pactflow.io:
 {% hint style="info" %}
 **NOTE**
 
-The Pact Broker is an open source tool that requires you to deploy, administer and host it yourself. If you would prefer a plug-and-play option, we've created [Pactflow](https://pactflow.io), a fully managed Pact Broker with additional features to simplify teams getting started and scaling with Pact.
+The Pact Broker is an open source tool that requires you to deploy, administer and host it yourself. If you would prefer a plug-and-play option, we've created [Pactflow](https://pactflow.io/?utm_source=ossdocs), a fully managed Pact Broker with additional features to simplify teams getting started and scaling with Pact.
 
-To get started for free, you can sign up to our [Developer Plan](https://pactflow.io/pricing/).
+To get started for free, you can sign up to our [Developer Plan](https://pactflow.io/pricing/?utm_source=ossdocs).
 {% endhint %}
 
 {% embed url="https://repl.it/@mefellows/docspactio-getting-started-publish" caption="Try it out: Sharing pacts through a Pact Broker \(via pactflow.io\)" %}
@@ -279,13 +278,13 @@ describe('Pact Verification', () => {
     tags: ['prod'],
     providerVersion: '1.0.' + process.env.HOSTNAME,
   }
-  
+
   before(async () => {
     server.listen(port, () => {
       console.log(`Provider service listening on http://localhost:${port}`)
     })
   })
-    
+
   it('should validate the expectations of Order Web', () => {
     return new Verifier().verifyProvider(opts)
   })
