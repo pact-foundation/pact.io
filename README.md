@@ -10,7 +10,7 @@ Pact is a tool for testing APIs and microservices. It uses an alternative approa
 
 In general, a contract is between a _consumer_ \(for example, a website that needs to receive some data\) and a _provider_ \(for example, an API on a server that provides the data\). In microservice architectures, the traditional terms _client_ and _server_ are not always appropriate -- for example, when communication is achieved through message queues. For this reason, we stick to _consumer_ and _provider_ in this documentation.
 
-Get started, with our [5 minute guide](getting_started/).
+Get started, with our [5 minute guide](5-minute-getting-started-guide.md).
 
 ![](.gitbook/assets/pact-logo.png)
 
@@ -38,5 +38,5 @@ Unlike a schema or specification \(eg. OAS\), which is a static artifact that de
 
 ## Next steps
 
-To learn more, read [how a pact test works](getting_started/how_pact_works.md).
+To learn more, read get started with our [5 minute guide](5-minute-getting-started-guide.md).
 
