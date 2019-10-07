@@ -90,7 +90,7 @@ Just documenting your API with an OAS and sharing it with developer teams will n
 
 OpenAPI can be used as a contract testing framework in a similar way to Pact if you have an automated way of ensuring _before_ deploying that:
 
-* your OAS is an accurate representation of your API \(including all error responses and polymorphic payloads\)
+* your specification is an accurate representation of your API \(including all error responses and polymorphic payloads\)
 * your consumers only makes requests and expect responses that conform to the specification
 * you do not break existing consumer expectations of your API
 * changes to the specification are automatically propagated to consumers
