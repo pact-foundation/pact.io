@@ -80,15 +80,25 @@ See [https://github.com/pact-foundation/pact-ruby/wiki/FAQ\#how-does-pact-differ
 
 OpenAPIs and Pact are designed with different ends in mind. The differences can be summarised below:
 
-The Swagger / OpenAPI specification aims to standardise the description and structure of an API. It can tell you what APIs are available and what fields/structure it expects and can generate documentation/UI to interact with one. What it is not, is a testing framework.
+The OpenAPI specification aims to standardise the description and structure of an API. It can tell you what APIs are available and what fields/structure it expects and can generate documentation/UI to interact with one. What it is not \(on its own\) is a testing framework.
 
 Pact on the other hand, is essentially a unit testing framework using _specification by example_. It just so happens that to be able to run those tests on the API consumer and provider side, it needs to generate an intermediate format to be able to communicate that structure - this is the specification.
 
-In fact, the authors of the OpenAPI specification predicted such use cases by announcing:
+Just documenting your API with an OAS and sharing it with developer teams will not stop integration bugs happening - but you can use additional tools to enforce OAS compliance on both sides. In fact, the authors of the OpenAPI specification predicted such use cases by announcing:
 
 > Additional utilities can also take advantage of the resulting files, such as testing tools. Potentially, for example, we could use vendor extensions to document this extra metadata that is captured in our spec. This is one way the two projects could come together.
 
-If you are using Swagger, consider using [Swagger Mock Validator](https://bitbucket.org/atlassian/swagger-mock-validator), a plugin developed at Atlassian that aims to unify these worlds.
+OpenAPI can be used as a contract testing framework in a similar way to Pact if you have an automated way of ensuring _before_ deploying that:
+
+* your OAS is an accurate representation of your API \(including all error responses and polymorphic payloads\)
+* your consumers only makes requests and expect responses that conform to the specification
+* you do not break existing consumer expectations of your API
+* changes to the specification are automatically propagated to consumers
+* you can coordinate deployments such that you only ever deploy compatible versions of your applications into the same environment
+
+These features are all provided in one single tool with Pact.
+
+If you are using OpenAPI, consider using [Swagger Mock Validator](https://bitbucket.org/atlassian/swagger-mock-validator), a plugin developed at Atlassian that aims to unify these worlds.
 
 Using in combination with Pact gives you confidence your API meets any published specification \(for external clients\), whilst giving you the confidence that any _known_ consumer requirements \(internal\) are satisfied.
 
@@ -96,14 +106,15 @@ See [https://github.com/pact-foundation/pact-specification/issues/28](https://gi
 
 Where Pact will really give you an advantage over using Swagger alone is when it comes to making changes to your API. Pact allows you to see the impact of making a change to an API within minutes, and gives you a concrete list of which teams to talk to, and what to discuss. Your tests will show you when the new functionality has been adopted by each consumer, and when any old functionality can be removed. On the other hand, releasing a new version of a Swagger specification and waiting for all the consumer teams \(who may or may not actually use that particular feature\) to respond to those changes could take weeks or months.
 
-### ...but I already have an end-to-end \(E2E\) integration suite that runs for an hour?
+### ...but I already have an end-to-end \(E2E\) integration suite?
 
 There are a few key problems with end-to-end \(E2E\) testing:
 
+* E2E tests require you to deploy before you can find the bugs, and deploying takes time. Wouldn't it be better to find the bugs before you deployed?
 * E2E tests are slow - slow build times result in batching of changes. Batching is bad for Continuous Delivery
 * E2E tests are hard to coordinate. How do you ensure the exact correct versions of _all_ software components are exactly as they should be?
 * E2E complexity is non-linear - it gets harder and messier over time.
-* Why should you care about how other systems behave
+* Why should you care about how other systems behave?
 
 The litmus test is this: if you can look someone straight in the eyes, and say that you don't spend a lot of time maintaining E2E environments or have constant challenges managing the tests, then it's time for another approach. If you have one or more people dedicated to managing release processes, this is probably a good sign you are heading in the wrong direction.
 
@@ -113,7 +124,7 @@ _NOTE: Obviously, there is an element of not wanting to throw the baby out with 
 
 ### ...but I use Docker?
 
-See "but I already have an E2E integration suite that runs for an hour?". All of the problems still exist, but Docker numbs the pain \(or defers it\).
+See "but I already have an E2E integration suite?". All of the problems still exist, but Docker numbs the pain \(or defers it\).
 
 ### ...but our company develops APIs before consumers \(e.g. API/Document Driven Design\)
 
