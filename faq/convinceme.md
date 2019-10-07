@@ -94,7 +94,7 @@ OpenAPI can be used as a contract testing framework in a similar way to Pact if 
 * your consumers only makes requests and expect responses that conform to the specification
 * you do not break existing consumer expectations of your API
 * changes to the specification are automatically propagated to consumers
-* you can coordinate deployments such that you only ever deploy compatible versions of your applications into the same environment
+* you can coordinate development and deployments such that you only ever deploy compatible versions of your applications into the same environment
 
 These features are all provided in one single tool with Pact.
 
