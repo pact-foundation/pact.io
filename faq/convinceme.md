@@ -57,11 +57,15 @@ Research tells us that integration tests are more costly in terms of time, effor
 You might all be on the same team now but:
 
 * new people join teams and they won't have all the context that your team currently has
-* people leave and take their knowledge with them
+* people leave and take their knowledge and practices with them
 * organisations get restructured, and product ownership changes
-* people are falliable, and communication doesn't always happen, despite everyone's best intent
+* people are fallible, and communication doesn't always happen, despite everyone's best intent
 
-Something to note - the team that orginally wrote Pact was "all on the same team".
+Something to note - the team that originally wrote Pact was "all on the same team".
+
+### ...but we all follow good engineering practices strictly and only ever make backwards compatible changes
+
+That's great to hear! See above.
 
 ### ...but I already have a local Mock Server \(e.g. VCR, MockServer\)
 
