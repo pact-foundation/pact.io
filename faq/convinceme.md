@@ -34,7 +34,7 @@ When compared to E2E testing approaches, contract testing enables you to create 
 
 ![From https://blog.pactflow.io/why-contract-testing/](../.gitbook/assets/screenshot-25-1.png)
 
-If you want to understand more on the "why", you can read the full article [here](https://blog.pactflow.io/why-contract-testing/).
+If you want to understand more on the "why", you can read the full article [here](https://blog.pactflow.io/why-contract-testing/?utm_source=ossdocs&utm_campaign=convince_me_why_contract_testing).
 
 ## How to get started contract testing?
 
