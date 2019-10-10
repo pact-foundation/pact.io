@@ -22,12 +22,13 @@ Pact is fantastic tool for developing and testing intra-organisation microservic
 
 ## What is it not good for?
 
+* Testing APIs where the team maintaining the other side of the integration will not also being using Pact
 * Testing APIs where the consumers cannot be individually identified \(eg. public APIs\).
+* Situations where you cannot load data into the provider without using the API that you're actually testing \(eg. public APIs\). [Why?](https://github.com/pact-foundation/pact-ruby/wiki/Why-Pact-may-not-be-the-best-tool-for-testing-public-APIs)
 * Testing new or existing providers where the functionality is not being driven or altered by the needs of particular consumers \(eg. a public API or an OAuth provider\)
 * Testing providers where the consumer and provider teams do not have good communication channels.
 * Performance and load testing.
 * [Functional testing](../best_practices/consumer/contract_tests_not_functional_tests.md) of the provider - that is what the provider's own tests should do. Pact is about checking the contents and format of requests and responses.
-* Situations where you cannot load data into the provider without using the API that you're actually testing \(eg. public APIs\). [Why?](https://github.com/pact-foundation/pact-ruby/wiki/Why-Pact-may-not-be-the-best-tool-for-testing-public-APIs)
 * Testing "pass through" APIs, where the provider merely passes on the request contents to a downstream service without validating them. [Why?](https://github.com/pact-foundation/pact-ruby/wiki/Why-Pact-may-not-be-the-best-tool-for-testing-pass-through-APIs)
 * Use as a general purpose mocking or stubbing tool for browser driven tests. [Why?](../best_practices/consumer/)
 
