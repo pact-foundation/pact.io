@@ -1,10 +1,10 @@
 ---
-description: 'Fast, easy and reliable testing for your APIs and microservices'
+description: >-
+  Fast, easy and reliable testing for your APIs and microservices during
+  development
 ---
 
 # Introduction
-
-_Fast, easy and reliable testing for your APIs and microservices._
 
 Pact is a tool for testing HTTP and message integrations in an automated way using `contract tests`. Contract tests assert that inter-application messages conform to a shared understanding that is documented in a contract. Without contract testing, the only way to ensure that applications will work correctly together is by using expensive and brittle integration tests.
 
