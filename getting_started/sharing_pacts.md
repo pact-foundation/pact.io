@@ -7,7 +7,7 @@ The consumer CI generates pact files during the execution of its isolated tests.
 
 The Pact Broker is an open source tool that requires you to deploy, administer and host it yourself. If you would prefer a plug-and-play option, we've created [Pactflow](https://pactflow.io/?utm_source=ossdocs&utm_campaign=sharing_pacts), a fully managed Pact Broker with additional features to simplify teams getting started and scaling with Pact.
 
-Get started for free on our [Developer Plan](https://pactflow.io/pricing/?utm_source=ossdocs).
+Get started for free on our [Developer Plan](https://pactflow.io/pricing/?utm_source=&utm_campaign=sharing_pacts_dev_plan).
 {% endhint %}
 
 ## Pact Broker

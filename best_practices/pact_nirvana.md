@@ -85,12 +85,12 @@ While you can use Pact without a Pact Broker, using one allows you to get the mo
 
 The Pact Broker is an open source tool that requires you to deploy, administer and host it yourself. If you would prefer a plug-and-play option, we've created [Pactflow](https://pactflow.io/?utm_source=ossdocs&utm_campaign=effective_pact_setup), a fully managed Pact Broker with additional features to simplify teams getting started and scaling with Pact.
 
-Get started for free on our [Developer Plan](https://pactflow.io/pricing/).
+Get started for free on our [Developer Plan](https://pactflow.io/pricing/?utm_source=ossdocs&utm_campaign=effective_pact_setup_dev_plan).
 {% endhint %}
 
 ### A. Set up a Pact Broker
 
-1. Read the Pact Broker [home page](https://github.com/pact-foundation/pact_broker), \(taking note of the various deployment options available to you\) and the [quick start guide](https://github.com/pact-foundation/pact_broker/wiki#quick-start-guide), or sign up to a hosted Developer plan at [Pactflow](https://pactflow.io/).
+1. Read the Pact Broker [home page](https://github.com/pact-foundation/pact_broker), \(taking note of the various deployment options available to you\) and the [quick start guide](https://github.com/pact-foundation/pact_broker/wiki#quick-start-guide), or sign up to a hosted Developer plan at [Pactflow](https://pactflow.io/pricing/?utm_source=ossdocs&utm_campaign=effective_pact_setup_step_1).
 2. Deploy a Pact Broker to a network that has access to both consumer and provider CI systems so it can trigger builds.
 
 ### B. Configure pact publication

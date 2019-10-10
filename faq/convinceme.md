@@ -34,11 +34,11 @@ When compared to E2E testing approaches, contract testing enables you to create 
 
 ![From https://blog.pactflow.io/why-contract-testing/](../.gitbook/assets/screenshot-25-1.png)
 
-If you want to understand more on the "why", you can read the full article [here](https://blog.pactflow.io/why-contract-testing/?utm_source=ossdocs&utm_campaign=convince_me_why_contract_testing).
+If you want to understand more on the "why", you can read the full article [here](https://blog.pactflow.io/why-contract-testing/?utm_source=ossdocs&utm_campaign=convince_me_what_is).
 
 ## How to get started contract testing?
 
-Once you have a grasp of what contract testing is and how it might solve some of your challenges, the next thing is working out how to get started in your environment. [This guide ](https://blog.pactflow.io/why-contract-testing/)will help you start that journey.
+Once you have a grasp of what contract testing is and how it might solve some of your challenges, the next thing is working out how to get started in your environment. [This guide ](https://blog.pactflow.io/why-contract-testing/?utm_source=ossdocs&utm_campaign=convince_me_how_to_start)will help you start that journey.
 
 ## What if I think end-to-end \(E2E\) integration tests are good?
 
