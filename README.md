@@ -6,17 +6,13 @@ description: 'Fast, easy and reliable testing for your APIs and microservices'
 
 _Fast, easy and reliable testing for your APIs and microservices._
 
-Pact is a tool for testing APIs and microservices. It uses an alternative approach to end-to-end integrated tests, called _contract testing_. Contract testing is a way to ensure that services \(such as an API provider and a client\) can communicate with each other. Without contract testing, the only way to know that services can communicate is by using expensive and brittle integration tests.
+Pact is a tool for testing HTTP and message integrations in an automated way using `contract tests`. Contract tests assert that inter-application messages conform to a shared understanding that is documented in a contract. Without contract testing, the only way to ensure that applications will work correctly together is by using expensive and brittle integration tests.
 
-In general, a contract is between a _consumer_ \(for example, a website that needs to receive some data\) and a _provider_ \(for example, an API on a server that provides the data\). In microservice architectures, the traditional terms _client_ and _server_ are not always appropriate -- for example, when communication is achieved through message queues. For this reason, we stick to _consumer_ and _provider_ in this documentation.
+Do you [set your house on fire to test your smoke alarm?](https://dius.com.au/2014/05/19/simplifying-micro-service-testing-with-pacts/) No, you test the contract it holds with your ears by using the testing button. Pact provides that testing button for your code, allowing you to safely confirm that your applications will work together without having to deploy the world first.
 
 Get started, with our [5 minute guide](5-minute-getting-started-guide.md).
 
 ![](.gitbook/assets/pact-logo.png)
-
-Pact is a tool for automating `contract tests` for HTTP and message based applications. Contract tests assert that inter-application messages conform to a shared understanding that is documented in a contract. Without contract testing, the only way to ensure that applications will work correctly together is by using expensive and brittle integration tests.
-
-Do you [set your house on fire to test your smoke alarm?](https://dius.com.au/2014/05/19/simplifying-micro-service-testing-with-pacts/) No, you test the contract it holds with your ears by using the testing button. Pact provides that testing button for your code, allowing you to safely confirm that your applications will work together without having to deploy the world first.
 
 ## Contract Testing
 
