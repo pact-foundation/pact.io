@@ -18,7 +18,7 @@ Hear how Soundcloud ["Move Fast and Consumer-Driven-Contract-Testing Things"](ht
 * [JVM Pact](https://github.com/DiUS/pact-jvm) and [Scala-Pact](https://github.com/ITV/scala-pact)
 * [.NET Pact](https://github.com/SEEK-Jobs/pact-net)
 * [JS Pact](https://github.com/pact-foundation/pact-js)
-* [Go Pact](https://github.com/pact-foundation/pact-go) \(there is also a v1.1 native [Pact Go](https://github.com/SEEK-Jobs/pact-go)\)
+* [Go Pact](https://github.com/pact-foundation/pact-go)
 * [Swift / Objective-C Pact](https://github.com/DiUS/pact-consumer-swift)
 * [Python](https://github.com/pact-foundation/pact-python)
 * [PHP](https://github.com/pact-foundation/pact-php)
