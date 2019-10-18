@@ -21,7 +21,7 @@ So how does this help us? Well, if we know that version 56 of Bar is already in 
 
 Let's see how the Pact Matrix helps us deploy safely in practice.
 
-In the deployment script for each application that uses Pact, we need to add a step that checks the Pact Matrix to make sure we're safe to deploy. The tool that we use to check the matrix is called \[can-i-deploy\]\[can-i-deploy\]. It is part of the Pact Broker client command line interface, and is available via Docker, or an executable that you can install via a script.
+In the deployment script for each application that uses Pact, we need to add a step that checks the Pact Matrix to make sure we're safe to deploy. The tool that we use to check the matrix is called [can-i-deploy][can-i-deploy]. It is part of the Pact Broker client command line interface, and is available via Docker, or an executable that you can install via a script.
 
 Here is how we would check to see if we were safe to deploy Foo version 23 to production, given that we know version 56 of Bar is in production. \(The Pact Broker URL and credentials have been skipped for clarity.\) Note that "pacticipant" is not a typo - it's the Pact term for "an application that participates in a pact".
 
