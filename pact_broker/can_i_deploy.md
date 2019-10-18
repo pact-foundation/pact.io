@@ -31,7 +31,7 @@ This works, but there's one problem - how do we get the production version of Ba
 
 This is where "tags" come in. Tags are metadata \(just simple string values\) that are stored with the pacticipant version object in the database. A version may have many tags, and the same tag can be applied to many versions. \(You can think of the time ordered list of pacticipant versions that share the same tag as forming a "pseudo-branch" of versions.\)
 
-When an application version is deployed to an environment, the relevant pacticipant version is "tagged" with the name of that environment. Let's see what that looks like.
+When an application version is deployed to an environment, the relevant pacticipant version needs to be "tagged" with the name of that environment, so that the Pact Broker knows what is deployed where. Let's see what that looks like in code.
 
 `$ pact-broker create-version-tag --pacticipant Bar --version 56 --tag prod`
 
