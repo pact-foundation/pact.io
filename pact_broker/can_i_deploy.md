@@ -57,5 +57,5 @@ and add the following line after deploying:
 
 `$ pact-broker create-version-tag --pacticipant PACTICIPANT --version VERSION --tag STAGE`
 
-\[can-i-deploy\]: [https://github.com/pact-foundation/pact\_broker-client\#can-i-deploy](https://github.com/pact-foundation/pact_broker-client#can-i-deploy)
+[can-i-deploy]: https://github.com/pact-foundation/pact_broker-client#can-i-deploy
 
