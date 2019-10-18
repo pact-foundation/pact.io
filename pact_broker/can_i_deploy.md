@@ -19,7 +19,7 @@ Imagine the pact verification matrix for consumer Foo and provider Bar. It shows
 
 So how does this help us? Well, if we know that version 56 of Bar is already in our prod environment, looking at the matrix tells us that we are safe to deploy version 22 or 23 to prod, but not any of the versions after. Conversely, if we know that version of 24 of Foo is in prod, then we know we're safe to deploy version 58 of Bar, but not any of the versions before.
 
-Let's see how the Pact Matrix helps us deploy safely in practise.
+Let's see how the Pact Matrix helps us deploy safely in practice.
 
 In the deployment script for each application that uses Pact, we need to add a step that checks the Pact Matrix to make sure we're safe to deploy. The tool that we use to check the matrix is called \[can-i-deploy\]\[can-i-deploy\]. It is part of the Pact Broker client command line interface, and is available via Docker, or an executable that you can install via a script.
 
