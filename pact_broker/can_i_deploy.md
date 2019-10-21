@@ -1,3 +1,9 @@
+---
+description: >-
+  How to use Pact + the can-i-deploy tool to ensure that you are safe to deploy
+  your application.
+---
+
 # Can I Deploy
 
 Before you deploy a new version of an application to a production environment, you need to know whether or not the version you're about to deploy is compatible with the versions of the other apps that already exist in that environment. The old-fashioned way of managing these dependencies involved deploying sets of pre-tested applications together, creating a bottleneck, and meaning that speedy development and testing on one application may be negated by slow development and testing on another.
@@ -21,7 +27,7 @@ So how does this help us? Well, if we know that version 56 of Bar is already in 
 
 Let's see how the Pact Matrix helps us deploy safely in practice.
 
-In the deployment script for each application that uses Pact, we need to add a step that checks the Pact Matrix to make sure we're safe to deploy. The tool that we use to check the matrix is called [can-i-deploy][can-i-deploy]. It is part of the Pact Broker client command line interface, and is available via Docker, or an executable that you can install via a script.
+In the deployment script for each application that uses Pact, we need to add a step that checks the Pact Matrix to make sure we're safe to deploy. The tool that we use to check the matrix is called [can-i-deploy](https://github.com/pact-foundation/pact_broker-client#can-i-deploy). It is part of the Pact Broker client command line interface, and is available via Docker, or an executable that you can install via a script.
 
 Here is how we would check to see if we were safe to deploy Foo version 23 to production, given that we know version 56 of Bar is in production. \(The Pact Broker URL and credentials have been skipped for clarity.\) Note that "pacticipant" is not a typo - it's the Pact term for "an application that participates in a pact".
 
@@ -57,5 +63,11 @@ and add the following line after deploying:
 
 `$ pact-broker create-version-tag --pacticipant PACTICIPANT --version VERSION --tag STAGE`
 
-[can-i-deploy]: https://github.com/pact-foundation/pact_broker-client#can-i-deploy
+## Further reading
+
+Please see the [Pact Broker Client CLI documentation](https://github.com/pact-foundation/pact_broker-client#can-i-deploy) for an explanation of all the parameters for can-i-deploy.
+
+
+
+\`\`
 
