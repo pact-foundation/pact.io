@@ -5,6 +5,7 @@
 * [What is Pact good for?](./#what-is-pact-good-for)
 * [What is Pact not good for?](./#what-is-pact-not-good-for)
 * [Who would typically implement Pact?](./#who-would-typically-implement-pact)
+* [What is the difference between contract testing and functional testing?](./#what-is-the-difference-between-contract-testing-and-functional-testing)
 * [Can I generate my pact file from something like Swagger?](./#can-i-generate-my-pact-file-from-something-like-swagger)
 * [Why doesn't Pact use JSON Schema?](./#why-doesnt-pact-use-json-schema)
 * [Why does Pact use concrete JSON documents rather than using more flexible JSONPaths?](./#why-does-pact-use-concrete-json-documents-rather-than-using-more-flexible-jsonpaths)
@@ -39,6 +40,10 @@ Pact is most valuable for designing and testing integrations where you \(or your
 Pact is generally implemented by developers, during development. Business analysts and testers can still benefit from the presence of contracts by using them to understand the underlying interactions between the applications.
 
 The consumer team is responsible for implementing the Pact tests in the consumer codebase that will generate the contract, and for publishing it to a shared location \(usually a [Pact Broker](https://github.com/pact-foundation/pact_broker)\). The provider team is responsible for setting up the Pact verification task in the provider codebase, and for writing the code that sets up the correct data for each `provider state` described in the contract. Both teams are responsible for collaborating and communicating about the API and its usage! Remember that contracts are not a substitute for good communication between teams.
+
+### What is the difference between contract testing and functional testing?
+
+See this [page](../best_practices/consumer/contract_tests_not_functional_tests.md) under the Consumer best practices section.
 
 ### Can I generate my pact file from something like Swagger?
 
