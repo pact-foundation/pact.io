@@ -12,7 +12,6 @@ If you'd like to go a little deeper, we have a [workshop](https://github.com/pac
 
 * [API Consumer](https://github.com/pact-foundation/pact-go/tree/master/examples/)
 * [Golang ServeMux](https://github.com/pact-foundation/pact-go/tree/master/examples/mux)
-* [Go Kit](https://github.com/pact-foundation/pact-go/tree/master/examples/go-kit)
 * [Gin](https://github.com/pact-foundation/pact-go/tree/master/examples/gin)
 
 ### Asynchronous APIs
