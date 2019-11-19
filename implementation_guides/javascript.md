@@ -23,7 +23,7 @@ Additionally, these complete examples are useful guides:
 * [Complete Example \(Node env\)](https://github.com/pact-foundation/pact-js/tree/master/examples/e2e)
 * [Pact with Jest \(Node env\)](https://github.com/pact-foundation/pact-js/tree/master/examples/jest)
 * [Pact with Mocha](https://github.com/pact-foundation/pact-js/tree/master/examples/mocha)
-* [Pact with Karma + Jasmine](https://github.com/pact-foundation/pact-js/tree/master/karma/jasmine)
-* [Pact with Karma + Mocha](https://github.com/pact-foundation/pact-js/tree/master/karma/mocha)
+* [Pact with Karma + Jasmine](https://github.com/pact-foundation/pact-js/tree/master/examples/karma/jasmine)
+* [Pact with Karma + Mocha](https://github.com/pact-foundation/pact-js/tree/master/examples/karma/mocha)
 * [Angular 4 + Mocha](https://github.com/stones/pact-angular-4-mocha)
 
