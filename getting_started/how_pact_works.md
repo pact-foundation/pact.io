@@ -88,7 +88,7 @@ If we pair the test and verification process for each interaction, the contract 
 
 ## Next steps
 
-_Contract tests should focus on the messages \(requests and responses\) rather than the behaviour_. It can be tempting to use contract tests to write general functional tests for the provider. Experience shows this to leads to painful experiences with brittle tests. See [this guide for contract testing best practices](https://docs.pact.io/best-practices/consumer/contract-tests-vs-functional-tests).
+_Contract tests should focus on the messages \(requests and responses\) rather than the behaviour_. It can be tempting to use contract tests to write general functional tests for the provider. Experience shows this to leads to painful experiences with brittle tests. See [this guide for contract testing best practices](../best-practices/consumer/contract-tests-vs-functional-tests).
 
 _Pact tests should be data independent_. Pact tests are best when successful verification doesn’t depend on the specific data that the provider returns. See this guide for best practices when describing interactions.
 
