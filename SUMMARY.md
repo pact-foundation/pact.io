@@ -53,6 +53,8 @@
     * [Provider verification results](pact_broker/advanced_topics/provider_verification_results.md)
     * [Provider verification badges](pact_broker/advanced_topics/provider_verification_badges.md)
     * [Pacticipants](pact_broker/advanced_topics/pacticipant.md)
+    * [Pending pacts](pact_broker/advanced_topics/pending_pacts.md)
+    * [Work In Progress pacts](pact_broker/advanced_topics/wip_pacts.md)
     * [API documentation](pact_broker/advanced_topics/api_docs/README.md)
       * [Publishing pacts](pact_broker/advanced_topics/api_docs/publish_pact.md)
       * [Publishing verification results](pact_broker/advanced_topics/api_docs/publish_verification_result.md)
