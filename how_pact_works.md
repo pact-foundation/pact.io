@@ -2,7 +2,7 @@
 
 Before we deploy an application to production, we need to make sure that it works correctly with the other applications with which it integrates. To do this, traditionally we use end to end integration tests.
 
-![The problem with integrated tests](.gitbook/assets/ANIMATION_1.png)
+![The problem with integrated tests](.gitbook/assets/Animation_1.png)
 
 E2E tests give us
 
@@ -17,7 +17,7 @@ but
 
 # Why not use isolated tests?
 
-![Why not use isolated tests](.gitbook/assets/ANIMATION_2.png)
+![Why not use isolated tests](.gitbook/assets/Animation_2.png)
 
 By testing each side of an integration point using a mock or simulated version of the other application, we get two sets of tests which:
 
@@ -38,13 +38,13 @@ Pact solves the problem of keeping the two sets of tests in sync by use of a "co
 
 During the execution of the consumer tests, each request that is made to the mock provider is recorded into the pact file, along with its expected response.
 
-![Consumer tests with Pact](.gitbook/assets/ANIMATION_3.png)
+![Consumer tests with Pact](.gitbook/assets/Animation_3.png)
 
 # How Pact helps - the provider side
 
 The pact file is then taken over to the provider project. Each request is replayed against the real provider, and the actual response is compared to the expected response. If they match, we have proven that the simulated applications behave the same way as the real applications. This means that when these two applications interact in real life, they should work together correctly.
 
-![Provider tests with Pact](.gitbook/assets/ANIMATION_4.png)
+![Provider tests with Pact](.gitbook/assets/Animation_4.png)
 
 Using Pact gives you tests that:
 
