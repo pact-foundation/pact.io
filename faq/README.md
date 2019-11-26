@@ -16,6 +16,7 @@
 * [Why Pact may not be the best tool for public testing APIs?](./#why-pact-may-not-be-the-best-tool-for-public-testing-apis)
 * [Why Pact may not be the best tool for testing pass through APIs?](./#why-pact-may-not-be-the-best-tool-for-testing-pass-through-apis)
 * [Do I still need end-to-end tests?](./#do-i-still-need-end-to-end-tests)
+* [Can I use Pact for UI tests?](./#can-i-use-pact-for-ui-tests)
 * [How can I handle versioning?](./#how-can-i-handle-versioning)
 * [Using Pact where the Consumer team is different from the Provider team](./#using-pact-where-the-consumer-team-is-different-from-the-provider-team)
 * [How to prevent a consumer from deploying with an invalid contract](./#how-to-prevent-a-consumer-from-deploying-with-an-invalid-contract)
@@ -123,6 +124,10 @@ If you work in an environment where you prioritise "agility" over "stability", t
 * optimising your builds so that they run faster
 
 If you work in a more traditional "Big Bang Release" environment, choose end to end tests that focus on the core business value provided by your system, rather than on tests that try to check that the HTTP requests are being done correctly.
+
+### Can I use Pact for UI tests?
+
+We do not recommend it. Please read more on the [Consumer Best Practices](best_practices/consumer#avoid-using-pact-for-tests-that-involve-the-ui) page.
 
 ### How can I handle versioning?
 
