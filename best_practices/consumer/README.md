@@ -34,7 +34,7 @@ If you use Pact for your UI tests you will likely end up with:
 
 Ideally, your Pact tests be scoped to cover as little consumer code as possible while still being a useful exercise (ie. don't just test a raw HTTP client call), and use as few mocked interactions at a time as possible.
 
-A better approach than using Pact for UI tests is to use shared fixtures, or the generated pact itself, to provide HTTP stubs for tests that cover all layers of your consumer. Following the "testing pyramid" approach, most of the tests for your UI components should be isolated tests anyway, and tests covering the full stack of your provider should be kept to a minimum.
+A better approach than using Pact for UI tests is to use shared fixtures, or the generated pact itself, to provide HTTP stubs for tests that cover all layers of your consumer. Following the "testing pyramid" approach, most of the tests for your UI components should be isolated tests anyway, and tests covering the full stack of your consumer should be kept to a minimum.
 
 ## Think carefully about how you use it for non-isolated tests \(functional, integration tests\)
 
