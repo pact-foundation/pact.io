@@ -10,10 +10,7 @@ E2E tests give us
 
 but
 
-❌introduce dependencies<br/>
-❌are slow<br/>
-❌break easily<br/>
-❌require lots of maintenance<br/>
+❌introduce dependencies<br/>❌are slow<br/>❌break easily<br/>❌require lots of maintenance<br/>
 
 # Why not use isolated tests?
 
@@ -21,10 +18,7 @@ but
 
 By testing each side of an integration point using a mock or simulated version of the other application, we get two sets of tests which:
 
-✅ can be run independently<br/>
-✅ are fast<br/>
-✅ stable<br/>
-✅ easy to maintain<br/>
+✅ can be run independently<br/>✅ are fast<br/>✅ stable<br/>✅ easy to maintain<br/>
 
 but
 
@@ -48,10 +42,7 @@ The pact file is then taken over to the provider project. Each request is replay
 
 Using Pact gives you tests that:
 
-✅ can be run independently<br/>
-✅ are fast<br/>
-✅ stable<br/>
-✅ easy to maintain<br/>
+✅ can be run independently<br/>✅ are fast<br/>✅ stable<br/>✅ easy to maintain<br/>
 
 and
 
