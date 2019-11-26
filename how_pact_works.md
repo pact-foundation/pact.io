@@ -1,10 +1,10 @@
-# The problem with integrated tests
+# The problem with integration tests
 
-Before we deploy an application to production, we need to make sure that it works correctly with the other applications with which it integrates. To do this, traditionally we use end to end integration tests.
+Before we deploy an application to production, we need to make sure that it works correctly with the other applications with which it integrates. To do this, traditionally we use end-to-end integration tests.
 
-![The problem with integrated tests](.gitbook/assets/how_pact_works_1.png)
+![Live applications interact with each other in integration tests](.gitbook/assets/how_pact_works_1.png)
 
-E2E tests give us
+End-to-end integration tests give us
 
 ✅ confidence to deploy
 
