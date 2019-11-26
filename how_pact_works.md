@@ -28,7 +28,7 @@ This is because there is nothing to ensure that the behaviour of the simulated a
 
 # How Pact helps - the consumer side
 
-Pact solves the problem of keeping the two sets of tests in sync by use of a "contract", also known as a “pact”.
+Pact solves the problem of keeping the two sets of tests in sync by use of a "contract", also known as a "pact".
 
 During the execution of the consumer tests, each request that is made to the mock provider is recorded into the pact file, along with its expected response.
 
