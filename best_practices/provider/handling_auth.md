@@ -10,11 +10,15 @@ Pact tests don't usually provide sufficient coverage on their own, so consider w
 
 The authentication and authorization services could be stubbed to accept/deny previously agreed upon hardcoded credentials.
 
-## 3. Modify the request to use real credentials
+## 3. Set up users with matching credentials using provider states
+
+Use pre-agreed upon credentials and set up the correct data so that authentication and authorization pass. It is best to use this only if your user data is internal to your service. External authentication providers should be stubbed.
+
+## 4. Modify the request to use real credentials
 
 Most Pact implementations allow some method of modifying the request before it is replayed (eg. the Pact-JVM request filter, or Ruby Rack middleware). If this is not possible, you could provide your own middleware or proxy during verification.
 
-## 4. Use a really really long lived token
+## 5. Use a really really long lived token
 
 This is not ideal, but may be the best option for you.
 
