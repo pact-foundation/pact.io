@@ -203,7 +203,7 @@ To get started for free, you can sign up to our [Developer Plan](https://pactflo
 
 {% embed url="https://repl.it/@mefellows/docspactio-getting-started-publish" caption="Try it out: Sharing pacts through a Pact Broker \(via pactflow.io\)" %}
 
-We can see the Pact published at [https://test.pact.dius.com.au/pacts/provider/GettingStartedOrderApi/consumer/GettingStartedOrderWeb/latest](https://test.pact.dius.com.au/pacts/provider/GettingStartedOrderApi/consumer/GettingStartedOrderWeb/latest)
+We can see the Pact published at [https://test.pact.dius.com.au/pacts/provider/GettingStartedOrderApi/consumer/GettingStartedOrderWeb/latest](https://test.pact.dius.com.au/pacts/provider/GettingStartedOrderApi/consumer/GettingStartedOrderWeb/latest). Use the username `dXfltyFMgNOFZAxr8io9wJ37iUpY42M`, and password `O5AIZWxelWbLvqMd8PkAVycBJh2Psyg1`.
 
 After publishing the pact, we can now verify that the Provider meets these expectations.
 
