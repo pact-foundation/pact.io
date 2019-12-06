@@ -34,6 +34,7 @@
     * [Contract Tests vs Functional Tests](best_practices/consumer/contract_tests_not_functional_tests.md)
   * [Provider](best_practices/provider/README.md)
     * [Using provider states effectively](best_practices/provider/using_provider_states_effectively.md)
+    * [Handling authentication and authorization](best_practices/provider/handling_auth.md)
   * [Effective Pact Setup Guide](best_practices/pact_nirvana.md)
 * [Feature support](feature_support.md)
 * [Pact Broker](pact_broker/README.md)
