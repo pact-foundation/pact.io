@@ -30,7 +30,7 @@ _**Contract testing** is a technique for testing an integration point by checkin
 
 For applications that communicate via HTTP, these "messages" would be the HTTP request and response, and for an application that used queues, this would be the message that goes on the queue.
 
-In practice, a common way of implementing contract tests is to check that all the calls to your test doubles [return the same results](https://martinfowler.com/bliki/ContractTest.html) as a call to the real application would.
+In practice, a common way of implementing contract tests \(and the way Pact does it\) is to check that all the calls to your test doubles [return the same results](https://martinfowler.com/bliki/ContractTest.html) as a call to the real application would.
 
 ### When would I use contract testing?
 
@@ -44,7 +44,7 @@ In general, a contract is between a _consumer_ \(for example, a client that want
 
 Pact is a code-first [_consumer-driven_](http://martinfowler.com/articles/consumerDrivenContracts.html) contract testing tool, and is generally used by developers and testers who code. The contract is generated during the execution of the automated consumer tests. A major advantage of this pattern is that only parts of the communication that are actually used by the consumer\(s\) get tested. This in turn means that any provider behaviour not used by current consumers is free to change without breaking tests.
 
-Unlike a schema or specification \(eg. OAS\), which is a static artifact that describes all possible states of a resource, a Pact contract is enforced by executing a collection of test cases, each of which describes a single concrete request/response pair - Pact is, in effect, "contract by example".
+Unlike a schema or specification \(eg. OAS\), which is a static artefact that describes all possible states of a resource, a Pact contract is enforced by executing a collection of test cases, each of which describes a single concrete request/response pair - Pact is, in effect, "contract by example".
 
 ### Next steps
 
