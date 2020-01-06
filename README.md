@@ -24,7 +24,7 @@ To view an animated step-by-step explanation of how Pact works, check out this p
 Ready to jump in to the code already? Get started with our [5 minute guide](5-minute-getting-started-guide.md).
 {% endhint %}
 
-### Contract Testing
+### What is contract testing?
 
 _**Contract testing** is a technique for testing an integration point by checking each application in isolation to ensure the messages it sends or receives conform to a shared understanding that is documented in a "contract"._
 
@@ -32,7 +32,11 @@ For applications that communicate via HTTP, these "messages" would be the HTTP r
 
 In practice, a common way of implementing contract tests is to check that all the calls to your test doubles [return the same results](https://martinfowler.com/bliki/ContractTest.html) as a call to the real application would.
 
+### When would I use contract testing?
+
 Contract testing is immediately applicable anywhere where you have two services that need to communicate - such as an API client and a web front-end. Although a single client and a single service is a common use case, contract testing really shines in an environment with many services \(as is common for a microservice architecture\). Having well-formed contract tests makes it easy for developers to avoid version hell. Contract testing is the killer app for microservice development and deployment.
+
+### Contract testing terminology
 
 In general, a contract is between a _consumer_ \(for example, a client that wants to receive some data\) and a _provider_ \(for example, an API on a server that provides the data the client needs\). In microservice architectures, the traditional terms _client_ and _server_ are not always appropriate -- for example, when communication is achieved through message queues. For this reason, we stick to _consumer_ and _provider_ in this documentation.
 
@@ -44,5 +48,5 @@ Unlike a schema or specification \(eg. OAS\), which is a static artifact that de
 
 ### Next steps
 
-To learn more, read get started with our [5 minute guide](5-minute-getting-started-guide.md).
+To learn by doing, get started with our [5 minute guide](5-minute-getting-started-guide.md).
 
