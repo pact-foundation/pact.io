@@ -26,7 +26,7 @@ Ready to jump in to the code already? Get started with our [5 minute guide](5-mi
 
 ### Contract Testing
 
-_**Contract testing** ensures that a pair of applications will work correctly together by checking each application in isolation to ensure the messages it sends or receives conform to a shared understanding that is documented in a "contract"._
+_**Contract testing** is a technique for testing an integration point by checking each application in isolation to ensure the messages it sends or receives conform to a shared understanding that is documented in a "contract"._
 
 For applications that communicate via HTTP, these "messages" would be the HTTP request and response, and for an application that used queues, this would be the message that goes on the queue.
 
