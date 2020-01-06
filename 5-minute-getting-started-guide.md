@@ -35,8 +35,8 @@ Here, a _Collaborator_ is a component who's job is to communicate with another s
 
 Imagine a simple model class that looks something like this \(order.js\). The attributes for an Order live on a remote server, and will need to be retrieved by an HTTP call to the Order API.
 
-{% code-tabs %}
-{% code-tabs-item title="order.js" %}
+{% tabs %}
+{% tab title="order.js" %}
 ```javascript
 class Order {
   constructor(id, items) {
@@ -56,9 +56,9 @@ class Order {
   }
 }
 ```
-{% endcode-tabs-item %}
+{% endtab %}
 
-{% code-tabs-item title="Sample Order" %}
+{% tab title="Sample Order" %}
 ```javascript
 module.exports = [
   {
@@ -78,15 +78,15 @@ module.exports = [
   },
 ]
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
 ### 2. Create an Order API client
 
 Here we have our external collaborator client. Its job is to both make the external request to the Order API and convert the response into the internal Order model as per above:
 
-{% code-tabs %}
-{% code-tabs-item title="orderClient.js" %}
+{% tabs %}
+{% tab title="orderClient.js" %}
 ```javascript
 const fetchOrders = () => {
   return request.get(`${API_ENDPOINT}/orders`).then(
@@ -102,8 +102,8 @@ const fetchOrders = () => {
   )
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
 ### 3. Configure the mock Order API
 
@@ -125,8 +125,8 @@ await provider.setup()
 
 ### 4. Write a test
 
-{% code-tabs %}
-{% code-tabs-item title="order.spec.js" %}
+{% tabs %}
+{% tab title="order.spec.js" %}
 ```javascript
 describe('Pact with Order API', () => {
   describe('given there are orders', () => {
@@ -165,8 +165,8 @@ describe('Pact with Order API', () => {
   })
 })
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
 Green!
 
@@ -262,8 +262,8 @@ We now need to perform the "provider verification" task, which involves the foll
 2. Starting the API \(line 16-18\)
 3. Running the Provider verification task \(line 22\)
 
-{% code-tabs %}
-{% code-tabs-item title="provider.spec.js" %}
+{% tabs %}
+{% tab title="provider.spec.js" %}
 ```javascript
 // Verify that the provider meets all consumer expectations
 describe('Pact Verification', () => {
@@ -290,8 +290,8 @@ describe('Pact Verification', () => {
   })
 })
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
 #### Run the Provider tests
 

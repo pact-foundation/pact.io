@@ -127,7 +127,7 @@ If you work in a more traditional "Big Bang Release" environment, choose end to 
 
 ### Can I use Pact for UI tests?
 
-We do not recommend it. Please read more on the [Consumer Best Practices](best_practices/consumer#avoid-using-pact-for-tests-that-involve-the-ui) page.
+We do not recommend it. Please read more on the [Consumer Best Practices](https://github.com/pact-foundation/pact.io/tree/ebbe880cce273dfb0d50f67c3a6933b9e4921a86/faq/best_practices/consumer/README.md#avoid-using-pact-for-tests-that-involve-the-ui) page.
 
 ### How can I handle versioning?
 

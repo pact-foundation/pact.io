@@ -8,7 +8,7 @@ description: Getting started with Pact JS
 
 ## Quickstart guide
 
-Our [5 minute guide](../5-minute-getting-started-guide.md) is written in JS, this is a good starting point if this is your first experience with Pact. 
+Our [5 minute guide](../5-minute-getting-started-guide.md) is written in JS, this is a good starting point if this is your first experience with Pact.
 
 ## Pact JS Workshop
 
