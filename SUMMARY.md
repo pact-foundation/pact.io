@@ -56,6 +56,7 @@
     * [Pacticipants](pact_broker/advanced_topics/pacticipant.md)
     * [Pending pacts](pact_broker/advanced_topics/pending_pacts.md)
     * [Work In Progress pacts](pact_broker/advanced_topics/wip_pacts.md)
+    * [Understanding pacticipant version selectors](pact_broker/advanced_topics/selectors.md)
     * [API documentation](pact_broker/advanced_topics/api_docs/README.md)
       * [Publishing pacts](pact_broker/advanced_topics/api_docs/publish_pact.md)
       * [Publishing verification results](pact_broker/advanced_topics/api_docs/publish_verification_result.md)
