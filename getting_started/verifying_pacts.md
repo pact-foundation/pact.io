@@ -1,6 +1,6 @@
 # Verifying Pacts
 
-"Verifying a pact" is the second step of the Pact testing process. Each request in the pact file is replayed against the provider, and the response that is returned is compared with the expected response in the pact file, and if the two match, then we know the consumer and provider are compatible.
+"Verifying a pact" is the second step of the Pact testing process. Each request in the pact file is replayed against the provider, and the response is compared with the expected response in the pact file. If the two match, then we know the consumer and provider are compatible.
 
 To verify a pact, we must:
 
@@ -12,7 +12,7 @@ Refer to the [Ruby example](../implementation_guides/ruby/verifying_pacts.md) fo
 
 ## Verifying Pacts from a Pact Broker
 
-If you are verifying a pact from a Pact Broker, you can configure your verification tool to publish the verification results back to the broker. This massively increases the value you get from using Pact, because sharing the contracts is only half the story - you also need to share the verification results so that the communication loop between the consumer and provider teams is complete. Your contract won't give you any confidence about deploying your consumer unless you know it's been verified successfully.
+If you are verifying a pact from a Pact Broker, you can configure your verification tool to publish the verification results back to the broker. This massively increases the value you get from using Pact, because sharing the contracts is only half the story - you also need to share the verification results so that the communication loop between the consumer and provider teams is complete. Your contract won't give you any confidence about deploying your consumer unless you know it has been verified successfully.
 
 Refer to the configuration documentation for your Pact implementation language for information on how to configure verification publishing.
 
@@ -22,5 +22,4 @@ If you are using a language that doesn't provide native support for verification
 
 ### Using Docker?
 
-Check out the pact provider verifier [Docker image](https://hub.docker.com/r/dius/pact-provider-verifier-docker/) image.
-
+Check out the Pact CLI [Docker image](https://hub.docker.com/r/pactfoundation/pact-cli) image.
