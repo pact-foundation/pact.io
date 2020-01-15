@@ -2,3 +2,4 @@ redirects:
   pending: pact_broker/advanced_topics/pending_pacts.md
   wip: pact_broker/advanced_topics/wip_pacts.md
   selectors: pact_broker/advanced_topics/selectors.md
+  too-many-interactions: best_practices/consumer.md
