@@ -30,7 +30,7 @@ This happens when two or more application versions publish the same Pact contrac
 
 Allowing multiple consumer versions to point to one pact contract file has the major advantage that verifications don’t need to be repeated when contracts haven’t changed. In the diagram above, a provider that has been verified against consumer version 0.0.0 is automatically considered to have been verified against consumer version 0.0.1. This is particularly useful when working on feature branches.
 
-It also has the smaller advantage that it is always safe to republish the same pact contract for the same consumer application version.
+It also has the smaller advantage that it is always safe to republish the same pact contract for the same consumer application version - it will simply be a no-op. You'll see a 200 OK instead of a 201 Created in this situation.
 
 ## Provider application versions
 
