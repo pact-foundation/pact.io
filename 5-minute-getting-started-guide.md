@@ -170,7 +170,7 @@ describe('Pact with Order API', () => {
 
 Green!
 
-Running the passing Order API spec will generate a pact file in the configured pact dir \(`./pacts` by default\). Logs will be output to the configured log dir \(./`log` by default\) that can be useful when diagnosing problems.
+Running the passing Order API spec will generate a pact file in the configured pact dir \(`./pacts` by default\). Logs will be output to the configured log dir \(`./log` by default\) that can be useful when diagnosing problems.
 
 You now have a pact file that can be used to verify your expectations of the Order API provider project.
 
