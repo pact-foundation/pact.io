@@ -12,7 +12,7 @@ Our [5 minute guide](../5-minute-getting-started-guide.md) is written in JS, thi
 
 ## Pact JS Workshop
 
-If you'd like to go a little deeper, we have a [workshop](https://github.com/DiUS/pact-workshop-js) that will take 1-2 hours. It goes into all of the key topics, and will take you from a novice to intermediate level understanding.
+If you'd like to go a little deeper, we have a [workshop](https://github.com/pact-foundation/pact-workshop-js) that will take 1-2 hours. It goes into all of the key topics, and will take you from a novice to intermediate level understanding.
 
 ## Examples
 
