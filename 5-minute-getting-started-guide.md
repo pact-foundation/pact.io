@@ -91,10 +91,9 @@ Here we have our external collaborator client. Its job is to both make the exter
 const fetchOrders = () => {
   return request.get(`${API_ENDPOINT}/orders`).then(
     res => {
-      return res.body.reduce((acc, o) => {
-        acc.push(new Order(o.id, o.items))
-        return acc
-      }, [])
+      return res.body.map((o) => {
+        return new Order(o.id, o.items)
+      })
     },
     err => {
       throw new Error(`Error from response: ${err.body}`)
