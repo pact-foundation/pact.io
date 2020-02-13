@@ -1,6 +1,6 @@
 # Using Tags
 
-Tags are simple String values that that belong to pacticipant \(application\) version resources in the Pact Broker. They are typically used to provide metadata about a version, the most common use cases being to indicate the git branch of a version \(eg. `master`\) or a stage \(eg `test`, `prod`\).
+Tags are simple String values that belong to pacticipant \(application\) version resources in the Pact Broker. They are typically used to provide metadata about a version, the most common use cases being to indicate the git branch of a version \(eg. `master`\) or a stage \(eg `test`, `prod`\).
 
 Pact Broker version tags can be used for multiple purposes.
 
