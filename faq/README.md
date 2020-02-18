@@ -111,7 +111,17 @@ What you really need is a “non-HTTP” pact between your consumer and the down
 
 Contract tests replace a certain class of system integration test \(the ones you do to make sure that you're using the API correctly and that the API responds the way you expect\). They don't replace the tests that ensure that the core business logic of your services is working.
 
-The real question is: how many end-to-end tests do you really need, and in which environment - test or production? The answer to _this_ question depends on your organisation's risk profile.
+The value of contract tests is that they allow you to shift effort from high maintance, slow feedback tests to low maintenance, fast feedback tests, reducing the overall effort required to release.
+
+#### Before contract tests
+
+<img src="https://image.slidesharecdn.com/voxxeddays2019-190520032930/95/microservices-test-smarter-not-harder-voxxed-days-2019-27-638.jpg?cb=1558323091" width="400" alt="Before contract tests"/>
+
+#### After contract tests
+
+<img src="https://image.slidesharecdn.com/voxxeddays2019-190520032930/95/microservices-test-smarter-not-harder-voxxed-days-2019-29-638.jpg?cb=1558323091" width="400" alt="After contract tests"/>
+
+The real question is: how many end-to-end tests do you really need once you have contract tests, and in which environment - test or production? The answer to _this_ question depends on your organisation's risk profile.
 
 There is generally a trade off between the amount of confidence you have that your system is bug free, and the speed with which you can respond to any bugs you find. A 10 hour test suite may make you feel secure that all the functionality of your system is working, but it will decrease your ability to put out a new release quickly when a bug is inevitably found.
 
@@ -124,6 +134,8 @@ If you work in an environment where you prioritise "agility" over "stability", t
 * optimising your builds so that they run faster
 
 If you work in a more traditional "Big Bang Release" environment, choose end to end tests that focus on the core business value provided by your system, rather than on tests that try to check that the HTTP requests are being done correctly.
+
+
 
 ### Can I use Pact for UI tests?
 
