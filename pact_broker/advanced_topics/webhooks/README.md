@@ -65,3 +65,5 @@ If your consumer and provider builds are both within the same private network, y
 * [Webhook template library](template_lib.md) - a library of useful webhook templates
 
 [can-i-deploy]: https://docs.pact.io/pact_broker/can_i_deploy
+[webhook-api-docs]: https://github.com/pact-foundation/pact_broker/blob/master/lib/pact_broker/doc/views/webhooks.markdown
+[dynamic-variable-substitution]: https://github.com/pact-foundation/pact_broker/blob/master/lib/pact_broker/doc/views/webhooks.markdown#dynamic-variable-substitution
