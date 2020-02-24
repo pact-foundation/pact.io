@@ -26,4 +26,4 @@ If you've seen a really good talk that's not on this list, please submit a PR to
 * [Consumer Driven Contract Testing with Pact and Docker - Harry Winser](https://www.youtube.com/watch?v=pnWVYeDVo2s) - Oct 2017
 * [It's not hard to test smart](https://www.youtube.com/watch?v=79GKBYSqMIo) - Dec 2017
 * [Service Evolution with Consumer Driven Contracts and Pact \(.Net\)](http://adamrodger.github.io/blog/2018/07/05/consumer-driven-contracts.html) - July 2018
-
+* [Microservices. Test smarter, not harder](https://youtu.be/mFnKHcqSJ3I) - Oct 2019
