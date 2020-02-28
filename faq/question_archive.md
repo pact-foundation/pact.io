@@ -1,5 +1,7 @@
 # Question Archive
 
+Some less commonly, but no less importantly, asked questions.
+
 ## My team wants to run the application inside docker as they feel that running it inside a docker with http server is much more realistic scenario in line with production.
 
 Contract testing is not about providing a realistic situation. It's about testing your requests and responses in focussed way, isolating the application under test from causes of failure that are unrelated to the contents of the requests and responses (eg. networking issues, deployment problems, race conditions, downstream service unavailability)
@@ -14,6 +16,6 @@ You can do this, but would you be getting any extra benefit from it over your ex
 
 The introduction of contract testing allows you to reduce your integrated and e2e tests - but how much they reduce them depends heavily on your situation. Some teams skip the integrated and e2e tests altogether, and some teams keep a smaller set that is focussed on the "business value" scenarios rather than the "is this request/response right" kind of scenarios.
 
-## What's the difference between the pact broker and the mock service? 
+## What's the difference between the pact broker and the mock service?
 
 The mock service (and stub service) runs on your local development or CI machine for the duration of the pact tests. The Pact Broker is a permanently running, externally hosted service that allows you exchange the pacts and verification results.

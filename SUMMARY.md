@@ -75,7 +75,7 @@
 * [Docker](docker.md)
 * [FAQ](faq/README.md)
   * [Convince me](faq/convinceme.md)
-  * [Question archive](/question_archive/README.md)
+  * [Question archive](/faq/question_archive.md)
 * [Getting Help](getting_help.md)
 * [Contributing](contributing/README.md)
   * [Contributors](contributing/contributors.md)
