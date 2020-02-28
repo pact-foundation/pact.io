@@ -1,7 +1,5 @@
 # Question Archive
 
-These are some less frequently asked questions that are still helpful to have recorded for future Pact users.
-
 ## My team wants to run the application inside docker as they feel that running it inside a docker with http server is much more realistic scenario in line with production.
 
 Contract testing is not about providing a realistic situation. It's about testing your requests and responses in focussed way, isolating the application under test from causes of failure that are unrelated to the contents of the requests and responses (eg. networking issues, deployment problems, race conditions, downstream service unavailability)
