@@ -3,10 +3,10 @@
 Selectors are the way we specify which pacticipants and versions we want to use when configuring verifications or querying the matrix. The best way to understand them is to imagine that we start with a Matrix table that contains the pacts/verification results for every consumer and provider in the Pact Broker.
 
 | Consumer | Consumer version | Provider | Provider version | Success |
-|----------|------------------|----------|------------------|---------|
-| Foo      | 1                | Oink     | 6                | true    |
-| Foo      | 1                | Bar      | 2                | true    |
-| Foo      | 1                | Bar      | 3                | false   |
+| :--- | :--- | :--- | :--- | :--- |
+| Foo | 1 | Oink | 6 | true |
+| Foo | 1 | Bar | 2 | true |
+| Foo | 1 | Bar | 3 | false |
 
 To specify that we wanted to see all the rows between Foo and Bar, our selectors would be:
 
@@ -15,9 +15,9 @@ To specify that we wanted to see all the rows between Foo and Bar, our selectors
 This would return:
 
 | Consumer | Consumer version | Provider | Provider version | Success |
-|----------|------------------|----------|------------------|---------|
-| Foo      | 1                | Bar      | 2                | true    |
-| Foo      | 1                | Bar      | 3                | false   |
+| :--- | :--- | :--- | :--- | :--- |
+| Foo | 1 | Bar | 2 | true |
+| Foo | 1 | Bar | 3 | false |
 
 To specify that we wanted to see the results for Foo v1 and Bar v3, our selectors would be:
 
@@ -26,39 +26,37 @@ To specify that we wanted to see the results for Foo v1 and Bar v3, our selector
 This would return:
 
 | Consumer | Consumer version | Provider | Provider version | Success |
-|----------|------------------|----------|------------------|---------|
-| Foo      | 1                | Bar      | 3                | false   |
+| :--- | :--- | :--- | :--- | :--- |
+| Foo | 1 | Bar | 3 | false |
 
-
-Best "Pact Broker" practice specifies that once a pact is published for a particular consumer version, it should not be overwritten, however, there is nothing built in to the broker to stop multiple pacts being published with the same consumer version (not recommended!). If the provider verifies each revision, we would end up with a table that looks like this:
+Best "Pact Broker" practice specifies that once a pact is published for a particular consumer version, it should not be overwritten, however, there is nothing built in to the broker to stop multiple pacts being published with the same consumer version \(not recommended!\). If the provider verifies each revision, we would end up with a table that looks like this:
 
 | Consumer | Consumer version | Provider | Provider version | Success |
-|----------|------------------|----------|------------------|---------|
-| Foo      | 1 (revision 1)   | Bar      | 3                | false   |
-| Foo      | 1 (revision 2)   | Bar      | 3                | true    |
-| Foo      | 1 (revision 3)   | Bar      | 3                | false   |
+| :--- | :--- | :--- | :--- | :--- |
+| Foo | 1 \(revision 1\) | Bar | 3 | false |
+| Foo | 1 \(revision 2\) | Bar | 3 | true |
+| Foo | 1 \(revision 3\) | Bar | 3 | false |
 
 The overwritten revisions are not useful for determining whether or not we are safe to deploy, so to remove these lines from the dataset, we can specify the option `{latestby: "cvpv"}` to return the latest row when grouped and ordered by "consumer version and provider version".
 
-Putting the selectors and the options together, to specify that we wanted to see the *latest* results for Foo v1 and Bar v3, our selectors would be:
+Putting the selectors and the options together, to specify that we wanted to see the _latest_ results for Foo v1 and Bar v3, our selectors would be:
 
 `{"pacticipant": "Foo", "version": "1"}` and `{"pacticipant": "Bar", "version": "3"}` and our options would be `{"latestby": "cvpv"}`.
 
 This would return:
 
 | Consumer | Consumer version | Provider | Provider version | Success |
-|----------|------------------|----------|------------------|---------|
-| Foo      | 1 (revision 3)   | Bar      | 3                | false   |
-
+| :--- | :--- | :--- | :--- | :--- |
+| Foo | 1 \(revision 3\) | Bar | 3 | false |
 
 Instead of specifying the version using the version number, you can also specify it by indicating the tag name.
 
 | Consumer | Consumer version | Provider | Provider version | Success |
-|----------|------------------|----------|------------------|---------|
-| Foo      | 1 (prod)         | Bar      | 2                | true    |
-| Foo      | 1 (prod)         | Bar      | 3 (prod)         | true    |
-| Foo      | 2                | Bar      | 4 (prod)         | true    |
-| Foo      | 2                | Bar      | 5                | true    |
+| :--- | :--- | :--- | :--- | :--- |
+| Foo | 1 \(prod\) | Bar | 2 | true |
+| Foo | 1 \(prod\) | Bar | 3 \(prod\) | true |
+| Foo | 2 | Bar | 4 \(prod\) | true |
+| Foo | 2 | Bar | 5 | true |
 
 Version 1 of Foo has been tagged prod, while versions 3 and 4 of Bar have been tagged prod.
 
@@ -69,15 +67,12 @@ To determine if Foo v2 can be deployed with the latest prod version of Bar, our 
 This would return:
 
 | Consumer | Consumer version | Provider | Provider version | Success |
-|----------|------------------|----------|------------------|---------|
-| Foo      | 2                | Bar      | 4 (prod)         | true    |
+| :--- | :--- | :--- | :--- | :--- |
+| Foo | 2 | Bar | 4 \(prod\) | true |
 
-
-Imagine that Foo added another provider (and may add more in the future). It would be brittle to specify each of its integration partners by name. The Pact Broker already knows which applications Foo integrates with, so let's allow it to work out the dependencies by itself.
+Imagine that Foo added another provider \(and may add more in the future\). It would be brittle to specify each of its integration partners by name. The Pact Broker already knows which applications Foo integrates with, so let's allow it to work out the dependencies by itself.
 
 To determine if Foo v2 can be deployed with the latest prod versions of all its integration partners, our selectors would be:
 
-`{"pacticipant": "Foo", "version": "2"}` and our options would be `{ "tag": "prod", latest: true, latestby: "cvp"}`. (Note the change in `latestby` from "cvpv" to "cvp". The reasons why this is the case are beyond the scope of this document.)
-
-
+`{"pacticipant": "Foo", "version": "2"}` and our options would be `{ "tag": "prod", latest: true, latestby: "cvp"}`. \(Note the change in `latestby` from "cvpv" to "cvp". The reasons why this is the case are beyond the scope of this document.\)
 

@@ -1,4 +1,4 @@
-# Consumer
+# Writing Consumer tests
 
 ## Use `Pact` for contract testing, not functional testing of the provider
 

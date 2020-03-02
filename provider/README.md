@@ -1,4 +1,4 @@
-# Provider
+# Verifying Pacts
 
 ## Ensure that the latest pact is being verified
 

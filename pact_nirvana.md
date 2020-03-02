@@ -12,7 +12,7 @@ Before you read this document, you should:
 
 * have a basic understanding of the concepts of both [consumer driven contracts](https://martinfowler.com/articles/consumerDrivenContracts.html) and Pact,
 * have read the [Pact Broker Overview](https://github.com/pact-foundation/pact_broker/wiki/Overview)
-* have read the section on [Pacticipant version numbers](../getting_started/versioning_in_the_pact_broker.md)
+* have read the section on [Pacticipant version numbers](getting_started/versioning_in_the_pact_broker.md)
 
 ### How to use this document
 
@@ -22,7 +22,7 @@ However, there are many similarities in the steps necessary on the journey to a 
 
 Feel free to pick and choose the steps that apply best to your team. You may implement only the first few steps described below, and just use Pact as a precursor to your standard integration tests; or you may throw away your integration tests altogether and reach “Pact Nirvana”.
 
-As Pact has been implemented in many different languages, this document will outline the theory for each step. You will need to consult the documentation of your chosen language to learn the relevant syntax for each task. See the [implementation guides](../implementation_guides/) section for more information.
+As Pact has been implemented in many different languages, this document will outline the theory for each step. You will need to consult the documentation of your chosen language to learn the relevant syntax for each task. See the [implementation guides](implementation_guides/) section for more information.
 
 ### What are the steps for reaching Pact Nirvana?
 
@@ -63,7 +63,7 @@ The hardest thing about setting up Pact in any company is getting buy in from al
 
 A good way to determine if Pact works for you is to write and verify a pact for a real consumer and provider.
 
-1. Write a Pact test in your consumer project \(consult [the documentation](../implementation_guides/) for your
+1. Write a Pact test in your consumer project \(consult [the documentation](implementation_guides/) for your
 
    chosen language\) and generate the pact.
 
@@ -146,7 +146,7 @@ In addition to some of the language-specific Pact tools \(eg Grade\), tagging ca
 
 Useful link:
 
-* [Best practices for pacticipant version numbers](../getting_started/versioning_in_the_pact_broker.md)
+* [Best practices for pacticipant version numbers](getting_started/versioning_in_the_pact_broker.md)
 
 ## 6. Use tags to ensure your provider is compatible with your production consumer
 
@@ -163,7 +163,7 @@ Before you deploy to a production environment, you need to know whether or not y
 
 The Pact way of managing these dependencies is to use the Pact Matrix - this is the matrix created when you create a table of all the consumer and provider versions that have been tested against each other using Pact. You can view the Pact Matrix for any pair of applications by going opening `/matrix/provider/PROVIDER/consumer/CONSUMER` in your Pact Broker.
 
-![Pact matrix](../.gitbook/assets/pact-matrix.png)
+![Pact matrix](.gitbook/assets/pact-matrix.png)
 
 One very important thing to note is that a verification is associated with the pact _content_ itself, not to a specific consumer version. This means that if a pact does not change between publications, any previous verifications can automatically be applied to the new pact publication, effectively “pre-verifying” it. \(For this reason, it is best not to use any random data in a pact, as this will cause the broker to consider it a new revision of the pact.\) Linking a verification to the pact content rather than to the application version also means that we can do a “cartesian join” of pacts/verifications, resulting in many more “compatible” versions than would otherwise be the case.
 
@@ -198,5 +198,5 @@ Make sure that the provider application version used when publishing the verific
 
 Useful link:
 
-* [Best practices for pacticipant version numbers](../getting_started/versioning_in_the_pact_broker.md)
+* [Best practices for pacticipant version numbers](getting_started/versioning_in_the_pact_broker.md)
 

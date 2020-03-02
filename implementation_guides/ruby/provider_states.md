@@ -1,6 +1,6 @@
 # Provider States
 
-See [Provider States](../../best_practices/provider/using_provider_states_effectively.md) for an introduction into this advanced topic.
+See [Provider States](../../provider/using_provider_states_effectively.md) for an introduction into this advanced topic.
 
 The text in the provider state should make sense when you read it as follows \(this is how the auto-generated documentation reads\):
 

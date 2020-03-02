@@ -22,5 +22,5 @@ Most Pact implementations allow some method of modifying the request before it i
 
 This is not ideal, but may be the best option for you.
 
-For more information, see the [FAQ](../../faq/#how-do-i-test-oauth-or-other-security-headers)
+For more information, see the [FAQ](../faq/#how-do-i-test-oauth-or-other-security-headers)
 

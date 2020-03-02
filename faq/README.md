@@ -21,6 +21,7 @@
 * [Using Pact where the Consumer team is different from the Provider team](./#using-pact-where-the-consumer-team-is-different-from-the-provider-team)
 * [How to prevent a consumer from deploying with an invalid contract](./#how-to-prevent-a-consumer-from-deploying-with-an-invalid-contract)
 * [How do I test OAuth or other security headers?](./#how-do-i-test-oauth-or-other-security-headers)
+* [How do I deal with a situation where there are multiple systems involved in a scenario?](./#how-do-i-deal-with-a-situation-where-there-are-multiple-systems-involved-in-a-scenario)
 * [How do I test binary files in responses, such as a download?](./#how-do-i-test-binary-files-in-responses-such-as-a-download)
 * [Why is the documentation so ugly?](./#why-is-the-documentation-so-ugly)
 
@@ -44,7 +45,7 @@ The consumer team is responsible for implementing the Pact tests in the consumer
 
 ### What is the difference between contract testing and functional testing?
 
-See this [page](../best_practices/consumer/contract_tests_not_functional_tests.md) under the Consumer best practices section.
+See this [page](../consumer/contract_tests_not_functional_tests.md) under the Consumer best practices section.
 
 ### Can I generate my pact file from something like Swagger?
 
@@ -115,11 +116,11 @@ The value of contract tests is that they allow you to shift effort from high mai
 
 #### Before contract tests
 
-<img src="https://image.slidesharecdn.com/voxxeddays2019-190520032930/95/microservices-test-smarter-not-harder-voxxed-days-2019-27-638.jpg?cb=1558323091" width="400" alt="Before contract tests"/>
+![Before contract tests](https://image.slidesharecdn.com/voxxeddays2019-190520032930/95/microservices-test-smarter-not-harder-voxxed-days-2019-27-638.jpg?cb=1558323091)
 
 #### After contract tests
 
-<img src="https://image.slidesharecdn.com/voxxeddays2019-190520032930/95/microservices-test-smarter-not-harder-voxxed-days-2019-29-638.jpg?cb=1558323091" width="400" alt="After contract tests"/>
+![After contract tests](https://image.slidesharecdn.com/voxxeddays2019-190520032930/95/microservices-test-smarter-not-harder-voxxed-days-2019-29-638.jpg?cb=1558323091)
 
 The real question is: how many end-to-end tests do you really need once you have contract tests, and in which environment - test or production? The answer to _this_ question depends on your organisation's risk profile.
 
@@ -135,11 +136,9 @@ If you work in an environment where you prioritise "agility" over "stability", t
 
 If you work in a more traditional "Big Bang Release" environment, choose end to end tests that focus on the core business value provided by your system, rather than on tests that try to check that the HTTP requests are being done correctly.
 
-
-
 ### Can I use Pact for UI tests?
 
-We do not recommend it. Please read more on the [Consumer Best Practices](https://github.com/pact-foundation/pact.io/tree/ebbe880cce273dfb0d50f67c3a6933b9e4921a86/faq/best_practices/consumer/README.md#avoid-using-pact-for-tests-that-involve-the-ui) page.
+Unless you're using our [stub server](../getting_started/stubs.md) to mock out back end calls, we do not recommend using Pact for this purpose. Please read more on the [Consumer Best Practices](https://github.com/pact-foundation/pact.io/tree/ebbe880cce273dfb0d50f67c3a6933b9e4921a86/faq/best_practices/consumer/README.md#avoid-using-pact-for-tests-that-involve-the-ui) page.
 
 ### How can I handle versioning?
 
@@ -219,6 +218,16 @@ See the following links for some further discussion:
 * [https://groups.google.com/forum/\#!searchin/pact-support/oauth\|sort:relevance/pact-support/zTnDlOgdYhU/tq\_Yx8MnIgAJ](https://groups.google.com/forum/#!searchin/pact-support/oauth|sort:relevance/pact-support/zTnDlOgdYhU/tq_Yx8MnIgAJ)
 * [https://groups.google.com/forum/\#!topic/pact-support/tSyKZMxsECk](https://groups.google.com/forum/#!topic/pact-support/tSyKZMxsECk)
 * [http://stackoverflow.com/questions/40777493/how-do-i-verify-pacts-against-an-api-that-requires-an-auth-token/40794800?noredirect=1\#comment69346814\_40794800](http://stackoverflow.com/questions/40777493/how-do-i-verify-pacts-against-an-api-that-requires-an-auth-token/40794800?noredirect=1#comment69346814_40794800)
+
+### How do I deal with a situation where there are multiple systems involved in a scenario?
+
+There are multiple situations where you need to traverse more than 2 systems in a single scenario. For example, consumer A calls provider B, which calls downstream dependency provider C, which then calls another downstream dependencies provider D and and so on.
+
+Another common example is where one system calls out to another system first to fetch an authentication token such as a JWT. In this case, there is an API call from consumer A to auth provider B, which is then able to call auth server C.
+
+Where possible, you should try to isolate interactions between two services at any one time. We would generally recommend stubbing out these systems. 
+
+See [https://gist.github.com/bethesque/43eef1bf47afea4445c8b8bdebf28df0](https://gist.github.com/bethesque/43eef1bf47afea4445c8b8bdebf28df0) for some more detail on how you might achieve this, and read our advice on [dealing with auth services](../provider/handling_auth.md).
 
 ### How do I test auth cookies?
 
