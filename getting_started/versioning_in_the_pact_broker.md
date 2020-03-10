@@ -68,19 +68,19 @@ The best practices for application versioning while using pact are also good bes
 
 ### Rules
 
-1. _Ensure that your consumer version changes whenever the pact contract changes, and whenever there’s a new deployable build artifact._ This is so that specific application versions can be looked up in the pact matrix for accurate verification status.
+1. _Ensure that your consumer version changes whenever the pact contract changes, and whenever there’s a new deployable build artifact._ This is so that specific application versions can be looked up in the pact matrix for accurate verification status without risk of race conditions.
    * For consumers, you will need a new version number when what consumer version X requires from the provider changes.
-   * For providers, this is when the contract that it provides changes \(eg, when an API endpoint is added or changed\).
+   * For providers, this is when the contract that it supports changes \(eg, when an API endpoint is added or changed\).
 2. _Ensure that application version numbers are unique._ For example, a feature branch that changes the contract should not be able to have the same version number as any other branch - an application version should always identify one specific instance of application code.
 3. _Ensure that your versions can be known during a release._ This is because you will want to be able to use the pact matrix to determine whether or not it is safe to release consumer version X. If you can’t tell the version number until after release, you will not be able to do this
 
 ### Guidelines
 
-1. Have the consumer application version number include something that identifies the point in your version control repository that will build this application. For git, you could include the git commit hash in your version number \(for example 0.01-76a39e5\). This has several advantages:
+1. Have the application version number include something that identifies the point in your version control repository that will build this application. *For git, it is ideal if you either use the git commit sha (short or long), or include the git commit sha in your version number \(for example 0.0.10+76a39e5\)*. This has several advantages:
    * The consumer version will definitely change whenever the pact contract changes \(satisfying rule 1 above\)
    * Feature branches will automatically have different versions to master branch versions \(satisfying rule 2 above\)
    * Versions can always be known at deploy time \(satisfying rule 3 above\)
-   * You can also identify and checkout the production version of the consumer if you need to
+   * You can also identify and checkout the production version of the provider if you need to [prevent missing verifications](https://docs.pact.io/pact_nirvana#8-prevent-missing-verifications).
 2. If you are unable to include a pointer to version control inside the application version number, then ensure that you are able to tag the version control repository with a unique application version number at build time.
 3. Avoid having random data in your contracts. If your contracts contain random data, then a unique pact contract may be created when the contract has not actually changed. If this happens, you can’t take advantage of Pact’s duplicate contract detection.
 
