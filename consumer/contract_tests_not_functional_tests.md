@@ -80,3 +80,32 @@ When writing a test for an interaction, ask yourself what you are trying to cove
 
 In short, your Pact scenarios should not dig into the business logic of the Provider but should stick with verifying that Consumer and Provider have a shared understanding of what requests and responses will be. In our example of validation, write scenarios about _how_ the validation fails, not _why_ the validation fails.
 
+## Which test is responsible for what?
+
+| Assertion                                                             | Test                                              |
+|-----------------------------------------------------------------------|---------------------------------------------------|
+| Does the consumer code make the expected response?                    | Pact consumer tests (Pact mock service)           |
+| Does the consumer correctly handle the expected response?             | Pact consumer tests (using your own assertions)   |
+| Does the provider handle the expected request?                        | Pact provider tests (verifier)                    |
+| Does the provider return the expected response?                       | Pact provider tests (verifier)                    |
+| Does the provider do the right thing with the request?                | Provider's own functional tests                   |
+
+### Does the consumer code make the expected response?
+
+The expectations that get set up on the Pact mock service allow you to check that the consumer code is making the expected HTTP request to the provider. eg. Does it set the right content type, accept header, does it serialise the body correctly. The mock service will raise an error if the request sent to it does not match the expected request. 
+
+### Does the consumer correctly handle the expected response?
+
+Does the consumer code correctly handle all the different HTTP status codes that are expected back? eg. Correctly parse a JSON body into a domain object for a 200 response, return a nil for a 404, return a validation error object for a 400, raise an exception for a 500. These assertions are made using your own test framework.
+
+### Does the provider handle the expected request?
+
+Are the path, query string, body, content type etc that have been used the correct way of invoking the provider's implementation? The Pact verification task checks this automatically for you by replaying each request in the pact against the the real provider.
+
+### Does the provider return the expected response?
+
+Does the provider return the response status, body and headers that the consumer expects for this request? The Pact verification task checks this automatically for you by comparing the returned response with the expected response in the pact file.
+
+### Does the provider do the right thing with the request?
+
+Does the provider do the correct thing with the data from the request. What are the side effects? eg. does it correctly store the new resource in its datasource, does it put a message on a queue, does it change the state of some related resource?
