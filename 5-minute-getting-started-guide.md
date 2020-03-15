@@ -29,7 +29,7 @@ Usually, your application will be broken down into a number of sub-components, d
 
 ![Scope of a consumer Pact test](.gitbook/assets/consumer-test-coverage.png)
 
-Here, a _Collaborator_ is a component who's job is to communicate with another system. In our case, this is the `OrderApiClient`communicating with the external `Order Api` system. This is what we want our consumer test to inspect.
+Here, a _Collaborator_ is a component whose job is to communicate with another system. In our case, this is the `OrderApiClient`communicating with the external `Order Api` system. This is what we want our consumer test to inspect.
 
 ### 1. Start with your model
 
