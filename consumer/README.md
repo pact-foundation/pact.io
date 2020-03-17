@@ -14,6 +14,10 @@ You can read more about the difference between contract and functional tests [he
 
 **The rule of thumb for working out what to test or not test is - if I don't include this scenario, what bug in the consumer or what misunderstanding about how the provider responds might be missed. If the answer is none, don't include it.**
 
+## Only make assertions about things that will affect the consumer if they change
+
+Avoid the temptation to make assertions about general business rules that you know about the provider (eg. the customer ID is expected to be in the format `[A-Z][A-Z][A-Z]\-\d\d\d`). Only make assertions about things that would affect your consumer if they changed (eg. a link must start with `http` because your app is expecting absolute URLs, and would error if it received a relative one). This allows the provider to evolve without getting false alerts from unncessarily strict pact verification tests.
+
 ## Use `Pact` for isolated \(unit\) tests
 
 * as a mock \(calls to mocks are verified after a test\) not a stub \(calls to stubs are not verified\). Using `Pact` as a stub defeats the purpose of using `Pacts`.
