@@ -6,8 +6,8 @@ The **Pact Foundation** is an organisation to foster collaboration between the v
 
 **Pact** and the **Pact Foundation** would not be possible without the companies who have graciously provided time and resources to the projects.
 
-| ![SEEK Jobs Logo](../.gitbook/assets/seek%20%281%29.jpg) | ![DiUS Logo](../.gitbook/assets/dius.png) | ![ITV](../.gitbook/assets/itv.png) |
-| :--- | :--- | :--- |
+| ![SEEK Jobs Logo](../.gitbook/assets/seek%20%281%29.jpg) | ![DiUS Logo](../.gitbook/assets/dius.png) | ![ITV](../.gitbook/assets/itv.png) | ![Aligntech](https://www.aligntech.com/img/align-logo.svg)
+| :--- | :--- | :--- | :--- |
 
 
 ## People
@@ -30,7 +30,7 @@ Current maintainer: [Ron Holshausen](https://github.com/uglyog)
 
 Past contributors: Tarcio Saraiva
 
-Current maintainers: [Matt Fellows](https://github.com/mefellows), [Michel Boudreau](https://github.com/mboudreau)
+Current maintainers: [Matt Fellows](https://github.com/mefellows), [Michel Boudreau](https://github.com/mboudreau), [Ron Holshausen](https://github.com/uglyog) for V3 support
 
 ### .NET
 
@@ -56,3 +56,6 @@ Current maintainer: [Charles Mack](https://github.com/mattermack)
 
 Current maintainer: [Dave Smith](https://github.com/davesmith00000)
 
+### Rust
+
+Current maintainer: [Ron Holshausen](https://github.com/uglyog)
