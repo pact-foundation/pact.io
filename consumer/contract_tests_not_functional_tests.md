@@ -84,13 +84,13 @@ In short, your Pact scenarios should not dig into the business logic of the Prov
 
 | Assertion                                                             | Test                                              |
 |-----------------------------------------------------------------------|---------------------------------------------------|
-| Does the consumer code make the expected response?                    | Pact consumer tests (Pact mock service)           |
+| Does the consumer code make the expected request?                     | Pact consumer tests (Pact mock service)           |
 | Does the consumer correctly handle the expected response?             | Pact consumer tests (using your own assertions)   |
 | Does the provider handle the expected request?                        | Pact provider tests (verifier)                    |
 | Does the provider return the expected response?                       | Pact provider tests (verifier)                    |
 | Does the provider do the right thing with the request?                | Provider's own functional tests                   |
 
-### Does the consumer code make the expected response?
+### Does the consumer code make the expected request?
 
 The expectations that get set up on the Pact mock service allow you to check that the consumer code is making the expected HTTP request to the provider. eg. Does it set the right content type, accept header, does it serialise the body correctly. The mock service will raise an error if the request sent to it does not match the expected request. 
 
