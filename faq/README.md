@@ -7,6 +7,7 @@
 * [Who would typically implement Pact?](./#who-would-typically-implement-pact)
 * [What is the difference between contract testing and functional testing?](./#what-is-the-difference-between-contract-testing-and-functional-testing)
 * [Can I generate my pact file from something like Swagger?](./#can-i-generate-my-pact-file-from-something-like-swagger)
+* [How do I use Pact with UI frameworks like React or Angular?](./#how-do-i-use-pact-with-ui-frameworks-like-react-or-angular)
 * [Why doesn't Pact use JSON Schema?](./#why-doesnt-pact-use-json-schema)
 * [Why does Pact use concrete JSON documents rather than using more flexible JSONPaths?](./#why-does-pact-use-concrete-json-documents-rather-than-using-more-flexible-jsonpaths)
 * [Why is there no support for specifying optional attributes?](./#why-is-there-no-support-for-specifying-optional-attributes)
@@ -52,6 +53,10 @@ See this [page](../consumer/contract_tests_not_functional_tests.md) under the Co
 Contract testing allows you to take an integration test that gives you slow feedback and replace it with two sets of "unit" tests that give you fast feedback - one set for the consumer, using a mock provider, and one set for the provider, using a "mock consumer". The pact file is the artifact that keeps these two sets of tests in sync. To generate the pact file from anything other than the consumer tests \(or to hand code it\) would be to defeat the purpose of this type of contract testing. The reason the pact file exists is to ensure the tests in both projects are kept in sync - it is not an end in itself. Manually writing or generating a pact file from something like a Swagger document would be like marking your own exam, and would do nothing to ensure that the code in the consumer and provider are compatibile with each other.
 
 Something that could be useful, however, is to generate skeleton Pact test code from a Swagger document. If you're interested in working on this, have a chat to the maintainers on the Pact Slack.
+
+### How do I use Pact with UI frameworks like React or Angular?
+
+The best way to use Pact on the consumer side is to focus the tests on just the code that makes the HTTP request, and bypass as much of the framework specific code as possible. You can read more about why that is so [here](/consumer#avoid-using-pact-for-tests-that-involve-the-ui). You can see some examples [here](https://github.com/pact-foundation/pact-js/tree/master/examples) and a pact-js workshop [here](https://github.com/pact-foundation/pact-workshop-js).
 
 ### Why doesn't Pact use JSON Schema?
 
