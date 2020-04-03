@@ -37,6 +37,7 @@
 * [Effective Pact Setup Guide](pact_nirvana.md)
 * [Feature support](feature_support.md)
 * [Pact Broker](pact_broker/README.md)
+  * [Terraform Provider](pact_broker/terraform-provider.md)
   * [Overview](pact_broker/overview.md)
   * [Pacticipant Version Numbers](pact_broker/pacticipant_version_numbers.md)
   * [Publishing and retrieving pacts](pact_broker/publishing_and_retrieving_pacts.md)

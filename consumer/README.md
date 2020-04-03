@@ -16,7 +16,7 @@ You can read more about the difference between contract and functional tests [he
 
 ## Only make assertions about things that will affect the consumer if they change
 
-Avoid the temptation to make assertions about general business rules that you know about the provider (eg. the customer ID is expected to be in the format `[A-Z][A-Z][A-Z]\-\d\d\d`). Only make assertions about things that would affect your consumer if they changed (eg. a link must start with `http` because your app is expecting absolute URLs, and would error if it received a relative one). This allows the provider to evolve without getting false alerts from unncessarily strict pact verification tests.
+Avoid the temptation to make assertions about general business rules that you know about the provider \(eg. the customer ID is expected to be in the format `[A-Z][A-Z][A-Z]\-\d\d\d`\). Only make assertions about things that would affect your consumer if they changed \(eg. a link must start with `http` because your app is expecting absolute URLs, and would error if it received a relative one\). This allows the provider to evolve without getting false alerts from unncessarily strict pact verification tests.
 
 ## Use `Pact` for isolated \(unit\) tests
 
@@ -24,7 +24,7 @@ Avoid the temptation to make assertions about general business rules that you kn
 * for _isolated tests_ \(ie. unit tests\) of the class\(es\) that will be responsible for making the HTTP calls from your `Consumer` application to your `Provider` application, not for integrated tests of your entire consumer codebase.
 * _carefully_, for any sort of functional or integrated tests within your consumer codebase.
 
- **Why?**
+  **Why?**
 
 If you use `Pact` with exact matching for tests that cover multiple layers of your application \(especially your UI\), you will drive yourself nuts. You will have very brittle `Consumer` tests, as `Pact` checks every outgoing path, JSON node, query param and header. You will also end up with a cartesian explosion of interactions that need to be verified on the `Provider` side. This will increase the amount of time you spend getting your `Provider` tests to pass, without usefully increasing the amount of test coverage.
 

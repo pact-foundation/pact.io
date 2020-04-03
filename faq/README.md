@@ -56,7 +56,7 @@ Something that could be useful, however, is to generate skeleton Pact test code 
 
 ### How do I use Pact with UI frameworks like React or Angular?
 
-The best way to use Pact on the consumer side is to focus the tests on just the code that makes the HTTP request, and bypass as much of the framework specific code as possible. You can read more about why that is so [here](/consumer#avoid-using-pact-for-tests-that-involve-the-ui). You can see some examples [here](https://github.com/pact-foundation/pact-js/tree/master/examples) and a pact-js workshop [here](https://github.com/pact-foundation/pact-workshop-js).
+The best way to use Pact on the consumer side is to focus the tests on just the code that makes the HTTP request, and bypass as much of the framework specific code as possible. You can read more about why that is so [here](../consumer/#avoid-using-pact-for-tests-that-involve-the-ui). You can see some examples [here](https://github.com/pact-foundation/pact-js/tree/master/examples) and a pact-js workshop [here](https://github.com/pact-foundation/pact-workshop-js).
 
 ### Why doesn't Pact use JSON Schema?
 
@@ -230,7 +230,7 @@ There are multiple situations where you need to traverse more than 2 systems in 
 
 Another common example is where one system calls out to another system first to fetch an authentication token such as a JWT. In this case, there is an API call from consumer A to auth provider B, which is then able to call auth server C.
 
-Where possible, you should try to isolate interactions between two services at any one time. We would generally recommend stubbing out these systems. 
+Where possible, you should try to isolate interactions between two services at any one time. We would generally recommend stubbing out these systems.
 
 See [https://gist.github.com/bethesque/43eef1bf47afea4445c8b8bdebf28df0](https://gist.github.com/bethesque/43eef1bf47afea4445c8b8bdebf28df0) for some more detail on how you might achieve this, and read our advice on [dealing with auth services](../provider/handling_auth.md).
 

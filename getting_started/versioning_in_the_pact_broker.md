@@ -76,7 +76,7 @@ The best practices for application versioning while using pact are also good bes
 
 ### Guidelines
 
-1. Have the application version number include something that identifies the point in your version control repository that will build this application. **For git, it is ideal if you either use the git commit sha (short or long), or include the git commit sha in your version number \(for example 0.0.10+76a39e5\)**. This has several advantages:
+1. Have the application version number include something that identifies the point in your version control repository that will build this application. **For git, it is ideal if you either use the git commit sha \(short or long\), or include the git commit sha in your version number \(for example 0.0.10+76a39e5\)**. This has several advantages:
    * The consumer version will definitely change whenever the pact contract changes \(satisfying rule 1 above\)
    * Feature branches will automatically have different versions to master branch versions \(satisfying rule 2 above\)
    * Versions can always be known at deploy time \(satisfying rule 3 above\)
