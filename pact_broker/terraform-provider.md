@@ -18,7 +18,7 @@ Here is a list of resources available for configuration:
 | [Secret](https://github.com/pactflow/terraform/blob/master/docs/resource_secret.html.markdown) | Resource | Pactflow | Create an encrypted secret for use in Webhooks |
 | [API Token](https://github.com/pactflow/terraform/blob/master/docs/resource_token.html.markdown) | Resource | Pactflow | Manage Pactflow API Tokens |
 
-Learn more at
+Learn more at the official website:
 
 {% embed url="https://github.com/pactflow/terraform" %}
 
