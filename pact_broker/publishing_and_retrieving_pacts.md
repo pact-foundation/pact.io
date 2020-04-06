@@ -2,6 +2,16 @@
 
 ## Publishing
 
+### Publish using CLI tools
+
+The recommended way to publish pacts are to use the [CLI tools](https://github.com/pact-foundation/pact-ruby-standalone/releases) which make administration a breeze:
+
+```text
+pact-broker publish --consumer-app-version 1.0.0 --broker-base-url https://dius.pact.dius.com.au --broker-token SomeToken /path/to/pacts/consumer-provider.json --tag master
+```
+
+### Publish using HTTP Requests
+
 Pacts are published by making a `PUT` request to the path `/pacts/provider/PROVIDER/consumer/CONSUMER/version/CONSUMER_VERSION_NUMBER` with the pact json document as the body.
 
 For example:
