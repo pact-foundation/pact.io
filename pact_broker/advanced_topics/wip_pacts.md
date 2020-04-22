@@ -1,4 +1,3 @@
 # Work In Progress pacts
 
-This page will contain some information about how "pending" pacts work. This is feature is in alpha testing but should be released soon.
-
+This feature is in beta release. You can read about how it works here: http://blog.pact.io/2020/02/24/introducing-wip-pacts/
