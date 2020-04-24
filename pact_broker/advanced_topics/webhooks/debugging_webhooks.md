@@ -4,6 +4,14 @@ Webhooks are executed when either the pact content changes, or a verification is
 
 ## Testing webhook execution
 
+### Pactflow
+
+Click on the Settings icon, and then select the Webhooks tab.
+
+Select the webhook you want to test, and click "EDIT". Scroll to the bottom of the screen, and the click the "TEST" button.
+
+### Pact Broker
+
 You can find the full list of webhooks at `/webhooks` \(or open the API Browser, and click on the `GET` button for the `pb:webhooks` relation\).
 
 Navigate to the webhook you want to test by clicking on the `GET` button for the desired webhook under the `pb:webhooks` relation in the Links section.
