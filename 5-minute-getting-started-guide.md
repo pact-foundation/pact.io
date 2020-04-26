@@ -178,7 +178,7 @@ Now, in real life you would rinse and repeat for other likely status codes that 
 * 404 \(return null, or raise an error?\)
 * 400 \(how should validation errors be handled, what will the body look like when there is one?\)
 * 500 \(specifying that the response body should contain an error message, and ensuring that your client logs that error message will make your life much easier when things go wrong. Note that it may be hard to force your provider to generate a 500 error on demand. You may need to collaborate with your provider team to create a known provider state that will artificially return a 500 error, or you may just wish to use a standard unit test without a pact to test this.\)
-* 401/403 if there is authorisation.
+* 401/403 if there is authorization.
 
 #### **Run the consumer Tests!**
 
