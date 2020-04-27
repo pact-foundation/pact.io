@@ -18,7 +18,7 @@ Contract testing is an alternative approach to traditional integration testing t
 
 It:
 
-* allows you to release customer value quickly and confidently by [deploying your services independently](http://techblog.realestate.com.au/enter-the-pact-matrix-or-how-to-decouple-the-release-cycles-of-your-microservices/) and avoiding the bottleneck of integration tests
+* allows you to release customer value quickly and confidently by [deploying your services independently](https://www.rea-group.com/blog/enter-the-pact-matrix-or-how-to-decouple-the-release-cycles-of-your-microservices/) and avoiding the bottleneck of integration tests
 * solves the problem of how to share contracts and verification results between consumer and provider projects
 * tells you which versions of your applications can be deployed safely together
 * automatically versions your contracts
