@@ -18,9 +18,9 @@ There are multiple implementations of Pact, and while we try to keep feature par
 | Dynamically fetch pacts for provider from Pact Broker for verification | Y | Y | Y | \* | \* | \* | \* | \* | Y | ? |
 | Dynamically fetch pacts for provider with specified tags | Y | Y | Y | \* | \* | \* | \* | \* | ? | ? |
 | Automatically tag consumer/provider with name of git branch |  | \* | Y | \* | \* | \* | \* | \* |  |  |
-| Use 'pacts for verification' Pact Broker API | N | Y | Y | Y | N | N | N | N | N | N |
-| Pending pacts                                | N | Y | Y | Y | N | N | N | N | N | N |
-| WIP pacts                                    | N | Y | Y | Y | N | N | N | N | N | N |
+| Use 'pacts for verification' Pact Broker API | N | Y | Y | Y | * | * | Y | N | N | N |
+| Pending pacts                                | N | Y | Y | Y | * | * | Y | N | N | N |
+| WIP pacts                                    | N | Y | Y | Y | * | * | Y | N | N | N |
 | JSON test results output |  | \* | Y | \* | Y | \* | \* | \* |  |  |
 | XML test results output | ? | \* | Y | \* | Y | \* | \* | \* |  |  |
 | Run a single interaction when verifying a pact | Y | Y | Y | \* | \* | \* | \* | \* | ? | ? |
