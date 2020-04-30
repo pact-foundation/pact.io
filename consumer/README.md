@@ -1,5 +1,9 @@
 # Writing Consumer tests
 
+The art of writing good consumer Pact tests is mostly about knowing what *not* to test. Getting this right will make the difference between Pact tests that are lightweight and helpful, and Pact tests that make you wish you'd stuck with integration testing. Your Pact tests should be as loose as they possibly can be, while still ensuring that the provider can't make changes that will break compatiblity with the consumer.
+
+It's worth taking the time to make sure you understand what to focus on before starting to write Pact tests for real.
+
 ## Use `Pact` for contract testing, not functional testing of the provider
 
 * Functional testing is about ensuring the provider does the right thing with a request. These tests belong in the provider codebase, and it's not the job of the consumer team to be writing them.
@@ -56,7 +60,7 @@ Do not hand create any HTTP requests directly in your `Consumer` app. Testing th
 
 ## Ensure the models you use in other tests could actually be created from the responses you expect
 
-Sure, you’ve checked that your client deserialises the HTTP response into the Alligator you expect, but then you need to make sure when you create an Alligator in another test, that you create it with valid attributes \(eg. is the Alligator’s last\_login\_time a Time or a DateTime?\). One way to do this is to use factories or fixtures to create the models for all your tests. See this [gist](https://gist.github.com/bethesque/69ae590e8312523e5337) for a more detailed explanation.
+Sure, you’ve checked that your client deserialises the HTTP response into the Alligator class you expect, but then you need to make sure when you create an Alligator in another test, that you create it with valid attributes \(eg. is the Alligator’s last\_login\_time a Time or a DateTime?\). One way to do this is to use factories or fixtures to create the models for all your tests. See this [gist](https://gist.github.com/bethesque/69ae590e8312523e5337) for a more detailed explanation.
 
 ## Beware of Garbage In, Garbage Out with PUT/POST/PATCH
 
@@ -64,7 +68,7 @@ Each interaction is tested in isolation, meaning you can’t do a PUT/POST/PATCH
 
 To ensure you don’t have a Garbage In Garbage Out situation, expect the response body to contain the newly updated values of the resource, and all will be well.
 
-If, for performance reasons, you don’t want to include the updated resource in the response, another way to avoid GIGO is to use a shared fixture between a GET response body, and a PUT/POST request body. That way, you know that the fields you are PUTing or POSTing are the same fields that you will be GETing.
+If you can't include the updated resource in the response, another way to avoid GIGO is to use a shared fixture between a GET response body, and a PUT/POST request body. That way, you know that the fields you are PUTing or POSTing are the same fields that you will be GETing.
 
 ## Use `can-i-deploy`
 
