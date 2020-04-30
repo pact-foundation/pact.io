@@ -1,7 +1,6 @@
 ---
 description: >-
-  Fast, easy and reliable testing for your APIs and microservices during
-  development
+  Fast and reliable testing for your APIs and microservices during development. Safety during deployment.
 ---
 
 # Introduction
