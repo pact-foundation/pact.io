@@ -14087,4 +14087,7 @@ article table {
 .dropdown.language-selector h6 {
   margin-top: 1.5em; }
 
+img.logo {
+  max-width: 100px; }
+
 /*# sourceMappingURL=theme-saas.css.map */
