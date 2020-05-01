@@ -14067,4 +14067,24 @@ article table {
 .docs-graphic:not(:hover) .btn {
   opacity: 0; }
 
+.icon-nofill {
+  flex-shrink: 0;
+  width: 20px;
+  height: 1.5rem; }
+  .icon-nofill.icon-md {
+    height: 2.25rem; }
+  .icon-nofill.icon-lg {
+    height: 3rem; }
+  .icon-nofill.icon-sm {
+    height: 0.75rem; }
+
+.icon-nofill + .icon-nofill {
+  margin-left: .25em; }
+
+.icon-nofill + .icon-nofill:last-child {
+  margin-right: .25em; }
+
+.dropdown.language-selector h6 {
+  margin-top: 1.5em; }
+
 /*# sourceMappingURL=theme.css.map */

@@ -97,7 +97,7 @@ getPaths = () => {
       folder: 'scss',
       all: 'scss/**/*',
       root: 'scss/*.scss',
-      themeScss: ['scss/theme-saas.scss', 'scss/theme.scss', '!scss/user.scss', '!scss/user-variables.scss'],
+      themeScss: ['scss/theme-saas.scss', `scss/theme-software-library.scss`, 'scss/theme.scss', '!scss/user.scss', '!scss/user-variables.scss'],
     },
     assets: {
       all: 'pages/assets/**/*',
