@@ -60,6 +60,9 @@ const babelConfig = {
 getPaths = () => {
   return {
     here: './',
+    config: {
+      all: ['config/**/*'],
+    },
     pages: {
       folder: 'pages',
       all: ['pages/**/*'],
@@ -148,6 +151,12 @@ gulp.task('clean:dist', function (done) {
     force: true
   });
   done();
+});
+
+// Copy html files to dist
+gulp.task('config', function () {
+  return gulp.src(paths.config.all)
+    .pipe(gulp.dest(paths.dist.folder))
 });
 
 // Copy html files to dist
@@ -378,6 +387,6 @@ gulp.task('watch', function (done) {
 
 });
 
-gulp.task('default', gulp.series('clean:dist', 'copy-assets', gulp.series('html', 'sass', 'sass-min', 'bootstrapjs', 'mrarejs'), gulp.series('serve', 'watch')));
+gulp.task('default', gulp.series('clean:dist', 'copy-assets', gulp.series('config', 'html', 'sass', 'sass-min', 'bootstrapjs', 'mrarejs'), gulp.series('serve', 'watch')));
 
-gulp.task('build', gulp.series('clean:dist', 'copy-assets', gulp.series('html', 'sass', 'sass-min', 'bootstrapjs', 'mrarejs')));
+gulp.task('build', gulp.series('clean:dist', 'copy-assets', gulp.series('config', 'html', 'sass', 'sass-min', 'bootstrapjs', 'mrarejs')));
