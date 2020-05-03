@@ -3,7 +3,7 @@
 
   <head>
     <meta charset="utf-8">
-    <title>Pact | Microservices testing made easy</title>
+    <title>Pact | Microservices testing made easy | Contract Testing</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="A corporate Bootstrap theme by Medium Rare">
     <link href="assets/css/loaders/loader-typing.css" rel="stylesheet" type="text/css" media="all" />
@@ -22,7 +22,7 @@
         <div class="container">
           <div class="col flex-fill px-0 d-flex justify-content-between">
             <a class="navbar-brand mr-0 fade-page" href="index.html">
-              <img src="assets/img/foundation-compact-black.png" alt="Pact Foundation" class="logo">
+              <img src="assets/img/foundation-compact.svg" alt="Pact Foundation" class="logo">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
               <img class="icon navbar-toggler-open" src="assets/img/icons/interface/menu.svg" alt="menu interface icon" data-inject-svg />
@@ -34,6 +34,9 @@
               <ul class="navbar-nav">
                 <li class="nav-item dropdown">
                   <a href="http://blog.pact.io" class="nav-link dropdown-toggle" data-toggle="dropdown-grid" aria-expanded="false" aria-haspopup="true">Blog</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a href="https://pact.canny.io" class="nav-link dropdown-toggle" data-toggle="dropdown-grid" aria-expanded="false" aria-haspopup="true">Roadmap</a>
                 </li>
                 <li class="nav-item dropdown">
                   <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown-grid" aria-expanded="false" aria-haspopup="true">Support</a>
@@ -66,9 +69,7 @@
               </ul>
             </div>
           </div>
-          <div class="collapse navbar-collapse justify-content-end col flex-fill px-0"><a href="#" class="btn btn-primary ml-lg-3">Purchase Now</a>
-
-          </div>
+          <!-- <div class="collapse navbar-collapse justify-content-end col flex-fill px-0"><a href="#" class="btn btn-primary ml-lg-3">Purchase Now</a></div> -->
         </div>
       </nav>
     </div>
@@ -77,16 +78,9 @@
       <div class="container">
         <div class="row justify-content-center text-center mb-6">
           <div class="col-xl-8 col-lg-9 col-md-10">
-            <h1 class="display-4">Pact</h1>
-            <p class="lead">Supercharge your API integration testing.</p>
+            <h1 class="display-4">Integration testing<br />...done properly</h1>
+            <p class="lead">Fast, easy and reliable testing for integrating web apps, APIs and microservices.</p>
             <div class="d-flex flex-column flex-sm-row justify-content-center align-items-center align-items-sm-start mt-5">
-              <!-- <div class="d-flex flex-column mx-1 text-center">
-                <a href="#" class="btn btn-lg btn-primary mb-2">
-                  <img class="icon" src="assets/img/icons/social/github.svg" alt="github social icon" data-inject-svg />
-                  <span>View on Github</span>
-                </a>
-                <a href="https://docs.pact.io" class="text-small hover-arrow">View Documentation</a>
-              </div> -->
               <div class="d-flex flex-column mx-1 text-center">
               <div class="dropdown language-selector">
                 <button class="btn btn-primary btn-lg dropdown-toggle" data-toggle="dropdown-grid" type="button" aria-expanded="false" aria-haspopup="true">
@@ -113,94 +107,6 @@
                   </div>
                 </div>
               </div>
-                <!-- <button class="btn btn-primary btn-lg dropdown-toggle" data-toggle="dropdown-grid" type="button" aria-expanded="false" aria-haspopup="true">
-                  <img class="icon" src="assets/img/icons/social/github.svg" alt="github social icon" data-inject-svg />
-                  <span>View on Github</span>
-                  <img class="icon" src="assets/img/icons/interface/arrow-caret.svg" alt="arrow-caret interface icon" data-inject-svg />
-                </button> -->
-                <!-- <a href="https://docs.pact.io" class="text-small hover-arrow">View Documentation</a> -->
-                <!-- <div class="dropdown-menu row">
-                  <div class="col-xl-6 col-lg-7 col-md-9" data-dropdown-content>
-                    <div class="card card-body shadow p-0">
-                      <div class="row no-gutters">
-                        <div class="col-md-3">
-                          <a href="https://github.com/pact-foundation/pact-js" class="d-flex m-3">
-                            <svg class="icon icon-lg bg-primary-2" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><title>Icon For Timer</title><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><rect opacity="0" x="0" y="0" width="24" height="24"></rect><path d="M12,21 C7.581722,21 4,17.418278 4,13 C4,8.581722 7.581722,5 12,5 C16.418278,5 20,8.581722 20,13 C20,17.418278 16.418278,21 12,21 Z" fill="#000000" opacity="0.3"></path><path d="M13,5.06189375 C12.6724058,5.02104333 12.3386603,5 12,5 C11.6613397,5 11.3275942,5.02104333 11,5.06189375 L11,4 L10,4 C9.44771525,4 9,3.55228475 9,3 C9,2.44771525 9.44771525,2 10,2 L14,2 C14.5522847,2 15,2.44771525 15,3 C15,3.55228475 14.5522847,4 14,4 L13,4 L13,5.06189375 Z" fill="#000000"></path><path d="M16.7099142,6.53272645 L17.5355339,5.70710678 C17.9260582,5.31658249 18.5592232,5.31658249 18.9497475,5.70710678 C19.3402718,6.09763107 19.3402718,6.73079605 18.9497475,7.12132034 L18.1671361,7.90393167 C17.7407802,7.38854954 17.251061,6.92750259 16.7099142,6.53272645 Z" fill="#000000"></path><path d="M11.9630156,7.5 L12.0369844,7.5 C12.2982526,7.5 12.5154733,7.70115317 12.5355117,7.96165175 L12.9585886,13.4616518 C12.9797677,13.7369807 12.7737386,13.9773481 12.4984096,13.9985272 C12.4856504,13.9995087 12.4728582,14 12.4600614,14 L11.5399386,14 C11.2637963,14 11.0399386,13.7761424 11.0399386,13.5 C11.0399386,13.4872031 11.0404299,13.4744109 11.0414114,13.4616518 L11.4644883,7.96165175 C11.4845267,7.70115317 11.7017474,7.5 11.9630156,7.5 Z" fill="#000000"></path></g></svg>
-                            <div class="ml-2">
-                              <span class="h6 mb-0">Node JS</span>
-                              <div class="text-small text-muted">Visit Pact JS on Github</div>
-                            </div>
-                          </a>
-                          <a href="#" class="d-flex m-3">
-                            <svg class="icon icon-lg bg-primary-2" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">    <title>Icon For Layout-top-panel-2</title>    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">        <rect opacity="0" x="0" y="0" width="24" height="24"></rect>        <path d="M3,4 L20,4 C20.5522847,4 21,4.44771525 21,5 L21,7 C21,7.55228475 20.5522847,8 20,8 L3,8 C2.44771525,8 2,7.55228475 2,7 L2,5 C2,4.44771525 2.44771525,4 3,4 Z M10,10 L20,10 C20.5522847,10 21,10.4477153 21,11 L21,19 C21,19.5522847 20.5522847,20 20,20 L10,20 C9.44771525,20 9,19.5522847 9,19 L9,11 C9,10.4477153 9.44771525,10 10,10 Z" fill="#000000"></path>        <rect fill="#000000" opacity="0.3" x="2" y="10" width="5" height="10" rx="1"></rect>    </g></svg>
-                            <div class="ml-2">
-                              <span class="h6 mb-0">Multiple Layouts</span>
-                              <div class="text-small text-muted">Customise interface layout</div>
-                            </div>
-                          </a>
-                          <a href="#" class="d-flex m-3">
-                            <svg class="icon icon-lg bg-primary-2" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">    <title>Icon For Layout-top-panel-2</title>    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">        <rect opacity="0" x="0" y="0" width="24" height="24"></rect>        <path d="M3,4 L20,4 C20.5522847,4 21,4.44771525 21,5 L21,7 C21,7.55228475 20.5522847,8 20,8 L3,8 C2.44771525,8 2,7.55228475 2,7 L2,5 C2,4.44771525 2.44771525,4 3,4 Z M10,10 L20,10 C20.5522847,10 21,10.4477153 21,11 L21,19 C21,19.5522847 20.5522847,20 20,20 L10,20 C9.44771525,20 9,19.5522847 9,19 L9,11 C9,10.4477153 9.44771525,10 10,10 Z" fill="#000000"></path>        <rect fill="#000000" opacity="0.3" x="2" y="10" width="5" height="10" rx="1"></rect>    </g></svg>
-                            <div class="ml-2">
-                              <span class="h6 mb-0">Multiple Layouts</span>
-                              <div class="text-small text-muted">Customise interface layout</div>
-                            </div>
-                          </a>
-                        </div>
-                        <div class="col-md-3">
-                          <a href="https://github.com/pact-foundation/pact-js" class="d-flex m-3">
-                            <svg class="icon icon-lg bg-primary-2" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><title>Icon For Timer</title><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><rect opacity="0" x="0" y="0" width="24" height="24"></rect><path d="M12,21 C7.581722,21 4,17.418278 4,13 C4,8.581722 7.581722,5 12,5 C16.418278,5 20,8.581722 20,13 C20,17.418278 16.418278,21 12,21 Z" fill="#000000" opacity="0.3"></path><path d="M13,5.06189375 C12.6724058,5.02104333 12.3386603,5 12,5 C11.6613397,5 11.3275942,5.02104333 11,5.06189375 L11,4 L10,4 C9.44771525,4 9,3.55228475 9,3 C9,2.44771525 9.44771525,2 10,2 L14,2 C14.5522847,2 15,2.44771525 15,3 C15,3.55228475 14.5522847,4 14,4 L13,4 L13,5.06189375 Z" fill="#000000"></path><path d="M16.7099142,6.53272645 L17.5355339,5.70710678 C17.9260582,5.31658249 18.5592232,5.31658249 18.9497475,5.70710678 C19.3402718,6.09763107 19.3402718,6.73079605 18.9497475,7.12132034 L18.1671361,7.90393167 C17.7407802,7.38854954 17.251061,6.92750259 16.7099142,6.53272645 Z" fill="#000000"></path><path d="M11.9630156,7.5 L12.0369844,7.5 C12.2982526,7.5 12.5154733,7.70115317 12.5355117,7.96165175 L12.9585886,13.4616518 C12.9797677,13.7369807 12.7737386,13.9773481 12.4984096,13.9985272 C12.4856504,13.9995087 12.4728582,14 12.4600614,14 L11.5399386,14 C11.2637963,14 11.0399386,13.7761424 11.0399386,13.5 C11.0399386,13.4872031 11.0404299,13.4744109 11.0414114,13.4616518 L11.4644883,7.96165175 C11.4845267,7.70115317 11.7017474,7.5 11.9630156,7.5 Z" fill="#000000"></path></g></svg>
-                            <div class="ml-2">
-                              <span class="h6 mb-0">Node JS</span>
-                              <div class="text-small text-muted">Visit Pact JS on Github</div>
-                            </div>
-                          </a>
-                          <a href="#" class="d-flex m-3">
-                            <svg class="icon icon-lg bg-primary-2" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">    <title>Icon For Layout-top-panel-2</title>    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">        <rect opacity="0" x="0" y="0" width="24" height="24"></rect>        <path d="M3,4 L20,4 C20.5522847,4 21,4.44771525 21,5 L21,7 C21,7.55228475 20.5522847,8 20,8 L3,8 C2.44771525,8 2,7.55228475 2,7 L2,5 C2,4.44771525 2.44771525,4 3,4 Z M10,10 L20,10 C20.5522847,10 21,10.4477153 21,11 L21,19 C21,19.5522847 20.5522847,20 20,20 L10,20 C9.44771525,20 9,19.5522847 9,19 L9,11 C9,10.4477153 9.44771525,10 10,10 Z" fill="#000000"></path>        <rect fill="#000000" opacity="0.3" x="2" y="10" width="5" height="10" rx="1"></rect>    </g></svg>
-                            <div class="ml-2">
-                              <span class="h6 mb-0">Multiple Layouts</span>
-                              <div class="text-small text-muted">Customise interface layout</div>
-                            </div>
-                          </a>
-                          <a href="#" class="d-flex m-3">
-                            <svg class="icon icon-lg bg-primary-2" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">    <title>Icon For Layout-top-panel-2</title>    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">        <rect opacity="0" x="0" y="0" width="24" height="24"></rect>        <path d="M3,4 L20,4 C20.5522847,4 21,4.44771525 21,5 L21,7 C21,7.55228475 20.5522847,8 20,8 L3,8 C2.44771525,8 2,7.55228475 2,7 L2,5 C2,4.44771525 2.44771525,4 3,4 Z M10,10 L20,10 C20.5522847,10 21,10.4477153 21,11 L21,19 C21,19.5522847 20.5522847,20 20,20 L10,20 C9.44771525,20 9,19.5522847 9,19 L9,11 C9,10.4477153 9.44771525,10 10,10 Z" fill="#000000"></path>        <rect fill="#000000" opacity="0.3" x="2" y="10" width="5" height="10" rx="1"></rect>    </g></svg>
-                            <div class="ml-2">
-                              <span class="h6 mb-0">Multiple Layouts</span>
-                              <div class="text-small text-muted">Customise interface layout</div>
-                            </div>
-                          </a>
-                        </div>
-                        <div class="col-md-3">
-                          <a href="https://github.com/pact-foundation/pact-js" class="d-flex m-3">
-                            <svg class="icon icon-lg bg-primary-2" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><title>Icon For Timer</title><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><rect opacity="0" x="0" y="0" width="24" height="24"></rect><path d="M12,21 C7.581722,21 4,17.418278 4,13 C4,8.581722 7.581722,5 12,5 C16.418278,5 20,8.581722 20,13 C20,17.418278 16.418278,21 12,21 Z" fill="#000000" opacity="0.3"></path><path d="M13,5.06189375 C12.6724058,5.02104333 12.3386603,5 12,5 C11.6613397,5 11.3275942,5.02104333 11,5.06189375 L11,4 L10,4 C9.44771525,4 9,3.55228475 9,3 C9,2.44771525 9.44771525,2 10,2 L14,2 C14.5522847,2 15,2.44771525 15,3 C15,3.55228475 14.5522847,4 14,4 L13,4 L13,5.06189375 Z" fill="#000000"></path><path d="M16.7099142,6.53272645 L17.5355339,5.70710678 C17.9260582,5.31658249 18.5592232,5.31658249 18.9497475,5.70710678 C19.3402718,6.09763107 19.3402718,6.73079605 18.9497475,7.12132034 L18.1671361,7.90393167 C17.7407802,7.38854954 17.251061,6.92750259 16.7099142,6.53272645 Z" fill="#000000"></path><path d="M11.9630156,7.5 L12.0369844,7.5 C12.2982526,7.5 12.5154733,7.70115317 12.5355117,7.96165175 L12.9585886,13.4616518 C12.9797677,13.7369807 12.7737386,13.9773481 12.4984096,13.9985272 C12.4856504,13.9995087 12.4728582,14 12.4600614,14 L11.5399386,14 C11.2637963,14 11.0399386,13.7761424 11.0399386,13.5 C11.0399386,13.4872031 11.0404299,13.4744109 11.0414114,13.4616518 L11.4644883,7.96165175 C11.4845267,7.70115317 11.7017474,7.5 11.9630156,7.5 Z" fill="#000000"></path></g></svg>
-                            <div class="ml-2">
-                              <span class="h6 mb-0">Node JS</span>
-                              <div class="text-small text-muted">Visit Pact JS on Github</div>
-                            </div>
-                          </a>
-                          <a href="#" class="d-flex m-3">
-                            <svg class="icon icon-lg bg-primary-2" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">    <title>Icon For Layout-top-panel-2</title>    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">        <rect opacity="0" x="0" y="0" width="24" height="24"></rect>        <path d="M3,4 L20,4 C20.5522847,4 21,4.44771525 21,5 L21,7 C21,7.55228475 20.5522847,8 20,8 L3,8 C2.44771525,8 2,7.55228475 2,7 L2,5 C2,4.44771525 2.44771525,4 3,4 Z M10,10 L20,10 C20.5522847,10 21,10.4477153 21,11 L21,19 C21,19.5522847 20.5522847,20 20,20 L10,20 C9.44771525,20 9,19.5522847 9,19 L9,11 C9,10.4477153 9.44771525,10 10,10 Z" fill="#000000"></path>        <rect fill="#000000" opacity="0.3" x="2" y="10" width="5" height="10" rx="1"></rect>    </g></svg>
-                            <div class="ml-2">
-                              <span class="h6 mb-0">Multiple Layouts</span>
-                              <div class="text-small text-muted">Customise interface layout</div>
-                            </div>
-                          </a>
-                          <a href="#" class="d-flex m-3">
-                            <svg class="icon icon-lg bg-primary-2" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">    <title>Icon For Layout-top-panel-2</title>    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">        <rect opacity="0" x="0" y="0" width="24" height="24"></rect>        <path d="M3,4 L20,4 C20.5522847,4 21,4.44771525 21,5 L21,7 C21,7.55228475 20.5522847,8 20,8 L3,8 C2.44771525,8 2,7.55228475 2,7 L2,5 C2,4.44771525 2.44771525,4 3,4 Z M10,10 L20,10 C20.5522847,10 21,10.4477153 21,11 L21,19 C21,19.5522847 20.5522847,20 20,20 L10,20 C9.44771525,20 9,19.5522847 9,19 L9,11 C9,10.4477153 9.44771525,10 10,10 Z" fill="#000000"></path>        <rect fill="#000000" opacity="0.3" x="2" y="10" width="5" height="10" rx="1"></rect>    </g></svg>
-                            <div class="ml-2">
-                              <span class="h6 mb-0">Multiple Layouts</span>
-                              <div class="text-small text-muted">Customise interface layout</div>
-                            </div>
-                          </a>
-                        </div>
-                      </div>
-                      <hr class="m-0">
-                      <div class="px-3 py-2 d-flex justify-content-between align-items-center">
-                        <span class="text-small">Or, book a demo from our friendly team</span>
-                        <a href="mailto:support@pactflow.io" class="btn btn-sm btn-outline-primary-2">Request a demo</a>
-                      </div>
-                    </div>
-                  </div>
-                </div> -->
               </div>
               <a href="https://pactflow.io" class="mx-1 btn btn-lg btn-primary-3 mt-3 mt-sm-0">Go Premium</a>
             </div>
@@ -225,9 +131,9 @@
       <div class="container">
         <div class="row justify-content-center text-center mb-6">
           <div class="col-xl-8 col-lg-9">
-            <h2 class="display-4 mx-xl-6">Purpose built for microservices.</h2>
+            <h2 class="display-4 mx-xl-6">Say goodbye to end-to-end testing</h2>
             <p class="lead">
-              Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa.
+              Testing microservices shouldn't involve setting up complex end-to-end test environments, creating lengthy integration suites and managing test data. Stop wasting time, and start releasing.
             </p>
           </div>
         </div>
@@ -256,6 +162,14 @@
                     <img class="icon bg-primary" src="assets/img/icons/theme/code/thunder-circle.svg" alt="saturation icon" data-inject-svg />
                   </div>
                   Serverless
+                </a>
+              </li>
+              <li class="nav-item mx-1">
+                <a class="nav-link" href="#saas-tab-3" data-toggle="tab" role="tab" aria-controls="saas-tab-3" aria-selected="false">
+                  <div class="icon-round icon-round-sm bg-primary">
+                    <img class="icon bg-primary" src="assets/img/icons/theme/code/github.svg" alt="saturation icon" data-inject-svg />
+                  </div>
+                  CI/CD Pipelines
                 </a>
               </li>
             </ul>
@@ -300,7 +214,7 @@
             <div class="row">
               <div class="col-md-6 d-flex mb-4" data-aos="fade-up" data-aos-delay="200">
                 <div class="icon-round bg-primary mr-3">
-                  <img class="icon bg-primary" src="assets/img/icons/theme/code/code.svg" alt="icon" data-inject-svg />
+                  <img class="icon bg-primary" src="assets/img/icons/theme/devices/laptop-macbook.svg" alt="icon" data-inject-svg />
                 </div>
                 <div>
                   <h4 class="mb-2">Find bugs in <em>dev</em></h4>
@@ -311,7 +225,7 @@
               </div>
               <div class="col-md-6 d-flex mb-4" data-aos="fade-up" data-aos-delay="100">
                 <div class="icon-round bg-primary mr-3">
-                  <img class="icon bg-primary" src="assets/img/icons/theme/general/shield-protected.svg" alt="icon" data-inject-svg />
+                  <img class="icon bg-primary" src="assets/img/icons/theme/general/thunder-move.svg" alt="icon" data-inject-svg />
                 </div>
                 <div>
                   <h4 class="mb-2">Deploy Faster, Safer &amp; More often</h4>
@@ -320,7 +234,7 @@
               </div>
               <div class="col-md-6 d-flex mb-4" data-aos="fade-up" data-aos-delay="400">
                 <div class="icon-round bg-primary mr-3">
-                  <img class="icon bg-primary" src="assets/img/icons/theme/weather/cloudy-night.svg" alt="icon" data-inject-svg />
+                  <img class="icon bg-primary" src="assets/img/icons/theme/devices/server.svg" alt="icon" data-inject-svg />
                 </div>
                 <div>
                   <h4 class="mb-2">Remove complex end-to-end environments</h4>
@@ -331,7 +245,7 @@
               </div>
               <div class="col-md-6 d-flex mb-4" data-aos="fade-up" data-aos-delay="400">
                 <div class="icon-round bg-primary mr-3">
-                  <img class="icon bg-primary" src="assets/img/icons/theme/weather/cloudy-night.svg" alt="icon" data-inject-svg />
+                  <img class="icon bg-primary" src="assets/img/icons/theme/files/deleted-file.svg" alt="icon" data-inject-svg />
                 </div>
                 <div>
                   <h4 class="mb-2">Stop relying on unreliable test data</h4>
@@ -342,31 +256,31 @@
               </div>
               <div class="col-md-6 d-flex mb-4" data-aos="fade-up" data-aos-delay="400">
                 <div class="icon-round bg-primary mr-3">
-                  <img class="icon bg-primary" src="assets/img/icons/theme/weather/cloudy-night.svg" alt="icon" data-inject-svg />
+                  <img class="icon bg-primary" src="assets/img/icons/theme/general/unlock.svg" alt="icon" data-inject-svg />
                 </div>
                 <div>
                   <h4 class="mb-2">Say goodbye to painful release processes</h4>
                   <p class="lead pr-xl-4">
-                    ... more words
+                    With Pact and the Pact Broker, you can orchestrate complex CI and CD pipelines and use <code>can-i-deploy</code> to tell you when a component is safe to release.
                   </p>
                 </div>
               </div>
               <div class="col-md-6 d-flex mb-4" data-aos="fade-up" data-aos-delay="300">
                 <div class="icon-round bg-primary mr-3">
-                  <img class="icon bg-primary" src="assets/img/icons/theme/shopping/box-2.svg" alt="icon" data-inject-svg />
-                </div>
-                <div>
-                  <h4 class="mb-2">Local stubs</h4>
-                  <p class="lead pr-xl-4">test locally with stubs</p>
-                </div>
-              </div>
-              <div class="col-md-6 d-flex mb-4" data-aos="fade-up" data-aos-delay="300">
-                <div class="icon-round bg-primary mr-3">
-                  <img class="icon bg-primary" src="assets/img/icons/theme/shopping/box-2.svg" alt="icon" data-inject-svg />
+                  <img class="icon bg-primary" src="assets/img/icons/theme/communication/group.svg" alt="icon" data-inject-svg />
                 </div>
                 <div>
                   <h4 class="mb-2">Collaborate with the Pact Broker</h4>
                   <p class="lead pr-xl-4">Integrate into your CI/CD pipelines, manage and promote contracts with the Pact Broker</p>
+                </div>
+              </div>
+              <div class="col-md-6 d-flex mb-4" data-aos="fade-up" data-aos-delay="300">
+                <div class="icon-round bg-primary mr-3">
+                  <img class="icon bg-primary" src="assets/img/icons/theme/devices/router-1.svg" alt="icon" data-inject-svg />
+                </div>
+                <div>
+                  <h4 class="mb-2">Work offline with API stubs</h4>
+                  <p class="lead pr-xl-4">Pact's API stubs are guaranteed to represent behaviour of the real system, so you can test with confidence</p>
                 </div>
               </div>
             </div>
