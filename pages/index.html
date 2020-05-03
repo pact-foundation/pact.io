@@ -3,13 +3,34 @@
 
   <head>
     <meta charset="utf-8">
-    <title>Pact | Microservices testing made easy | Contract Testing</title>
+    <title>Pact | Microservices testing made easy</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="A corporate Bootstrap theme by Medium Rare">
+    <meta name="description" content="Fast, easy and reliable testing for integrating web apps, APIs and microservices"/>
+    <meta property="og:title" content="Microservices and API testing framework"/>
+    <meta property="og:url" content="https://cypress.io/"/>
+    <meta property="og:site_name" content="Microservices and API testing framework | cypress.io"/>
+    <meta property="og:description" content="Fast, easy and reliable testing for integrating web apps, APIs and microservices"/>
+    <meta property="og:type" content="article"/>
+    <meta property="og:image" content="https://cypress.io/static/cypress-io-logo-social-share-8fb8a1db3cdc0b289fad927694ecb415.png"/>
+    <meta name="twitter:card" content="summary" />
+    <meta property="twitter:title" content="Microservices and API testing framework"/>
+    <meta property="twitter:description" content="Fast, easy and reliable testing for integrating web apps, APIs and microservices"/>
+    <meta property="twitter:site" content="@pact_up"/>
+
     <link href="assets/css/loaders/loader-typing.css" rel="stylesheet" type="text/css" media="all" />
     <link href="assets/css/theme-software-library.css" rel="stylesheet" type="text/css" media="all" />
     <link rel="preload" as="font" href="assets/fonts/Inter-UI-upright.var.woff2" type="font/woff2" crossorigin="anonymous">
     <link rel="preload" as="font" href="assets/fonts/Inter-UI.var.woff2" type="font/woff2" crossorigin="anonymous">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-8926693-16"></script>
+    <script>
+      if (window.location.hostname.indexOf("localhost") < 0) {
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-8926693-16');
+      }
+    </script>
+
   </head>
 
   <body>
@@ -22,7 +43,7 @@
         <div class="container">
           <div class="col flex-fill px-0 d-flex justify-content-between">
             <a class="navbar-brand mr-0 fade-page" href="index.html">
-              <img src="assets/img/foundation-compact.svg" alt="Pact Foundation" class="logo">
+              <img src="assets/img/logo-black.png" alt="Pact Foundation" class="logo">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
               <img class="icon navbar-toggler-open" src="assets/img/icons/interface/menu.svg" alt="menu interface icon" data-inject-svg />
@@ -48,14 +69,14 @@
                         </div>
                         <div class="list-group list-group-flush">
                           <a href="https://docs.pact.io" target="_blank" class="list-group-item list-group-item-action d-flex align-items-center p-3">
-                            <img class="icon icon-md" src="assets/img/icons/theme/files/selected-file.svg" alt="selected-file icon" data-inject-svg />
+                            <img class="icon icon-md" src="assets/img/icons/theme/files/selected-file.svg" alt="Read the docs" data-inject-svg />
                             <div class="text-body ml-3">
                               <span>Documentation</span>
                               <div class="text-small text-muted">Get all the information you need</div>
                             </div>
                           </a>
                           <a href="http://slack.pact.io" target="_blank" class="list-group-item list-group-item-action d-flex align-items-center p-3">
-                            <img class="icon icon-md" src="assets/img/icons/theme/communication/chat-4.svg" alt="chat-4 icon" data-inject-svg />
+                            <img class="icon icon-md" src="assets/img/icons/theme/communication/chat-4.svg" alt="Join our slack channel" data-inject-svg />
                             <div class="text-body ml-3">
                               <span>Looking for answers?</span>
                               <div class="text-small text-muted">Join our Slack Channel</div>
@@ -69,7 +90,7 @@
               </ul>
             </div>
           </div>
-          <!-- <div class="collapse navbar-collapse justify-content-end col flex-fill px-0"><a href="#" class="btn btn-primary ml-lg-3">Purchase Now</a></div> -->
+          <div class="collapse navbar-collapse justify-content-end col flex-fill px-0"><a href="mailto:hello@pactflow.io?subject=Request+a+Pact+demo" class="btn btn-primary ml-lg-3">Request a demo</a></div>
         </div>
       </nav>
     </div>
@@ -79,7 +100,7 @@
         <div class="row justify-content-center text-center mb-6">
           <div class="col-xl-8 col-lg-9 col-md-10">
             <h1 class="display-4">Integration testing<br />...done properly</h1>
-            <p class="lead">Fast, easy and reliable testing for integrating web apps, APIs and microservices.</p>
+            <p class="lead">Fast, easy and reliable testing for integrating web apps, APIs and microservices</p>
             <div class="d-flex flex-column flex-sm-row justify-content-center align-items-center align-items-sm-start mt-5">
               <div class="d-flex flex-column mx-1 text-center">
               <div class="dropdown language-selector">
@@ -92,17 +113,17 @@
                   <div class="col-auto" data-dropdown-content>
                     <div class="card card-sm card-body shadow">
                       <h6>Select a language</h6>
-                      <a href="https://github.com/pact-foundation/pact-js" class="dropdown-item"><img class="icon-nofill" src="assets/img/languages/javascript-original.svg" alt="icon" data-inject-svg /><img class="icon-nofill" src="assets/img/languages/nodejs-original.svg" alt="icon" data-inject-svg /><img class="icon-nofill" src="assets/img/languages/typescript-original.svg" alt="icon" /> Node JS and Javascript</a>
-                      <a href="https://github.com/DiUS/pact-jvm" class="dropdown-item"><img class="icon-nofill" src="assets/img/languages/java-original.svg" alt="icon" data-inject-svg /><img class="icon-nofill" src="assets/img/languages/kotlin-original.svg" alt="icon"  /><img class="icon-nofill" src="assets/img/languages/scala-original.svg" alt="icon" data-inject-svg /><img class="icon-nofill" src="assets/img/languages/clojure-original.svg" alt="icon" data-inject-svg>Java and JVM Languages</a>
-                      <a href="https://github.com/pact-foundation/pact-net" class="dropdown-item"><img class="icon-nofill" src="assets/img/languages/csharp-original.svg" alt="icon" data-inject-svg /> .NET</a>
-                      <a href="https://github.com/pact-foundation/pact-go" class="dropdown-item"><img class="icon-nofill" src="assets/img/languages/go-original.svg" alt="icon" data-inject-svg /> Golang</a>
-                      <a href="https://github.com/pact-foundation/pact-python" class="dropdown-item"><img class="icon-nofill" src="assets/img/languages/python-original.svg" alt="icon" data-inject-svg /> Python</a>
-                      <a href="https://github.com/DiUS/pact-consumer-swift" class="dropdown-item"><img class="icon-nofill" src="assets/img/languages/swift-original.svg" alt="icon" data-inject-svg /> Swift and Objective-C</a>
-                      <a href="https://github.com/pact-foundation/pact-ruby" class="dropdown-item"><img class="icon-nofill" src="assets/img/languages/ruby-original.svg" alt="icon" data-inject-svg /> Ruby</a>
-                      <a href="https://github.com/pact-foundation/pact-php" class="dropdown-item"><img class="icon-nofill" src="assets/img/languages/php-original.svg" alt="icon" data-inject-svg /> PHP</a>
-                      <a href="https://github.com/pact-foundation/pact-cplusplus" class="dropdown-item"><img class="icon-nofill" src="assets/img/languages/cplusplus-original.svg" alt="icon" data-inject-svg /> C++</a>
+                      <a href="https://github.com/pact-foundation/pact-js" class="dropdown-item"><img class="icon-nofill" src="assets/img/languages/javascript-original.svg" alt="Pact JS" data-inject-svg /><img class="icon-nofill" src="assets/img/languages/nodejs-original.svg" alt="Pact JS" data-inject-svg /><img class="icon-nofill" src="assets/img/languages/typescript-original.svg" alt="Pact JS" /> Node JS and Javascript</a>
+                      <a href="https://github.com/DiUS/pact-jvm" class="dropdown-item"><img class="icon-nofill" src="assets/img/languages/java-original.svg" alt="Pact Java" data-inject-svg /><img class="icon-nofill" src="assets/img/languages/kotlin-original.svg" alt="Pact Java"  /><img class="icon-nofill" src="assets/img/languages/scala-original.svg" alt="Pact Java" data-inject-svg /><img class="icon-nofill" src="assets/img/languages/clojure-original.svg" alt="Pact Java" data-inject-svg>Java and JVM Languages</a>
+                      <a href="https://github.com/pact-foundation/pact-net" class="dropdown-item"><img class="icon-nofill" src="assets/img/languages/csharp-original.svg" alt="Pact .NET" data-inject-svg /> .NET</a>
+                      <a href="https://github.com/pact-foundation/pact-go" class="dropdown-item"><img class="icon-nofill" src="assets/img/languages/go-original.svg" alt="Pact Go" data-inject-svg /> Golang</a>
+                      <a href="https://github.com/pact-foundation/pact-python" class="dropdown-item"><img class="icon-nofill" src="assets/img/languages/python-original.svg" alt="Pact Python" data-inject-svg /> Python</a>
+                      <a href="https://github.com/DiUS/pact-consumer-swift" class="dropdown-item"><img class="icon-nofill" src="assets/img/languages/swift-original.svg" alt="Pact Swift and Objective C" data-inject-svg /> Swift and Objective-C</a>
+                      <a href="https://github.com/pact-foundation/pact-ruby" class="dropdown-item"><img class="icon-nofill" src="assets/img/languages/ruby-original.svg" alt="Pact Ruby" data-inject-svg /> Ruby</a>
+                      <a href="https://github.com/pact-foundation/pact-php" class="dropdown-item"><img class="icon-nofill" src="assets/img/languages/php-original.svg" alt="Pact PHP" data-inject-svg /> PHP</a>
+                      <a href="https://github.com/pact-foundation/pact-cplusplus" class="dropdown-item"><img class="icon-nofill" src="assets/img/languages/cplusplus-original.svg" alt="Pact C++" data-inject-svg /> C++</a>
                       <div class="dropdown-divider"></div>
-                      <h6>Need help? <a href="mailto:support@pactflow.io" >Book a demo</a> with the team</h6>
+                      <h6>Need help? <a href="mailto:hello@pactflow.io?subject=Request+a+Pact+demo" >Book a demo</a> with the team</h6>
                     </div>
                   </div>
                 </div>
@@ -117,7 +138,7 @@
             <div class="rounded bg-primary-3 p-4 text-light text-monospace shadow layer-2">
               <div>
                 <span class="text-primary-2">$</span>
-                <span data-typed-text data-type-speed="80" data-strings='["npm install @pact-foundation/pact", "gem install pact", "pip install pact-python", "go get github.com/pact-foundation/pact-go", "conan install ..", "gradle install", "maven install" ]' data-loop="true" data-back-delay="2000"></span>
+                <span data-typed-text data-type-speed="80" data-strings='["npm install @pact-foundation/pact", "gem install pact", "pip install pact-python", "go get github.com/pact-foundation/pact-go" ]' data-loop="true" data-back-delay="2000"></span>
               </div>
             </div>
             <div class="decoration bottom right" data-aos="fade-up">
@@ -143,7 +164,7 @@
               <li class="nav-item mx-1">
                 <a class="nav-link active" href="#saas-tab-1" data-toggle="tab" role="tab" aria-controls="saas-tab-1" aria-selected="true">
                   <div class="icon-round icon-round-sm bg-primary">
-                    <img class="icon bg-primary" src="assets/img/icons/theme/shopping/box-2.svg" alt="box-2 icon" data-inject-svg />
+                    <img class="icon bg-primary" src="assets/img/icons/theme/shopping/box-2.svg" alt="REST APIs" data-inject-svg />
                   </div>
                   REST APIs
                 </a>
@@ -151,7 +172,7 @@
               <li class="nav-item mx-1">
                 <a class="nav-link" href="#saas-tab-2" data-toggle="tab" role="tab" aria-controls="saas-tab-2" aria-selected="false">
                   <div class="icon-round icon-round-sm bg-primary">
-                    <img class="icon bg-primary" src="assets/img/icons/theme/code/git-3.svg" alt="chart-pie icon" data-inject-svg />
+                    <img class="icon bg-primary" src="assets/img/icons/theme/code/git-3.svg" alt="Message driven systems" data-inject-svg />
                   </div>
                   Message driven systems
                 </a>
@@ -159,15 +180,15 @@
               <li class="nav-item mx-1">
                 <a class="nav-link" href="#saas-tab-3" data-toggle="tab" role="tab" aria-controls="saas-tab-3" aria-selected="false">
                   <div class="icon-round icon-round-sm bg-primary">
-                    <img class="icon bg-primary" src="assets/img/icons/theme/code/thunder-circle.svg" alt="saturation icon" data-inject-svg />
+                    <img class="icon bg-primary" src="assets/img/icons/theme/code/thunder-circle.svg" alt="Serverless" data-inject-svg />
                   </div>
                   Serverless
                 </a>
               </li>
               <li class="nav-item mx-1">
-                <a class="nav-link" href="#saas-tab-3" data-toggle="tab" role="tab" aria-controls="saas-tab-3" aria-selected="false">
+                <a class="nav-link" href="#saas-tab-4" data-toggle="tab" role="tab" aria-controls="saas-tab-4" aria-selected="false">
                   <div class="icon-round icon-round-sm bg-primary">
-                    <img class="icon bg-primary" src="assets/img/icons/theme/code/github.svg" alt="saturation icon" data-inject-svg />
+                    <img class="icon bg-primary" src="assets/img/icons/theme/code/github.svg" alt="CI/CD Pipelines" data-inject-svg />
                   </div>
                   CI/CD Pipelines
                 </a>
@@ -180,26 +201,32 @@
             <div class="tab-content">
               <div class="tab-pane fade show active" id="saas-tab-1" role="tabpanel" aria-labelledby="saas-tab-1">
                 <div class="popover-image">
-                  <div class="popover-hotspot bg-primary-2" style="top: 25%; left: 10%;" data-toggle="popover" title="Hotspot title" data-content="And here's some amazing content. It's very engaging. Right?"></div>
-                  <div class="popover-hotspot bg-primary-2" style="top: 10%; left: 90%;" data-toggle="popover" title="Hotspot title" data-content="And here's some amazing content. It's very engaging. Right?"></div>
-                  <div class="popover-hotspot bg-primary-2" style="top: 90%; left: 20%;" data-toggle="popover" title="Hotspot title" data-content="And here's some more amazing content. It's very engaging. Right?"></div>
+                  <div class="popover-hotspot bg-primary-2" style="top: 7%; left: 10%;" data-toggle="popover" title="Web Applications" data-content="Prevent breaking changes to your web apps. Use React, Angular or Vue? Mocha or Jest? JS or TS? We have you covered."></div>
+                  <div class="popover-hotspot bg-primary-2" style="top: 6%; left: 82%;" data-toggle="popover" title="Mobile Applications" data-content="Ensure your mobile apps are always supported with bindings for Swift, Objective-C and JVM based languages."></div>
+                  <div class="popover-hotspot bg-primary-2" style="top: 62%; left: 48%;" data-toggle="popover" title="REST APIs" data-content="Mix and match tests for your APIs written in any of our 12 languages."></div>
                   <img src="assets/img/pact-rest-black.png" alt="Image" class="rounded border shadow-lg">
                 </div>
               </div>
               <div class="tab-pane fade" id="saas-tab-2" role="tabpanel" aria-labelledby="saas-tab-2">
                 <div class="popover-image">
-                  <div class="popover-hotspot bg-primary-2" style="top: 25%; left: 90%;" data-toggle="popover" title="Hotspot title" data-content="And here's some amazing content. It's very engaging. Right?"></div>
-                  <div class="popover-hotspot bg-primary-2" style="top: 90%; left: 10%;" data-toggle="popover" title="Hotspot title" data-content="And here's some amazing content. It's very engaging. Right?"></div>
-                  <div class="popover-hotspot bg-primary-2" style="top: 30%; left: 60%;" data-toggle="popover" title="Hotspot title" data-content="And here's some more amazing content. It's very engaging. Right?"></div>
+                  <div class="popover-hotspot bg-primary-2" style="top: 7%; left: 12%;" data-toggle="popover" title="Message Producers" data-content="Ensure your message producers create valid and compatible events."></div>
+                  <div class="popover-hotspot bg-primary-2" style="top: 61%; left: 54%;" data-toggle="popover" title="Message Queues" data-content="Kafka? Kinesis? MQ? With our unique approach, it doesn't matter queuing technology you use."></div>
+                  <div class="popover-hotspot bg-primary-2" style="top: 7%; left: 82%;" data-toggle="popover" title="Message Consumers" data-content="Prevent breaking changes to your message consumers"></div>
                   <img src="assets/img/pact-messages.png" alt="Image" class="rounded border shadow-lg">
                 </div>
               </div>
               <div class="tab-pane fade" id="saas-tab-3" role="tabpanel" aria-labelledby="saas-tab-3">
                 <div class="popover-image">
-                  <div class="popover-hotspot bg-primary-2" style="top: 2%; left: 2%;" data-toggle="popover" title="Hotspot title" data-content="And here's some amazing content. It's very engaging. Right?"></div>
-                  <div class="popover-hotspot bg-primary-2" style="top: 35%; left: 95%;" data-toggle="popover" title="Hotspot title" data-content="And here's some amazing content. It's very engaging. Right?"></div>
-                  <div class="popover-hotspot bg-primary-2" style="top: 90%; left: 50%;" data-toggle="popover" title="Hotspot title" data-content="And here's some more amazing content. It's very engaging. Right?"></div>
+                  <div class="popover-hotspot bg-primary-2" style="top: 55%; left: 80%;" data-toggle="popover" title="First class functions" data-content="Maybe lambda or Azure functions are your thing? That's cool, we can test those too."></div>
+                  <div class="popover-hotspot bg-primary-2" style="top: 57%; left: 48.5%;" data-toggle="popover" title="Integration" data-content="Whether you're creating modern serverless microservices, complex data pipelines or respond to events, use Pact to ensure your ecosystem is always on."></div>
                   <img src="assets/img/pact-serverless.png" alt="Image" class="rounded border shadow-lg">
+                </div>
+              </div>
+              <div class="tab-pane fade" id="saas-tab-4" role="tabpanel" aria-labelledby="saas-tab-3">
+                <div class="popover-image">
+                  <div class="popover-hotspot bg-primary-2" style="top: 3%; left: 29%;" data-toggle="popover" title="Integrate into your CI" data-content="We love Buildkite, but it's easy to integrate Pact into any CI platform"></div>
+                  <div class="popover-hotspot bg-primary-2" style="top: 47%; left: 7%;" data-toggle="popover" title="Can I deploy?" data-content="In this example we are checking if it's safe to release a change to production - it is \o/"></div>
+                  <img src="assets/img/pact-broker-can-i-deploy.png" alt="Image" class="rounded border shadow-lg">
                 </div>
               </div>
             </div>
@@ -239,7 +266,7 @@
                 <div>
                   <h4 class="mb-2">Remove complex end-to-end environments</h4>
                   <p class="lead pr-xl-4">
-                    Reduce (or removing entirely) the need for complex, costly and hard-to-manage integration test environments.
+                    Reduce (or removing entirely) the need for complex, costly and hard-to-manage integration test environments
                   </p>
                 </div>
               </div>
@@ -250,18 +277,18 @@
                 <div>
                   <h4 class="mb-2">Stop relying on unreliable test data</h4>
                   <p class="lead pr-xl-4">
-                    XXX% of teams say finding and managing test data is a key pain point - with Pact, you can significantly reduce your reliance on flakey test data
+                    Finding and managing test data is a key pain point for engineering teams - with Pact, you can significantly reduce your reliance on flakey test data
                   </p>
                 </div>
               </div>
               <div class="col-md-6 d-flex mb-4" data-aos="fade-up" data-aos-delay="400">
                 <div class="icon-round bg-primary mr-3">
-                  <img class="icon bg-primary" src="assets/img/icons/theme/general/unlock.svg" alt="icon" data-inject-svg />
+                  <img class="icon bg-primary" src="assets/img/icons/theme/general/smile.svg" alt="icon" data-inject-svg />
                 </div>
                 <div>
                   <h4 class="mb-2">Say goodbye to painful release processes</h4>
                   <p class="lead pr-xl-4">
-                    With Pact and the Pact Broker, you can orchestrate complex CI and CD pipelines and use <code>can-i-deploy</code> to tell you when a component is safe to release.
+                    With Pact and the Pact Broker, you can orchestrate complex CI and CD pipelines and use <code>can-i-deploy</code> to tell you when a component is safe to release
                   </p>
                 </div>
               </div>
@@ -283,14 +310,23 @@
                   <p class="lead pr-xl-4">Pact's API stubs are guaranteed to represent behaviour of the real system, so you can test with confidence</p>
                 </div>
               </div>
+              <div class="col-md-6 d-flex mb-4" data-aos="fade-up" data-aos-delay="300">
+                <div class="icon-round bg-primary mr-3">
+                  <img class="icon bg-primary" src="assets/img/icons/theme/code/option.svg" alt="icon" data-inject-svg />
+                </div>
+                <div>
+                  <h4 class="mb-2">Create bulletproof pipelines</h4>
+                  <p class="lead pr-xl-4">Pact CLI tools + Pact Broker = powerful automation capabilities</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-        <div class="row">
+        <!-- <div class="row">
           <div class="col text-center">
             <a href="#" class="lead hover-arrow">Explore all features</a>
           </div>
-        </div>
+        </div> -->
       </div>
     </section>
     <section class="bg-primary-alt has-divider">
@@ -299,7 +335,7 @@
           <div class="col-xl-8 col-lg-9">
             <h2 class="display-4 mx-xl-6">Contract testing at scale.</h2>
             <p class="lead">
-              Accelerate your path to integration testing enlightenment with Pactflow, a premium Pact Broker designed for the enterprise.
+              Accelerate your path to integration testing enlightenment with Pactflow, a premium Pact Broker experience designed for the enterprise
             </p>
           </div>
         </div>
@@ -392,6 +428,11 @@
             </div>
           </div>
         </div>
+        <div class="row">
+          <div class="col text-center">
+            <a href="https://pactflow.io" class="lead hover-arrow">Explore all features</a>
+          </div>
+        </div>
       </div>
     </section>
     <section class="pt-md-0">
@@ -427,7 +468,7 @@
             <div data-flickity='{ "imagesLoaded": true, "wrapAround": true }'>
               <div class="carousel-cell mx-md-4">
                 <div class="card card-body flex-row py-4">
-                  <img src="assets/img/logos/brand/itv.svg" alt="Avatar" class="logo">
+                  <img src="assets/img/logos/brand/itv.svg" alt="ITV Logo" class="logo">
                   <div class="ml-3">
                     <h4>
                       &ldquo;Using Pact we have eliminated the need for tightly coupled integration test environments in favour of isolated micro-services that can be tested and deployed independently&rdquo;
@@ -441,7 +482,7 @@
               </div>
               <div class="carousel-cell mx-md-4">
                 <div class="card card-body flex-row py-4">
-                  <img src="assets/img/logos/brand/john-lewis.png" alt="Avatar" class="logo">
+                  <img src="assets/img/logos/brand/john-lewis.png" alt="John Lewis and Partners Logo" class="logo">
                   <div class="ml-3">
                     <h4>
                       &ldquo;It has given our team the confidence to remove the E2E tests we previously had ... we no longer have to rely on other services being available for our pipeline to remain green&rdquo;
@@ -455,7 +496,7 @@
               </div>
               <div class="carousel-cell mx-md-4">
                 <div class="card card-body flex-row py-4">
-                  <img src="assets/img/logos/brand/mc_vrt_pos.svg" alt="Avatar" class="logo">
+                  <img src="assets/img/logos/brand/mc_vrt_pos.svg" alt="Mastercard Logo" class="logo">
                   <div class="ml-3">
                     <h4>
                       &ldquo;Utilizing CDCs has alleviated our problem of API specification drift&rdquo;
@@ -469,7 +510,7 @@
               </div>
               <div class="carousel-cell mx-md-4">
                 <div class="card card-body flex-row py-4">
-                  <img src="assets/img/logos/brand/poppulo.svg" alt="Avatar" class="logo">
+                  <img src="assets/img/logos/brand/poppulo.svg" alt="Poppulo Logo" class="logo">
                   <div class="ml-3">
                     <h4>
                       &ldquo;CDC helped us massively in testing service interactions across 100+ microservices, without relying on heavy (and sometimes brittle) full end-to-end environments&rdquo;
@@ -483,7 +524,7 @@
               </div>
               <div class="carousel-cell mx-md-4">
                 <div class="card card-body flex-row py-4">
-                  <img src="assets/img/logos/brand/govuk.png" alt="Avatar" class="logo">
+                  <img src="assets/img/logos/brand/govuk.png" alt="Government Digital Services Logo" class="logo">
                   <div class="ml-3">
                     <h4>
                       &ldquo;Using contract testing has allowed us to ... be in a position to replace expensive end-to-end testing with pact testing&rdquo;
@@ -497,7 +538,7 @@
               </div>
               <div class="carousel-cell mx-md-4">
                 <div class="card card-body flex-row py-4">
-                  <img src="assets/img/logos/brand/atlassian.svg" alt="Avatar" class="logo">
+                  <img src="assets/img/logos/brand/atlassian.svg" alt="Atlassian Logo" class="logo">
                   <div class="ml-3">
                     <h4>
                       &ldquo;They received immediate feedback in their tests when a breaking change was about to be made to the API implementation by validating against our API spec&rdquo;
@@ -505,6 +546,20 @@
                     <div class="avatar-author d-block">
                       <h6>James Navin</h6>
                       <span>Principal Developer, Atlassian</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-cell mx-md-4">
+                <div class="card card-body flex-row py-4">
+                  <img src="assets/img/logos/brand/dazn.png" alt="DAZN Logo" class="logo">
+                  <div class="ml-3">
+                    <h4>
+                      &ldquo;they asked me to post a feature request on their Github issues. And they actually got around to it! I was very happy with the type of open communication their developers have&rdquo;
+                    </h4>
+                    <div class="avatar-author d-block">
+                      <h6>Bernardo Guerreiro</h6>
+                      <span>DAZN</span>
                     </div>
                   </div>
                 </div>
@@ -523,22 +578,6 @@
         </div>
         <div class="row">
           <div class="row justify-content-center">
-            <!-- <div class="col">
-              <ul class="d-flex flex-wrap justify-content-center list-unstyled">
-                <li class="mx-xl-4 mx-3 mb-5" data-aos="fade-up" data-aos-delay="100">
-                  <img class="icon icon-lg bg-primary-3 opacity-20" src="assets/img/logos/brand/intercom.svg" alt="intercom logo icon" data-inject-svg />
-                </li>
-                <li class="mx-xl-4 mx-3 mb-5" data-aos="fade-up" data-aos-delay="200">
-                  <img class="icon icon-lg bg-primary-3 opacity-20" src="assets/img/logos/brand/slack.svg" alt="slack logo icon" data-inject-svg />
-                </li>
-                <li class="mx-xl-4 mx-3 mb-5" data-aos="fade-up" data-aos-delay="300">
-                  <img class="icon icon-lg bg-primary-3 opacity-20" src="assets/img/logos/brand/spotify.svg" alt="spotify logo icon" data-inject-svg />
-                </li>
-                <li class="mx-xl-4 mx-3 mb-5" data-aos="fade-up" data-aos-delay="400">
-                  <img class="icon icon-lg bg-primary-3 opacity-20" src="assets/img/logos/brand/target.svg" alt="target logo icon" data-inject-svg />
-                </li>
-              </ul>
-            </div> -->
           <div class="col">
             <ul class="d-flex flex-wrap justify-content-center list-unstyled">
               <li class="mx-xl-4 mx-3 mb-5" data-aos="fade-up" data-aos-delay="100">
@@ -587,23 +626,17 @@
         <div class="row mb-4 justify-content-center">
           <div class="col-auto">
             <a href="index.html">
-              <img src="assets/img/link-white.png" alt="Pact" class="icon icon-lg">
+              <img src="assets/img/logo-white.png" alt="Pact" class="logo">
             </a>
           </div>
         </div>
         <div class="row mb-4">
           <div class="col">
             <ul class="nav justify-content-center">
-              <li class="nav-item"><a href="#" class="nav-link">Documentation</a>
-              </li>
-              <li class="nav-item"><a href="#" class="nav-link">Pages</a>
-              </li>
-              <li class="nav-item"><a href="#" class="nav-link">Blog</a>
-              </li>
-              <li class="nav-item"><a href="#" class="nav-link">Portfolio</a>
-              </li>
-              <li class="nav-item"><a href="#" class="nav-link">Elements</a>
-              </li>
+              <li class="nav-item"><a href="https://docs.pact.io" class="nav-link">Documentation</a></li>
+              <li class="nav-item"><a href="https://slack.pact.io" class="nav-link">Slack</a></li>
+              <li class="nav-item"><a href="http://blog.pact.io" class="nav-link">Blog</a></li>
+              <li class="nav-item"><a href="https://pactflow.io" class="nav-link">Pactflow</a></li>
             </ul>
           </div>
         </div>
@@ -685,6 +718,7 @@
     <!-- Required theme scripts (Do not remove) -->
     <script type="text/javascript" src="assets/js/theme.js"></script>
     <!-- Removes page load animation when window is finished loading -->
+    <script type="text/javascript" src="https://unpkg.com/plyr@~3.5.6/dist/plyr.polyfilled.min.js"></script>
     <script type="text/javascript">
       window.addEventListener("load", function () {    document.querySelector('body').classList.add('loaded');  });
     </script>
