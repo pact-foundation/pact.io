@@ -1,5 +1,5 @@
 # Redirects from what the browser requests to what we serve
-/pending                https://docs.pact.io/pact_broker/advanced_topics/pending_pacts.md
-/wip                    https://docs.pact.io/pact_broker/advanced_topics/wip_pacts.md
-/selectors              https://docs.pact.io/pact_broker/advanced_topics/selectors.md
-/too-many-interactions  https://docs.pact.io/best_practices/consumer/README.md#use-pact-for-isolated-unit-tests
+/pending                https://docs.pact.io/pact_broker/advanced_topics/pending_pacts
+/wip                    https://docs.pact.io/pact_broker/advanced_topics/wip_pacts
+/selectors              https://docs.pact.io/pact_broker/advanced_topics/selectors
+/too-many-interactions  https://docs.pact.io/consumer#use-pact-for-isolated-unit-tests

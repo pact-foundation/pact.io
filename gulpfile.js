@@ -156,6 +156,7 @@ gulp.task('clean:dist', function (done) {
 // Copy html files to dist
 gulp.task('config', function () {
   return gulp.src(paths.config.all)
+    // .pipe(newer(paths.dist.folder))
     .pipe(gulp.dest(paths.dist.folder))
 });
 
