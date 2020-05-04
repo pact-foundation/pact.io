@@ -1,13 +1,15 @@
-# README #
+# README
 
-Leap Bootstrap Theme by Medium Rare
+pact.io home page
 
-### Where are the docs? ###
+[![Netlify Status](https://api.netlify.com/api/v1/badges/cd85e418-2a51-404e-b8c5-a148317484dd/deploy-status)](https://app.netlify.com/sites/pact-io/deploys)
+
+### Where are the docs?
 
 * Formal documentation is located at http://leap.mediumra.re/documentation/index.html - accessible from the **Documentation** link on most demo pages.
 * You can find lists of the styled components at pages/components-leap.html and pages/components-bootstrap.html
 
-### Getting Set Up (optional) ###
+### Getting Set Up (optional)
 
 Setup instructions are located in the docs mentioned above.
 
@@ -17,14 +19,3 @@ The short version:
 * npm install
 * gulp
 
-### Getting Support ###
-
-Medium Rare provides support for bugfixes and guidance on using the theme.
-
-To access support, find the support link in your Bootstrap Marketplace dashboard.
-
-### Giving Feedback ###
-
-We strive to improve our products and we rely on feedback from our customers.
-
-Please feel free to share any feedback about Leap via twitter @mrareweb or feedback(at)mrare.co.

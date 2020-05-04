@@ -1,9 +1,9 @@
 {
-  "author": "Medium Rare",
+  "author": "Matt Fellows",
   "private": true,
-  "name": "leap",
+  "name": "pact.io",
   "version": "2.0.0",
-  "description": "Software and SaaS Bootstrap Theme",
+  "description": "Static website for pact.io",
   "main": "gulpfile.js",
   "scripts": {
     "start": "./node_modules/.bin/gulp",
@@ -20,7 +20,7 @@
     }
   },
   "license": "SEE LICENSE IN LICENSE.md",
-  "homepage": "http://leap.mediumra.re/index.html",
+  "homepage": "https://pact.io",
   "dependencies": {
     "@fancyapps/fancybox": "3.5.2",
     "@tanem/svg-injector": "~8.0.12",
