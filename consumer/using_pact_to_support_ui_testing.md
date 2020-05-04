@@ -4,7 +4,7 @@ While we don't recommend you generate pacts from your UI tests, you can use Pact
 
 ## 1. Use the generated pact file to run a Pact HTTP stub server
 
-You can use the [Rust](https://github.com/pact-foundation/pact-stub-server) implementation (which supports v3 Pact Specification), or the [Ruby](https://github.com/pact-foundation/pact-mock_service#stub-service-usage) stub server if you are using one of the languages that already wraps the Ruby implementation (JS, go, .Net, Python, php).
+You can use the [Rust](https://github.com/pact-foundation/pact-stub-server) implementation (which supports v3 Pact Specification), or the [Ruby](https://github.com/pact-foundation/pact-mock_service#stub-service-usage) stub server if you are using one of the languages that already wraps the Ruby implementation (JS, go, .Net, Python, php). See the page on [API stubs](https://docs.pact.io/getting_started/stubs) for more information.
 
 ## 2. Use the generated pact file to seed a non-Pact stub server
 
