@@ -12,7 +12,6 @@
   * [Provider states](getting_started/provider_states.md)
   * [Sharing Pacts with the Pact Broker](getting_started/sharing_pacts.md)
   * [Versioning in the Pact Broker](getting_started/versioning_in_the_pact_broker.md)
-  * [Pending pacts](getting_started/pending-pacts.md)
   * [Local API stubs](getting_started/stubs.md)
   * [Further reading](getting_started/further_reading.md)
 * [Implementation guides](implementation_guides/README.md)
