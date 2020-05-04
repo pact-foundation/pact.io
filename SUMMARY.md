@@ -31,6 +31,7 @@
   * [Other Languages](implementation_guides/other_languages.md)
 * [Writing Consumer tests](consumer/README.md)
   * [Contract Tests vs Functional Tests](consumer/contract_tests_not_functional_tests.md)
+  * [Using Pact to support UI testing](consumer/using_pact_to_support_ui_testing.md)
 * [Verifying Pacts](provider/README.md)
   * [Using provider states effectively](provider/using_provider_states_effectively.md)
   * [Handling authentication and authorization](provider/handling_auth.md)
