@@ -83,10 +83,11 @@
 * [History](history.md)
 * [Who's using Pact?](testimonials.md)
 * [Community videos and articles](blogs_videos_and_articles.md)
-* [Roadmap](roadmap.md)
+* [Roadmap](https://pact.canny.io)
 
 ## External Links
 
+* [Pact Website](https://pact.io)
 * [Blog](http://blog.pact.io)
 * [Pactflow](https://pactflow.io/?utm_source=ossdocs&utm_campaign=summary)
 

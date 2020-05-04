@@ -6,7 +6,7 @@ Often times, you'll want to use Docker to run Pact. For example, a common approa
 
 Images from the `"pactfoundation"` [repository](https://hub.docker.com/u/pactfoundation) can be considered official:
 
-* CLI Tools: [https://hub.docker.com/r/pactfoundation/pact-cli](https://hub.docker.com/r/pactfoundation/pact-cli) (includes the Ruby implementation of the mock service, a language agnostic provider verifier, and the Pact Broker client tools.)
+* CLI Tools: [https://hub.docker.com/r/pactfoundation/pact-cli](https://hub.docker.com/r/pactfoundation/pact-cli) \(includes the Ruby implementation of the mock service, a language agnostic provider verifier, and the Pact Broker client tools.\)
 * Pact Broker: [https://hub.docker.com/r/pactfoundation/pact-broker/](https://hub.docker.com/r/pactfoundation/pact-broker/)
 * Stub Server: [https://hub.docker.com/r/pactfoundation/pact-stub-server](https://hub.docker.com/r/pactfoundation/pact-stub-server)
 
