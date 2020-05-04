@@ -56,7 +56,7 @@ Something that could be useful, however, is to generate skeleton Pact test code 
 
 ### How do I use Pact with UI frameworks like React or Angular?
 
-The best way to use Pact on the consumer side is to focus the tests on just the code that makes the HTTP request, and bypass as much of the framework specific code as possible. You can read more about why that is so [here](../consumer/#avoid-using-pact-for-tests-that-involve-the-ui). You can see some examples [here](https://github.com/pact-foundation/pact-js/tree/master/examples) and a pact-js workshop [here](https://github.com/pact-foundation/pact-workshop-js).
+The best way to use Pact on the consumer side is to focus the tests on just the code that makes the HTTP request, and bypass as much of the framework specific code as possible. You can read more about why that is so [here](../consumer/#avoid-using-pact-for-tests-that-involve-the-ui). You can read about how to use Pact to support your UI testing using stub servers [here](https://docs.pact.io/consumer/using_pact_to_support_ui_testing). You can see some examples of using Pact to test consumer code [here](https://github.com/pact-foundation/pact-js/tree/master/examples) and a pact-js workshop [here](https://github.com/pact-foundation/pact-workshop-js). 
 
 ### Why doesn't Pact use JSON Schema?
 
