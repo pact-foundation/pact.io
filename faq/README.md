@@ -76,7 +76,7 @@ The same goes for specifying "SOME\_VALUE or null". If all your provider verific
 
 The same goes for specifying an array with length 0 or more. If all your provider verification data returned 0 length arrays, all your verification tests would pass without you ever having validated the contents of the array. This is why you can only specify an array with minimum length 1 OR a zero length array.
 
-Remember that unlike a schema, which describes all possible states of a document, Pact is "contract by examples". If you need to assert that multiple states are possible, then you need to provide an example for each of those states. Consider if it's _really_ important to you before you do add a Pact test for each and every state however. Remember that each interaction comes with a "cost" of maintenance and execution time, and you need to consider if it is worth the cost in your particular situation.
+Remember that unlike a schema, which describes all possible states of a document, Pact is "contract by examples". If you need to assert that multiple variations are possible, then you need to provide an example for each of those variations. Consider if it's _really_ important to you before you do add a Pact test for each and every variation however. Remember that each interaction comes with a "cost" of maintenance and execution time, and you need to consider if it is worth the cost in your particular situation. You may be better off handling the common scenarios in the pact, and then writing your consumer to code to gracefully handle unexpected variations (eg. by ignoring that data and raising an alert).
 
 ### Why are the pacts generated and not static?
 
