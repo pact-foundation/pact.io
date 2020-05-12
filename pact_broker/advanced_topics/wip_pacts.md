@@ -6,3 +6,8 @@ When verifying pacts, the verification task can be configured to include all "wo
 
 This feature is in beta release and may not yet be implemented in your language. You can read about how it works here: [http://blog.pact.io/2020/02/24/introducing-wip-pacts/](http://blog.pact.io/2020/02/24/introducing-wip-pacts/)
 
+## To try using WIP pacts
+
+* You need to either be using [pactflow.io](https://pactflow.io), or have the latest version of the OSS Pact Broker running with the environment variable `PACT_BROKER_FEATURES=pacts_for_verification`
+* You need to be on the latest version of the Pact client library for Javascript, Go, Ruby, .Net or Python (pact-python, not pactman)
+* You need to find the verification documentation for your langage, and set the "includeWipPactsSince" date to your chosen date (eg. try a week ago). The reason this date is required is that if you included all the pacts that were considered work in progress, you may include many years of outstanding pacts!
