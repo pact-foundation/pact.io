@@ -6,7 +6,7 @@ When verifying pacts, the verification task can be configured to include all "wo
 
 This feature is in beta release and may not yet be implemented in your language. You can read about how it works here: [http://blog.pact.io/2020/02/24/introducing-wip-pacts/](http://blog.pact.io/2020/02/24/introducing-wip-pacts/)
 
-## To try using WIP pacts
+## To start using the WIP pacts feature
 
 * You need to either be using [pactflow.io](https://pactflow.io), or have the latest version of the OSS Pact Broker running with the environment variable `PACT_BROKER_FEATURES=pacts_for_verification`
 * You need to be on the latest version of the Pact client library for Javascript, Go, Ruby, .Net or Python (pact-python, not pactman)
