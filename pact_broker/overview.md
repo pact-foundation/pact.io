@@ -18,7 +18,7 @@ A pact is published using the consumer name, the provider name, and the consumer
 
 ## Pacticipant versions
 
-A pacticipant has many pacticipant versions \(ie. application versions\). A version is identified by its [version number](pacticipant_version_numbers.md) which would typically be a git sha \(or subversion revision number\), or a semantic version number with a repository reference as metadata. A pacticipant version resource will be automatically created every time a pact or a verification result is published \(if it did not already exist\). A pacticipant version will have a pact associated with it if it is a consumer version, and it will have a verification result it if is a provider version.
+A pacticipant has many pacticipant versions \(ie. application versions\). A version is identified by its [version number](pacticipant_version_numbers.md) which would typically be a git sha \(or subversion revision number\), or a semantic version number with a repository reference as metadata. A pacticipant version resource will be automatically created every time a pact or a verification result is published \(if it did not already exist\). A pacticipant version will have a pact associated with it if it is a consumer version, and it will have a verification result if is a provider version.
 
 ## Verifications
 
