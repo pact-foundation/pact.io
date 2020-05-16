@@ -35,6 +35,7 @@
   * [Using provider states effectively](provider/using_provider_states_effectively.md)
   * [Handling authentication and authorization](provider/handling_auth.md)
 * [Effective Pact Setup Guide](pact_nirvana.md)
+  * [Talk](pact_nirvana/step-1.md)
 * [Feature support](feature_support.md)
 * [Pact Broker](pact_broker/README.md)
   * [Overview](pact_broker/overview.md)
