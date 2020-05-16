@@ -40,7 +40,7 @@
   * [3. Write and verify a real Pact](pact_nirvana/step_3.md)
   * [4. Automate the contract and verification results exchange](pact_nirvana/step_4.md)
   * [5. Allow contracts to change without breaking your builds](pact_nirvana/step_5.md)
-  * [6. Use tags to ensure your provider is compatible with your production consumer](pact_nirvana/step_6.md)
+  * [6. Ensure backwards compatiblity between the latest provider and production consumer](pact_nirvana/step_6.md)
   * [7. Use The Pact “Matrix” as a gateway to deployments](pact_nirvana/step_7.md)
   * [8. Prevent missing verifications](pact_nirvana/step_8.md)
 * [Feature support](feature_support.md)
