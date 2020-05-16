@@ -19,7 +19,7 @@ Get started for free on our [Developer Plan](https://pactflow.io/pricing/?utm_so
 1. Read the Pact Broker [home page](https://github.com/pact-foundation/pact_broker), \(taking note of the various deployment options available to you\) and the [quick start guide](https://github.com/pact-foundation/pact_broker/wiki#quick-start-guide), or sign up to a hosted Developer plan at [Pactflow](https://pactflow.io/pricing/?utm_source=ossdocs&utm_campaign=effective_pact_setup_step_1).
 2. Deploy a Pact Broker to a network that has access to both consumer and provider CI systems so it can trigger builds.
 
-## B. Do the CI/CD workshop
+### B. Do the CI/CD workshop
 
 Before setting up Pact in your own environment, it can help to have an idea of what a working pipeline might look like. Completing the [Pact CI/CD workshop](https://github.com/pactflow/ci-cd-workshop) will give you a good understanding of how the Pact client libaries interact with the Pact Broker and where these interactions fit into your release pipeline.
 
@@ -38,14 +38,14 @@ Note that if you are using your own instance of the open source Pact Broker, it 
 ### E. Configure pact to be verified when contract changes
 
 1. Create a new CI job that performs just the provider pact verification step for a given pact URL \(consult the documentation for your chosen language for how to configure this\). The job should accept the URL of the changed pact in the HTTP request parameters or body (you'll need to consult the documentation for your CI application to learn how to pass in parameters to a builld).
-2. Configure a [webhook](pact_broker/advanced_topics/webhooks) to kick off the provider verification build when a pact changes, and use [webhook templates](pact_broker/advanced_topics/webhooks#dynamic-variable-substitution) to pass the URL of the changed pact to the build.
+2. Configure a [webhook](pact_broker/advanced_topics/api_docs/webhooks.md) to kick off the provider verification build when a pact changes, and use [webhook templates](pact_broker/advanced_topics/api_docs/webhooks.md#dynamic-variable-substitution) to pass the URL of the changed pact to the build.
 
-As you have two different builds running the pact verifications \(one when the provider changes, one when the contract changes\) it is best to use a provider version number that is deterministic \(eg. does not include your CI build number\) so that a verification from either job is recorded with the same version number. The recommended approach is to use the git sha \(or equivalent for your version control system\) wherever possible. This will help you when it comes to using the `can-i-deploy` tool in step 7. Please read the section on [versioning in the Pact Broker](getting_started/versioning_in_the_pact_broker) to ensure your version numbers will help you get the most out of your Pact Broker.
+As you have two different builds running the pact verifications \(one when the provider changes, one when the contract changes\) it is best to use a provider version number that is deterministic \(eg. does not include your CI build number\) so that a verification from either job is recorded with the same version number. The recommended approach is to use the git sha \(or equivalent for your version control system\) wherever possible. This will help you when it comes to using the `can-i-deploy` tool in step 7. Please read the section on [versioning in the Pact Broker](getting_started/versioning_in_the_pact_broker.md) to ensure your version numbers will help you get the most out of your Pact Broker.
 
 Useful links:
 
 * [Installing a Docker Pact Broker](https://hub.docker.com/r/pactfoundation/pact-broker)
 * [Publishing verification results](pact_broker/advanced_topics/provider_verification_results.md)
-* [Configuring webhooks in the Pact Broker](pact_broker/advanced_topics/webhooks)
+* [Configuring webhooks in the Pact Broker](pact_broker/advanced_topics/webhooks/README.md)
 * [Adding verification badges to your READMEs](pact_broker/advanced_topics/provider_verification_badges.md)
 * [Versioning in the Pact Broker](getting_started/versioning_in_the_pact_broker.md)
