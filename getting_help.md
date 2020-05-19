@@ -1,6 +1,6 @@
 # Getting Help
 
-The best place to ask for help is the slack team: ![slack](http://slack.pact.io/badge.svg)
+The best place to ask for help is the slack team: ![slack](https://slack.pact.io/badge.svg)
 
 You can also get help on Pact from the following channels:
 
