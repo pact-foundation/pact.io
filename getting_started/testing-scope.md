@@ -14,7 +14,7 @@ Usually, your application will be broken down into a number of sub-components, d
 
 Here, a _Collaborator_ is a component whose job is to communicate with another system. In our case, this is the `OrderApiClient`communicating with the external `Order Api` system. This is what we want our consumer test to inspect.
 
-### Scope of a Provider Pact Test <a id="scope-of-a-provider-pact-test"></a>
+### Scope of a Provider Pact Test
 
 On the Provider side, Pact needs to replay all of the interactions \(usually HTTP requests\) against your service. There are a number of choices that can be made here, but usually these are the choices:
 
@@ -24,5 +24,9 @@ On the Provider side, Pact needs to replay all of the interactions \(usually HTT
 
 Generally speaking, we test the entire service and mock out external services such as downstream APIs \(which would need their own set of Pact tests\) and databases. This gives you some of the benefits of an integration test without the high costs of maintenance.
 
-This is how you might visualise the coverage of a provider Pact test:![](https://gblobscdn.gitbook.com/assets%2F-LC2AYrI9MJa-_aAjE1u%2F-LpIfDjFGfbhsHiW8sCG%2F-LpIjOoPxs5RfxLcSafS%2Fscreenshot.png?alt=media&token=538de49c-dc81-45bb-926e-45ac722f5a09)Provider side Pact test scope
+This is how you might visualise the coverage of a provider Pact test:
+
+![Provider side Pact test scope](../.gitbook/assets/screenshot%20%281%29.png)
+
+### 
 
