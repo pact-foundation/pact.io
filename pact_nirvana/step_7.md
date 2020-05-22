@@ -1,10 +1,10 @@
-## 7. Use The Pact "Matrix" as a gateway to deployments
+# 7. Use The Pact “Matrix” as a gateway to deployments
 
 Before you deploy to a production environment, you need to know whether or not your app is compatible with the versions of the other apps that already exist in that environment. The old-fashioned way of managing these dependencies involved deploying sets of pre-tested applications together, creating a bottleneck and meaning that speedy development and testing on one application may be negated by slow development and testing on another.
 
 The Pact way of managing these dependencies is to use the Pact Matrix - this is the matrix generated when you create a table of all the consumer and provider versions that have been tested against each other using Pact. You can view the Pact Matrix for any pair of applications by opening `/matrix/provider/PROVIDER/consumer/CONSUMER` in your Pact Broker.
 
-![Pact matrix](.gitbook/assets/pact-matrix.png)
+![Pact matrix](https://github.com/pact-foundation/pact.io/tree/4b6694c451d37eb7756beac675e0d2d0fa936720/pact_nirvana/.gitbook/assets/pact-matrix.png)
 
 One very important thing to note is that a verification is associated with the pact _content_ itself, not with a specific consumer version. This means that if a pact does not change between publications, any previous verifications are automatically be applied to the new pact publication, effectively “pre-verifying” it. \(For this reason, it is best not to use any random data in a pact, as this will cause the broker to consider it a new revision of the pact.\) Linking a verification to the pact content rather than to the application version also means that we can do a “cartesian join” of pacts/verifications, resulting in many more "compatible" versions than would otherwise be the case.
 
@@ -24,3 +24,4 @@ The [`can-i-deploy`](https://github.com/pact-foundation/pact_broker-client#can-i
 Useful link:
 
 * [Checking verification results using the can-i-deploy CLI](https://github.com/pact-foundation/pact_broker-client#can-i-deploy)
+

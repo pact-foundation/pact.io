@@ -56,7 +56,7 @@ Something that could be useful, however, is to generate skeleton Pact test code 
 
 ### How do I use Pact with UI frameworks like React or Angular?
 
-The best way to use Pact on the consumer side is to focus the tests on just the code that makes the HTTP request, and bypass as much of the framework specific code as possible. You can read more about why that is so [here](../consumer/#avoid-using-pact-for-tests-that-involve-the-ui). You can read about how to use Pact to support your UI testing using stub servers [here](https://docs.pact.io/consumer/using_pact_to_support_ui_testing). You can see some examples of using Pact to test consumer code [here](https://github.com/pact-foundation/pact-js/tree/master/examples) and a pact-js workshop [here](https://github.com/pact-foundation/pact-workshop-js). 
+The best way to use Pact on the consumer side is to focus the tests on just the code that makes the HTTP request, and bypass as much of the framework specific code as possible. You can read more about why that is so [here](../consumer/#avoid-using-pact-for-tests-that-involve-the-ui). You can read about how to use Pact to support your UI testing using stub servers [here](https://docs.pact.io/consumer/using_pact_to_support_ui_testing). You can see some examples of using Pact to test consumer code [here](https://github.com/pact-foundation/pact-js/tree/master/examples) and a pact-js workshop [here](https://github.com/pact-foundation/pact-workshop-js).
 
 ### Why doesn't Pact use JSON Schema?
 
@@ -76,7 +76,7 @@ The same goes for specifying "SOME\_VALUE or null". If all your provider verific
 
 The same goes for specifying an array with length 0 or more. If all your provider verification data returned 0 length arrays, all your verification tests would pass without you ever having validated the contents of the array. This is why you can only specify an array with minimum length 1 OR a zero length array.
 
-Remember that unlike a schema, which describes all possible states of a document, Pact is "contract by examples". If you need to assert that multiple variations are possible, then you need to provide an example for each of those variations. Consider if it's _really_ important to you before you do add a Pact test for each and every variation however. Remember that each interaction comes with a "cost" of maintenance and execution time, and you need to consider if it is worth the cost in your particular situation. You may be better off handling the common scenarios in the pact, and then writing your consumer to code to gracefully handle unexpected variations (eg. by ignoring that data and raising an alert).
+Remember that unlike a schema, which describes all possible states of a document, Pact is "contract by examples". If you need to assert that multiple variations are possible, then you need to provide an example for each of those variations. Consider if it's _really_ important to you before you do add a Pact test for each and every variation however. Remember that each interaction comes with a "cost" of maintenance and execution time, and you need to consider if it is worth the cost in your particular situation. You may be better off handling the common scenarios in the pact, and then writing your consumer to code to gracefully handle unexpected variations \(eg. by ignoring that data and raising an alert\).
 
 ### Why are the pacts generated and not static?
 

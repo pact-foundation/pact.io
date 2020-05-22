@@ -1,4 +1,4 @@
-## 2. Spike \(Optional\)
+# 2. Spike
 
 If you have not used Pact before, consider trying it out on a [spike](https://en.wikipedia.org/wiki/Spike_%28software_development%29) application first.
 
@@ -11,3 +11,4 @@ If you have not used Pact before, consider trying it out on a [spike](https://en
 4. Get the provider team to implement the provider, and verify the pact.
 
 Next, you could try adding provider states and matchers. Make sure you understand how the pact generation and verification steps work.
+

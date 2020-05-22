@@ -6,6 +6,16 @@ The art of writing good consumer Pact tests is mostly about knowing what _not_ t
 It is easy to write brittle, unnecessarily strict, burdensome Pact tests if you don't know what you're doing. It's worth taking the time to make sure you understand what to focus on before starting to write Pact tests for real.
 {% endhint %}
 
+## Scope of a Consumer Test
+
+Pact tests should be "unit tests" for your client class, and they should just focus on ensuring that the request creation and response handling are correct. If you use pact for your UI tests, you'll end up with an explosion of redundant interactions that will make the verification process tedious. Remember that pact is for testing the contract used for communication, and not for testing particular UI behaviour or business logic.
+
+Usually, your application will be broken down into a number of sub-components, depending on what type of application your consumer is \(e.g. a Web application or another API\). This is how you might visualise the coverage of a consumer Pact test:
+
+![Scope of a consumer Pact test](../.gitbook/assets/consumer-test-coverage.png)
+
+Here, a _Collaborator_ is a component whose job is to communicate with another system. In our case, this is the `OrderApiClient`communicating with the external `Order Api` system. This is what we want our consumer test to inspect.
+
 ## Use `Pact` for contract testing, not functional testing of the provider
 
 * Functional testing is about ensuring the provider does the right thing with a request. These tests belong in the provider codebase, and it's not the job of the consumer team to be writing them.

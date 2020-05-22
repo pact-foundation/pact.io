@@ -1,4 +1,4 @@
-## 8. Prevent missing verifications
+# 8. Prevent missing verifications
 
 Step 7 means that you can now know that the production provider has successfully verified the pact from the consumer version you’re about to deploy. However, in some cases, the production version of the provider may never have run a CI against your candidate pact, because your candidate consumer pact may not have existed when the CI for that provider version was run.
 
@@ -12,4 +12,5 @@ Make sure that the provider application version used when publishing the verific
 
 Useful link:
 
-* [Best practices for pacticipant version numbers](getting_started/versioning_in_the_pact_broker.md)
+* [Best practices for pacticipant version numbers](https://github.com/pact-foundation/pact.io/tree/563329e1a5ff96f14f9165c05d620b8d2d6bff82/pact_nirvana/getting_started/versioning_in_the_pact_broker.md)
+

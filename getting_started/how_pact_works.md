@@ -92,5 +92,5 @@ _Contract tests should focus on the messages \(requests and responses\) rather t
 
 _Pact tests should be data independent_. Pact tests are best when successful verification doesn’t depend on the specific data that the provider returns. See this guide for best practices when describing interactions.
 
-_Use the broker to integrate Pact with your CI infrastructure._ Integrating Pact with your continuous integration infrastructure is a major win for safe and successful deployment. [See this guide for Pact integration best practices](../pact_nirvana.md)
+_Use the broker to integrate Pact with your CI infrastructure._ Integrating Pact with your continuous integration infrastructure is a major win for safe and successful deployment. [See this guide for Pact integration best practices](../pact_nirvana/)
 
