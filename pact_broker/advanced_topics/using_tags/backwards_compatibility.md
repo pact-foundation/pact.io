@@ -1,6 +1,6 @@
 # Ensure backwards compatibility
 
-If you want to ensure your provider is compatible with both the head version of your consumer, and the production version, you can use pact tagging to achieve this. To read more about this idea, check out this [blog post](http://techblog.realestate.com.au/enter-the-pact-matrix-or-how-to-decouple-the-release-cycles-of-your-microservices/) on decoupling the release cycles of your services.
+If you want to ensure your provider is compatible with both the head version of your consumer, and the production version, you can use pact tagging to achieve this. To read more about this idea, check out this [blog post](https://www.rea-group.com/blog/enter-the-pact-matrix-or-how-to-decouple-the-release-cycles-of-your-microservices/) on decoupling the release cycles of your services.
 
 ## Step 1. Tag the production version of the pact
 
