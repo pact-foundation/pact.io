@@ -55,7 +55,7 @@ Now, what happens when Foo gets another provider, Baz. Do we need to add `--pact
 
 ## Summary
 
-To stay safe while avoiding "big bag" deployments, add the following line before deploying:
+To stay safe while avoiding "big bang" deployments, add the following line before deploying:
 
 `$ pact-broker can-i-deploy --pacticipant PACTICIPANT --version VERSION --to STAGE`
 
