@@ -11,7 +11,7 @@ If you want to ensure your provider is compatible with both the head version of 
 
 ## Step 2. Configure the provider to verify the production pact
 
-* Add a new pact URL to the verification configuration of your provider project. The new URL will be the same as the normal "latest" url, with the name of the tag appended. 
+* Add a new pact URL to the verification configuration of your provider project. The new URL will be the same as the normal "latest" url, with the name of the tag appended.
 
   eg. `http://pact-broker/pacts/provider/Animal%20Service/consumer/Zoo%20App/latest/prod`
 

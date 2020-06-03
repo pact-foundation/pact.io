@@ -12,5 +12,5 @@ Make sure that the provider application version used when publishing the verific
 
 Useful link:
 
-* [Best practices for pacticipant version numbers](https://github.com/pact-foundation/pact.io/tree/563329e1a5ff96f14f9165c05d620b8d2d6bff82/pact_nirvana/getting_started/versioning_in_the_pact_broker.md)
+* [Best practices for pacticipant version numbers](../getting_started/versioning_in_the_pact_broker.md)
 
