@@ -68,9 +68,9 @@
    to: "scss/custom/components/plugins"
 - 
    files:
-     - "scrollMonitor.js"
-     - "scrollMonitor.js.map"
-   from: "node_modules/scrollmonitor"
+     - "index.js"
+     - "index.js.map"
+   from: "node_modules/scrollmonitor/dist/module"
    to: "pages/assets/js"
 - 
    files: "smooth-scroll.polyfills.min.js"
@@ -84,9 +84,9 @@
    to: "pages/assets/js"
 - 
    files: 
-     - "typed.min.js"
-     - "typed.min.js.map"
-   from: "node_modules/typed.js/lib"
+     - "typed.module.js"
+     - "typed.module.js.map"
+   from: "node_modules/typed.js/dist"
    to: "pages/assets/js"
 - 
    files: "aos.css"
