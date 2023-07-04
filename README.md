@@ -26,6 +26,8 @@ The short version:
 
 ```
 brew install pyenv
+eval "$(pyenv init -)" # set in your profile (.zshrc / .bashrc etc)
 pyenv install 2.7.18
 pyenv shell 2.7.18
 ... npm commands above
+```
