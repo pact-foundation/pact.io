@@ -13,9 +13,19 @@ pact.io home page
 
 Setup instructions are located in the docs mentioned above.
 
+Node 14 is required
+Python 2 is required due to an old version of node-sass.
+
 The short version:
 
-* npm install -g gulp-cli
 * npm install
-* gulp
+* $(npm bin)/gulp
 
+
+#### MacOS
+
+```
+brew install pyenv
+pyenv install 2.7.18
+pyenv shell 2.7.18
+... npm commands above
