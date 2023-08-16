@@ -95,7 +95,7 @@
           <div class="col-lg-9 col-xl-8">
             <h5>1 - 31 October, 2023</h5>
             <h1 class="display-1">Pactober</h1>
-            <p class="lead mb-4">Schedule coming soon</p>
+            <a href="#featuring"><p class="lead mb-4">Click here to see the schedule & speakers</p></a>
             <a href="https://cucumber.typeform.com/PactoberEoI?utm_source=lander&utm_medium=web&utm_campaign=pactober2023&utm_content=hero" class="btn btn-primary btn-lg">Register to keep up to date or host an event</a>
           </div>
         </div>
@@ -144,10 +144,17 @@
       <div class="container">
         <div class="row mb-4">
           <div class="col">
-            <h2 class="h1">Featuring talks from</h2>
+            <h2 class="h1" id="featuring">Featuring talks from</h2>
           </div>
         </div>
         <div class="row">
+          <div class="col-sm-6 col-lg-4 d-flex align-items-center mb-5" data-aos="fade-up" data-aos-delay="100">
+            <img src="assets/img/avatars/sebr.jpg" alt="Seb Rose" class="avatar avatar-xlg mr-3">
+            <div>
+              <h5 class="mb-0">Seb Rose</h5>
+              Software Consultant - Independent
+            </div>
+          </div>
           <div class="col-sm-6 col-lg-4 d-flex align-items-center mb-5" data-aos="fade-up" data-aos-delay="100">
             <img src="assets/img/avatars/saf.png" alt="Yousaf Nabi" class="avatar avatar-xlg mr-3">
             <div>
@@ -210,7 +217,7 @@
               <div class="icon-round mb-3 mb-md-4 icon bg-primary">
                 <img class="icon bg-primary" src="assets/img/icons/theme/general/user.svg" alt="icon" data-inject-svg />
               </div>
-              <h5 class="mb-0">Freelancing in the modern economy</h5>
+              <h5 class="mb-0">Pact History</h5>
             </a>
           </div>
           <div class="col-md-6 col-lg-3 d-flex" data-aos="fade-up" data-aos-delay="200">
@@ -218,7 +225,7 @@
               <div class="icon-round mb-3 mb-md-4 icon bg-white">
                 <img class="icon bg-white" src="assets/img/icons/theme/home/clock.svg" alt="icon" data-inject-svg />
               </div>
-              <h5 class="mb-0">Time management for creatives</h5>
+              <h5 class="mb-0">Path to Pact Nirvana</h5>
             </a>
           </div>
           <div class="col-md-6 col-lg-3 d-flex" data-aos="fade-up" data-aos-delay="300">
@@ -226,7 +233,7 @@
               <div class="icon-round mb-3 mb-md-4 icon bg-white">
                 <img class="icon bg-white" src="assets/img/icons/theme/devices/mic.svg" alt="icon" data-inject-svg />
               </div>
-              <h5 class="mb-0">Marketing your unique skill-set</h5>
+              <h5 class="mb-0">Pact Plugins</h5>
             </a>
           </div>
           <div class="col-md-6 col-lg-3 d-flex" data-aos="fade-up" data-aos-delay="400">
@@ -234,7 +241,7 @@
               <div class="icon-round mb-3 mb-md-4 icon bg-white">
                 <img class="icon bg-white" src="assets/img/icons/theme/devices/battery-half.svg" alt="icon" data-inject-svg />
               </div>
-              <h5 class="mb-0">Recharging your creativity</h5>
+              <h5 class="mb-0">Round table with experts</h5>
             </a>
           </div>
         </div>
@@ -244,29 +251,40 @@
           </div>
         </div>
       </div>
-    </section> -->
+    </section>
+ -->
 
-
-    <!-- <section>
+    
+    <section>
       <div class="container">
         <div class="row aling-items-center mb-4">
           <div class="col">
-            <h2 class="h1 mb-sm-0">Schedule</h2>
+            <h2 class="h1 mb-sm-0" id="schedule">Schedule</h2>
           </div>
+          <p></p>
           <div class="col-auto">
             <ul class="nav" role="tablist">
               <li class="nav-item">
-                <a class="nav-link btn active" href="#day-one" id="day-one-tab" data-toggle="tab" aria-controls="day-one" role="tab" aria-selected="true">Day One</a>
+                <a class="nav-link btn active" href="#week-one" id="week-one-tab" data-toggle="tab" aria-controls="week-one" role="tab" aria-selected="true">Week One</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link btn" href="#day-two" id="day-two-tab" data-toggle="tab" aria-controls="day-two" role="tab" aria-selected="false">Day Two</a>
+                <a class="nav-link btn" href="#week-two" id="week-two-tab" data-toggle="tab" aria-controls="week-two" role="tab" aria-selected="false">Week Two</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link btn" href="#week-three" id="week-three-tab" data-toggle="tab" aria-controls="week-three" role="tab" aria-selected="false">Week Three</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link btn" href="#week-four" id="week-four-tab" data-toggle="tab" aria-controls="week-four" role="tab" aria-selected="false">Week Four</a>
               </li>
             </ul>
           </div>
         </div>
         <div class="row no-gutters d-none d-md-flex bg-white py-3">
           <div class="col-xl-7 col-md-6">
-            <span class="h6 mb-0 text-muted">Workshop</span>
+            <span class="h6 mb-0 text-muted">Title</span>
+          </div>
+          <div class="col">
+            <span class="h6 mb-0 text-muted">Day</span>
           </div>
           <div class="col">
             <span class="h6 mb-0 text-muted">Time</span>
@@ -276,225 +294,184 @@
           </div>
         </div>
         <div class="tab-content" data-aos="fade-up">
-          <div id="day-one" class="list-group list-group-flush tab-pane fade show active" role="tabpanel" aria-labelledby="day-one-tab">
+          <div id="week-one" class="list-group list-group-flush tab-pane fade show active" role="tabpanel" aria-labelledby="week-one-tab">
             <a href="#" class="list-group-item list-group-item-action row no-gutters align-items-center py-3">
               <div class="col-xl-7 col-md-6">
-                <h5 class="mb-0">Registration</h5>
+                <h5 class="mb-0">How I Learned to Stop Worrying and Love Releasing</h5>
               </div>
               <div class="col-md">
-                <span>8:30am</span>
+                <span>2nd</span>
               </div>
               <div class="col-md">
                 <span>–</span>
               </div>
-            </a>
-            <a href="#" class="list-group-item list-group-item-action row no-gutters align-items-center py-3">
-              <div class="col-xl-7 col-md-6">
-                <h5 class="mb-0">Resisting Complexity</h5>
-              </div>
-              <div class="col-md">
-                <span>9:30am</span>
-              </div>
               <div class="col-md">
                 <div class="d-flex align-items-center mt-2 mt-md-0">
-                  <img src="assets/img/avatars/male-1.jpg" alt="Benjamin Cameron" class="avatar avatar-sm mr-2">
-                  <span class="h6 mb-0">Benjamin Cameron</span>
+                  <img src="assets/img/avatars/sebr.jpg" alt="Seb Rose" class="avatar avatar-sm mr-2">
+                  <span class="h6 mb-0">Seb Rose</span>
                 </div>
               </div>
             </a>
             <a href="#" class="list-group-item list-group-item-action row no-gutters align-items-center py-3">
               <div class="col-xl-7 col-md-6">
-                <h5 class="mb-0">Freelancing and The Sharing Economy</h5>
+                <h5 class="mb-0">Pact CI/CD Workshop (HTTP) </h5>
               </div>
               <div class="col-md">
-                <span>10:20am</span>
+                <span>3rd</span>
+              </div>
+              <div class="col-md">
+                <span>-</span>
               </div>
               <div class="col-md">
                 <div class="d-flex align-items-center mt-2 mt-md-0">
-                  <img src="assets/img/avatars/male-4.jpg" alt="Cedric Vance" class="avatar avatar-sm mr-2">
-                  <span class="h6 mb-0">Cedric Vance</span>
+                  <img src="assets/img/avatars/saf.png" alt="Yousaf Nabi" class="avatar avatar-sm mr-2">
+                  <span class="h6 mb-0">Yousaf Nabi</span>
                 </div>
               </div>
             </a>
             <a href="#" class="list-group-item list-group-item-action row no-gutters align-items-center py-3">
               <div class="col-xl-7 col-md-6">
-                <h5 class="mb-0">Marketing A Unique Skill-set</h5>
+                <h5 class="mb-0">Your workshop here? </h5>
               </div>
               <div class="col-md">
-                <span>11:30am</span>
+                <span>TBC</span>
               </div>
               <div class="col-md">
-                <div class="d-flex align-items-center mt-2 mt-md-0">
-                  <img src="assets/img/avatars/female-4.jpg" alt="Andrea Souzakis" class="avatar avatar-sm mr-2">
-                  <span class="h6 mb-0">Andrea Souzakis</span>
-                </div>
-              </div>
-            </a>
-            <a href="#" class="list-group-item list-group-item-action row no-gutters align-items-center py-3">
-              <div class="col-xl-7 col-md-6">
-                <h5 class="mb-0">Lunch</h5>
-              </div>
-              <div class="col-md">
-                <span>12:30pm</span>
-              </div>
-              <div class="col-md">
-                <span>–</span>
-              </div>
-            </a>
-            <a href="#" class="list-group-item list-group-item-action row no-gutters align-items-center py-3">
-              <div class="col-xl-7 col-md-6">
-                <h5 class="mb-0">Recharging Your Creativity</h5>
-              </div>
-              <div class="col-md">
-                <span>1:30pm</span>
+                <span>-</span>
               </div>
               <div class="col-md">
                 <div class="d-flex align-items-center mt-2 mt-md-0">
-                  <img src="assets/img/avatars/female-3.jpg" alt="Candice Tierman" class="avatar avatar-sm mr-2">
-                  <span class="h6 mb-0">Candice Tierman</span>
-                </div>
-              </div>
-            </a>
-            <a href="#" class="list-group-item list-group-item-action row no-gutters align-items-center py-3">
-              <div class="col-xl-7 col-md-6">
-                <h5 class="mb-0">Understanding Git</h5>
-              </div>
-              <div class="col-md">
-                <span>2:30pm</span>
-              </div>
-              <div class="col-md">
-                <div class="d-flex align-items-center mt-2 mt-md-0">
-                  <img src="assets/img/avatars/female-4.jpg" alt="Andrea Souzakis" class="avatar avatar-sm mr-2">
-                  <span class="h6 mb-0">Andrea Souzakis</span>
-                </div>
-              </div>
-            </a>
-            <a href="#" class="list-group-item list-group-item-action row no-gutters align-items-center py-3">
-              <div class="col-xl-7 col-md-6">
-                <h5 class="mb-0">Node Essentials</h5>
-              </div>
-              <div class="col-md">
-                <span>3:30pm</span>
-              </div>
-              <div class="col-md">
-                <div class="d-flex align-items-center mt-2 mt-md-0">
-                  <img src="assets/img/avatars/male-2.jpg" alt="Benjamin Cameron" class="avatar avatar-sm mr-2">
-                  <span class="h6 mb-0">Benjamin Cameron</span>
+                  <img src="assets/img/avatars/female-4.jpg" alt="You" class="avatar avatar-sm mr-2">
+                  <span class="h6 mb-0">You?</span>
                 </div>
               </div>
             </a>
           </div>
-          <div id="day-two" class="list-group list-group-flush tab-pane fade" role="tabpanel" aria-labelledby="day-two-tab">
+          <div id="week-two" class="list-group list-group-flush tab-pane fade" role="tabpanel" aria-labelledby="week-two-tab">
             <a href="#" class="list-group-item list-group-item-action row no-gutters align-items-center py-3">
               <div class="col-xl-7 col-md-6">
-                <h5 class="mb-0">Registration</h5>
+                <h5 class="mb-0">10th Birthday Bash</h5>
               </div>
               <div class="col-md">
-                <span>8:30am</span>
+                <span>10th</span>
               </div>
               <div class="col-md">
                 <span>–</span>
               </div>
-            </a>
-            <a href="#" class="list-group-item list-group-item-action row no-gutters align-items-center py-3">
-              <div class="col-xl-7 col-md-6">
-                <h5 class="mb-0">Freelancing and The Sharing Economy</h5>
-              </div>
               <div class="col-md">
-                <span>9:00am</span>
-              </div>
-              <div class="col-md">
-                <div class="d-flex align-items-center mt-2 mt-md-0">
-                  <img src="assets/img/avatars/male-4.jpg" alt="Cedric Vance" class="avatar avatar-sm mr-2">
-                  <span class="h6 mb-0">Cedric Vance</span>
-                </div>
+                <span>Various Speakers</span>
               </div>
             </a>
             <a href="#" class="list-group-item list-group-item-action row no-gutters align-items-center py-3">
               <div class="col-xl-7 col-md-6">
-                <h5 class="mb-0">Marketing A Unique Skill-set</h5>
+                <h5 class="mb-0">Pact CI/CD Workshop (Message) </h5>
               </div>
               <div class="col-md">
-                <span>10:30am</span>
-              </div>
-              <div class="col-md">
-                <div class="d-flex align-items-center mt-2 mt-md-0">
-                  <img src="assets/img/avatars/female-4.jpg" alt="Andrea Souzakis" class="avatar avatar-sm mr-2">
-                  <span class="h6 mb-0">Andrea Souzakis</span>
-                </div>
-              </div>
-            </a>
-            <a href="#" class="list-group-item list-group-item-action row no-gutters align-items-center py-3">
-              <div class="col-xl-7 col-md-6">
-                <h5 class="mb-0">Resisting Complexity</h5>
-              </div>
-              <div class="col-md">
-                <span>11:30am</span>
-              </div>
-              <div class="col-md">
-                <div class="d-flex align-items-center mt-2 mt-md-0">
-                  <img src="assets/img/avatars/male-1.jpg" alt="Benjamin Cameron" class="avatar avatar-sm mr-2">
-                  <span class="h6 mb-0">Benjamin Cameron</span>
-                </div>
-              </div>
-            </a>
-            <a href="#" class="list-group-item list-group-item-action row no-gutters align-items-center py-3">
-              <div class="col-xl-7 col-md-6">
-                <h5 class="mb-0">Lunch</h5>
-              </div>
-              <div class="col-md">
-                <span>12:30pm</span>
+                <span>11th</span>
               </div>
               <div class="col-md">
                 <span>–</span>
               </div>
-            </a>
-            <a href="#" class="list-group-item list-group-item-action row no-gutters align-items-center py-3">
-              <div class="col-xl-7 col-md-6">
-                <h5 class="mb-0">Node Essentials</h5>
-              </div>
-              <div class="col-md">
-                <span>1:30pm</span>
-              </div>
               <div class="col-md">
                 <div class="d-flex align-items-center mt-2 mt-md-0">
-                  <img src="assets/img/avatars/male-2.jpg" alt="Benjamin Cameron" class="avatar avatar-sm mr-2">
-                  <span class="h6 mb-0">Benjamin Cameron</span>
+                  <img src="assets/img/avatars/saf.png" alt="Yousaf Nabi" class="avatar avatar-sm mr-2">
+                  <span class="h6 mb-0">Yousaf Nabi</span>
                 </div>
               </div>
             </a>
             <a href="#" class="list-group-item list-group-item-action row no-gutters align-items-center py-3">
               <div class="col-xl-7 col-md-6">
-                <h5 class="mb-0">Recharging Your Creativity</h5>
+                <h5 class="mb-0">Your workshop here? </h5>
               </div>
               <div class="col-md">
-                <span>2:30pm</span>
+                <span>TBC</span>
+              </div>
+              <div class="col-md">
+                <span>-</span>
               </div>
               <div class="col-md">
                 <div class="d-flex align-items-center mt-2 mt-md-0">
-                  <img src="assets/img/avatars/female-3.jpg" alt="Candice Tierman" class="avatar avatar-sm mr-2">
-                  <span class="h6 mb-0">Candice Tierman</span>
+                  <img src="assets/img/avatars/female-4.jpg" alt="You" class="avatar avatar-sm mr-2">
+                  <span class="h6 mb-0">You?</span>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div id="week-three" class="list-group list-group-flush tab-pane fade" role="tabpanel" aria-labelledby="week-three-tab">
+            <a href="#" class="list-group-item list-group-item-action row no-gutters align-items-center py-3">
+              <div class="col-xl-7 col-md-6">
+                <h5 class="mb-0">Pact CI/CD Workshop (Plugins) </h5>
+              </div>
+              <div class="col-md">
+                <span>17th</span>
+              </div>
+              <div class="col-md">
+                <span>–</span>
+              </div>
+              <div class="col-md">
+                <div class="d-flex align-items-center mt-2 mt-md-0">
+                  <img src="assets/img/avatars/saf.png" alt="Yousaf Nabi" class="avatar avatar-sm mr-2">
+                  <span class="h6 mb-0">Yousaf Nabi</span>
                 </div>
               </div>
             </a>
             <a href="#" class="list-group-item list-group-item-action row no-gutters align-items-center py-3">
               <div class="col-xl-7 col-md-6">
-                <h5 class="mb-0">Understanding Git</h5>
+                <h5 class="mb-0">Your workshop here? </h5>
               </div>
               <div class="col-md">
-                <span>3:30pm</span>
+                <span>TBC</span>
+              </div>
+              <div class="col-md">
+                <span>-</span>
               </div>
               <div class="col-md">
                 <div class="d-flex align-items-center mt-2 mt-md-0">
-                  <img src="assets/img/avatars/female-4.jpg" alt="Andrea Souzakis" class="avatar avatar-sm mr-2">
-                  <span class="h6 mb-0">Andrea Souzakis</span>
+                  <img src="assets/img/avatars/female-4.jpg" alt="You" class="avatar avatar-sm mr-2">
+                  <span class="h6 mb-0">You?</span>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div id="week-four" class="list-group list-group-flush tab-pane fade" role="tabpanel" aria-labelledby="week-four-tab">
+            <a href="#" class="list-group-item list-group-item-action row no-gutters align-items-center py-3">
+              <div class="col-xl-7 col-md-6">
+                <h5 class="mb-0">Pact Maintainer Workshop (FFI) </h5>
+              </div>
+              <div class="col-md">
+                <span>24rd</span>
+              </div>
+              <div class="col-md">
+                <span>–</span>
+              </div>
+              <div class="col-md">
+                <div class="d-flex align-items-center mt-2 mt-md-0">
+                  <img src="assets/img/avatars/saf.png" alt="Yousaf Nabi" class="avatar avatar-sm mr-2">
+                  <span class="h6 mb-0">Yousaf Nabi</span>
+                </div>
+              </div>
+            </a>
+            <a href="#" class="list-group-item list-group-item-action row no-gutters align-items-center py-3">
+              <div class="col-xl-7 col-md-6">
+                <h5 class="mb-0">Your workshop here? </h5>
+              </div>
+              <div class="col-md">
+                <span>TBC</span>
+              </div>
+              <div class="col-md">
+                <span>-</span>
+              </div>
+              <div class="col-md">
+                <div class="d-flex align-items-center mt-2 mt-md-0">
+                  <img src="assets/img/avatars/female-4.jpg" alt="You" class="avatar avatar-sm mr-2">
+                  <span class="h6 mb-0">You?</span>
                 </div>
               </div>
             </a>
           </div>
         </div>
       </div>
-    </section> -->
+    </section>
 
 
     <!-- <section class="bg-primary-3 text-light has-divider">
