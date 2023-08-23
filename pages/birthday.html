@@ -21,73 +21,36 @@
     <div class="loader">
       <div class="loading-animation"></div>
     </div>
-    <div class="navbar-container ">
-      <nav class="navbar navbar-expand-lg navbar-dark" data-overlay data-sticky="top">
+    <div class="navbar-container">
+      <nav class="navbar navbar-expand-lg navbar" data-overlay data-sticky="top">
         <div class="container">
           <div class="col flex-fill px-0 d-flex justify-content-between">
             <a class="navbar-brand mr-0 fade-page" href="index.html">
-              <img src="assets/img/logo-black.png" alt="Pact Foundation" class="logo">
+              <img src="../../assets/img/logo-black.png" alt="Pact Foundation" class="logo">
             </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
-              <img class="icon navbar-toggler-open" src="assets/img/icons/interface/menu.svg" alt="menu interface icon" data-inject-svg />
-              <img class="icon navbar-toggler-close" src="assets/img/icons/interface/cross.svg" alt="cross interface icon" data-inject-svg />
-            </button>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+            <img class="icon navbar-toggler-open" src="../../assets/img/icons/interface/menu.svg" alt="menu interface icon" data-inject-svg />
+            <img class="icon navbar-toggler-close" src="../../assets/img/icons/interface/cross.svg" alt="cross interface icon" data-inject-svg />
+          </button>
           </div>
-          <div class="collapse navbar-collapse col px-0 px-lg-2 flex-fill">
-            <div class="py-2 py-lg-0">
-              <ul class="navbar-nav">
-                <li class="nav-item dropdown">
-                  <a href="https://docs.pact.io/blog" class="nav-link dropdown-toggle" data-toggle="dropdown-grid" aria-expanded="false" aria-haspopup="true">Blog</a>
-                </li>
-                <li class="nav-item dropdown">
-                  <a href="https://pact.canny.io" class="nav-link dropdown-toggle" data-toggle="dropdown-grid" aria-expanded="false" aria-haspopup="true">Roadmap</a>
-                </li>
-                <li class="nav-item dropdown">
-                  <a href="https://docs.pact.io" class="nav-link dropdown-toggle" data-toggle="dropdown-grid" aria-expanded="false" aria-haspopup="true">Documentation</a>
-                </li>
-                <li class="nav-item dropdown">
-                  <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown-grid" aria-expanded="false" aria-haspopup="true">Support</a>
-                  <div class="dropdown-menu row">
-                    <div class="col-auto px-0" data-dropdown-content>
-                      <div class="bg-white rounded border shadow-lg o-hidden">
-                        <div class="p-3">
-                          <h6 class="mb-0">Support</h6>
-                        </div>
-                        <div class="list-group list-group-flush">
-                          <a href="https://docs.pact.io" target="_blank" class="list-group-item list-group-item-action d-flex align-items-center p-3">
-                            <img class="icon icon-md" src="assets/img/icons/theme/files/selected-file.svg" alt="Read the docs" data-inject-svg />
-                            <div class="text-body ml-3">
-                              <span>Documentation</span>
-                              <div class="text-small text-muted">Get all the information you need</div>
-                            </div>
-                          </a>
-                          <a href="http://slack.pact.io" target="_blank" class="list-group-item list-group-item-action d-flex align-items-center p-3">
-                            <img class="icon icon-md" src="assets/img/icons/theme/communication/chat-4.svg" alt="Join our slack channel" data-inject-svg />
-                            <div class="text-body ml-3">
-                              <span>Looking for answers?</span>
-                              <div class="text-small text-muted">Join our Slack Channel</div>
-                            </div>
-                          </a>
-                          <a href="https://pactflow.io/partners" target="_blank" class="list-group-item list-group-item-action d-flex align-items-center p-3">
-                            <img class="icon icon-md" src="assets/img/icons/theme/communication/group.svg" alt="Get help from our consulting partners" data-inject-svg />
-                            <div class="text-body ml-3">
-                              <span>Need support on the ground?</span>
-                              <div class="text-small text-muted">Get help from trusted partners</div>
-                            </div>
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="collapse navbar-collapse justify-content-end col flex-fill px-0"><a href="https://cucumber.typeform.com/PactoberEoI?utm_source=lander&utm_medium=web&utm_campaign=pactober2023&utm_content=header" class="btn btn-primary ml-lg-3">Register</a></div>
+      <div class="collapse navbar-collapse col px-0 px-lg-2 flex-fill">
+        <div class="py-2 py-lg-0">
+          <ul class="navbar-nav">
+            <li class="nav-item dropdown">
+              <a href="https://cucumber.typeform.com/PactoberEoI?utm_source=lander&utm_medium=web&utm_campaign=pactober2023&utm_content=header" class="nav-link dropdown-toggle" data-toggle="dropdown-grid" aria-expanded="false" aria-haspopup="true">Register</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a href="/birthday" class="nav-link dropdown-toggle" data-toggle="dropdown-grid" aria-expanded="false" aria-haspopup="true">Main Event</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a href="/pactober#schedule_container" class="nav-link dropdown-toggle" data-toggle="dropdown-grid" aria-expanded="false" aria-haspopup="true">Full Schedule</a>
+            </li>
+          </ul>
+        </div>
+        </div>
         </div>
       </nav>
     </div>
-
 
 
     <section class="bg-primary-3 text-light has-divider">
@@ -127,17 +90,155 @@
         </div>
         <div class="tab-content" data-aos="fade-up">
           <div id="week-one" class="list-group list-group-flush tab-pane fade show active" role="tabpanel" aria-labelledby="week-one-tab">
-            <a href="/pactober/2023/template.html" class="list-group-item list-group-item-action row no-gutters align-items-center py-3">
+            <a href="/pactober/2023/elliot-murray.html" class="list-group-item list-group-item-action row no-gutters align-items-center py-3">
               <div class="col-xl-7 col-md-6">
-                <h5 class="mb-0">Opening Keynote</h5>
+                <h5 class="mb-0">Opening Session</h5>
               </div>
               <div class="col-md">
                 <span>10:00 / 05:00 / 19:00</span>
               </div>
               <div class="col-md">
                 <div class="d-flex align-items-center mt-2 mt-md-0">
-                  <img src="assets/img/avatars/female-4.jpg" alt="Seb Rose" class="avatar avatar-sm mr-2">
+                  <img src="assets/img/favicons/pact.png" alt="" class="avatar avatar-sm mr-2">
+                  <span class="h6 mb-0">Elliot Murray</span>
+                </div>
+              </div>
+            </a>
+            <a href="/pactober/2023/hello-pact-core.html" class="list-group-item list-group-item-action row no-gutters align-items-center py-3">
+              <div class="col-xl-7 col-md-6">
+                <h5 class="mb-0">Hello from the Pact Core team</h5>
+              </div>
+              <div class="col-md">
+                <span>10:20 / 05:20 / 19:20</span>
+              </div>
+              <div class="col-md">
+                <div class="d-flex align-items-center mt-2 mt-md-0">
+                  <img src="https://avatars.githubusercontent.com/u/446228?v=4" alt="" class="avatar avatar-sm mr-2">
+                  <span class="h6 mb-0">Beth Skurrie</span>
+                </div>
+                <div class="d-flex align-items-center mt-2 mt-md-0">
+                  <img src="https://avatars.githubusercontent.com/u/53900?v=4" alt="" class="avatar avatar-sm mr-2">
+                  <span class="h6 mb-0">Matt Fellows</span>
+                </div>
+                <div class="d-flex align-items-center mt-2 mt-md-0">
+                  <img src="https://avatars.githubusercontent.com/u/863666?v=4" alt="" class="avatar avatar-sm mr-2">
+                  <span class="h6 mb-0">Ronald Holshousen</span>
+                </div>
+              </div>
+            </a>
+            <a href="/pactober/2023/community-intro.html" class="list-group-item list-group-item-action row no-gutters align-items-center py-3">
+              <div class="col-xl-7 col-md-6">
+                <h5 class="mb-0">Community Intro Video</h5>
+              </div>
+              <div class="col-md">
+                <span>10:40 / 05:40 / 19:40</span>
+              </div>
+              <div class="col-md">
+                <div class="d-flex align-items-center mt-2 mt-md-0">
+                  <img src="assets/img/favicons/pact.png" alt="" class="avatar avatar-sm mr-2">
+                  <span class="h6 mb-0">Various</span>
+                </div>
+              </div>
+            </a>
+            <a href="/pactober/2023/sam-newman.html" class="list-group-item list-group-item-action row no-gutters align-items-center py-3">
+              <div class="col-xl-7 col-md-6">
+                <h5 class="mb-0">Opening Keynote</h5>
+              </div>
+              <div class="col-md">
+                <span>10:45 / 05:45 / 19:45</span>
+              </div>
+              <div class="col-md">
+                <div class="d-flex align-items-center mt-2 mt-md-0">
+                  <img src="https://samnewman.io/img/me_in_iceland.jpg" alt="" class="avatar avatar-sm mr-2">
+                  <span class="h6 mb-0">Sam Newman</span>
+                </div>
+              </div>
+            </a>
+            <a href="/pactober/2023/fireside-chat.html" class="list-group-item list-group-item-action row no-gutters align-items-center py-3">
+              <div class="col-xl-7 col-md-6">
+                <h5 class="mb-0">Fireside Chat</h5>
+              </div>
+              <div class="col-md">
+                <span>11:45 / 06:45 / 20:45</span>
+              </div>
+              <div class="col-md">
+                <div class="d-flex align-items-center mt-2 mt-md-0">
+                  <img src="https://avatars.githubusercontent.com/u/17763998?v=4" alt="" class="avatar avatar-sm mr-2">
+                  <span class="h6 mb-0">Lewis Prescott</span>
+                </div>
+                <div class="d-flex align-items-center mt-2 mt-md-0">
+                  <img src="https://avatars.githubusercontent.com/u/10740451?v=4" alt="" class="avatar avatar-sm mr-2">
+                  <span class="h6 mb-0">Bas Dijkstra</span>
+                </div>
+              </div>
+            </a>
+            <a href="/pactober/2023/break.html" class="list-group-item list-group-item-action row no-gutters align-items-center py-3">
+              <div class="col-xl-7 col-md-6">
+                <h5 class="mb-0">Break</h5>
+              </div>
+              <div class="col-md">
+                <span>12:45 / 07:45 / 21:45</span>
+              </div>
+              <div class="col-md">
+                <div class="d-flex align-items-center mt-2 mt-md-0">
+                  <img src="assets/img/favicons/pact.png" alt="" class="avatar avatar-sm mr-2">
+                  <span class="h6 mb-0">Various</span>
+                </div>
+              </div>
+            </a>
+            <a href="/pactober/2023/pact-updates.html" class="list-group-item list-group-item-action row no-gutters align-items-center py-3">
+              <div class="col-xl-7 col-md-6">
+                <h5 class="mb-0">Pact Updates</h5>
+              </div>
+              <div class="col-md">
+                <span>13:00 / 08:00 / 20:00</span>
+              </div>
+              <div class="col-md">
+                <div class="d-flex align-items-center mt-2 mt-md-0">
+                  <img src="assets/img/favicons/pact.png" alt="" class="avatar avatar-sm mr-2">
                   <span class="h6 mb-0">To be announced</span>
+                </div>
+              </div>
+            </a>
+            <a href="/pactober/2023/break.html" class="list-group-item list-group-item-action row no-gutters align-items-center py-3">
+              <div class="col-xl-7 col-md-6">
+                <h5 class="mb-0">Break / Activities</h5>
+              </div>
+              <div class="col-md">
+                <span>13:45 / 08:45 / 20:45</span>
+              </div>
+              <div class="col-md">
+                <div class="d-flex align-items-center mt-2 mt-md-0">
+                  <img src="assets/img/favicons/pact.png" alt="" class="avatar avatar-sm mr-2">
+                  <span class="h6 mb-0">Various</span>
+                </div>
+              </div>
+            </a>
+            <a href="/pactober/2023/jb-rainsberger.html" class="list-group-item list-group-item-action row no-gutters align-items-center py-3">
+              <div class="col-xl-7 col-md-6">
+                <h5 class="mb-0">Closing Keynote</h5>
+              </div>
+              <div class="col-md">
+                <span>14:00 / 09:00 / 21:00</span>
+              </div>
+              <div class="col-md">
+                <div class="d-flex align-items-center mt-2 mt-md-0">
+                  <img src="https://d33wubrfki0l68.cloudfront.net/75a893a87a9cdf5d1aa0569703ed0e7072f8a6a9/d0dde/images/cartoon-headshot-white-background.jpg" alt="" class="avatar avatar-sm mr-2">
+                  <span class="h6 mb-0">J.B. Rainsberger</span>
+                </div>
+              </div>
+            </a>
+            <a href="/pactober/2023/elliot-murray.html" class="list-group-item list-group-item-action row no-gutters align-items-center py-3">
+              <div class="col-xl-7 col-md-6">
+                <h5 class="mb-0">Wrap up</h5>
+              </div>
+              <div class="col-md">
+                <span>15:00 / 10:00 / 22:00</span>
+              </div>
+              <div class="col-md">
+                <div class="d-flex align-items-center mt-2 mt-md-0">
+                  <img src="assets/img/favicons/pact.png" alt="" class="avatar avatar-sm mr-2">
+                  <span class="h6 mb-0">Elliot Murray</span>
                 </div>
               </div>
             </a>
