@@ -7,6 +7,10 @@
   to = "/birthday"
   status = 200
 [[redirects]]
-  from = "/pact_event_template.html"
-  to = "/pact_event_template"
+  from = "/pactober/2023/template.html"
+  to = "/pactober/2023/pact_event_template"
+  status = 200
+[[redirects]]
+  from = "/pactober/2023/seb-rose.html"
+  to = "/pactober/2023/seb-rose"
   status = 200
