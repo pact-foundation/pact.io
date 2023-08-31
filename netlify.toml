@@ -8,9 +8,41 @@
   status = 200
 [[redirects]]
   from = "/pactober/2023/template.html"
-  to = "/pactober/2023/pact_event_template"
+  to = "/pactober/2023/template"
+  status = 200
+[[redirects]]
+  from = "/pactober/2023/community-intro.html"
+  to = "/pactober/2023/community-intro"
+  status = 200
+[[redirects]]
+  from = "/pactober/2023/fireside-chat.html"
+  to = "/pactober/2023/fireside-chat"
   status = 200
 [[redirects]]
   from = "/pactober/2023/seb-rose.html"
   to = "/pactober/2023/seb-rose"
+  status = 200
+[[redirects]]
+  from = "/pactober/2023/elliot-murray.html"
+  to = "/pactober/2023/elliot-murray"
+  status = 200
+[[redirects]]
+  from = "/pactober/2023/hello-pact-core.html"
+  to = "/pactober/2023/hello-pact-core"
+  status = 200
+[[redirects]]
+  from = "/pactober/2023/break.html"
+  to = "/pactober/2023/break"
+  status = 200
+[[redirects]]
+  from = "/pactober/2023/jb-rainsberger.html"
+  to = "/pactober/2023/jb-rainsberger"
+  status = 200
+[[redirects]]
+  from = "/pactober/2023/sam-newman.html"
+  to = "/pactober/2023/sam-newman"
+  status = 200
+[[redirects]]
+  from = "/pactober/2023/timothy-jones.html"
+  to = "/pactober/2023/timothy-jones"
   status = 200
