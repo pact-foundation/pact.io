@@ -1,0 +1,16 @@
+[[redirects]]
+  from = "/pactober.html"
+  to = "/pactober"
+  status = 200
+[[redirects]]
+  from = "/birthday.html"
+  to = "/birthday"
+  status = 200
+[[redirects]]
+  from = "/pactober/2023/template.html"
+  to = "/pactober/2023/pact_event_template"
+  status = 200
+[[redirects]]
+  from = "/pactober/2023/seb-rose.html"
+  to = "/pactober/2023/seb-rose"
+  status = 200
