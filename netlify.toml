@@ -14,3 +14,7 @@
   from = "/pactober/2023/seb-rose.html"
   to = "/pactober/2023/seb-rose"
   status = 200
+[[redirects]]
+  from = "/pactober/2023/pact-jvm-dsl.html"
+  to = "/pactober/2023/pact-jvm-dsl"
+  status = 200
