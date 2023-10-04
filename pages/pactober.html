@@ -16,6 +16,15 @@
   <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicons/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicons/favicon-16x16.png">
   <link rel="manifest" href="assets/img/favicons/site.webmanifest">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-8926693-16"></script>
+  <script>
+    if (window.location.hostname.indexOf("localhost") < 0) {
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-8926693-16');
+    }
+  </script>
 </head>
 
 <body>
@@ -26,7 +35,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark" data-overlay data-sticky="top">
       <div class="container">
         <a class="navbar-brand mr-0 fade-page" href="index.html">
-          <img src="assets/img/logo-black.png" alt="Pact Foundation" class="logo">
+          <img src="assets/img/logo-white.png" alt="Pact Foundation" class="logo">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse"
           aria-expanded="false" aria-label="Toggle navigation">
@@ -40,7 +49,7 @@
             <ul class="navbar-nav">
               <li class="nav-item dropdown">
                 <a href="/birthday" class="nav-link dropdown-toggle" data-toggle="dropdown-grid" aria-expanded="false"
-                  aria-haspopup="true">Birthday Bash (main event)</a>
+                  aria-haspopup="true">Birthday Bash / Main Event</a>
               </li>
               <li class="nav-item dropdown">
                 <a href="/pactober#schedule" class="nav-link" data-toggle="dropdown-grid"
