@@ -44,7 +44,7 @@
     "smartwizard": "~4.4.1",
     "smooth-scroll": "~16.1.3",
     "twitter-fetcher": "~18.0.4",
-    "typed.js": "~2.0.9"
+    "typed.js": "~2.0.11"
   },
   "devDependencies": {
     "@babel/core": "^7.5.5",
