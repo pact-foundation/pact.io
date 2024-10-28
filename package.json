@@ -63,7 +63,7 @@
     "gulp-eslint": "~6.0.0",
     "gulp-newer": "~1.4.0",
     "gulp-rename": "~1.4.0",
-    "gulp-sass": "~4.0.2",
+    "gulp-sass": "~5.1.0",
     "gulp-sourcemaps": "~2.6.1",
     "node-sass-css-importer": "~0.0.3",
     "rollup": "^2.79.2",
