@@ -38,7 +38,7 @@
     "jquery": "~3.7.1",
     "jquery-countdown": "~2.2.0",
     "plyr": "~3.5.4",
-    "popper.js": "~1.15.0",
+    "popper.js": "~1.16.0",
     "prismjs": "^1.27.0",
     "scrollmonitor": "~1.2.4",
     "smartwizard": "~4.3.1",
