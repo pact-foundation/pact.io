@@ -50,7 +50,7 @@
     "@babel/core": "7.9.0",
     "@babel/plugin-proposal-object-rest-spread": "7.9.5",
     "@babel/preset-env": "7.9.5",
-    "babel-plugin-transform-es2015-modules-strip": "0.1.1",
+    "babel-plugin-transform-es2015-modules-strip": "0.1.2",
     "babel-plugin-transform-strict-mode": "6.24.1",
     "browser-sync": "3.0.3",
     "del": "5.1.0",
