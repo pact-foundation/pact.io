@@ -41,7 +41,7 @@
     "popper.js": "~1.15.0",
     "prismjs": "^1.27.0",
     "scrollmonitor": "~1.2.4",
-    "smartwizard": "~4.4.0",
+    "smartwizard": "~6.0.0",
     "smooth-scroll": "~16.1.0",
     "twitter-fetcher": "~18.0.2",
     "typed.js": "~2.0.9"
