@@ -23,7 +23,7 @@
   "homepage": "https://pact.io",
   "dependencies": {
     "@fancyapps/fancybox": "3.5.2",
-    "@tanem/svg-injector": "~8.2.0",
+    "@tanem/svg-injector": "~10.1.0",
     "aos": "~2.3.4",
     "autosize": "~6.0.0",
     "bootstrap": "~4.6.0",
