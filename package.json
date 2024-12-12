@@ -22,7 +22,7 @@
   "license": "SEE LICENSE IN LICENSE.md",
   "homepage": "https://pact.io",
   "dependencies": {
-    "@fancyapps/fancybox": "3.5.2",
+    "@fancyapps/fancybox": "3.5.7",
     "@tanem/svg-injector": "~10.1.0",
     "aos": "~2.3.4",
     "autosize": "~6.0.0",
