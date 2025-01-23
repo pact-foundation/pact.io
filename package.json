@@ -67,7 +67,7 @@
     "gulp-sourcemaps": "3.0.0",
     "node-sass-css-importer": "0.0.3",
     "rollup": "2.79.2",
-    "rollup-plugin-babel": "4.4.0",
+    "@rollup/plugin-babel": "5.0.0",
     "rollup-plugin-commonjs": "10.1.0",
     "rollup-plugin-node-resolve": "5.2.0",
     "rollup-plugin-uglify": "6.0.4",
