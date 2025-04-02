@@ -52,7 +52,7 @@
     "@babel/preset-env": "7.9.5",
     "babel-plugin-transform-es2015-modules-strip": "0.1.2",
     "babel-plugin-transform-strict-mode": "6.24.1",
-    "browser-sync": "3.0.3",
+    "browser-sync": "3.0.4",
     "del": "5.1.0",
     "eslint": "6.8.0",
     "eslint-config-airbnb-base": "14.2.1",
