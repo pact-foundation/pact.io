@@ -62,7 +62,7 @@
     "gulp-clean-css": "4.3.0",
     "gulp-eslint": "6.0.0",
     "gulp-newer": "1.4.0",
-    "gulp-rename": "2.0.0",
+    "gulp-rename": "2.1.0",
     "gulp-sass": "4.1.1",
     "gulp-sourcemaps": "3.0.0",
     "node-sass-css-importer": "0.0.3",
