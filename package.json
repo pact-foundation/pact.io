@@ -47,7 +47,7 @@
     "typed.js": "~2.0.9"
   },
   "devDependencies": {
-    "@babel/core": "7.27.4",
+    "@babel/core": "7.27.7",
     "@babel/plugin-proposal-object-rest-spread": "7.20.7",
     "@babel/preset-env": "7.27.2",
     "babel-plugin-transform-es2015-modules-strip": "0.1.2",
