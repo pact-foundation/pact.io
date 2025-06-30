@@ -64,7 +64,7 @@
     "gulp-newer": "~1.4.0",
     "gulp-rename": "~1.4.0",
     "gulp-sass": "~4.0.2",
-    "gulp-sourcemaps": "~2.6.1",
+    "gulp-sourcemaps": "~3.0.0",
     "node-sass-css-importer": "~0.0.3",
     "rollup": "^2.79.2",
     "rollup-plugin-babel": "~4.3.2",
