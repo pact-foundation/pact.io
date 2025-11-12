@@ -23,7 +23,7 @@
   "homepage": "https://pact.io",
   "dependencies": {
     "@fancyapps/fancybox": "3.5.2",
-    "@tanem/svg-injector": "~8.0.12",
+    "@tanem/svg-injector": "8.0.12",
     "aos": "~2.3.4",
     "autosize": "~4.0.2",
     "bootstrap": "~4.3.1",
@@ -35,7 +35,7 @@
     "ion-rangeslider": "~2.3.0",
     "isotope-layout": "~3.0.6",
     "jarallax": "^1.11.0",
-    "jquery": "~3.7.1",
+    "jquery": "3.7.1",
     "jquery-countdown": "~2.2.0",
     "plyr": "~3.5.4",
     "popper.js": "~1.15.0",
@@ -44,7 +44,7 @@
     "smartwizard": "~4.3.1",
     "smooth-scroll": "~16.1.0",
     "twitter-fetcher": "~18.0.2",
-    "typed.js": "~2.0.9"
+    "typed.js": "2.0.11"
   },
   "devDependencies": {
     "@babel/core": "^7.5.5",
