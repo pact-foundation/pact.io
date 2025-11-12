@@ -1,11 +1,13 @@
 /* eslint-disable */
 const autoprefixer = require('gulp-autoprefixer'),
+
   browserSync = require('browser-sync'),
   cleanCSS = require('gulp-clean-css'),
   copyDepsYaml = './copydeps.yml',
   cssImporter = require('node-sass-css-importer')({
     import_paths: ['./scss']
   }),
+  sass = require('gulp-sass')(require('sass')),
   del = require('del'),
   eslint = require('gulp-eslint'),
   gulp = require('gulp'),
@@ -15,11 +17,10 @@ const autoprefixer = require('gulp-autoprefixer'),
   reload = browserSync.reload,
   rename = require('gulp-rename'),
   rollup = require('rollup'),
-  rollupBabel = require('rollup-plugin-babel'),
+  rollupBabel = require('@rollup/plugin-babel'),
   rollupCommonjs = require('rollup-plugin-commonjs'),
   rollupResolve = require('rollup-plugin-node-resolve'),
-  rollupUglify = require('rollup-plugin-uglify').uglify,
-  sass = require('gulp-sass'),
+  rollupUglify = require('@rollup/plugin-terser'),
   sourcemaps = require('gulp-sourcemaps'),
   themeYaml = './theme.yml',
   year = new Date().getFullYear(),
@@ -48,13 +49,13 @@ const babelConfig = {
     }
   },
   exclude: 'node_modules/**', // Only transpile our source code
-  externalHelpersWhitelist: [ // Include only required helpers
-    'defineProperties',
-    'createClass',
-    'inheritsLoose',
-    'defineProperty',
-    'objectSpread2'
-  ],
+  // externalHelpersWhitelist: [ // Include only required helpers
+  //   'defineProperties',
+  //   'createClass',
+  //   'inheritsLoose',
+  //   'defineProperty',
+  //   'objectSpread2'
+  // ],
 };
 
 getPaths = () => {

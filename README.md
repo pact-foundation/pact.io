@@ -13,21 +13,10 @@ pact.io home page
 
 Setup instructions are located in the docs mentioned above.
 
-Node 14 is required
-Python 2 is required due to an old version of node-sass.
+Node 14 or greater is required
+Python 3 is required for some dependencies (sass)
 
 The short version:
 
 * npm install
-* $(npm bin)/gulp
-
-
-#### MacOS
-
-```
-brew install pyenv
-eval "$(pyenv init -)" # set in your profile (.zshrc / .bashrc etc)
-pyenv install 2.7.18
-pyenv shell 2.7.18
-... npm commands above
-```
+* npx netlify-cli dev
