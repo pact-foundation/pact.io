@@ -20,3 +20,45 @@ The short version:
 
 * npm install
 * npx netlify-cli dev
+
+## Redirects
+
+### Unix (sh)
+
+```sh
+curl -fsSL pact.io/sh | sh -
+```
+
+### Windows (ps1)
+
+```ps1
+iwr -useb pact.io/ps1 | iex
+```
+
+### Windows (choco)
+
+```ps1
+curl pact.io/choco/<version> -OutFile <pkg_name>.nupkg
+choco install -y <pkg_name> --source .
+```
+
+#### Choco x64
+
+```ps1
+curl pact.io/choco/pact.0.9.1.nupkg -OutFile pact.nupkg
+choco install -y pact --source .
+```
+
+#### Choco arm64
+
+```ps1
+curl pact.io/choco/pact.0.9.1.nupkg -OutFile pact.nupkg
+choco install -y pact --params "'/ForceARM64:true'"  --source .
+```
+
+### Windows (scoop)
+
+```ps1
+scoop bucket add pact pact.io/scoop
+scoop install pact
+```

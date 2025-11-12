@@ -25,3 +25,19 @@ publish = "dist"
   from = "/pactober/2023/pact-jvm-dsl.html"
   to = "/pactober/2023/pact-jvm-dsl"
   status = 200
+[[redirects]]
+  from = "/sh"
+  to = "https://raw.githubusercontent.com/pact-foundation/pact-cli/main/install.sh"
+  status = 200
+[[redirects]]
+  from = "/ps1"
+  to = "https://raw.githubusercontent.com/pact-foundation/pact-cli/main/install.ps1"
+  status = 200
+[[redirects]]
+  from = "/scoop/*"
+  to = "https://github.com/pact-foundation/scoop/:splat"
+  status = 200
+[[redirects]]
+  from = "/choco/*"
+  to = " https://github.com/pact-foundation/choco/releases/download/choco/:splat"
+  status = 200
