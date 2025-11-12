@@ -19,15 +19,46 @@ Python 2 is required due to an old version of node-sass.
 The short version:
 
 * npm install
-* $(npm bin)/gulp
+* npx netlify-cli dev
 
+## Redirects
 
-#### MacOS
+### Unix (sh)
 
+```sh
+curl -fsSL pact.io/sh | sh -
 ```
-brew install pyenv
-eval "$(pyenv init -)" # set in your profile (.zshrc / .bashrc etc)
-pyenv install 2.7.18
-pyenv shell 2.7.18
-... npm commands above
+
+### Windows (ps1)
+
+```ps1
+iwr -useb pact.io/ps1 | iex
+```
+
+### Windows (choco)
+
+```ps1
+curl pact.io/choco/<version> -OutFile <pkg_name>.nupkg
+choco install -y <pkg_name> --source .
+```
+
+#### Choco x64
+
+```ps1
+curl pact.io/choco/pact.0.9.1.nupkg -OutFile pact.nupkg
+choco install -y pact --source .
+```
+
+#### Choco arm64
+
+```ps1
+curl pact.io/choco/pact.0.9.1.nupkg -OutFile pact.nupkg
+choco install -y pact --params "'/ForceARM64:true'"  --source .
+```
+
+### Windows (scoop)
+
+```ps1
+scoop bucket add pact pact.io/scoop
+scoop install pact
 ```
