@@ -10,3 +10,7 @@
 /pactober/workshop/watch        https://www.youtube.com/watch?v=0FpzPRSf2VA
 /pactober/feedback              https://cucumber.typeform.com/to/xO0II3dk
 /pactober/workshop/watch/pact-jvm-dsl  https://www.youtube.com/watch?v=whXaNti7PSg
+/sh     https://raw.githubusercontent.com/pact-foundation/pact-cli/main/install.sh
+/ps1    https://raw.githubusercontent.com/pact-foundation/pact-cli/main/install.ps1
+/scoop/*  https://github.com/pact-foundation/scoop/:splat
+/choco/*  https://github.com/pact-foundation/choco/releases/download/choco/:splat
